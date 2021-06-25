@@ -436,4 +436,37 @@ body {
   color: #333333 !important;
   background-color: #eeeeee !important;
 }
+.person-image {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.person-avatar {
+    border-radius: 100%;
+}
+
+.person-meta {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.person-name {
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+li {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+@media(min-width:767px) {
+    li {
+        font-size: 20px;
+        line-height: 1.6;
+    }
+}
+
 
