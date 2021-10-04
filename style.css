@@ -477,3 +477,28 @@ li {
 }
 
 
+.hl-green {
+    color:yellowgreen
+}
+.hl-green:hover {
+    color:rgb(193, 211, 35)
+}
+.hl-green:focus {
+    color:rgb(193, 211, 35)
+}
+
+.hl-blue {
+    color:rgb(0, 174, 243)
+}
+
+.modal-title {
+    color: black;
+}
+
+.modal-body {
+    color: black;
+    text-align: justify;
+    text-align-last: left;
+    text-justify: inter-ideograph;
+}
+
