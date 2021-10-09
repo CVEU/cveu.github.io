@@ -502,3 +502,21 @@ li {
     text-justify: inter-ideograph;
 }
 
+#submission #collapseExample.collapse:not(.in) {
+  display: block;
+  height: 3rem;
+  overflow: hidden;
+}
+
+#submission #collapseExample.collapsing {
+  height: 300rem;
+}
+
+#submission #more-btn.collapsed::after {
+  content: '+ Show More';
+}
+
+#submission #more-btn:not(.collapsed)::after {
+  content: '- Show Less';
+}
+
