@@ -9,7 +9,8 @@ var currTz = sessionStorage.getItem('timezone');
 // Display timezone
 $(".local-timezone").each(function (index, element) {
     // element == this
-    $(this).html("Time in " + currTz);
+    // $(this).html("Time in " + currTz);
+    $(this).html("" + currTz);
 });
 
 $(".local-day").each(function (index, element) {
