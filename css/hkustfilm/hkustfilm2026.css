@@ -1,0 +1,269 @@
+.status-card {
+    background-color: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 25px;
+    color: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.status-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.45);
+}
+
+.status-card__icon {
+    font-size: 34px;
+    line-height: 1;
+    color: #f1c40f;
+    flex-shrink: 0;
+}
+
+.status-card__body {
+    flex: 1;
+}
+
+.status-card__heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.status-card__heading h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.status-card__body p {
+    margin-bottom: 0;
+    font-size: 1.05em;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.status-card__label {
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 767px) {
+    .status-card {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .status-card__heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.submission-wrapper {
+    background-color: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 35px 30px;
+    color: #fff;
+}
+
+.submission-intro .lead {
+    font-size: 1.4em;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.submission-intro .btn {
+    margin-top: 10px;
+}
+
+.submission-tags {
+    margin-top: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.submission-tags .label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 6px 14px;
+    background-color: transparent;
+    color: #fff;
+}
+
+.submission-tags .label i {
+    color: #f1c40f;
+}
+
+.submission-panels {
+    margin-top: 25px;
+}
+
+.submission-card.panel {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    color: #fff;
+}
+
+.submission-card .panel-heading {
+    background: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.submission-card .panel-heading h4 {
+    margin: 0;
+    font-size: 1.4em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.submission-card .panel-heading h4 i {
+    color: #f1c40f;
+    font-size: 0.6em;
+}
+
+.submission-card .panel-body {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.6em;
+    line-height: 1.55;
+}
+
+.submission-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.submission-list li {
+    margin-bottom: 12px;
+}
+
+.submission-list li:last-child {
+    margin-bottom: 0;
+}
+
+.submission-list__title {
+    font-weight: 600;
+    color: #fff;
+    font-size: 1em;
+}
+
+/* Past editions dropdown tweaks */
+.navbar-custom .dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    min-width: 140px;
+}
+
+.navbar-custom .dropdown-menu>li>a {
+    color: #fff;
+    padding: 10px 18px;
+}
+
+.navbar-custom .dropdown-menu>li>a:hover,
+.navbar-custom .dropdown-menu>li>a:focus {
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #fff;
+}
+
+.winners-section {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 80px 0;
+    color: #fff;
+}
+
+.winners-header p {
+    max-width: 720px;
+    margin: 10px auto 30px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.winners-year-label {
+    font-size: 0.85em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.winners-card-row {
+    margin-top: 25px;
+}
+
+.winners-card-col {
+    margin-bottom: 25px;
+}
+
+.winner-card {
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+.winner-card h3 {
+    margin-top: 0;
+    font-size: 28px;
+}
+
+.winner-category {
+    color: #f1c40f;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.winner-meta {
+    margin-top: 20px;
+    font-size: 0.95em;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.winner-meta li {
+    margin-right: 15px;
+}
+
+.winner-card--certificate {
+    text-align: center;
+}
+
+.winner-certificate {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.winner-meta-text {
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.95em;
+}
+
+@media (max-width: 767px) {
+    .submission-wrapper {
+        padding: 25px 20px;
+    }
+    .winners-card-col {
+        width: 100%;
+    }
+}
