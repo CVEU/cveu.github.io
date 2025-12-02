@@ -103,7 +103,7 @@
 }
 
 .submission-tags .label i {
-    color: #f1c40f;
+    color: #4da3ff;
 }
 
 .submission-panels {
@@ -132,10 +132,11 @@
     align-items: center;
     gap: 8px;
     color: rgba(255, 255, 255, 1);
+    text-shadow: 0 0 12px rgba(77, 163, 255, 0.15);
 }
 
 .submission-card .panel-heading h4 i {
-    color: #f1c40f;
+    color: #4da3ff;
     font-size: 0.6em;
 }
 
@@ -160,8 +161,8 @@
 }
 
 .submission-list__title {
-    font-weight: 600;
-    color: #fff;
+    font-weight: 700;
+    color: #b8d8ff;
     font-size: 1em;
 }
 
