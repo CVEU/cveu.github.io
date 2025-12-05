@@ -279,9 +279,9 @@
     padding: 14px 18px;
     border-top: 1px solid rgba(255,255,255,0.12);
     border-bottom: 1px solid rgba(255,255,255,0.12);
-    font-size: 18px;                /* 更大，看起来像副标题 */
+    font-size: 18px;               
     font-weight: 600;
-    color: #ffffffcc;               /* 80% 白，柔和不刺眼 */
+    color: #ffffffcc;               
     text-decoration: none;
     letter-spacing: 0.3px;
     transition: all 0.15s ease;
@@ -296,7 +296,7 @@
     float: right;
     font-size: 13px;
     margin-top: 2px;
-    color: #ffffff99;               /* 60% 白，不与标题抢 */
+    color: #ffffff99;               
 }
 
 .submission-reg-download-btn {
