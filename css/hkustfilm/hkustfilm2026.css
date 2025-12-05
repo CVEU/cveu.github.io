@@ -268,3 +268,52 @@
         width: 100%;
     }
 }
+
+/* For dark background */
+.submission-reg-section-toggle-wrapper {
+    margin: 32px 0 6px;
+}
+
+.submission-reg-toggle-section {
+    display: block;
+    padding: 14px 18px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    font-size: 18px;                /* 更大，看起来像副标题 */
+    font-weight: 600;
+    color: #ffffffcc;               /* 80% 白，柔和不刺眼 */
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    transition: all 0.15s ease;
+}
+
+.submission-reg-toggle-section:hover {
+    background-color: rgba(255,255,255,0.05);
+    color: #ffffffff;
+}
+
+.submission-reg-toggle-section .submission-reg-icon {
+    float: right;
+    font-size: 13px;
+    margin-top: 2px;
+    color: #ffffff99;               /* 60% 白，不与标题抢 */
+}
+
+.submission-reg-download-btn {
+    background: linear-gradient(90deg, #1DD4FF 0%, #1D7DFF 100%);
+    border: none;
+    color: #fff !important;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s ease;
+}
+
+.submission-reg-download-btn:hover {
+    box-shadow: 0 0 15px rgba(29,125,255,0.5);
+    opacity: 0.95;
+    text-decoration: none;
+}
