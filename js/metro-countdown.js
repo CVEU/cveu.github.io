@@ -1,7 +1,7 @@
 (function( $ ) {
     $.widget("metro.countdown", {
 
-        version: "1.0.0",
+        version: "1.0.1", // support both 3 and 2 digits display for days
 
         options: {
             style: {
@@ -23,17 +23,25 @@
         _create: function(){
             var that = this, countdown = this.element;
 
-            $.each(['Days','Hours','Minutes','Seconds'],function(){
-                $('<span class="count'+this+'">').html(
-                    '<span class="digit-wrapper">\
-                        <span class="digit">0</span>\
-                    </span>\
-                    <span class="digit-wrapper">\
-                        <span class="digit">0</span>\
-                    </span>'
-                ).appendTo(countdown);
+            $.each(['Days','Hours','Minutes','Seconds'],function(i, item){
+                var digitCount = (item === 'Days') ? 3 : 2;
+                var $unitContainer = $('<span class="count'+item+'">');
+                
+                for(var k = 0; k < digitCount; k++) {
+                    var $wrapper = $('<span class="digit-wrapper">')
+                        .html('<span class="digit">0</span>');
 
-                if(this!="Seconds"){
+                    if (k < digitCount - 1) {
+                        $wrapper.css('margin-right', '5px');
+                    }
+                    
+                    $unitContainer.append($wrapper);
+                }
+
+                $unitContainer.appendTo(countdown);
+
+
+                if(item!="Seconds"){
                     countdown.append('<span class="divider"></span>');
                 }
             });
@@ -107,22 +115,22 @@
 
                 // Number of days left
                 d = Math.floor(left / days);
-                that.updateDuo(0, 1, d);
+                that.updateTrio(0, 1, 2, d);
                 left -= d*days;
 
                 // Number of hours left
                 h = Math.floor(left / hours);
-                that.updateDuo(2, 3, h);
+                that.updateDuo(3, 4, h);
                 left -= h*hours;
 
                 // Number of minutes left
                 m = Math.floor(left / minutes);
-                that.updateDuo(4, 5, m);
+                that.updateDuo(5, 6, m);
                 left -= m*minutes;
 
                 // Number of seconds left
                 s = left;
-                that.updateDuo(6, 7, s);
+                that.updateDuo(7, 8, s);
 
                 // Calling an optional user supplied ontick
                 that.options.ontick(d, h, m, s);
@@ -148,6 +156,22 @@
             this.wrappers.each(function(){
                 $(this).children(".digit").addClass("stop");
             })
+        },
+
+        updateTrio: function(hundreds, tens, units, value){
+            var hundredsWrapper = this.wrappers.eq(hundreds);
+            var h_val = Math.floor(value / 100);
+            
+            if (h_val === 0) {
+                hundredsWrapper.css('display', 'none');
+            } else {
+                hundredsWrapper.css('display', 'inline-block'); 
+                
+                this.switchDigit(hundredsWrapper, h_val % 10);
+            }
+
+            this.switchDigit(this.wrappers.eq(tens), Math.floor(value/10)%10);
+            this.switchDigit(this.wrappers.eq(units), value%10);
         },
 
         updateDuo: function(minor, major, value){
@@ -196,5 +220,3 @@
         }
     });
 })( jQuery );
-
-
