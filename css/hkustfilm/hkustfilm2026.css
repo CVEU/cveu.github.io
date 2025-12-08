@@ -394,7 +394,7 @@
     padding: 24px 10px 24px 24px; 
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 5px;
     justify-content: center; 
 }
 
@@ -412,17 +412,23 @@
 
 .advisor-title {
     display: block;
+    margin-bottom: 6px;
+}
+
+.advisor-role {
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.82em;
+    font-size: 0.9em;
     letter-spacing: 0.5px;
-    line-height: 1.35;
+    font-weight: 700;
     color: #f6d560;
-    margin-bottom: 8px;
-    font-weight: 600;
-    opacity: 0.9;
-    border-bottom: 1px solid rgba(255,255,255,0.12); 
-    padding-bottom: 6px;
-    width: 100%; 
+}
+
+.advisor-division {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75em;
+    letter-spacing: 0.3px;
+    color: rgba(255, 255, 255, 0.78);
+    font-style: italic;
 }
 
 
