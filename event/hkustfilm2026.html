@@ -119,7 +119,7 @@
                             class="hl-green">TBD </a> -->
                     </p>
                     <p class="text-center" style="margin-top: 15px;">
-                        <a href="#submission" class="btn btn-primary btn-lg" style="border-radius: 999px; background-color: #009dff; border-color: #009dff;">
+                        <a href="#submission" class="btn btn-primary btn-lg page-scroll" style="border-radius: 999px; background-color: #009dff; border-color: #009dff;">
                             Submit your film
                         </a>
                     </p>
@@ -733,7 +733,76 @@
     </div>
 </section>
 
-  
+
+<section id="organizer" class="content-section text-left">
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="organizer-section-title">Advisor Committee</h2>
+            </div>
+        </div>
+
+        <div class="advisor-grid">
+            <div class="advisor-card" data-profile-url="https://anyirao.com/" tabindex="0">
+                <div class="advisor-card__img-col">
+                    <img src="/img/amcfilm/anyirao.jpg" alt="Advisor" class="advisor-card__img">
+                </div>
+                <div class="advisor-card__body">
+                    <h3 class="advisor-name">Dr. Anyi Rao</h3>
+                    <span class="advisor-title">
+                    Assistant Professor<br>
+                    Division of Arts and Machine Creativity
+                    </span>
+                    <ul class="advisor-interests">
+                        <li>- AI for Creativity</li>
+                        <li>- Computer Vision</li>
+                        <li>- Human–Computer Interaction</li>
+                        <li>- Film Analysis & Editing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="advisor-card" data-profile-url="https://ust-hk.academia.edu/VennesCheng" tabindex="0">
+                <div class="advisor-card__img-col">
+                    <img src="/img/amcfilm/vennescheng.jpg" alt="Advisor" class="advisor-card__img">
+                </div>
+                <div class="advisor-card__body">
+                    <h3 class="advisor-name">Dr. Vennes Sau Wai CHENG</h3>
+                    <span class="advisor-title">
+                    Lecturer I<br>
+                    Division of Arts and Machine Creativity
+                    </span>
+                    <ul class="advisor-interests">
+                        <li>- Contemporary Art</li>
+                        <li>- Art Archive</li>
+                        <li>- Curatorial Studies</li>
+                        <li>- Critical Theory</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="advisor-card" data-profile-url="https://hongbofu.people.ust.hk/" tabindex="0">
+                <div class="advisor-card__img-col">
+                    <img src="/img/amcfilm/hongbofu.JPG" alt="Advisor" class="advisor-card__img">
+                </div>
+                <div class="advisor-card__body">
+                    <h3 class="advisor-name">Prof. Hongbo Fu</h3>
+                    <span class="advisor-title">
+                    Acting Head and Professor<br>
+                    Division of Arts and Machine Creativity
+                    </span>
+                    <ul class="advisor-interests">
+                        <li>- Computer Graphics</li>
+                        <li>- Computer Vision</li>
+                        <li>- Human–Computer Interaction</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
 
 
 <!-- Organizer Section -->
@@ -884,7 +953,7 @@
         <div class="col-lg-8 col-lg-offset-2">
             <h2>Contact</h2>
             <!-- <p>🚧 This site is under-construction 🚧 </p> -->
-            <p><a href="mailto:hkustaifilm@googlegroups.com">hkustaifilm@googlegroups.com</a>
+            <p><a href="mailto:hkustaiff@ust.hk">hkustaiff@ust.hk</a>
             </p>
             <ul class="list-inline banner-social-buttons">
 
@@ -920,6 +989,28 @@
 
 <!-- Plugin JavaScript -->
 <script src=" /js/jquery.easing.min.js"></script>
+
+<script>
+    // Make advisor cards open their profile in a new tab when a URL is provided.
+    document.addEventListener('DOMContentLoaded', function () {
+        var cards = document.querySelectorAll('.advisor-card[data-profile-url]');
+        cards.forEach(function (card) {
+            var url = card.getAttribute('data-profile-url');
+            if (!url) return;
+            card.classList.add('advisor-card--link');
+            var openProfile = function () {
+                window.open(url, '_blank', 'noopener');
+            };
+            card.addEventListener('click', openProfile);
+            card.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openProfile();
+                }
+            });
+        });
+    });
+</script>
 <script src=" /js/jquery.widget.min.js"></script>
 
 
