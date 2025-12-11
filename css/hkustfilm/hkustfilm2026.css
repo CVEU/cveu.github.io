@@ -458,9 +458,6 @@
     position: relative;
     overflow: hidden;
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    margin: 0 auto 5px;
 }
 
 .person-image--role::after {
@@ -489,6 +486,21 @@
 }
 
 .person-image--role img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+/* unify organizer/advisory avatar sizing */
+#organizer .person-image {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 5px;
+}
+
+#organizer .person-image img {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover;
