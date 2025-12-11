@@ -453,6 +453,49 @@
 }
 
 
+/* organizer section uses the shared download-section background */
+.person-image--role {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 5px;
+}
+
+.person-image--role::after {
+    content: attr(data-role);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.72);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85em;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    padding: 10px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.person-image--role:hover::after {
+    opacity: 1;
+}
+
+.person-image--role img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
 @media (max-width: 991px) {
     .advisor-grid {
         padding: 0;
