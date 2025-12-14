@@ -453,46 +453,6 @@
 }
 
 
-/* organizer section uses the shared download-section background */
-.person-image--role {
-    position: relative;
-    overflow: hidden;
-    border-radius: 50%;
-}
-
-.person-image--role::after {
-    content: attr(data-role);
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.72);
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.85em;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    opacity: 0;
-    transition: opacity 0.2s ease;
-    padding: 10px;
-    text-align: center;
-    border-radius: 50%;
-}
-
-.person-image--role:hover::after {
-    opacity: 1;
-}
-
-.person-image--role img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover;
-    border-radius: 50%;
-    display: block;
-}
-
 /* unify organizer/advisory avatar sizing */
 #organizer .person-image {
     width: 120px;
@@ -506,6 +466,75 @@
     object-fit: cover;
     border-radius: 50%;
     display: block;
+}
+
+.organizer-subtitle {
+    margin: 10px 0 20px;
+    letter-spacing: 0.5px;
+}
+
+.organizer-cochairs {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 20px 28px;
+    margin-bottom: 18px;
+}
+
+.organizer-advisory {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 28px;
+}
+
+.organizer-advisory > [class*="col-"] {
+    float: none;
+}
+
+.organizer-cochairs > [class*="col-"],
+.organizer-advisory > [class*="col-"] {
+    float: none;
+    flex: 0 0 160px;
+    padding: 0 10px;
+}
+
+.organizer-lists {
+    margin-top: 15px;
+}
+
+.organizer-list-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 16px 18px;
+    height: 100%;
+}
+
+.organizer-list-title {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    display: flex;
+    align-items: center;
+}
+
+.organizer-list {
+    list-style: none;
+    padding-left: 12px;
+    margin: 0;
+    border-left: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+.organizer-list li {
+    margin-bottom: 6px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95em;
+}
+
+.organizer-list li:last-child {
+    margin-bottom: 0;
 }
 
 @media (max-width: 991px) {
