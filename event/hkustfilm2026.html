@@ -4,17 +4,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>HKUST AI Film Festival — 2nd Edition</title>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="HKUST AI Film Festival.">
     <link rel="canonical" href="https://cveu.github.io/">
     <link rel="icon" href="/favicon.ico">
 
     <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-    <link rel="stylesheet" href=" /style.css">
+    <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/css/hkustfilm/hkustfilm2026.css">
 
     <!-- Custom Fonts -->
-    <link rel="stylesheet" href=" /css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -737,11 +737,12 @@
 <section id="organizer" class="content-section text-left">
     <div class="download-section">
         <div class="container">
-            <div class="col-lg-8 col-lg-offset-2">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
                 <h2 class="text-center">Organizers</h2>
 
-                <div class="row organizer-cochairs">
-                    <div class="col-sm-6 col-md-3">
+                <div class="people-grid organizer-cochairs">
+                    <div class="person-card">
                         <div class="person-image">
                             <img src="/img/avatar/Tony_zhang.jpg" class="person-avatar" width="80%" height="80%">
                         </div>
@@ -752,7 +753,7 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-6 col-md-3">
+                    <div class="person-card">
                         <div class="person-image">
                             <img src="/img/amcfilm/zeyuzhang.jpg" class="person-avatar" width="80%" height="80%">
                         </div>
@@ -763,7 +764,7 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-6 col-md-3">
+                    <div class="person-card">
                         <div class="person-image">
                             <img src="/img/amcfilm/shiqinhou.jpg" class="person-avatar" width="80%" height="80%">
                         </div>
@@ -774,7 +775,7 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-6 col-md-3">
+                    <div class="person-card">
                         <div class="person-image">
                             <img src="/img/amcfilm/jiayanchen.jpg" class="person-avatar" width="80%" height="80%">
                         </div>
@@ -785,7 +786,7 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-6 col-md-3">
+                    <div class="person-card">
                         <div class="person-image">
                             <img src="/img/amcfilm/ziweichi.jpg" class="person-avatar" width="80%" height="80%">
                         </div>
@@ -798,8 +799,10 @@
                 </div>
 
                 <h2 class="text-center">Advisory Committee</h2>
-                <div class="row organizer-advisory">
-                    <div class="col-md-2">
+                <div class="people-grid organizer-advisory">
+                    <div class="person-card placeholder" aria-hidden="true"></div>
+
+                    <div class="person-card">
                         <div class="person-image">
                             <img src="/img/avatar/anyi_rao.jpg" class="person-avatar" width="80%" height="80%">
                         </div>
@@ -810,7 +813,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-2">
+                    <div class="person-card">
                         <div class="person-image">
                             <img src="/img/amcfilm/vennescheng.jpg" class="person-avatar" width="80%" height="80%">
                         </div>
@@ -821,7 +824,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-2">
+                    <div class="person-card">
                         <div class="person-image">
                             <img src="/img/amcfilm/hongbofu.jpg" class="person-avatar" width="80%" height="80%">
                         </div>
@@ -832,6 +835,7 @@
                         </div>
                     </div>
 
+                    <div class="person-card placeholder" aria-hidden="true"></div>
                 </div>
 
                 <div class="row organizer-lists">
@@ -858,6 +862,7 @@
                 <br><br>
 
 
+                </div>
             </div>
         </div>
     </div>
@@ -1041,13 +1046,13 @@
     </footer>
 
     <!-- jQuery Version 1.11.0 -->
-<script src=" /js/jquery.js"></script>
+<script src="/js/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src=" /js/bootstrap.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 
 <!-- Plugin JavaScript -->
-<script src=" /js/jquery.easing.min.js"></script>
+<script src="/js/jquery.easing.min.js"></script>
 
 <script>
     // Make advisor cards open their profile in a new tab when a URL is provided.
@@ -1070,7 +1075,7 @@
         });
     });
 </script>
-<script src=" /js/jquery.widget.min.js"></script>
+<script src="/js/jquery.widget.min.js"></script>
 
 
 <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
@@ -1078,14 +1083,14 @@
    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
 
 <!-- Custom Theme JavaScript -->
-<script src=" /js/grayscale.js"></script>
-<script src=" /js/metro.min.js"></script>
-<script src=" /js/metro-countdown.js"></script>
+<script src="/js/grayscale.js"></script>
+<script src="/js/metro.min.js"></script>
+<script src="/js/metro-countdown.js"></script>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.7/jstz.min.js"></script>
-<script src=" /js/moment.min.js"></script>
-<script src=" /js/moment-timezone.min.js"></script>
-<script src=" /js/main.js"></script>
+<script src="/js/moment.min.js"></script>
+<script src="/js/moment-timezone.min.js"></script>
+<script src="/js/main.js"></script>
 </body>
 
 </html>

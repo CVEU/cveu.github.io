@@ -453,6 +453,49 @@
 }
 
 
+/* People grids (organizers/advisory) */
+.people-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 220px));
+    gap: 24px 24px;
+    justify-items: center;
+    align-items: start;
+    place-content: center;
+    width: 100%;
+    max-width: 1100px;
+    margin: 18px auto;
+}
+
+.organizer-cochairs.people-grid {
+    gap: 24px 26px;
+}
+
+.organizer-advisory.people-grid {
+    gap: 18px 18px;
+}
+
+/* Desktop: explicit column counts for symmetry */
+@media (min-width: 1200px) {
+    .organizer-cochairs.people-grid {
+        grid-template-columns: repeat(5, minmax(150px, 1fr));
+        max-width: 1250px;
+    }
+    .organizer-advisory.people-grid {
+        grid-template-columns: repeat(5, minmax(150px, 1fr));
+        max-width: 1250px;
+        gap: 24px 24px;
+    }
+}
+
+.person-card {
+    text-align: center;
+    width: 100%;
+}
+
+.person-card.placeholder {
+    visibility: hidden;
+}
+
 /* unify organizer/advisory avatar sizing */
 #organizer .person-image {
     width: 120px;
@@ -471,32 +514,6 @@
 .organizer-subtitle {
     margin: 10px 0 20px;
     letter-spacing: 0.5px;
-}
-
-.organizer-cochairs {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    gap: 20px 28px;
-    margin-bottom: 18px;
-}
-
-.organizer-advisory {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px 28px;
-}
-
-.organizer-advisory > [class*="col-"] {
-    float: none;
-}
-
-.organizer-cochairs > [class*="col-"],
-.organizer-advisory > [class*="col-"] {
-    float: none;
-    flex: 0 0 160px;
-    padding: 0 10px;
 }
 
 .organizer-lists {
@@ -545,6 +562,12 @@
     .advisor-card__body {
         padding: 18px 5px 18px 18px; 
     }
+
+    /* Tablet: allow denser people grid */
+    .people-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 18px 16px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -555,5 +578,24 @@
     .advisor-card__img {
         aspect-ratio: 4 / 5;
         height: auto;
+    }
+
+    /* Mobile: force 5-column grid, shrink avatars to fit */
+    .people-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 10px 8px;
+    }
+
+    #organizer .person-image {
+        width: 70px;
+        height: 70px;
+    }
+
+    .person-name {
+        font-size: 12px;
+    }
+
+    .person-affliation {
+        font-size: 11px;
     }
 }
