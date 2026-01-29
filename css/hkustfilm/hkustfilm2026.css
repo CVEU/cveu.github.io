@@ -471,7 +471,7 @@
 }
 
 .organizer-advisory.people-grid {
-    gap: 18px 18px;
+    gap: 24px 24px;
 }
 
 /* Desktop: explicit column counts for symmetry */
@@ -481,8 +481,8 @@
         max-width: 1250px;
     }
     .organizer-advisory.people-grid {
-        grid-template-columns: repeat(4, minmax(170px, 1fr));
-        max-width: 1100px;
+        grid-template-columns: repeat(5, minmax(170px, 1fr));
+        max-width: 1250px;
         gap: 24px 24px;
     }
 }
@@ -493,7 +493,21 @@
 }
 
 .person-card.placeholder {
-    visibility: hidden;
+    border: 1px dashed rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 10px 8px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.person-card.placeholder .person-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 50%;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 700;
+    font-size: 14px;
 }
 
 /* unify organizer/advisory avatar sizing */
@@ -580,14 +594,9 @@
         height: auto;
     }
 
-    /* Mobile: force 5-column grid for organizers, 4-column for advisory; shrink avatars to fit */
+    /* Mobile: force 5-column grid for organizers/advisory; shrink avatars to fit */
     .people-grid {
         grid-template-columns: repeat(5, minmax(0, 1fr));
-        gap: 10px 8px;
-    }
-
-    .organizer-advisory.people-grid {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 10px 8px;
     }
 
