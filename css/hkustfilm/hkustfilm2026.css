@@ -481,8 +481,8 @@
         max-width: 1250px;
     }
     .organizer-advisory.people-grid {
-        grid-template-columns: repeat(5, minmax(150px, 1fr));
-        max-width: 1250px;
+        grid-template-columns: repeat(4, minmax(170px, 1fr));
+        max-width: 1100px;
         gap: 24px 24px;
     }
 }
@@ -580,9 +580,14 @@
         height: auto;
     }
 
-    /* Mobile: force 5-column grid, shrink avatars to fit */
+    /* Mobile: force 5-column grid for organizers, 4-column for advisory; shrink avatars to fit */
     .people-grid {
         grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 10px 8px;
+    }
+
+    .organizer-advisory.people-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 10px 8px;
     }
 
