@@ -481,8 +481,8 @@
         max-width: 1250px;
     }
     .organizer-advisory.people-grid {
-        grid-template-columns: repeat(5, minmax(170px, 1fr));
-        max-width: 1250px;
+        grid-template-columns: repeat(6, minmax(150px, 1fr));
+        max-width: 1350px;
         gap: 24px 24px;
     }
 }
@@ -598,6 +598,10 @@
     .people-grid {
         grid-template-columns: repeat(5, minmax(0, 1fr));
         gap: 10px 8px;
+    }
+    /* Advisory needs six columns on mobile */
+    .organizer-advisory.people-grid {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
     }
 
     #organizer .person-image {
