@@ -613,19 +613,15 @@
         height: auto;
     }
 
-    /* Mobile: force 5-column grid for organizers/advisory; shrink avatars to fit */
+    /* Mobile: show 3 columns for organizers/advisory */
     .people-grid {
-        grid-template-columns: repeat(5, minmax(0, 1fr));
-        gap: 10px 8px;
-    }
-    /* Advisory needs six columns on mobile */
-    .organizer-advisory.people-grid {
-        grid-template-columns: repeat(6, minmax(0, 1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px 10px;
     }
 
     #organizer .person-image {
-        width: 70px;
-        height: 70px;
+        width: clamp(58px, 20vw, 78px);
+        height: clamp(58px, 20vw, 78px);
     }
 
     .person-name {
