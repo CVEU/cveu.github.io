@@ -604,6 +604,10 @@
 }
 
 @media (max-width: 767px) {
+    html, body {
+        overflow-x: hidden;
+    }
+
     .advisor-card {
         min-height: auto;
         flex-direction: column;
@@ -630,5 +634,12 @@
 
     .person-affliation {
         font-size: 11px;
+    }
+
+    /* Avoid horizontal overflow from nested rows on mobile */
+    .winners-card-row,
+    .submission-panels {
+        margin-left: 0;
+        margin-right: 0;
     }
 }
