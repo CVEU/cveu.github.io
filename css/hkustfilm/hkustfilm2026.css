@@ -162,7 +162,7 @@
 
 .submission-list__title {
     font-weight: 700;
-    color: #b8d8ff;
+    color: #337ab7; /* match default anchor color */
     font-size: 1em;
 }
 
@@ -641,5 +641,18 @@
     .submission-panels {
         margin-left: 0;
         margin-right: 0;
+    }
+
+     .submission-reg-download-btn {
+        display: block;
+        width: 100%;
+        max-width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 12px 18px;
+        white-space: normal;
+        line-height: 1.3;
     }
 }
