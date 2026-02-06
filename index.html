@@ -62,6 +62,195 @@
         .table li:last-child {
             margin-bottom: 0;
         }
+        /* Program section styling */
+        #program .program-wrap {
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            margin-bottom: 30px;
+        }
+        #program .program-schedule-table {
+            margin-bottom: 0;
+            font-size: 15px;
+        }
+        #program .program-schedule-table thead th {
+            background: rgba(0, 120, 200, 0.35);
+            color: #fff;
+            font-weight: 600;
+            padding: 14px 16px;
+            border: none;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        #program .program-schedule-table tbody td {
+            padding: 12px 16px;
+            border-color: rgba(255, 255, 255, 0.1);
+            vertical-align: middle;
+        }
+        #program .program-schedule-table tbody tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.03);
+        }
+        #program .program-schedule-table tbody tr:hover {
+            background: rgba(255, 255, 255, 0.06);
+        }
+        #program .program-schedule-table .session-cell {
+            line-height: 1.5;
+        }
+        #program .program-schedule-table .time-cell {
+            text-align: center;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        /* Tentative Speakers */
+        #program .speakers-section {
+            margin-top: 35px;
+        }
+        #program .speakers-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px 24px;
+            margin-top: 20px;
+        }
+        #program .speaker-tbd {
+            text-align: center;
+            flex: 0 0 auto;
+        }
+        #program .speaker-tbd .speaker-avatar-wrap {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #program .speaker-tbd .speaker-avatar-wrap span {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.6);
+            font-weight: 600;
+        }
+        #program .speaker-tbd .speaker-meta {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        /* Submission Tracks table */
+        #program .submission-tracks-wrap {
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 12px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            margin-top: 8px;
+            min-width: 0;
+        }
+        #program .submission-tracks-table {
+            margin-bottom: 0;
+            font-size: 15px;
+            min-width: 880px;
+            table-layout: fixed;
+            width: 100%;
+        }
+        #program .submission-tracks-table thead th {
+            background: rgba(0, 120, 200, 0.35);
+            color: #fff;
+            font-weight: 600;
+            padding: 14px 16px;
+            border: none;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            vertical-align: middle;
+        }
+        #program .submission-tracks-table tbody th {
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            font-weight: 600;
+            padding: 14px 16px;
+            border-color: rgba(255, 255, 255, 0.1);
+            vertical-align: top;
+            width: 14%;
+        }
+        #program .submission-tracks-table tbody td {
+            padding: 14px 16px;
+            border-color: rgba(255, 255, 255, 0.1);
+            vertical-align: top;
+        }
+        #program .submission-tracks-table tbody td:first-of-type {
+            width: 52%;
+        }
+        #program .submission-tracks-table tbody td.dates-column {
+            width: 34%;
+        }
+        #program .submission-tracks-table tbody tr {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        #program .submission-tracks-table tbody tr:last-child {
+            border-bottom: none;
+        }
+        #program .submission-tracks-table tbody tr:nth-child(even) th,
+        #program .submission-tracks-table tbody tr:nth-child(even) td {
+            background: rgba(255, 255, 255, 0.02);
+        }
+        #program .submission-tracks-table tbody tr:hover th,
+        #program .submission-tracks-table tbody tr:hover td {
+            background: rgba(255, 255, 255, 0.06);
+        }
+        #program .submission-tracks-table .track-details {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+        #program .submission-tracks-table .track-details li {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 10px;
+            line-height: 1.45;
+            padding-left: 0;
+        }
+        #program .submission-tracks-table .track-details li:last-child {
+            margin-bottom: 0;
+        }
+        #program .submission-tracks-table .track-details li::before {
+            content: "";
+            flex-shrink: 0;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            margin-top: 8px;
+        }
+        #program .submission-tracks-table .detail-label {
+            flex: 0 0 90px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.95);
+            white-space: nowrap;
+        }
+        #program .submission-tracks-table .detail-value {
+            flex: 1;
+            min-width: 0;
+        }
+        #program .submission-tracks-table .dates-column .detail-label {
+            flex: 0 0 95px;
+        }
+        #program .submission-tracks-table .dates-column .detail-value {
+            white-space: nowrap;
+        }
+        #program .submission-tracks-table .dates-column .track-details li::before {
+            background: rgba(125, 211, 252, 0.7);
+        }
+        #program .submission-tracks-table tbody td:not(.dates-column) {
+            font-size: 0.9em;
+        }
+        #program .submission-tracks-table .dates-column {
+            font-size: 0.88em;
+        }
+        #program .submission-tracks-table a {
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
     </style>
 
 </head>
@@ -186,69 +375,88 @@
     <div class="download-section"> 
         <div class="container"> 
             <div class="col-lg-8 col-lg-offset-2"> 
-                <h2 class="text-center">Tentative Program (CVPR 2026)</h2> 
-                <div class="container" style="width:100%">
-                    <table class="table table-bordered" style="width: 100%;"> 
+                <h2 class="text-center" style="font-size: 1.8em; margin-bottom: 24px;">Tentative Program (CVPR 2026)</h2> 
+                <div class="program-wrap">
+                    <table class="table table-bordered program-schedule-table" style="width: 100%;"> 
                         <colgroup>                             
                             <col style="width: 72%;">
                             <col style="width: 28%;">
                         </colgroup> 
                         <thead>
                             <tr>
-                                <th scope="col" style="text-align:center; vertical-align:middle; padding:12px;">
-                                    Schedule
-                                </th>
-                                <th scope="col" style="text-align:center; vertical-align:middle; padding:12px;">
-                                    Mountain Time (MT)<br/>June 3 or 4, 2026 (TBD)
-                                </th>
+                                <th scope="col">Schedule</th>
+                                <th scope="col">Mountain Time (MT)<br/><small>June 3 or 4, 2026 (TBD)</small></th>
                             </tr>
                         </thead>
                         <tbody> 
-
                             <tr>
-                                <td><b>Warm-up Session</b></td>
-                                <td style="text-align:center; vertical-align:middle;">TBD</td>
+                                <td class="session-cell"><b>Warm-up Session</b></td>
+                                <td class="time-cell">TBD</td>
                             </tr>
                             <tr>
-                                <td><b>Workshop Opening Remarks</b></td>
-                                <td style="text-align:center; vertical-align:middle;">TBD</td>
+                                <td class="session-cell"><b>Workshop Opening Remarks</b></td>
+                                <td class="time-cell">TBD</td>
                             </tr>
                             <tr>
-                                <td>
+                                <td class="session-cell">
                                     <b>Session I</b>
-                                    <br>&nbsp;&nbsp;&nbsp;• Keynote I
-                                    <br>&nbsp;&nbsp;&nbsp;• Keynote II
-                                    <br>&nbsp;&nbsp;&nbsp;• Keynote III
-                                    <br>&nbsp;&nbsp;&nbsp;• Roundtable Discussion
+                                    <br><span style="opacity: 0.9;">Keynote I · Keynote II · Keynote III · Roundtable Discussion</span>
                                 </td>
-                                <td style="text-align:center; vertical-align:middle;">Afternoon (TBD)</td>
+                                <td class="time-cell">Afternoon (TBD)</td>
                             </tr>
                             <tr>
-                                <td><b>Industry Talks</b></td>
-                                <td style="text-align:center; vertical-align:middle;">TBD</td>
+                                <td class="session-cell"><b>Industry Talks</b></td>
+                                <td class="time-cell">TBD</td>
                             </tr>
                             <tr>
-                                <td><b>Poster Presentations</b></td>
-                                <td style="text-align:center; vertical-align:middle;">TBD</td>
+                                <td class="session-cell"><b>Poster Presentations</b></td>
+                                <td class="time-cell">TBD</td>
                             </tr>
                             <tr>
-                                <td>
+                                <td class="session-cell">
                                     <b>Session II</b>
-                                    <br>&nbsp;&nbsp;&nbsp;• Keynote I
-                                    <br>&nbsp;&nbsp;&nbsp;• Keynote II
-                                    <br>&nbsp;&nbsp;&nbsp;• Keynote III
-                                    <br>&nbsp;&nbsp;&nbsp;• Roundtable Discussion
+                                    <br><span style="opacity: 0.9;">Keynote I · Keynote II · Keynote III · Roundtable Discussion</span>
                                 </td>
-                                <td style="text-align:center; vertical-align:middle;">Late Afternoon (TBD)</td>
+                                <td class="time-cell">Late Afternoon (TBD)</td>
                             </tr>
                             <tr>
-                                <td><b>Closing Remarks</b></td>
-                                <td style="text-align:center; vertical-align:middle;">TBD</td>
+                                <td class="session-cell"><b>Closing Remarks</b></td>
+                                <td class="time-cell">TBD</td>
                             </tr>
                         </tbody> 
                     </table>
-                </div>  
-                
+                </div>
+
+                <div class="speakers-section">
+                    <h2 class="text-center" style="font-size: 1.8em; margin-bottom: 10px;">Tentative Speakers</h2>
+                    <p class="text-center" style="font-size: 0.95em; color: rgba(255,255,255,0.8); margin-bottom: 0;">Speakers to be announced.</p>
+                    <div class="speakers-row">
+                        <div class="speaker-tbd">
+                            <div class="speaker-avatar-wrap"><span>TBD</span></div>
+                            <div class="speaker-meta">TBD</div>
+                        </div>
+                        <div class="speaker-tbd">
+                            <div class="speaker-avatar-wrap"><span>TBD</span></div>
+                            <div class="speaker-meta">TBD</div>
+                        </div>
+                        <div class="speaker-tbd">
+                            <div class="speaker-avatar-wrap"><span>TBD</span></div>
+                            <div class="speaker-meta">TBD</div>
+                        </div>
+                        <div class="speaker-tbd">
+                            <div class="speaker-avatar-wrap"><span>TBD</span></div>
+                            <div class="speaker-meta">TBD</div>
+                        </div>
+                        <div class="speaker-tbd">
+                            <div class="speaker-avatar-wrap"><span>TBD</span></div>
+                            <div class="speaker-meta">TBD</div>
+                        </div>
+                        <div class="speaker-tbd">
+                            <div class="speaker-avatar-wrap"><span>TBD</span></div>
+                            <div class="speaker-meta">TBD</div>
+                        </div>
+                    </div>
+                </div>
                 
                 <br />
 
@@ -292,76 +500,76 @@
                 </div>
 
                 <br />
-                <h2 class="text-center" style="font-size: 1.8em; margin-top: 20px; margin-bottom: 15px;">Submission Tracks</h2>
-                <div class="container" style="width:100%">
-                <table class="table table-bordered" style="width: 100%">
-                    <thead>
-                        <tr>
-                            <th scope="col" style="text-align: center; vertical-align: middle; width: 20%;">Track</th>
-                            <th scope="col" style="text-align: center; vertical-align: middle; width: 50%;">Description</th>
-                            <th scope="col" style="text-align: center; vertical-align: middle; width: 30%;">Important Dates<br/><small>(Mountain Time, TBD)</small></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row" style="font-weight: 600;">In-proceeding Track</th>
-                            <td>
-                                <ul style="margin-bottom: 0;">
-                                    <li>8 pages (excluding references)</li>
-                                    <li>Included in official CVPR workshop proceedings</li>
-                                    <li>CVPR template required</li>
-                                    <li>Submit via <a href="https://openreview.net/group?id=thecvf.com/CVPR/2026/Workshop/CVEU" target="_blank">CVEU OpenReview Console</a></li>
-                                </ul>
-                            </td>
-                            <td class="dates-column">
-                                <ul style="margin-bottom: 0;">
-                                    <li><strong>Submission Start:</strong> 2026-02-09 00:00</li>
-                                    <li><strong>Abstract Registration:</strong> 2026-03-16 23:59</li>
-                                    <li><strong>Submission:</strong> 2026-03-23 23:59</li>
-                                    <li><strong>Notification:</strong> 2026-04-06</li>
-                                    <li><strong>Camera-ready:</strong> 2026-04-09</li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row" style="font-weight: 600;">Extended Abstract Track</th>
-                            <td>
-                                <ul style="margin-bottom: 0;">
-                                    <li>4 pages (excluding references)</li>
-                                    <li>Not published in CVPR proceedings</li>
-                                    <li>Can be submitted elsewhere</li>
-                                    <li>CVPR template required</li>
-                                    <li>Submit via TBD</li>
-                                </ul>
-                            </td>
-                            <td class="dates-column">
-                                <ul style="margin-bottom: 0;">
-                                    <li><strong>Submission:</strong> 2026-04-22</li>
-                                    <li><strong>Acceptance notification:</strong> TBA</li>
-                                    <li><strong>Camera-ready:</strong> TBA</li>
-                                    <li><strong>Presentation material:</strong> TBA</li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row" style="font-weight: 600;">Invited Submission Track</th>
-                            <td>
-                                <ul style="margin-bottom: 0;">
-                                    <li>For already published papers (e.g., CVPR 2026)</li>
-                                    <li>Must relate to CVEU topics</li>
-                                    <li>Present at workshop</li>
-                                    <li>Submit via form (TBD)</li>
-                                </ul>
-                            </td>
-                            <td class="dates-column">
-                                <ul style="margin-bottom: 0;">
-                                    <li><strong>Submission:</strong> TBD</li>
-                                    <li><strong>Notification:</strong> TBD</li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <h2 class="text-center" style="font-size: 1.8em; margin-top: 28px; margin-bottom: 8px;">Submission Tracks</h2>
+                <p class="text-center" style="font-size: 0.9em; color: rgba(255,255,255,0.75); margin-bottom: 0;">Important dates in Mountain Time where noted.</p>
+                <div class="submission-tracks-wrap">
+                    <table class="table submission-tracks-table" style="width: 100%">
+                        <thead>
+                            <tr>
+                                <th scope="col" style="width: 14%;">Track</th>
+                                <th scope="col" style="width: 52%;">Description</th>
+                                <th scope="col" style="width: 34%;">Important Dates</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">In-proceeding Track</th>
+                                <td>
+                                    <ul class="track-details">
+                                        <li><span class="detail-label">Format</span><span class="detail-value">8 pages (excluding references)</span></li>
+                                        <li><span class="detail-label">Publication</span><span class="detail-value">Included in official CVPR workshop proceedings</span></li>
+                                        <li><span class="detail-label">Template</span><span class="detail-value">CVPR template required</span></li>
+                                        <li><span class="detail-label">Submit</span><span class="detail-value">Via <a href="https://openreview.net/group?id=thecvf.com/CVPR/2026/Workshop/CVEU" target="_blank" style="color: #7dd3fc;">CVEU OpenReview Console</a></span></li>
+                                    </ul>
+                                </td>
+                                <td class="dates-column">
+                                    <ul class="track-details">
+                                        <li><span class="detail-label">Start</span><span class="detail-value">2026-02-09 00:00</span></li>
+                                        <li><span class="detail-label">Abstract</span><span class="detail-value">2026-03-16 23:59</span></li>
+                                        <li><span class="detail-label">Submission</span><span class="detail-value">2026-03-23 23:59</span></li>
+                                        <li><span class="detail-label">Notification</span><span class="detail-value">2026-04-06</span></li>
+                                        <li><span class="detail-label">Camera-ready</span><span class="detail-value">2026-04-09</span></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Extended Abstract Track</th>
+                                <td>
+                                    <ul class="track-details">
+                                        <li><span class="detail-label">Format</span><span class="detail-value">4 pages (excluding references)</span></li>
+                                        <li><span class="detail-label">Publication</span><span class="detail-value">Not in CVPR proceedings; may submit elsewhere</span></li>
+                                        <li><span class="detail-label">Template</span><span class="detail-value">CVPR template required</span></li>
+                                        <li><span class="detail-label">Submit</span><span class="detail-value">Via TBD</span></li>
+                                    </ul>
+                                </td>
+                                <td class="dates-column">
+                                    <ul class="track-details">
+                                        <li><span class="detail-label">Submission</span><span class="detail-value">2026-04-22</span></li>
+                                        <li><span class="detail-label">Acceptance</span><span class="detail-value">TBA</span></li>
+                                        <li><span class="detail-label">Camera-ready</span><span class="detail-value">TBA</span></li>
+                                        <li><span class="detail-label">Presentation</span><span class="detail-value">TBA</span></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Invited Submission Track</th>
+                                <td>
+                                    <ul class="track-details">
+                                        <li><span class="detail-label">Eligibility</span><span class="detail-value">Already published papers (e.g. CVPR 2026)</span></li>
+                                        <li><span class="detail-label">Scope</span><span class="detail-value">Must relate to CVEU topics</span></li>
+                                        <li><span class="detail-label">Opportunity</span><span class="detail-value">Present at workshop</span></li>
+                                        <li><span class="detail-label">Submit</span><span class="detail-value">Via form (TBD)</span></li>
+                                    </ul>
+                                </td>
+                                <td class="dates-column">
+                                    <ul class="track-details">
+                                        <li><span class="detail-label">Submission</span><span class="detail-value">TBD</span></li>
+                                        <li><span class="detail-label">Notification</span><span class="detail-value">TBD</span></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
