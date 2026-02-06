@@ -381,10 +381,38 @@
                         background-color: rgba(255, 255, 255, 0.1);
                         display: inline-block;
                     }
+                    #organizer .organizers-row {
+                        display: flex;
+                        flex-wrap: nowrap;
+                        justify-content: space-between;
+                        margin-left: -5px;
+                        margin-right: -5px;
+                    }
+                    #organizer .organizers-row .organizer-item {
+                        flex: 1 1 0;
+                        min-width: 0;
+                        padding: 0 5px;
+                    }
+                    @media (max-width: 991px) {
+                        #organizer .organizers-row {
+                            flex-wrap: wrap;
+                            justify-content: center;
+                        }
+                        #organizer .organizers-row .organizer-item {
+                            flex: 0 0 33.333%;
+                            max-width: 33.333%;
+                        }
+                    }
+                    @media (max-width: 767px) {
+                        #organizer .organizers-row .organizer-item {
+                            flex: 0 0 50%;
+                            max-width: 50%;
+                        }
+                    }
                     #organizer .person-image {
                         width: 100px;
                         height: 100px;
-                        margin: 0 auto 8px;
+                        margin: 0 auto 5px;
                         overflow: hidden;
                         border-radius: 50%;
                     }
@@ -411,8 +439,8 @@
                         margin: 0px 5px 8px 5px;
                     }
                 </style>
-                <div class="row">
-                    <div class="col-md-2">
+                <div class="row organizers-row">
+                    <div class="organizer-item">
                         <div class="person-image">
                             <img src="/img/avatar/Ozgur_Kara.jpg" class="person-avatar">
                         </div>  
@@ -422,8 +450,7 @@
                             <span class="person-affliation">UIUC</span>
                         </div>
                     </div>
-
-                    <div class="col-md-2">
+                    <div class="organizer-item">
                         <div class="person-image">
                             <img src="/img/avatar/jhkim.png" class="person-avatar">
                         </div>
@@ -433,8 +460,7 @@
                             <span class="person-affliation">UIUC</span>
                         </div>
                     </div>
-
-                    <div class="col-md-2">
+                    <div class="organizer-item">
                         <div class="person-image">
                             <img src="/img/avatar/victor.jpeg" class="person-avatar">
                         </div>
@@ -444,8 +470,7 @@
                             <span class="person-affliation">Independent</span>
                         </div>
                     </div>
-
-                    <div class="col-md-2">
+                    <div class="organizer-item">
                         <div class="person-image">
                             <img src="/img/avatar/DongLiu.jpg" class="person-avatar">
                         </div>
@@ -455,8 +480,7 @@
                             <span class="person-affliation">Adobe</span>
                         </div>
                     </div>
-
-                    <div class="col-md-2">
+                    <div class="organizer-item">
                         <div class="person-image">
                             <img src="/img/avatar/Fabian.png" class="person-avatar">
                         </div>
@@ -466,8 +490,7 @@
                             <span class="person-affliation">Adobe</span>
                         </div>
                     </div>
-
-                    <div class="col-md-2">
+                    <div class="organizer-item">
                         <div class="person-image">
                             <img src="/img/avatar/jaymahajan.jpeg" class="person-avatar">
                         </div>
@@ -477,10 +500,7 @@
                             <span class="person-affliation">UIUC</span>
                         </div>
                     </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-2">
+                    <div class="organizer-item">
                         <div class="person-image">
                             <img src="/img/avatar/jiajumu.png" class="person-avatar">
                         </div>
@@ -490,8 +510,7 @@
                             <span class="person-affliation">Stanford University</span>
                         </div>
                     </div>
-
-                    <div class="col-md-2">
+                    <div class="organizer-item">
                         <div class="person-image">
                             <img src="/img/avatar/Songlin_Yang.jpg" class="person-avatar">
                         </div>
@@ -501,8 +520,7 @@
                             <span class="person-affliation">HKUST</span>
                         </div>
                     </div>
-
-                    <div class="col-md-2">
+                    <div class="organizer-item">
                         <div class="person-image">
                             <img src="/img/avatar/rushikeshzawar.jpeg" class="person-avatar">
                         </div>
