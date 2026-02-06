@@ -23,11 +23,44 @@
     <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/09c88d384d.js" crossorigin="anonymous"></script>
     <style>
+        /* Base font size for consistent typography */
+        body {
+            font-size: 16px;
+        }
+        .content-section {
+            font-size: 16px;
+        }
+        .content-section p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
         .date-text {
-            font-size: 0.85em;
+            font-size: 0.9em;
         }
         .dates-column {
-            font-size: 0.85em;
+            font-size: 0.9em;
+        }
+        /* Compact table styling */
+        .table {
+            font-size: 15px;
+        }
+        .table th, .table td {
+            padding: 10px 12px;
+            vertical-align: top;
+        }
+        .table th {
+            font-weight: 600;
+        }
+        .table ul {
+            margin-bottom: 0;
+            padding-left: 20px;
+        }
+        .table li {
+            margin-bottom: 4px;
+            line-height: 1.4;
+        }
+        .table li:last-child {
+            margin-bottom: 0;
         }
     </style>
 
@@ -84,7 +117,7 @@
                 <div class="col-md-8 col-md-offset-2">
                     </br>
                     </br>
-                    <h1 class="brand-heading" style="font-size: 80px;">CVPR 2026 Workshop</h1>
+                    <h1 class="brand-heading" style="font-size: 60px;">CVPR 2026 Workshop</h1>
                     <h2 class="intro-text">AI for Creative Visual Content Generation Editing and Understanding<br>
                         
                     </h2>
@@ -127,8 +160,8 @@
 <section id="about" class="container content-section text-left">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
-            <h2 class="text-center">About</h2>
-            <p style="text-align: justify">
+            <h2 class="text-center" style="font-size: 1.8em; margin-bottom: 20px;">About</h2>
+            <p style="text-align: justify;">
                 The AI for Creative Visual Content Generation, Editing and Understanding (CVEU) workshop at CVPR 2026 continues the series of events at
                 <a href="https://cveu.github.io/event/cvpr2025.html">CVPR'25</a>,
                 <a href="https://cveu.github.io/event/cvpr2024.html">CVPR'24</a>,
@@ -140,7 +173,7 @@
                 <a href="https://cveu.github.io/event/sa2025.html">SIGGRAPH Asia 2025</a>,
                 and the HKUST AI <a href="https://cveu.github.io/event/hkustfilm2025.html">Film Festival 2025</a>.
             </p>
-            <p style="text-align: justify">
+            <p style="text-align: justify;">
                 It brings together researchers, artists and entrepreneurs working on computer graphics, human–computer interaction,
                 computer vision, machine learning, and cognitive research to explore how AI can assist creative visual content
                 generation, editing and understanding.
@@ -155,17 +188,17 @@
             <div class="col-lg-8 col-lg-offset-2"> 
                 <h2 class="text-center">Tentative Program (CVPR 2026)</h2> 
                 <div class="container" style="width:100%">
-                    <table class="table table-bordered" style="font-size: 1.25em; width: 100%;"> 
+                    <table class="table table-bordered" style="width: 100%;"> 
                         <colgroup>                             
                             <col style="width: 72%;">
                             <col style="width: 28%;">
                         </colgroup> 
                         <thead>
                             <tr>
-                                <th scope="col" style="text-align:center; vertical-align:middle; padding:18px;">
+                                <th scope="col" style="text-align:center; vertical-align:middle; padding:12px;">
                                     Schedule
                                 </th>
-                                <th scope="col" style="text-align:center; vertical-align:middle; padding:18px;">
+                                <th scope="col" style="text-align:center; vertical-align:middle; padding:12px;">
                                     Mountain Time (MT)<br/>June 3 or 4, 2026 (TBD)
                                 </th>
                             </tr>
@@ -217,11 +250,10 @@
                 </div>  
                 
                 
-                </br>
-                </br>
+                <br />
 
-                <h2 id="cfp" class="text-center">Call for Papers</h2>
-                <p style="text-align: justify">
+                <h2 id="cfp" class="text-center" style="font-size: 1.8em; margin-top: 25px; margin-bottom: 15px;">Call for Papers</h2>
+                <p style="text-align: justify;">
                     The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026<br />
                     This workshop is for the next installment of the AI for Creative Visual Content Generation Editing and Understanding (CVEU). 
                     It brings together researchers working on computer vision, machine listening, computer graphics, human-computer interaction, 
@@ -232,8 +264,8 @@
                     or concurrently published research.
                 </p>
 
-                <div style="display: flex; flex-wrap: wrap; gap: 2rem;">
-                    <ul style="flex: 1 1 300px; list-style: disc;">
+                <div style="display: flex; flex-wrap: wrap; gap: 1.5rem;">
+                    <ul style="flex: 1 1 300px; list-style: disc; line-height: 1.5;">
                         <li>Video GenAI</li>
                         <li>Video storyboarding</li>
                         <li>GenAI for visual productions</li>
@@ -245,7 +277,7 @@
                         <li>Computational Videography/Virtual Cinematography</li>
                         <li>Video Shortening and Manipulation</li>
                     </ul>
-                    <ul style="flex: 1 1 300px; list-style: disc;">
+                    <ul style="flex: 1 1 300px; list-style: disc; line-height: 1.5;">
                         <li>Video Description and Storyboarding</li>
                         <li>Video Search and Retrieval</li>
                         <li>Human-centric Video Understanding</li>
@@ -260,73 +292,70 @@
                 </div>
 
                 <br />
-                <br />
-                <h2 class="text-center">Submission Tracks</h2>
+                <h2 class="text-center" style="font-size: 1.8em; margin-top: 20px; margin-bottom: 15px;">Submission Tracks</h2>
                 <div class="container" style="width:100%">
-                <table class="table table-bordered" style="font-size: 1.25em; width: 100%">
+                <table class="table table-bordered" style="width: 100%">
                     <thead>
                         <tr>
-                            <th scope="col" style="text-align: center; vertical-align: middle;">Track</th>
-                            <th scope="col" style="text-align: center; vertical-align: middle;">Description</th>
-                            <th scope="col" style="text-align: center; vertical-align: middle;">Important Dates (Mountain Time, TBD)</th>
+                            <th scope="col" style="text-align: center; vertical-align: middle; width: 20%;">Track</th>
+                            <th scope="col" style="text-align: center; vertical-align: middle; width: 50%;">Description</th>
+                            <th scope="col" style="text-align: center; vertical-align: middle; width: 30%;">Important Dates<br/><small>(Mountain Time, TBD)</small></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row">In-proceeding Track</th>
+                            <th scope="row" style="font-weight: 600;">In-proceeding Track</th>
                             <td>
-                                <ul>
+                                <ul style="margin-bottom: 0;">
                                     <li>8 pages (excluding references)</li>
-                                    <li>Will be included in official CVPR workshop proceedings</li>
-                                    <li>Must use CVPR template</li>
-                                    <li>No rebuttal or second review cycle</li>
+                                    <li>Included in official CVPR workshop proceedings</li>
+                                    <li>CVPR template required</li>
                                     <li>Submit via <a href="https://openreview.net/group?id=thecvf.com/CVPR/2026/Workshop/CVEU" target="_blank">CVEU OpenReview Console</a></li>
                                 </ul>
                             </td>
                             <td class="dates-column">
-                                <ul>
-                                    <li><strong>Abstract Registration Deadline:</strong> TBD</li>
-                                    <li><strong>Paper Submission Deadline:</strong> TBD</li>
-                                    <li><strong>Acceptance Notification:</strong> TBD</li>
-                                    <li><strong>Camera-ready Deadline:</strong> TBD</li>
+                                <ul style="margin-bottom: 0;">
+                                    <li><strong>Abstract Registration:</strong> TBD</li>
+                                    <li><strong>Submission:</strong> TBD</li>
+                                    <li><strong>Notification:</strong> TBD</li>
+                                    <li><strong>Camera-ready:</strong> TBD</li>
                                 </ul>
                             </td>
                         </tr>
                         <tr>
-                            <th scope="row">Extended Abstract Track</th>
+                            <th scope="row" style="font-weight: 600;">Extended Abstract Track</th>
                             <td>
-                                <ul>
-                                    <li>4 pages (including figures and tables, excluding references)</li>
-                                    <li>Will not be published in official CVPR proceedings</li>
-                                    <li>Can be submitted to other venues</li>
-                                    <li>Must use CVPR template</li>
-                                    <li>No rebuttal or second review cycle</li>
+                                <ul style="margin-bottom: 0;">
+                                    <li>4 pages (excluding references)</li>
+                                    <li>Not published in CVPR proceedings</li>
+                                    <li>Can be submitted elsewhere</li>
+                                    <li>CVPR template required</li>
                                     <li>Submit via TBD</li>
                                 </ul>
                             </td>
                             <td class="dates-column">
-                                <ul>
-                                    <li><strong>Abstract Registration Deadline:</strong> TBD</li>
-                                    <li><strong>Submission Deadline:</strong> TBD</li>
-                                    <li><strong>Acceptance Notification:</strong> TBD</li>
-                                    <li><strong>Camera-ready Deadline:</strong> TBD</li>
+                                <ul style="margin-bottom: 0;">
+                                    <li><strong>Abstract Registration:</strong> TBD</li>
+                                    <li><strong>Submission:</strong> TBD</li>
+                                    <li><strong>Notification:</strong> TBD</li>
+                                    <li><strong>Camera-ready:</strong> TBD</li>
                                 </ul>
                             </td>
                         </tr>
                         <tr>
-                            <th scope="row">Invited Submission Track</th>
+                            <th scope="row" style="font-weight: 600;">Invited Submission Track</th>
                             <td>
-                                <ul>
-                                    <li>For already published papers (e.g., accepted by CVPR 2026)</li>
-                                    <li>Must be related to CVEU workshop topics</li>
-                                    <li>Opportunity to present at workshop</li>
-                                    <li>Submit via the CVEU invited submission form (TBD)</li>
+                                <ul style="margin-bottom: 0;">
+                                    <li>For already published papers (e.g., CVPR 2026)</li>
+                                    <li>Must relate to CVEU topics</li>
+                                    <li>Present at workshop</li>
+                                    <li>Submit via form (TBD)</li>
                                 </ul>
                             </td>
                             <td class="dates-column">
-                                <ul>
-                                    <li><strong>Submission Deadline:</strong> TBD</li>
-                                    <li><strong>Acceptance Notification:</strong> TBD</li>
+                                <ul style="margin-bottom: 0;">
+                                    <li><strong>Submission:</strong> TBD</li>
+                                    <li><strong>Notification:</strong> TBD</li>
                                 </ul>
                             </td>
                         </tr>
@@ -353,9 +382,9 @@
                         display: inline-block;
                     }
                     #organizer .person-image {
-                        width: 150px;
-                        height: 150px;
-                        margin: 0 auto 10px;
+                        width: 120px;
+                        height: 120px;
+                        margin: 0 auto 8px;
                         overflow: hidden;
                         border-radius: 50%;
                     }
@@ -365,6 +394,21 @@
                         object-fit: cover;
                         border-radius: 50%;
                         display: block;
+                    }
+                    #organizer .person-meta {
+                        text-align: center;
+                        margin-bottom: 8px;
+                        font-size: 15px;
+                    }
+                    #organizer .person-name {
+                        font-size: 15px;
+                    }
+                    #organizer .person-affliation {
+                        font-size: 14px;
+                    }
+                    #organizer .logo-box {
+                        padding: 8px;
+                        margin: 0px 5px 8px 5px;
                     }
                 </style>
                 <div class="row">
@@ -470,7 +514,7 @@
                     </div>
                 </div>
 
-                <h2 id="advisory committee" class="text-center">Advisory Committee</h2>
+                <h2 id="advisory committee" class="text-center" style="font-size: 1.8em; margin-top: 30px; margin-bottom: 20px;">Advisory Committee</h2>
                 <div class="row">
                     <div class="col-md-2">
                         <div class="person-image">
@@ -517,18 +561,12 @@
                     </div>
                 </div>
 
-                <h2 class="text-center">Participants from</h2>
+                <h2 class="text-center" style="font-size: 1.8em; margin-top: 30px; margin-bottom: 15px;">Participants from</h2>
                 <div class="row" style="margin-left: 10px;">
-                    <img class="logo-box" src="https://cveu.github.io/img/org/adobe.png" width="auto" height="100px">
-                    <img class="logo-box" src="https://cveu.github.io/img/org/stanford.png" width="auto" height="100px">
-                    <img class="logo-box" src="https://cveu.github.io/img/org/huggingface.png" width="auto" height="100px">
-                    <img class="logo-box" src="https://cveu.github.io/img/org/cmu.png" width="auto" height="100px">
-                    <img class="logo-box" src="https://cveu.github.io/img/org/tau.png" width="auto" height="100px">
-                    <img class="logo-box" src="https://cveu.github.io/img/org/netflix.png" width="auto" height="100px">
-                    <img class="logo-box" src="https://cveu.github.io/img/org/hkust.png" width="auto" height="100px">
-                    <img class="logo-box" src="https://cveu.github.io/img/org/uiuc.png" width="auto" height="100px">
-                    <img class="logo-box" src="https://cveu.github.io/img/org/ucl.png" width="auto" height="100px">
-                    <img class="logo-box" src="https://cveu.github.io/img/org/snap.png" width="auto" height="100px">
+                    <img class="logo-box" src="https://cveu.github.io/img/org/uiuc.png" width="auto" height="80px">
+                    <img class="logo-box" src="https://cveu.github.io/img/org/adobe.png" width="auto" height="80px">
+                    <img class="logo-box" src="https://cveu.github.io/img/org/hkust.png" width="auto" height="80px">
+                    <img class="logo-box" src="https://cveu.github.io/img/org/stanford.png" width="auto" height="80px">
                 </div>
 
                 </div>
