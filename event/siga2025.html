@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CVEU Workshop</title>
+    <meta nPMe="viewport" content="width=device-width">
+    <meta nPMe="description" content="Siggraph 2025 Workshop on AI for Creative Visual Content Generation Editing and Understanding.">
+    <link rel="canonical" href="https://cveu.github.io/">
+
+    <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link rel="stylesheet" href="https://cveu.github.io/style.css">
+
+    <!-- <link rel="stylesheet" href="/style.css"> -->
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="https://cveu.github.io/css/font-awesome/css/all.min.css">
+
+    <!-- <link rel="stylesheet" href="/css/font-awesome/css/all.min.css"> -->
+
+    <link rel="icon" type="image/x-icon" href="/img/cveu.ico">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/09c88d384d.js" crossorigin="anonymous"></script>
+    <style>
+        .date-text {
+            font-size: 0.85em;
+        }
+        .dates-column {
+            font-size: 0.85em;
+        }
+    </style>
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <!-- Navigation -->
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand page-scroll" href="#page-top">
+                <i class="fa fa-play-circle"></i> <span class="light">CVEU@SIGGRAPH Asia 2025</span>
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+            <ul class="nav navbar-nav">
+                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#about">About</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#program">Program</a>
+                </li>
+                <!-- <li>
+                    <a class="page-scroll" href="#sponsorship">Sponsorship</a>
+                </li> -->
+                <li>
+                    <a class="page-scroll" href="#organizer">Organizers</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#advisory committee">Advisory Committee</a>
+                </li>
+
+                <li>
+                    <a class="page-scroll" href="#contact">Contact</a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapses--> 
+    </div>
+    <!-- /.container -->
+</nav>
+    <!-- Intro Header -->
+<header class="intro" style="background: url(/img/bg-hongkong.jpg) no-repeat bottom center scroll; background-size: cover; -o-background-size: cover;">
+<!-- <header class="intro" style="background: url(/img/bg-hongkong.jpg) no-repeat bottom center scroll; background-size: cover; -o-background-size: cover;"> -->
+
+    <div class="intro-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    </br>
+                    </br>
+                    <h1 class="brand-heading" style="font-size: 80px;">SIGGRAPH Asia 25 Course and Workshop</h1>
+                    <h2 class="intro-text">AI for Visual Content Generation Editing and Understanding<br>
+                        
+                    </h2>
+                    <div class="countdown" id="countdown" data-role="countdown" data-blink="false"
+                        data-stoptimer="2025-12-16T09:00:00" style="font-size: 20px"></div>
+
+                        <p style="margin-bottom: 0;"><span style="color: rgb(168, 241, 255);"><b>December 16-18, 2025</b></span></p>
+
+                        <p style="margin-bottom: 0;">
+                            <span style="color: rgb(144, 238, 144);">
+                                <b>
+                                    <a href="https://cveu.github.io/event/hkustfilm2026.html" style="color: inherit; text-decoration: underline;">2nd HKUST AI Film Festival : 2026-05-16 — 2026-05-17</a> (HKT)
+                                </b>
+                            </span>
+                        </p>
+                       
+                        
+                        <p style="margin-bottom: 0;">
+                            <span style="color: rgb(255, 248, 168);">
+                                <b>
+                                    <a href="https://sa2025.conference-schedule.org/presentation/?id=bof_128&sess=sess294" style="color: inherit; text-decoration: underline;">Art Tech BoF Workshop : 2025-12-16 5:00pm – 6:00pm</a> (HKT)
+                                </b>
+                            </span>
+                        </p>
+                         <p style="margin-bottom: 0;">
+                            <span style="color: rgb(255, 248, 168);">
+                                <b>
+                                    <a href="https://sa2025.conference-schedule.org/presentation/?id=crs_111&sess=sess237" style="color: inherit; text-decoration: underline;">AICG Course : 2025-12-18 1:00pm – 4:45pm</a> (HKT)
+                                </b>
+                            </span>
+                        </p>
+                        <p style="margin-bottom: 0;">
+                            <span style="color: rgb(255, 248, 168);">
+                                <b>
+                                    <a href="https://sa2025.conference-schedule.org/presentation/?id=bof_111&sess=sess302" style="color: inherit; text-decoration: underline;">AIGC BoF Workshop : 2025-12-18 1:00pm – 2:00pm</a> (HKT)
+                                </b>
+                            </span>
+                        </p>
+                        <p style="margin-top: 0; margin-bottom: 0;">
+                            <!-- <i>Hong Kong, China <span style="color: rgb(242, 255, 168);"><b>( xxx room)</b></span></i><br/> -->
+                             <i>Hong Kong, China</i><br/>
+                            <!-- <a href="https://cveu.github.io/" target="_blank"
+                            class="hl-green">Link</a>
+                            | 
+                            <a href="https://github.com/CVEU/2025/raw/main/papers/SIGASIA25CVEU_Course.pdf" target="_blank" class="hl-green">Slides</a> -->
+                            <!-- <i>Course : 2025-12-16 2:00pm – 5:45pm (HKT)</i><br/>
+                            <i>BoF Workshop 1 : 2025-12-16 5:00pm – 6:00pm (HKT)</i><br/>
+                            <i>BoF Workshop 2 : 2025-12-18 1:00pm – 2:00pm (HKT)</i><br/> -->
+                            <!-- Generative Models for Visual Content Editing and Creation -->
+
+                        <br>
+                        
+                        <!-- <p style="margin-top: 0; margin-bottom: 0;">
+                        Workshop Recording: 
+                        <a href="https://youtu.be/KVmXVYiQM0Q?si=XHy-jRsolj_QvTJf" target="_blank"
+                            class="hl-green">xxxxxxxxxxxxxxxx</a>
+                        </p> -->
+                        <br>
+                    <a href="#about" class="btn btn-circle page-scroll">
+                        <i class="fa fa-angle-double-down animated"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+    <!-- About Section -->
+<section id="about" class="container content-section text-left">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h2 class="text-center">About</h2>
+            <p style="text-align: justify">The AI for Creative Visual Content Generation, Editing and Understanding (CVEU) returns for its 8th edition with 
+                <span style="color: rgb(246, 255, 168);">three sessions: a course, an AIGC focused BoF and an Art Tech focused BoF</span> 
+                that together explore the evolving dialogue between machine intelligence and human creativity.
+                Evolving from its successful editions at
+                <a href="https://cveu.github.io/event/sig2025.html">SIGGRAPH'25</a>,
+                <a href="https://cveu.github.io/event/cvpr2025.html">CVPR'25</a>,
+                <a href="https://cveu.github.io/event/cvpr2024.html">CVPR'24</a>,
+                <a href="https://cveu.github.io/event/iccv2023.html">ICCV'23</a>, 
+                <a href="https://cveu.github.io/event/eccv2022.html">ECCV'22</a>, <a href="https://cveu.github.io/event/iccv2021.html">ICCV'21</a>, 
+                a Generative Models Course at <a href="https://cveu.github.io/event/sig2024.html">SIGGRAPH'24</a>,
+                2023 Paris ShortFest AI <a href="https://filmfreeway.com/AIShortFest">Film Festival</a>,
+                and 2025 Hong Kong HKUST AI <a href="https://cveu.github.io/event/hkustfilm2025.html">Film Festival</a>. CVEU has become a platform where art, research, and technology meet.
+            </p>
+            
+
+            <p style="text-align: justify">
+                With over <span style="color: rgb(246, 255, 168);">3,000 participants worldwide</span>, CVEU continues to foster a vibrant global community of artists,
+                 researchers, curators, and technologists. 
+                <span style="color: rgb(246, 255, 168);">The Course "Generative Models for Visual Content Editing and Creation"</span>
+                uses an "Explain, Show and Do" approach to 
+                help creators and developers master AI tools for storyboarding and pre-visualization while maintaining creative control.
+
+            <p style="text-align: justify">The <span style="color: rgb(246, 255, 168);">AIGC Birds of a Feather</span> and <span style="color: rgb(246, 255, 168);">Art Tech Birds of a Feather</span> investigate how machines 
+                signal intent and legibility, how authorship and agency are co-negotiated in human–machine creation, 
+                and how ethics and audience care inform <b>the curation and presentation of AI-driven art</b></span>.
+            
+            <p style="text-align: justify">
+            
+        </div>
+    </div>
+</section>
+<section id="program" class="content-section text-left"> 
+    <div class="download-section"> 
+        <div class="container"> 
+            <div class="col-lg-8 col-lg-offset-2"> 
+                <h2 class="text-center">Course & BoF Workshop Program</h2> 
+                <div class="container" style="width:100%">
+                    <table class="table table-bordered" style="font-size: 1.25em; width: 100%;"> 
+                        <colgroup>                             
+                            <col style="width: 72%;">
+                            <col style="width: 28%;">
+                        </colgroup> 
+                        <thead>
+                            <!-- <tr style="background-color:#070707; color:#fff;">
+                                <th scope="col" style="text-align:center; vertical-align:middle; padding:18px;">
+                                    Course Program
+                                </th>
+                                <th scope="col" style="text-align:center; vertical-align:middle; padding:18px;">
+                                    📌 Date: 16 December 2025<br>
+                                    📌 Time: 2:00pm – 5:45pm (GMT+8)
+                                </th>
+                            </tr> -->
+                        </thead>
+                        <tbody> 
+
+                            <!-- <tr style="background-color: #070707;"> 
+                                <th scope="col" style="text-align: center; vertical-align: middle;">
+                                    <b>Course Program</b>
+                                </th>
+                                <th scope="col" style="text-align: center; vertical-align: middle;">
+                                    <b>Hong Kong Time</b><br>2025-12-16<br><b>Meeting Room S425, Level 4</b>
+                                </th>
+                            </tr> 
+                            <tr> 
+                                <td> 
+                                    <b>Unit 1: <span class="hl-green">Diffusion & Multimodal Foundations</span></b> 
+                                    <br> • Latent diffusion, cross-attention, LoRA/ControlNet, image-text alignment 
+                                    <br> • Rapid Colab demo 
+                                </td>
+                                <td style="text-align:center; vertical-align:middle;"> 
+                                    2:00pm – 2:45pm
+                                </td>
+                            </tr> 
+                            <tr> 
+                                <td> 
+                                    <b>Unit 2A: <span class="hl-green">Prompt Craft & Style Control</span></b> 
+                                    <br> • Prompt taxonomy (subject, camera, lighting, mood), negative prompts, classifier-free guidance 
+                                    <br> • Hands-on: multiple distinct shot styles 
+                                </td>
+                                <td style="text-align:center; vertical-align:middle;"> 
+                                    2:45pm – 3:30pm
+                                </td> 
+                            </tr> 
+                            <tr> 
+                                <td> 
+                                    <b>Unit 2B: <span class="hl-green">Mixed-Initiative Tool-Chains & Lab</span></b> 
+                                    <br> • Group task: build a six-shot sequence from a log-line 
+                                    <br> • Export contact sheet 
+                                </td>
+                                <td style="text-align:center; vertical-align:middle;"> 
+                                    3:30pm – 4:15pm
+                                </td> 
+                            </tr> 
+                            <tr> 
+                                <td> 
+                                    <b>Unit 3A: <span class="hl-green">The Aesthetics of Noise in Generative AI</span></b> 
+                                    <br> • Metastability, indexicality, multiplanarity; temporality in predictive generation 
+                                    <br> • Illustrated talk with case study 
+                                </td>
+                                <td style="text-align:center; vertical-align:middle;"> 
+                                    4:15pm – 5:00pm
+                                </td> 
+                            </tr> 
+                            <tr> 
+                                <td> 
+                                    <b>Unit 3B: <span class="hl-green">VR Storytelling & AI Collaboration</span></b> 
+                                    <br> • Cinematic VR virtual reality education, production workflow, emerging AI tools 
+                                    <br> • Comparative case discussion 
+                                </td>
+                                <td style="text-align:center; vertical-align:middle;"> 
+                                    5:00pm – 5:45pm
+                                </td> 
+                            </tr>  -->
+                            <tr style="background-color: #050505;"> 
+                                <th scope="col" style="text-align: center; vertical-align: middle;">
+                                    <b>BoF Workshop Program</b><br>
+                                    <b>Myth, Motion, and Machine Intent in Artistic Co-Creation</b>
+                                </th>
+                                <th scope="col" style="text-align: center; vertical-align: middle;">
+                                    <b>Hong Kong Time</b><br>2025-12-16<br><b>Meeting Room S222, Level 2</b>
+                                </th>
+                            </tr> 
+                            <tr> 
+                                <td> 
+                                    <b>Session: <span class="hl-green">Artistic Co-Creation & Machine Intent</span></b>
+                                    <br> • Art-led perspectives on how machines express intent and legibility  
+                                    <br> • Negotiating agency and authorship in human–machine co-creation  
+                                    <br> • Ethical considerations and audience care in exhibition making  
+                                    <br> • Curatorial strategies, commissioning models, and supportive infrastructures  
+                                </td>
+                                <td style="text-align:center; vertical-align:middle;"> 
+                                    5:00pm – 6:00pm
+                                </td>  
+                            </tr>
+                            <tr style="background-color: #070707;"> 
+                                <th scope="col" style="text-align: center; vertical-align: middle;">
+                                    <b>Course Program & BoF Workshop</b><br>
+                                    <b>Generative AI for Visual Content Editing and Creation</b>
+                                </th>
+                                <th scope="col" style="text-align: center; vertical-align: middle;">
+                                    <b>Hong Kong Time</b><br>2025-12-18<br><b>Meeting Room S425, Level 4</b>
+                                </th>
+                            </tr> 
+                            <tr> 
+                                <td> 
+                                    <b><span class="hl-green">Opening</span></b>
+                                    <br> • Prof. Anyi RAO &amp; Prof. Xian XU
+                                </td>
+                                <td style="text-align:center; vertical-align:middle;"> 
+                                    1:00pm – 1:10pm
+                                </td>
+                            </tr> 
+                            <tr> 
+                                <td> 
+                                    <b>Unit 1: <span class="hl-green">AI Generative Models &amp; Foundations</span></b> 
+                                    <br> • AI generative models and foundational concepts
+                                    <br> • Speaker: Zheng WEI (introduced by Prof. Anyi RAO)
+                                </td>
+                                <td style="text-align:center; vertical-align:middle;"> 
+                                    1:10pm – 1:25pm
+                                </td>
+                            </tr> 
+                            <tr> 
+                                <td> 
+                                    <b>Unit 1A: <span class="hl-green">Agentic AI &amp; HCI Systems</span></b> 
+                                    <br> • Building HCI systems and Agentic AI systems based on AI models
+                                    <br> • Speaker: Zheng WEI
+                                </td>
+                                <td style="text-align:center; vertical-align:middle;"> 
+                                    1:25pm – 1:40pm
+                                </td> 
+                            </tr> 
+                            <tr> 
+                                <td> 
+                                    <b>Unit 1B: <span class="hl-green">AI Series/Film Production &amp; Festivals</span></b> 
+                                    <br> • AI-based production for AI series/films
+                                    <br> • Related AI film festivals
+                                    <br> • Speakers: Tianyi ZHANG &amp; Shiqin HOU
+                                </td>
+                                <td style="text-align:center; vertical-align:middle;"> 
+                                    1:40pm – 2:00pm
+                                </td> 
+                            </tr> 
+                            <tr> 
+                                <td> 
+                                    <b>Unit 1C: <span class="hl-green">Guest Sharing</span></b>
+                                    <br> Prof. Emilie Yueh Yu YEH (Dean of the Faculty of Arts, Lingnan University) 
+                                    <br> Prof. Jiajian Min (MIT Film Chair)
+                                    <br> HOST Prof. Anyi RAO & Prof. Xian XU
+                                </td>
+                                <td style="text-align:center; vertical-align:middle;"> 
+                                    2:00pm – 2:30pm
+                                </td> 
+                            </tr>
+                            <tr> 
+                                <td> 
+                                    <b><span class="hl-green">Tea Break</span></b>
+                                </td>
+                                <td style="text-align:center; vertical-align:middle;"> 
+                                    2:30pm – 3:00pm
+                                </td> 
+                            </tr> 
+                            <tr> 
+                                <td> 
+                                    <b>Unit 2: <span class="hl-green">VR Education Systems</span></b> 
+                                    <br> • Virtual reality education systems for film and arts education
+                                    <br> • Speaker: Prof. Xian XU
+                                </td>
+                                <td style="text-align:center; vertical-align:middle;"> 
+                                    3:00pm – 3:20pm
+                                </td> 
+                            </tr> 
+                            <tr> 
+                                <td> 
+                                    <b>Unit 2A: <span class="hl-green">AI Tools in VR &amp; Case Study</span></b> 
+                                    <br> • Application of AI Tools in VR, combined with case analysis
+                                    <br> • Speaker: Yuqing LIU
+                                </td>
+                                <td style="text-align:center; vertical-align:middle;"> 
+                                    3:20pm – 3:40pm
+                                </td> 
+                            </tr> 
+                            <tr> 
+                                <td> 
+                                    <b>Unit 2B: <span class="hl-green">Aesthetics of Noise in Generative AI</span></b> 
+                                    <br> • The aesthetics of noise in generative AI, using an artist's example
+                                    <br> • Speaker: Grace HAN (Zoom)
+                                </td>
+                                <td style="text-align:center; vertical-align:middle;"> 
+                                    3:40pm – 4:00pm
+                                </td> 
+                            </tr>
+                            
+                            <!-- <tr> 
+                                <td> 
+                                    <b>Session 3: <span class="hl-green">Research & Practice</span></b> 
+                                    <br> • Highlights of emerging research and creative applications 
+                                    <br> • Case studies on generation, editing, and understanding 
+                                </td>
+                                <td style="text-align:center; vertical-align:middle;"> 
+                                    ---
+                                </td>  
+                            </tr>  -->
+                            
+                            <!-- <tr> 
+                                <td> 
+                                    <b>Session 5: <span class="hl-green">Panel & Closing Remarks</span></b> 
+                                    <br> • Summary of key takeaways and reflections 
+                                    <br> • Closing words and community outlook 
+                                </td>
+                                <td style="text-align:center; vertical-align:middle;"> 
+                                    ---
+                                </td>  
+                            </tr>  -->
+                        </tbody> 
+                    </table>
+                </div>  
+                
+                
+                <!-- <div class="container" style="width:100%">
+                    <table class="table table-bordered" style="font-size: 1.25em; width: 90%;">
+                        <colgroup>
+                            <col style="width: 75%;">
+                            <col style="width: 25%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col" style="text-align: center; vertical-align: middle;">Schedule</th>
+                                <th scope="col" style="text-align: center; vertical-align: middle;">Vancouver Time<br />2025-08-14</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><b>Warm-up Session</b></td>
+                            <td>8:50 AM - 9:00 AM</td>
+                        </tr>
+                        <tr>
+                            <td><b>Workshop Opening Remarks</b></td>
+                            <td>9:00 AM - 9:05 AM</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Session I - <span class="hl-green">From Text to Image and Beyond: Mastering AI Tools for Visual Creation</span></b>
+                                <br>&nbsp;&nbsp;&nbsp;• Keynote I - Mira Dontcheva (9:05 AM – 9:25 AM)
+                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #ff9ff3; font-weight: bold;">Building AI-Driven Tools for the Creative Process of Video Editing</span>
+                                <br>&nbsp;&nbsp;&nbsp;• Keynote II - Maneesh Agrawala (9:25 AM – 9:45 AM)
+                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #ff9ff3; font-weight: bold;">Making is Decision Making</span>
+                                <br>&nbsp;&nbsp;&nbsp;• Keynote III - Apolinário Passos (9:45 AM – 10:05 AM)
+                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #ff9ff3; font-weight: bold;">Generative AI as a medium of expression: beyond AI as a tool</span>
+                                <br>&nbsp;&nbsp;&nbsp;• Roundtable Discussion (10:05 AM – 10:30 AM)
+                            </td>
+                            <td>9:05 AM - 10:30 AM</td>
+                        </tr>
+                        <tr>
+                            <td><b> Coffee Break</b></td>
+                            <td>10:30 AM - 10:45 AM</td>
+                        </tr>
+                        <!-- <tr>
+                            <td><b><a href="https://www.linkedin.com/in/yunfei-zhao-234530266/" target="_blank" rel="noopener noreferrer">Abaka AI</a> - Frontiers of Generative AI and Datasets <br> Yunfei Zhao</b></td>
+                            <td>3:10 PM - 3:20 PM</td>
+                        </tr>
+                        <tr>
+                            <td><b>Poster Presentations</b></td>
+                            <td>3:00 PM - 3:45 PM</td>
+                        </tr> -->
+                        <!-- <tr>
+                            <td>
+                                <b>Session II - <span class="hl-green">Refine & Reveal: AI-Powered Creation and Editing Visual Content</span></b>
+                                <br>&nbsp;&nbsp;&nbsp;• Keynote I - Niloy J. Mitra (10:45 AM – 11:05 AM)
+                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #ff9ff3; font-weight: bold;">Towards Iterative and Predictable Workflows for Creative Authoring</span>
+                                <br>&nbsp;&nbsp;&nbsp;• Keynote II - Kuan-Chieh (Jackson) Wang (11:05 AM – 11:25 AM)
+                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #ff9ff3; font-weight: bold;">Connecting Through Generation: Identity, Relationships, and Diffusion Models</span>
+                                <br>&nbsp;&nbsp;&nbsp;• Keynote III - Huamin Qu (11:25 AM – 11:45 AM)
+                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #ff9ff3; font-weight: bold;">Human-AI Collaboration for Storytelling</span>
+                                <br>&nbsp;&nbsp;&nbsp;• Roundtable Discussion (11:45 AM – 12:10 AM)
+                            </td>
+                            <td>10:45 AM - 12:10 PM</td>
+                        </tr>
+                        <tr>
+                            <td><b>Closing Remarks</b></td>
+                            <td>12:10 PM - 12:15 PM</td>
+                        </tr>
+                    </tbody>
+                    </table>
+
+                </div> --> 
+                </br>
+                </br>
+                <h2 class="text-center">Participants from</h2>
+                <div class="row" style="margin-left: 10px;">
+                    <img class="logo-box" src="https://cveu.github.io/img/org/adobe.png" width="auto" height="100px">
+                    <img class="logo-box" src="https://cveu.github.io/img/org/stanford.png" width="auto" height="100px">
+                    <img class="logo-box" src="https://cveu.github.io/img/org/huggingface.png" width="auto" height="100px">
+                    <img class="logo-box" src="https://cveu.github.io/img/org/cmu.png" width="auto" height="100px">
+                    <img class="logo-box" src="https://cveu.github.io/img/org/tau.png" width="auto" height="100px">
+                    <img class="logo-box" src="https://cveu.github.io/img/org/netflix.png" width="auto" height="100px">
+                    <img class="logo-box" src="https://cveu.github.io/img/org/hkust.png" width="auto" height="100px">
+                    <img class="logo-box" src="https://cveu.github.io/img/org/uiuc.png" width="auto" height="100px">
+                    <img class="logo-box" src="https://cveu.github.io/img/org/ucl.png" width="auto" height="100px">
+                    <img class="logo-box" src="https://cveu.github.io/img/org/snap.png" width="auto" height="100px">
+                </div>
+                </br>
+                </br>
+                </br>
+                </br>
+                </br>
+                
+                <h2 id="organizer" class="text-center">Organizers</h2>
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/speakers/Zheng_wei.jpg" class="person-avatar" width="80%" height="80%">
+                        </div>  
+                        <div class="person-meta">
+                            <span class="person-name"><a href="https://www.zhengwei302.com/" target="_blank">Zheng Wei</a></span>
+                            <br />
+                            <span class="person-affliation">HKUST</span>
+                        </div>
+                    </div>
+               
+                    <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/speakers/yuqing_liu.jpg" class="person-avatar" width="80%" height="80%">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-name"><a href="https://liuyuqing19990831.github.io/" target="_blank">Yuqing Liu</a></span>
+                            <br />
+                            <span class="person-affliation">HKU</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/speakers/Grace_Han.jpg" class="person-avatar" width="80%" height="80%">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-name"><a href="https://art.stanford.edu/people/grace-han" target="_blank">Grace Han</a></span>
+                            <br />
+                            <span class="person-affliation">Stanford University</span>
+                        </div>
+                    </div>
+                     
+                      <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/avatar/Tony_zhang.jpg" class="person-avatar" width="80%" height="80%">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-name"><a href="https://www.zhangtianyi.page/" target="_blank">Tony Zhang</a></span>
+                            <br />
+                            <span class="person-affliation">HKUST</span>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/avatar/shiqin-hou.jpg" class="person-avatar" width="80%" height="80%">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-name"><a href="https://cveu.github.io/" target="_blank">Shiqin Hou</a></span>
+                            <br />
+                            <span class="person-affliation">HKUST</span>
+                        </div>
+                      </div>
+                    <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/avatar/Zhuli_Pan.jpg" class="person-avatar" width="80%" height="80%">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-name"><a href="https://cveu.github.io/" target="_blank">Zhuli Pan</a></span>
+                            <br />
+                            <span class="person-affliation">HKUST</span>
+                        </div>
+                      </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/avatar/houyuan-chen.jpg" class="person-avatar" width="80%" height="80%">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-name"><a href="https://github.com/houyuanchen111/" target="_blank">Houyuan Chen</a></span>
+                            <br />
+                            <span class="person-affliation">NJU</span>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/avatar/xuyi_yang.jpg" class="person-avatar" width="80%" height="80%">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-name"><a href="https://cveu.github.io/" target="_blank">Xuyi Yang</a></span>
+                            <br />
+                            <span class="person-affliation">WHU</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/avatar/baoyang-chen.jpg" class="person-avatar" width="80%" height="80%">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-name"><a href="https://baoyangchen.com/" target="_blank">Baoyang Chen</a></span>
+                            <br />
+                            <span class="person-affliation">HKUST</span>
+                        </div>
+                    </div>
+                                        <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/avatar/Harry_Yang.jpg" class="person-avatar" width="80%" height="80%">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-name"><a href="https://hyang.org/" target="_blank">Harry Yang</a></span>
+                            <br />
+                            <span class="person-affliation">HKUST</span>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/speakers/xian_xu.jpg" class="person-avatar" width="80%" height="80%">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-name"><a href="https://xxuxian.github.io/" target="_blank">Xian Xu</a></span>
+                            <br />
+                            <span class="person-affliation">Lingnan University</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                            <div class="person-image">
+                                <img src="/img/speakers/anyi_rao.jpg" class="person-avatar" width="80%" height="80%">
+                            </div>
+                            <div class="person-meta">
+                                <span class="person-name"><a href="https://anyirao.com/" target="_blank">Anyi Rao</a></span>
+                                <br />
+                                <span class="person-affliation">HKUST</span>
+                            </div>
+                    </div>
+                    
+                </div>
+                </br> 
+                </br>
+                </br>
+                
+                <h2 id="advisory committee" class="text-center">Advisory Committee</h2>
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/avatar/maneesh_agrawala.jpg" class="person-avatar" width="80%" height="80%">
+                        </div>  
+                        <div class="person-meta">
+                            <span class="person-name"><a href="http://graphics.stanford.edu/~maneesh/" target="_blank"> Maneesh Agrawala</a></span>
+                            <br />
+                            <span class="person-affliation">Stanford University</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/speakers/huamin_qu.jpg" class="person-avatar" width="80%" height="80%">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-name"><a href="http://huamin.org/" target="_blank">Huamin Qu</a></span>
+                            <br />
+                            <span class="person-affliation">HKUST</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/avatar/James Evans.jpg" class="person-avatar" width="80%" height="80%">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-name"><a href="https://sociology.uchicago.edu/directory/James-A-Evans" target="_blank">James Evans</a></span>
+                            <br />
+                            <span class="person-affliation">University of Chicago</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/avatar/shanedenson.jpg" class="person-avatar" width="80%" height="80%">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-name"><a href="https://shanedenson.com/bio.html#about" target="_blank">Shane Denson</a></span>
+                            <br />
+                            <span class="person-affliation">Stanford University</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/avatar/Tim Gruenewald.jpg" class="person-avatar" width="80%" height="80%">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-name"><a href="https://amstudy.hku.hk/staff/TGruenewald.html" target="_blank">Tim Gruenewald</a></span>
+                            <br />
+                            <span class="person-affliation">HKU</span>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/speakers/xian_xu.jpg" class="person-avatar" width="80%" height="80%">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-name"><a href="https://xxuxian.github.io/" target="_blank">Xian Xu</a></span>
+                            <br />
+                            <span class="person-affliation">Lingnan University</span>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2">
+                            <div class="person-image">
+                                <img src="/img/speakers/anyi_rao.jpg" class="person-avatar" width="80%" height="80%">
+                            </div>
+                            <div class="person-meta">
+                                <span class="person-name"><a href="https://anyirao.com/" target="_blank">Anyi Rao</a></span>
+                                <br />
+                                <span class="person-affliation">HKUST</span>
+                            </div>
+                    </div>
+                </div>
+
+                </div>
+
+                </br> 
+                <!-- Sponsorship Section -->
+                <!-- <h2 id="sponsorship" class="text-center">Sponsorship</h2>
+                <div class="row">
+                    <img class="logo-box" src="https://cveu.github.io/2025/imgs/org/cybever.png" width="auto" height="100px">
+                    <img class="logo-box" src="https://cveu.github.io/2025/imgs/org/pika.png" width="auto" height="100px">
+                    <img class="logo-box" src="https://cveu.github.io/2025/imgs/org/tencent.png" width="auto" height="100px">
+                </div>
+                </br>
+                </br> -->
+
+                
+                <!-- <h2 id="organizer" class="text-center">Organizers</h2>
+                <div class="row">
+                <div class="row"> -->
+                    
+                    <!-- <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/avatar/Gaurav-Parmar.jpg" class="person-avatar" width="80%" height="80%">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-nPMe"><a href="https://gauravparmar.com/" target="_blank">Gaurav-Parmar</a></span>
+                            <br />
+                            <span class="person-affliation">CMU</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/avatar/Or-Patashnik.jpg" class="person-avatar" width="80%" height="80%">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-nPMe"><a href="https://orpatashnik.github.io/" target="_blank">Or Patashnik</a></span>
+                            <br />
+                            <span class="person-affliation">TAU</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/avatar/xianghao-kong.jpg" class="person-avatar" width="80%" height="80%">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-nPMe"><a href="https://scholar.google.com/citations?user=yQ0CXqUAAAAJ/" target="_blank">Xianghao Kong</a></span>
+                            <br />
+                            <span class="person-affliation">HKUST</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/avatar/houyuan-chen.jpg" class="person-avatar" width="80%" height="80%">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-nPMe"><a href="https://github.com/houyuanchen111/" target="_blank">Houyuan Chen</a></span>
+                            <br />
+                            <span class="person-affliation">NJU</span>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/amcfilm/jiajuma.jpg" class="person-avatar" width="80%" height="80%">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-nPMe"><a href="https://majiaju.io/" target="_blank">Jiaju Ma</a></span>
+                            <br />
+                            <span class="person-affliation">Stanford</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/avatar/Ozgur_Kara.jpg" class="person-avatar" width="80%" height="80%">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-nPMe"><a href="https://karaozgur.com" target="_blank">Özgür Kara</a></span>
+                            <br />
+                            <span class="person-affliation">UIUC</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/avatar/DongLiu.jpg" class="person-avatar" width="80%" height="80%">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-nPMe"><a href="https://www.ee.columbia.edu/~dongliu/" target="_blank">Dong Liu</a></span>
+                            <br />
+                            <span class="person-affliation">Netflix</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/avatar/Fabian.png" class="person-avatar" width="80%" height="80%">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-nPMe"><a href="https://fabiancaba.com/" target="_blank">Fabian Caba Heilbron</a></span>
+                            <br />
+                            <span class="person-affliation">Adobe Research</span>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/avatar/JamesRehg.jpg" class="person-avatar" width="80%" height="80%">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-nPMe"><a href="https://rehg.org/" target="_blank">James M. Rehg</a></span>
+                            <br />
+                            <span class="person-affliation">UIUC</span>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/avatar/Daniel-Cohen-Or.jpg" class="person-avatar" width="80%" height="80%">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-nPMe"><a href="https://danielcohenor.com/" target="_blank">Daniel Cohen-Or</a></span>
+                            <br />
+                            <span class="person-affliation">TAU</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/avatar/Jun-Yan-Zhu.jpg" class="person-avatar" width="80%" height="80%">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-nPMe"><a href="https://github.com/junyanz/" target="_blank">Jun-Yan Zhu</a></span>
+                            <br />
+                            <span class="person-affliation">CMU</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/avatar/anyi_rao.jpg" class="person-avatar" width="80%" height="80%">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-nPMe"><a href="https://anyirao.com/" target="_blank">Anyi Rao</a></span>
+                            <br />
+                            <span class="person-affliation">HKUST</span>
+                        </div>
+                    </div> -->
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Podcast Section -->
+<section id="community-feature" class="container content-section text-center">
+  <div class="feature-container">
+           <h2>Podcast</h2>
+    <div class="feature-top">
+
+     <p class="feature-hosts">If you want to explore with us more about how AI is shaping the future of filmmaking, we invite you to tune in to podcast <strong>Empowering Storytellers</strong> <a href="https://www.youtube.com/@EmpoweringStorytellers"><i class="fab fa-youtube fa-fw"></i> <span class="network-nPMe"></span></a>    <a href="https://x.com/ep_storytellers" ><i class="fab fa-twitter fa-fw"></i> <span class="network-nPMe"></span></a>  <a href="https://open.spotify.com/show/5yTdlfU4ncxmIonSwR1QFV?si=9f857041fce445cf" ><i class="fab fa-spotify fa-fw"></i> <span class="network-nPMe"></span></a> <a href="https://www.linkedin.com/company/empowering-storytellers/"><i class="fab fa-linkedin fa-fw"></i> <span class="network-nPMe"></span></a>
+                </li>.</p>
+
+      
+    </div>
+
+    <h4 class="guest-section-title">OUR GUESTS INCLUDE</h4>
+    <div class="guest-grid">
+      <div class="guest-card">
+        <p class="guest-name"><a href="https://www.smpte.org/about/board-tony-ngai"><strong>Tony Ngai</strong></a> </p>
+        <p class="guest-affiliation">Governor, Asia-Pacific Region, Society of Motion Picture and Television Engineers (SMPTE)</p>
+      </div>
+      <div class="guest-card">
+        <p class="guest-name"><a href="https://nz.linkedin.com/in/chris-williamson-02b0232"><strong>Chris Williamson</strong></a> </p>
+        <p class="guest-affiliation">Senior 3D Generalist & Technical Advisor, Wētā Workshop</p>
+      </div>
+      <div class="guest-card">
+        <p class="guest-name"><a href="https://nz.linkedin.com/in/jacky-zheng-3562b9185?original_referer=https%3A%2F%2Fwww.google.com%2F"><strong>Jacky Zheng</strong></a> </p>
+        <p class="guest-affiliation">Art Director, Wētā Workshop</p>
+      </div>
+      <div class="guest-card">
+        <p class="guest-name"><a href="https://www.hkapa.edu/tch/ftv/faculty/lam-terry"><strong>Terry Lam</strong></a> </p>
+        <p class="guest-affiliation">Dean, School of Film and Television, The Hong Kong Academy for Performing Arts</p>
+      </div>
+      <div class="guest-card">
+        <p class="guest-name"><a href="https://lucasmariano.com/"><strong>Lucas Mariano</strong></a> </p>
+        <p class="guest-affiliation">2D Animator & Motion Designer</p>
+      </div>
+        <div class="guest-card placeholder-card">
+        <span>More guests to be announced...</span>
+        </div>
+    </div>
+  </div>
+</section>
+    
+    <!-- Contact Section -->
+<section id="contact" class="container content-section text-center">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h2>Contact</h2>
+            <!-- <p>🚧 This site is under-construction 🚧 </p> -->
+            <p><a href="mailto:cveu_avatar@googlegroups.com">cveu_avatar@googlegroups.com</a>
+            </p>
+            <ul class="list-inline banner-social-buttons">
+
+                <li>
+                    <a href="https://twitter.com/cveu_workshop" class="btn btn-default btn-lg"><i class="fab fa-twitter fa-fw"></i> <span class="network-nPMe">twitter</span></a>
+                </li>
+
+                <li>
+                    <a href="https://github.com/CVEU" class="btn btn-default btn-lg"><i class="fab fa-github fa-fw"></i> <span class="network-nPMe">github</span></a>
+                </li>
+
+                <li>
+                    <a href="https://discord.gg/RvH3H5gshw" class="btn btn-default btn-lg"><i class="fab fa-discord fa-fw"></i> <span class="network-nPMe">discord</span></a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</section>
+
+        <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; AI for Creative Video Generation Editing and Understanding 2025</p>
+            <!-- Image credit to Getty Images -->
+        </div>
+    </footer>
+
+    <!-- jQuery Version 1.11.0 -->
+<script src="https://cveu.github.io/js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="https://cveu.github.io/js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="https://cveu.github.io/js/jquery.easing.min.js"></script>
+<script src="https://cveu.github.io/js/jquery.widget.min.js"></script>
+
+
+<!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+<script type="text/javascript"
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="https://cveu.github.io/js/grayscale.js"></script>
+<script src="https://cveu.github.io/js/metro.min.js"></script>
+<script src="https://cveu.github.io/js/metro-countdown.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.7/jstz.min.js"></script>
+<script src="https://cveu.github.io/js/moment.min.js"></script>
+<script src="https://cveu.github.io/js/moment-timezone.min.js"></script>
+<script src="https://cveu.github.io/js/main.js"></script>
+</body>
+
+</html>
