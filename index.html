@@ -148,8 +148,8 @@
         }
         #program .submission-tracks-table {
             margin-bottom: 0;
-            font-size: 15px;
-            min-width: 880px;
+            font-size: 14px;
+            min-width: 620px;
             table-layout: fixed;
             width: 100%;
         }
@@ -167,21 +167,21 @@
             background: rgba(255, 255, 255, 0.05);
             color: #fff;
             font-weight: 600;
-            padding: 14px 16px;
+            padding: 12px 14px;
             border-color: rgba(255, 255, 255, 0.1);
             vertical-align: top;
-            width: 14%;
+            width: 13%;
         }
         #program .submission-tracks-table tbody td {
-            padding: 14px 16px;
+            padding: 12px 14px;
             border-color: rgba(255, 255, 255, 0.1);
             vertical-align: top;
         }
         #program .submission-tracks-table tbody td:first-of-type {
-            width: 52%;
+            width: 47%;
         }
         #program .submission-tracks-table tbody td.dates-column {
-            width: 34%;
+            width: 40%;
         }
         #program .submission-tracks-table tbody tr {
             border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -233,10 +233,13 @@
             min-width: 0;
         }
         #program .submission-tracks-table .dates-column .detail-label {
-            flex: 0 0 95px;
+            flex: 0 0 auto;
         }
         #program .submission-tracks-table .dates-column .detail-value {
-            white-space: nowrap;
+            white-space: normal;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
         }
         #program .submission-tracks-table .dates-column .track-details li::before {
             background: rgba(125, 211, 252, 0.7);
@@ -250,6 +253,130 @@
         #program .submission-tracks-table a {
             text-decoration: underline;
             text-underline-offset: 2px;
+        }
+
+        /* Deadline update notice banner */
+        .deadline-update-notice {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            background: linear-gradient(135deg, rgba(234, 179, 8, 0.18) 0%, rgba(217, 119, 6, 0.15) 100%);
+            border: 1px solid rgba(234, 179, 8, 0.45);
+            border-left: 4px solid rgba(234, 179, 8, 0.9);
+            border-radius: 10px;
+            padding: 14px 18px;
+            margin-bottom: 20px;
+            margin-top: 12px;
+        }
+        .deadline-update-notice .notice-icon {
+            flex-shrink: 0;
+            font-size: 1.25em;
+            color: #fbbf24;
+            margin-top: 1px;
+        }
+        .deadline-update-notice .notice-content {
+            font-size: 0.92em;
+            color: rgba(255,255,255,0.92);
+            line-height: 1.55;
+        }
+        .deadline-update-notice .notice-title {
+            font-weight: 700;
+            color: #fde68a;
+            font-size: 1em;
+        }
+        .deadline-update-notice .notice-dates {
+            display: block;
+            margin-top: 5px;
+            color: rgba(255,255,255,0.85);
+        }
+        .deadline-update-notice .notice-dates b {
+            color: #fde68a;
+        }
+
+        /* Strikethrough old dates */
+        .old-date {
+            color: rgba(255,255,255,0.35);
+            text-decoration: line-through;
+            font-size: 0.88em;
+        }
+        /* New updated date highlight */
+        .new-date {
+            display: block;
+            color: #fde68a;
+            font-weight: 600;
+            font-size: 0.92em;
+            line-height: 1.4;
+        }
+        .new-date::before {
+            content: "↳ ";
+            color: #fbbf24;
+            font-weight: 700;
+        }
+
+        /* Improved table visuals */
+        #program .submission-tracks-table thead th:first-child {
+            border-radius: 12px 0 0 0;
+        }
+        #program .submission-tracks-table thead th:last-child {
+            border-radius: 0 12px 0 0;
+        }
+        #program .submission-tracks-table thead th {
+            background: linear-gradient(135deg, rgba(14, 90, 170, 0.7) 0%, rgba(0, 130, 200, 0.5) 100%);
+            letter-spacing: 0.04em;
+            font-size: 0.88em;
+            text-transform: uppercase;
+            padding: 13px 16px;
+        }
+        #program .submission-tracks-table tbody th {
+            background: rgba(255,255,255,0.07);
+            border-right: 1px solid rgba(255,255,255,0.08);
+            font-size: 0.92em;
+            color: #7dd3fc;
+        }
+        #program .submission-tracks-table .track-badge {
+            display: inline-block;
+            background: rgba(125, 211, 252, 0.12);
+            border: 1px solid rgba(125, 211, 252, 0.3);
+            border-radius: 20px;
+            padding: 2px 10px;
+            font-size: 0.82em;
+            color: #7dd3fc;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            margin-bottom: 2px;
+            white-space: nowrap;
+        }
+        #program .submission-tracks-table .detail-label {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(255,255,255,0.09);
+            border-radius: 4px;
+            padding: 2px 7px;
+            font-size: 0.73em;
+            font-weight: 700;
+            color: rgba(255,255,255,0.8);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            flex: 0 0 auto;
+            white-space: nowrap;
+            line-height: 1.5;
+        }
+        #program .submission-tracks-table .dates-column .detail-label {
+            background: rgba(125, 211, 252, 0.12);
+            color: rgba(125, 211, 252, 0.9);
+            border: 1px solid rgba(125, 211, 252, 0.2);
+        }
+        #program .submission-tracks-table tbody tr {
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        #program .submission-tracks-table tbody tr:nth-child(even) th,
+        #program .submission-tracks-table tbody tr:nth-child(even) td {
+            background: rgba(255,255,255,0.04);
+        }
+        #program .submission-tracks-table tbody tr:hover th,
+        #program .submission-tracks-table tbody tr:hover td {
+            background: rgba(125, 211, 252, 0.06);
+            transition: background 0.15s ease;
         }
     </style>
 
@@ -524,19 +651,28 @@
 
                 <br />
                 <h2 class="text-center" style="font-size: 1.8em; margin-top: 28px; margin-bottom: 8px;">Submission Tracks</h2>
-                <p class="text-center" style="font-size: 0.9em; color: rgba(255,255,255,0.75); margin-bottom: 0;">Important dates in Mountain Time where noted.</p>
+                <p class="text-center" style="font-size: 0.9em; color: rgba(255,255,255,0.75); margin-bottom: 0;">Important dates in UTC where noted.</p>
+                <div class="deadline-update-notice">
+                    <div class="notice-icon"><i class="fas fa-bullhorn"></i></div>
+                    <div class="notice-content">
+                        <span class="notice-title">Deadline Update</span> — Per the updated message from CVPR workshop chairs, the submission deadlines for the In-proceeding Track have been revised:
+                        <span class="notice-dates">
+                            <b>Abstract Registration:</b> Mar 16, 2026 · 11:59 PM UTC &nbsp; · &nbsp; <b>Submission Deadline:</b> Mar 17, 2026 · 11:59 PM UTC
+                        </span>
+                    </div>
+                </div>
                 <div class="submission-tracks-wrap">
                     <table class="table submission-tracks-table" style="width: 100%">
                         <thead>
                             <tr>
-                                <th scope="col" style="width: 14%;">Track</th>
-                                <th scope="col" style="width: 52%;">Description</th>
-                                <th scope="col" style="width: 34%;">Important Dates</th>
+                                <th scope="col" style="width: 13%;">Track</th>
+                                <th scope="col" style="width: 47%;">Description</th>
+                                <th scope="col" style="width: 40%;">Important Dates</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope="row">In-proceeding Track</th>
+                                <th scope="row"><span class="track-badge">In-proceeding</span></th>
                                 <td>
                                     <ul class="track-details">
                                         <li><span class="detail-label">Format</span><span class="detail-value">8 pages (excluding references)</span></li>
@@ -548,15 +684,15 @@
                                 <td class="dates-column">
                                     <ul class="track-details">
                                         <li><span class="detail-label">Start</span><span class="detail-value">2026-02-09 00:00</span></li>
-                                        <li><span class="detail-label">Abstract</span><span class="detail-value">2026-03-16 23:59</span></li>
-                                        <li><span class="detail-label">Submission</span><span class="detail-value">2026-03-23 23:59</span></li>
+                                        <li><span class="detail-label">Abstract</span><span class="detail-value"><s class="old-date">2026-03-16 23:59</s><span class="new-date">Mar 16, 2026 · 11:59 PM UTC</span></span></li>
+                                        <li><span class="detail-label">Submission</span><span class="detail-value"><s class="old-date">2026-03-23 23:59</s><span class="new-date">Mar 17, 2026 · 11:59 PM UTC</span></span></li>
                                         <li><span class="detail-label">Notification</span><span class="detail-value">2026-04-06</span></li>
                                         <li><span class="detail-label">Camera-ready</span><span class="detail-value">2026-04-09</span></li>
                                     </ul>
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">Extended Abstract Track</th>
+                                <th scope="row"><span class="track-badge">Extended Abstract</span></th>
                                 <td>
                                     <ul class="track-details">
                                         <li><span class="detail-label">Format</span><span class="detail-value">4 pages (excluding references)</span></li>
@@ -575,7 +711,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">Invited Submission Track</th>
+                                <th scope="row"><span class="track-badge">Invited</span></th>
                                 <td>
                                     <ul class="track-details">
                                         <li><span class="detail-label">Eligibility</span><span class="detail-value">Already published papers (e.g. CVPR 2026)</span></li>
