@@ -72,7 +72,7 @@
         }
         #program .program-schedule-table {
             margin-bottom: 0;
-            font-size: 15px;
+            font-size: 16px;
         }
         #program .program-schedule-table thead th {
             background: rgba(0, 120, 200, 0.35);
@@ -95,11 +95,14 @@
         }
         #program .program-schedule-table .session-cell {
             line-height: 1.5;
+            font-size: 16px;
         }
         #program .program-schedule-table .time-cell {
             text-align: center;
-            font-weight: 500;
+            font-weight: 600;
             white-space: nowrap;
+            font-size: 16px;
+            letter-spacing: 0.02em;
         }
         /* Tentative Speakers */
         #program .speakers-section {
@@ -541,53 +544,55 @@
             <div class="col-lg-8 col-lg-offset-2"> 
                 <h2 class="text-center" style="font-size: 1.8em; margin-bottom: 24px;">Tentative Program (CVPR 2026)</h2> 
                 <div class="program-wrap">
-                    <table class="table table-bordered program-schedule-table" style="width: 100%;"> 
-                        <colgroup>                             
-                            <col style="width: 72%;">
-                            <col style="width: 28%;">
-                        </colgroup> 
+                    <table class="table table-bordered program-schedule-table" style="width: 100%;">
+                        <colgroup>
+                            <col style="width: 65%;">
+                            <col style="width: 35%;">
+                        </colgroup>
                         <thead>
                             <tr>
                                 <th scope="col">Schedule</th>
                                 <th scope="col">Mountain Time (MT)<br/><small>June 3 or 4, 2026 (TBD)</small></th>
                             </tr>
                         </thead>
-                        <tbody> 
+                        <tbody>
                             <tr>
-                                <td class="session-cell"><b>Warm-up Session</b></td>
-                                <td class="time-cell">TBD</td>
+                                <td class="session-cell"><b>Opening Remarks</b></td>
+                                <td class="time-cell">8:30 – 8:35 AM</td>
                             </tr>
                             <tr>
-                                <td class="session-cell"><b>Workshop Opening Remarks</b></td>
-                                <td class="time-cell">TBD</td>
+                                <td class="session-cell"><b>Keynote Talk #1</b></td>
+                                <td class="time-cell">8:35 – 9:00 AM</td>
                             </tr>
                             <tr>
-                                <td class="session-cell">
-                                    <b>Session I</b>
-                                    <br><span style="opacity: 0.9;">Keynote I · Keynote II · Keynote III · Roundtable Discussion</span>
-                                </td>
-                                <td class="time-cell">Afternoon (TBD)</td>
+                                <td class="session-cell"><b>Keynote Talk #2</b></td>
+                                <td class="time-cell">9:00 – 9:25 AM</td>
                             </tr>
                             <tr>
-                                <td class="session-cell"><b>Industry Talks</b></td>
-                                <td class="time-cell">TBD</td>
+                                <td class="session-cell"><b>Keynote Talk #3</b></td>
+                                <td class="time-cell">9:25 – 9:50 AM</td>
+                            </tr>
+                            <tr style="background: rgba(255,255,255,0.04);">
+                                <td class="session-cell"><b>Coffee Break & Poster Session</b></td>
+                                <td class="time-cell">9:50 – 11:10 AM</td>
                             </tr>
                             <tr>
-                                <td class="session-cell"><b>Poster Presentations</b></td>
-                                <td class="time-cell">TBD</td>
+                                <td class="session-cell"><b>Keynote Talk #4</b></td>
+                                <td class="time-cell">11:10 – 11:35 AM</td>
                             </tr>
                             <tr>
-                                <td class="session-cell">
-                                    <b>Session II</b>
-                                    <br><span style="opacity: 0.9;">Keynote I · Keynote II · Keynote III · Roundtable Discussion</span>
-                                </td>
-                                <td class="time-cell">Late Afternoon (TBD)</td>
+                                <td class="session-cell"><b>Keynote Talk #5</b></td>
+                                <td class="time-cell">11:35 AM – 12:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td class="session-cell"><b>Keynote Talk #6</b></td>
+                                <td class="time-cell">12:00 – 12:25 PM</td>
                             </tr>
                             <tr>
                                 <td class="session-cell"><b>Closing Remarks</b></td>
-                                <td class="time-cell">TBD</td>
+                                <td class="time-cell">12:25 – 12:30 PM</td>
                             </tr>
-                        </tbody> 
+                        </tbody>
                     </table>
                 </div>
 
@@ -604,12 +609,12 @@
                             <div class="speaker-meta"><div class="speaker-name">Jiajun Wu</div><div class="speaker-affiliation">Stanford University</div></div>
                         </div>
                         <div class="speaker-tbd">
-                            <div class="speaker-avatar-wrap"><span>TBD</span></div>
-                            <div class="speaker-meta">TBD</div>
+                            <div class="speaker-avatar-wrap"><img src="https://jparkerholder.github.io/img/jack+doris.png" alt="Jack Parker-Holder"></div>
+                            <div class="speaker-meta"><div class="speaker-name">Jack Parker-Holder</div><div class="speaker-affiliation">Google DeepMind</div></div>
                         </div>
                         <div class="speaker-tbd">
-                            <div class="speaker-avatar-wrap"><span>TBD</span></div>
-                            <div class="speaker-meta">TBD</div>
+                            <div class="speaker-avatar-wrap"><img src="https://www.sainingxie.com/imgs/profile_nana_banana.png" alt="Saining Xie"></div>
+                            <div class="speaker-meta"><div class="speaker-name">Saining Xie</div><div class="speaker-affiliation">AMI Labs, NYU</div></div>
                         </div>
                         <div class="speaker-tbd">
                             <div class="speaker-avatar-wrap"><span>TBD</span></div>
@@ -624,125 +629,266 @@
                 
                 <br />
 
-                <h2 id="cfp" class="text-center" style="font-size: 1.8em; margin-top: 25px; margin-bottom: 15px;">Call for Papers</h2>
-                <p style="text-align: justify;">
-                    The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026<br />
-                    This workshop is for the next installment of the AI for Creative Visual Content Generation Editing and Understanding (CVEU). 
-                    It brings together researchers working on computer vision, machine listening, computer graphics, human-computer interaction, 
-                    and cognitive research. It aims to bring awareness of recent advances in machine learning technologies to enable 
-                    assisted creative-video creation and understanding. The workshop will include invited talks by experts in the area and 
-                    give the community opportunities to share their work via oral and poster presentations. We encourage practitioners, 
-                    designers, students, post-docs, and researchers to submit work describing new ideas, work-in-progress, and previously 
-                    or concurrently published research.
-                </p>
+                <style>
+                    .cfp-toggle {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 10px;
+                        cursor: pointer;
+                        user-select: none;
+                        margin-top: 25px;
+                        margin-bottom: 0;
+                        padding: 12px 0;
+                        border-radius: 8px;
+                        transition: background 0.15s ease;
+                    }
+                    .cfp-toggle:hover {
+                        background: rgba(255,255,255,0.04);
+                    }
+                    .cfp-toggle h2 {
+                        margin: 0;
+                        font-size: 1.8em;
+                    }
+                    .cfp-toggle .cfp-icon {
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 28px;
+                        height: 28px;
+                        border-radius: 50%;
+                        border: 2px solid rgba(255,255,255,0.4);
+                        font-size: 18px;
+                        font-weight: 300;
+                        color: rgba(255,255,255,0.7);
+                        transition: transform 0.25s ease, border-color 0.15s ease;
+                        flex-shrink: 0;
+                    }
+                    .cfp-toggle:hover .cfp-icon {
+                        border-color: rgba(255,255,255,0.7);
+                        color: #fff;
+                    }
+                    .cfp-toggle.active .cfp-icon {
+                        transform: rotate(45deg);
+                    }
+                    .cfp-content {
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: max-height 0.35s ease;
+                    }
+                    .cfp-content.open {
+                        max-height: 600px;
+                    }
+                </style>
+                <div id="cfp" class="cfp-toggle" onclick="this.classList.toggle('active'); document.getElementById('cfp-body').classList.toggle('open');">
+                    <h2>Call for Papers</h2>
+                    <span style="font-size: 0.45em; color: rgba(255,255,255,0.45); font-weight: 400; margin-left: -4px;">(click to expand)</span>
+                    <span class="cfp-icon">+</span>
+                </div>
+                <div id="cfp-body" class="cfp-content">
+                    <p style="text-align: justify; margin-top: 10px;">
+                        The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026<br />
+                        This workshop is for the next installment of the AI for Creative Visual Content Generation Editing and Understanding (CVEU).
+                        It brings together researchers working on computer vision, machine listening, computer graphics, human-computer interaction,
+                        and cognitive research. It aims to bring awareness of recent advances in machine learning technologies to enable
+                        assisted creative-video creation and understanding. The workshop will include invited talks by experts in the area and
+                        give the community opportunities to share their work via oral and poster presentations. We encourage practitioners,
+                        designers, students, post-docs, and researchers to submit work describing new ideas, work-in-progress, and previously
+                        or concurrently published research.
+                    </p>
 
-                <div style="display: flex; flex-wrap: wrap; gap: 1.5rem;">
-                    <ul style="flex: 1 1 300px; list-style: disc; line-height: 1.5;">
-                        <li>Video GenAI</li>
-                        <li>Video storyboarding</li>
-                        <li>GenAI for visual productions</li>
-                        <li>GenAI for audio-visual storytelling</li>
-                        <li>Watermarking</li>
-                        <li>Content attribution</li>
-                        <li>Safety in content generation</li>
-                        <li>Computational Video Editing</li>
-                        <li>Computational Videography/Virtual Cinematography</li>
-                        <li>Video Shortening and Manipulation</li>
-                    </ul>
-                    <ul style="flex: 1 1 300px; list-style: disc; line-height: 1.5;">
-                        <li>Video Description and Storyboarding</li>
-                        <li>Video Search and Retrieval</li>
-                        <li>Human-centric Video Understanding</li>
-                        <li>Event/Story Understanding</li>
-                        <li>Emotion/Sound Recognition</li>
-                        <li>Generative Adversarial Network for Video</li>
-                        <li>Diffusion Model and GAN for Video</li>
-                        <li>Neural Rendering for Video</li>
-                        <li>VR/AR/Panorama Video</li>
-                        <li>Dataset and Evaluation</li>
-                    </ul>
+                    <div style="display: flex; flex-wrap: wrap; gap: 1.5rem;">
+                        <ul style="flex: 1 1 300px; list-style: disc; line-height: 1.5;">
+                            <li>Video GenAI</li>
+                            <li>Video storyboarding</li>
+                            <li>GenAI for visual productions</li>
+                            <li>GenAI for audio-visual storytelling</li>
+                            <li>Watermarking</li>
+                            <li>Content attribution</li>
+                            <li>Safety in content generation</li>
+                            <li>Computational Video Editing</li>
+                            <li>Computational Videography/Virtual Cinematography</li>
+                            <li>Video Shortening and Manipulation</li>
+                        </ul>
+                        <ul style="flex: 1 1 300px; list-style: disc; line-height: 1.5;">
+                            <li>Video Description and Storyboarding</li>
+                            <li>Video Search and Retrieval</li>
+                            <li>Human-centric Video Understanding</li>
+                            <li>Event/Story Understanding</li>
+                            <li>Emotion/Sound Recognition</li>
+                            <li>Generative Adversarial Network for Video</li>
+                            <li>Diffusion Model and GAN for Video</li>
+                            <li>Neural Rendering for Video</li>
+                            <li>VR/AR/Panorama Video</li>
+                            <li>Dataset and Evaluation</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <br />
                 <h2 class="text-center" style="font-size: 1.8em; margin-top: 28px; margin-bottom: 8px;">Submission Tracks</h2>
-                <p class="text-center" style="font-size: 0.9em; color: rgba(255,255,255,0.75); margin-bottom: 0;">Important dates in UTC where noted.</p>
-                <div class="deadline-update-notice">
-                    <div class="notice-icon"><i class="fas fa-bullhorn"></i></div>
-                    <div class="notice-content">
-                        <span class="notice-title">Deadline Update</span> — Per the updated message from CVPR workshop chairs, the submission deadlines for the In-proceeding Track have been revised:
-                        <span class="notice-dates">
-                            <b>Abstract Registration:</b> Mar 16, 2026 · 11:59 PM UTC &nbsp;·&nbsp; <b>Submission Deadline:</b> Mar 17, 2026 · 11:59 PM UTC &nbsp;·&nbsp; <b>Decisions Released:</b> Mar 24, 2026 · 23:59 UTC
-                        </span>
+
+                <style>
+                    .track-card {
+                        background: rgba(255,255,255,0.06);
+                        border: 1px solid rgba(255,255,255,0.12);
+                        border-radius: 10px;
+                        padding: 20px 24px;
+                        margin-bottom: 14px;
+                    }
+                    .track-card-header {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        gap: 8px;
+                        margin-bottom: 12px;
+                    }
+                    .track-card-title {
+                        font-size: 1.1em;
+                        font-weight: 700;
+                        color: #7dd3fc;
+                    }
+                    .track-card-meta {
+                        font-size: 0.82em;
+                        color: rgba(255,255,255,0.6);
+                    }
+                    .track-card-submit {
+                        margin-bottom: 14px;
+                        font-size: 0.88em;
+                    }
+                    .track-card-submit a {
+                        color: #7dd3fc;
+                        text-decoration: underline;
+                        text-underline-offset: 2px;
+                    }
+                    .track-dates {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 10px 24px;
+                        font-size: 0.95em;
+                    }
+                    .track-date-item {
+                        display: flex;
+                        align-items: baseline;
+                        gap: 7px;
+                    }
+                    .track-date-label {
+                        color: rgba(255,255,255,0.5);
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        font-size: 0.82em;
+                        letter-spacing: 0.03em;
+                    }
+                    .track-date-value {
+                        color: rgba(255,255,255,0.95);
+                        font-weight: 600;
+                    }
+                    .track-card .old-date {
+                        color: rgba(255,255,255,0.3);
+                        text-decoration: line-through;
+                        font-size: 0.9em;
+                        margin-right: 2px;
+                    }
+                    .track-card .new-date {
+                        color: #fde68a;
+                        font-weight: 600;
+                        display: inline;
+                    }
+                    .track-card .new-date::before {
+                        content: "→ ";
+                        color: #fbbf24;
+                    }
+                    .track-card-notice {
+                        background: rgba(234, 179, 8, 0.12);
+                        border: 1px solid rgba(234, 179, 8, 0.3);
+                        border-radius: 6px;
+                        padding: 8px 12px;
+                        font-size: 0.82em;
+                        color: rgba(255,255,255,0.85);
+                        margin-bottom: 12px;
+                    }
+                    .track-card-notice b {
+                        color: #fde68a;
+                    }
+                </style>
+
+                <!-- In-proceeding Track -->
+                <div class="track-card">
+                    <div class="track-card-header">
+                        <span class="track-card-title">In-proceeding Track</span>
+                        <span class="track-card-meta">8 pages (excl. references) · CVPR proceedings · CVPR template</span>
+                    </div>
+                    <div class="track-card-notice">
+                        <b>Updated</b> per CVPR workshop chairs — Abstract, Submission, and Notification dates revised below.
+                    </div>
+                    <div class="track-card-submit">
+                        Submit via <a href="https://openreview.net/group?id=thecvf.com/CVPR/2026/Workshop/CVEU" target="_blank">CVEU OpenReview Console</a>
+                    </div>
+                    <div class="track-dates">
+                        <div class="track-date-item">
+                            <span class="track-date-label">Abstract</span>
+                            <span class="track-date-value"><s class="old-date">Mar 16</s> <span class="new-date">Mar 16, 2026 · 11:59 PM UTC</span></span>
+                        </div>
+                        <div class="track-date-item">
+                            <span class="track-date-label">Submission</span>
+                            <span class="track-date-value"><s class="old-date">Mar 23</s> <span class="new-date">Mar 17, 2026 · 11:59 PM UTC</span></span>
+                        </div>
+                        <div class="track-date-item">
+                            <span class="track-date-label">Notification</span>
+                            <span class="track-date-value"><s class="old-date">Apr 6</s> <span class="new-date">Mar 24, 2026 · 23:59 UTC</span></span>
+                        </div>
+                        <div class="track-date-item">
+                            <span class="track-date-label">Camera-ready</span>
+                            <span class="track-date-value">Apr 9, 2026</span>
+                        </div>
                     </div>
                 </div>
-                <div class="submission-tracks-wrap">
-                    <table class="table submission-tracks-table" style="width: 100%">
-                        <thead>
-                            <tr>
-                                <th scope="col" style="width: 13%;">Track</th>
-                                <th scope="col" style="width: 47%;">Description</th>
-                                <th scope="col" style="width: 40%;">Important Dates</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row"><span class="track-badge">In-proceeding</span></th>
-                                <td>
-                                    <ul class="track-details">
-                                        <li><span class="detail-label">Format</span><span class="detail-value">8 pages (excluding references)</span></li>
-                                        <li><span class="detail-label">Publication</span><span class="detail-value">Included in official CVPR workshop proceedings</span></li>
-                                        <li><span class="detail-label">Template</span><span class="detail-value">CVPR template required</span></li>
-                                        <li><span class="detail-label">Submit</span><span class="detail-value">Via <a href="https://openreview.net/group?id=thecvf.com/CVPR/2026/Workshop/CVEU" target="_blank" style="color: #7dd3fc;">CVEU OpenReview Console</a></span></li>
-                                    </ul>
-                                </td>
-                                <td class="dates-column">
-                                    <ul class="track-details">
-                                        <li><span class="detail-label">Start</span><span class="detail-value">2026-02-09 00:00</span></li>
-                                        <li><span class="detail-label">Abstract</span><span class="detail-value"><s class="old-date">2026-03-16 23:59</s><span class="new-date">Mar 16, 2026 · 11:59 PM UTC</span></span></li>
-                                        <li><span class="detail-label">Submission</span><span class="detail-value"><s class="old-date">2026-03-23 23:59</s><span class="new-date">Mar 17, 2026 · 11:59 PM UTC</span></span></li>
-                                        <li><span class="detail-label">Notification</span><span class="detail-value"><s class="old-date">2026-04-06</s><span class="new-date">Mar 24, 2026 · 23:59 UTC</span></span></li>
-                                        <li><span class="detail-label">Camera-ready</span><span class="detail-value">2026-04-09</span></li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row"><span class="track-badge">Extended Abstract</span></th>
-                                <td>
-                                    <ul class="track-details">
-                                        <li><span class="detail-label">Format</span><span class="detail-value">4 pages (excluding references)</span></li>
-                                        <li><span class="detail-label">Publication</span><span class="detail-value">Not in CVPR proceedings; may submit elsewhere</span></li>
-                                        <li><span class="detail-label">Template</span><span class="detail-value">CVPR template required</span></li>
-                                        <li><span class="detail-label">Submit</span><span class="detail-value">Via TBD</span></li>
-                                    </ul>
-                                </td>
-                                <td class="dates-column">
-                                    <ul class="track-details">
-                                        <li><span class="detail-label">Submission</span><span class="detail-value">2026-04-22</span></li>
-                                        <li><span class="detail-label">Acceptance</span><span class="detail-value">TBA</span></li>
-                                        <li><span class="detail-label">Camera-ready</span><span class="detail-value">TBA</span></li>
-                                        <li><span class="detail-label">Presentation</span><span class="detail-value">TBA</span></li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row"><span class="track-badge">Invited</span></th>
-                                <td>
-                                    <ul class="track-details">
-                                        <li><span class="detail-label">Eligibility</span><span class="detail-value">Already published papers (e.g. CVPR 2026)</span></li>
-                                        <li><span class="detail-label">Scope</span><span class="detail-value">Must relate to CVEU topics</span></li>
-                                        <li><span class="detail-label">Opportunity</span><span class="detail-value">Present at workshop</span></li>
-                                        <li><span class="detail-label">Submit</span><span class="detail-value">Via form (TBD)</span></li>
-                                    </ul>
-                                </td>
-                                <td class="dates-column">
-                                    <ul class="track-details">
-                                        <li><span class="detail-label">Submission</span><span class="detail-value">TBD</span></li>
-                                        <li><span class="detail-label">Notification</span><span class="detail-value">TBD</span></li>
-                                    </ul>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+
+                <!-- Extended Abstract Track -->
+                <div class="track-card">
+                    <div class="track-card-header">
+                        <span class="track-card-title">Extended Abstract Track</span>
+                        <span class="track-card-meta">4 pages (excl. references) · Not in proceedings · CVPR template</span>
+                    </div>
+                    <div class="track-card-submit">
+                        Submit via <a href="https://openreview.net/group?id=thecvf.com/CVPR/2026/Workshop/CVEU_Extended_Abstract_Track" target="_blank">CVEU Extended Abstract OpenReview</a>
+                    </div>
+                    <div class="track-dates">
+                        <div class="track-date-item">
+                            <span class="track-date-label">Submission</span>
+                            <span class="track-date-value">Apr 22, 2026</span>
+                        </div>
+                        <div class="track-date-item">
+                            <span class="track-date-label">Notification</span>
+                            <span class="track-date-value">May 1, 2026</span>
+                        </div>
+                        <div class="track-date-item">
+                            <span class="track-date-label">Camera-ready</span>
+                            <span class="track-date-value">May 7, 2026</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Invited Track -->
+                <div class="track-card">
+                    <div class="track-card-header">
+                        <span class="track-card-title">Invited Submission Track</span>
+                        <span class="track-card-meta">Already published papers (e.g. CVPR 2026) · Must relate to CVEU topics</span>
+                    </div>
+                    <div class="track-card-submit">
+                        Submit via form (TBD)
+                    </div>
+                    <div class="track-dates">
+                        <div class="track-date-item">
+                            <span class="track-date-label">Submission</span>
+                            <span class="track-date-value">May 7, 2026</span>
+                        </div>
+                        <div class="track-date-item">
+                            <span class="track-date-label">Notification</span>
+                            <span class="track-date-value">May 10, 2026</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
