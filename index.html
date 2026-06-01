@@ -444,6 +444,66 @@
     </div>
     <!-- /.container -->
 </nav>
+
+    <!-- Poster Board Assignment Notice -->
+<style>
+    .poster-notice-banner {
+        position: relative;
+        margin-top: 60px;
+        background: linear-gradient(135deg, rgba(234, 179, 8, 0.2) 0%, rgba(217, 119, 6, 0.18) 100%);
+        border-bottom: 2px solid rgba(234, 179, 8, 0.7);
+        border-top: 1px solid rgba(234, 179, 8, 0.4);
+        padding: 14px 20px;
+        text-align: center;
+        z-index: 100;
+    }
+    .poster-notice-banner .notice-inner {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 1100px;
+    }
+    .poster-notice-banner .notice-bang {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: #fbbf24;
+        color: #1a1a1a;
+        font-weight: 900;
+        font-size: 1.05em;
+        flex-shrink: 0;
+    }
+    .poster-notice-banner .notice-message {
+        color: #fde68a;
+        font-weight: 600;
+        font-size: 1em;
+        letter-spacing: 0.02em;
+    }
+    .poster-notice-banner .notice-message b {
+        color: #ffffff;
+    }
+    .poster-notice-banner a.notice-link {
+        color: #ffffff;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        font-weight: 700;
+    }
+    .poster-notice-banner a.notice-link:hover {
+        color: #fde68a;
+    }
+</style>
+<div class="poster-notice-banner">
+    <div class="notice-inner">
+        <span class="notice-bang">!</span>
+        <span class="notice-message"><b>Poster boards are assigned.</b> Each accepted paper now has its board number (front/back) listed on the <a href="#accepted-papers" class="page-scroll notice-link">Accepted Papers</a> page.</span>
+    </div>
+</div>
+
     <!-- Intro Header -->
 <header class="intro" style="background: url(/img/bg-denver-cvpr26.jpg) no-repeat bottom center scroll; background-size: cover; -o-background-size: cover;">
 
@@ -961,6 +1021,20 @@
                         margin-left: 6px;
                         font-style: normal;
                     }
+                    .papers-list .board-badge {
+                        display: inline-block;
+                        background: rgba(251, 191, 36, 0.15);
+                        border: 1px solid rgba(251, 191, 36, 0.45);
+                        border-radius: 4px;
+                        padding: 2px 8px;
+                        font-size: 0.78em;
+                        font-weight: 700;
+                        color: #fde68a;
+                        margin-left: 8px;
+                        white-space: nowrap;
+                        letter-spacing: 0.02em;
+                        vertical-align: middle;
+                    }
                     .papers-empty {
                         color: rgba(255,255,255,0.5);
                         font-style: italic;
@@ -971,55 +1045,55 @@
                 <div class="papers-track">
                     <div class="papers-track-title">In-proceeding Track</div>
                     <ul class="papers-list">
-                        <li><span class="paper-index">1.</span><span class="paper-title">Generating Fit Check Videos with a Handheld Camera</span><span class="paper-authors">Bowei Chen, Brian Curless, Ira Kemelmacher-Shlizerman, Steve Seitz</span></li>
-                        <li><span class="paper-index">2.</span><span class="paper-title">Diamonds in the Sky: Pareidolic Animals in Clouds</span><span class="paper-authors">Miriam Horovicz, Yacov Hel-Or, Yael Moses</span></li>
-                        <li><span class="paper-index">3.</span><span class="paper-title">LaDe: Unified Multi-Layered Graphic Media Generation and Decomposition</span><span class="paper-authors">Vlad-Constantin Lungu-Stan, Ionut Mironica, Iuliana Georgescu</span></li>
-                        <li><span class="paper-index">4.</span><span class="paper-title">LumiCtrl: Learning Illuminant Prompts for Lighting Control in Personalized Text-to-Image Models</span><span class="paper-authors">Muhammad Atif Butt, Kai Wang, Javier Vazquez-Corral, Joost van de Weijer</span></li>
-                        <li><span class="paper-index">5.</span><span class="paper-title">FOCUS: Optimal Control for Multi-Entity World Modeling in Text-to-Image Generation</span><span class="paper-authors">Eric Bill, Enis Simsar, Thomas Hofmann</span></li>
-                        <li><span class="paper-index">6.</span><span class="paper-title">Learning Temporal Relations for Evaluating Instruction-Guided Image Editing in Vision-Language Models</span><span class="paper-authors">Pia Donabauer, Alexander Tack, Udo Kruschwitz</span></li>
-                        <li><span class="paper-index">7.</span><span class="paper-title">PLATO++: Pose-Conditioned Part-Aware Object Generation via Residual Structure Learning</span><span class="paper-authors">Varghese Kuruvilla, Harishwar Rao J., Ravi Kiran Sarvadevabhatla</span></li>
-                        <li><span class="paper-index">8.</span><span class="paper-title">Temporal Environment-Aware Image Generation via Latent Diffusion</span><span class="paper-authors">Nasrin Kalanat, Yiqun Xie, Yanhua Li, Xiaowei Jia</span></li>
-                        <li><span class="paper-index">9.</span><span class="paper-title">Towards Design Composition</span><span class="paper-authors">Abhinav Mahajan, Abhikhya Tripathy, Sudeeksha Pala, Vaibhav Methi, K Joseph, Balaji Vasan Srinivasan</span></li>
-                        <li><span class="paper-index">10.</span><span class="paper-title">ProFashion: Prototype-guided Fashion Video Generation with Multiple Reference Images</span><span class="paper-authors">Xianghao Kong, Qiaosong Qi, Yuanbin Wang, Biaolong Chen, Aixi Zhang, Anyi Rao</span></li>
-                        <li><span class="paper-index">11.</span><span class="paper-title">X-Aligner: Composed Visual Retrieval without the Bells and Whistles</span><span class="paper-authors">Yuqian Zheng, Iuliana Georgescu</span></li>
-                        <li><span class="paper-index">12.</span><span class="paper-title">Visual Composition Generation of Multi-Source Heterogeneous Concepts — A Practical Study Based on the AIGC Short Film: The Meeting</span><span class="paper-authors">Shiqin Hou, Jiayan Chen, Tianyi Zhang, Baoyang Chen, Anyi Rao</span></li>
-                        <li><span class="paper-index">13.</span><span class="paper-title">Hi-Light: A Path to High-fidelity, High-resolution Video Relighting With A Refined Evaluation Paradigm</span><span class="paper-authors">Xiangrui Liu, Haoxiang Li, Yezhou Yang</span></li>
-                        <li><span class="paper-index">14.</span><span class="paper-title">From Pixels to Layers: Multimodal Generation of Editable Vector Graphics</span><span class="paper-authors">Rongxiang Zhang, Xinyi Shang, Peng Sun, Tao Lin</span></li>
-                        <li><span class="paper-index">15.</span><span class="paper-title">Faces in the Wild: GAN-Driven Normalization for Robust Facial Recognition</span><span class="paper-authors">Mohit, Atul Kumar, Akshay Agarwal</span></li>
-                        <li><span class="paper-index">16.</span><span class="paper-title">Mem-UniVST: Recurrent Gram Memory for Training-Free Temporally Consistent Video Stylization</span><span class="paper-authors">Nimay Ballal, Shylaja S S</span></li>
-                        <li><span class="paper-index">17.</span><span class="paper-title">Pseudo-Unification: Entropy Probing Reveals Divergent Information Patterns in Unified Multimodal Models</span><span class="paper-authors">Songlin Yang, Xianghao Kong, Anyi Rao</span></li>
-                        <li><span class="paper-index">18.</span><span class="paper-title">FashionDraft: Resolving Structural Ambiguity in Text-To-Image Fashion Generation</span><span class="paper-authors">Santhosh V, Arushi Jain, Shubham Paliwal, Monika Sharma</span></li>
-                        <li><span class="paper-index">19.</span><span class="paper-title">DRA-MTransfer: Physically Realistic Video Motion Transfer with Dual-Grained Re-Adaptation</span><span class="paper-authors">Guoli Jia, Zhiyuan Ma, Junyao Hu, Xinwei Long, Kai Tian, Kaikai Zhao, Zhaoxiang Liu, Kai Wang, Shiguo Lian, Bowen Zhou</span></li>
+                        <li><span class="paper-index">1.</span><span class="paper-title">Generating Fit Check Videos with a Handheld Camera</span><span class="board-badge">Board 1 · Front</span><span class="paper-authors">Bowei Chen, Brian Curless, Ira Kemelmacher-Shlizerman, Steve Seitz</span></li>
+                        <li><span class="paper-index">2.</span><span class="paper-title">Diamonds in the Sky: Pareidolic Animals in Clouds</span><span class="board-badge">Board 1 · Back</span><span class="paper-authors">Miriam Horovicz, Yacov Hel-Or, Yael Moses</span></li>
+                        <li><span class="paper-index">3.</span><span class="paper-title">LaDe: Unified Multi-Layered Graphic Media Generation and Decomposition</span><span class="board-badge">Board 2 · Front</span><span class="paper-authors">Vlad-Constantin Lungu-Stan, Ionut Mironica, Iuliana Georgescu</span></li>
+                        <li><span class="paper-index">4.</span><span class="paper-title">LumiCtrl: Learning Illuminant Prompts for Lighting Control in Personalized Text-to-Image Models</span><span class="board-badge">Board 2 · Back</span><span class="paper-authors">Muhammad Atif Butt, Kai Wang, Javier Vazquez-Corral, Joost van de Weijer</span></li>
+                        <li><span class="paper-index">5.</span><span class="paper-title">FOCUS: Optimal Control for Multi-Entity World Modeling in Text-to-Image Generation</span><span class="board-badge">Board 3 · Front</span><span class="paper-authors">Eric Bill, Enis Simsar, Thomas Hofmann</span></li>
+                        <li><span class="paper-index">6.</span><span class="paper-title">Learning Temporal Relations for Evaluating Instruction-Guided Image Editing in Vision-Language Models</span><span class="board-badge">Board 3 · Back</span><span class="paper-authors">Pia Donabauer, Alexander Tack, Udo Kruschwitz</span></li>
+                        <li><span class="paper-index">7.</span><span class="paper-title">PLATO++: Pose-Conditioned Part-Aware Object Generation via Residual Structure Learning</span><span class="board-badge">Board 4 · Front</span><span class="paper-authors">Varghese Kuruvilla, Harishwar Rao J., Ravi Kiran Sarvadevabhatla</span></li>
+                        <li><span class="paper-index">8.</span><span class="paper-title">Temporal Environment-Aware Image Generation via Latent Diffusion</span><span class="board-badge">Board 4 · Back</span><span class="paper-authors">Nasrin Kalanat, Yiqun Xie, Yanhua Li, Xiaowei Jia</span></li>
+                        <li><span class="paper-index">9.</span><span class="paper-title">Towards Design Composition</span><span class="board-badge">Board 5 · Front</span><span class="paper-authors">Abhinav Mahajan, Abhikhya Tripathy, Sudeeksha Pala, Vaibhav Methi, K Joseph, Balaji Vasan Srinivasan</span></li>
+                        <li><span class="paper-index">10.</span><span class="paper-title">ProFashion: Prototype-guided Fashion Video Generation with Multiple Reference Images</span><span class="board-badge">Board 5 · Back</span><span class="paper-authors">Xianghao Kong, Qiaosong Qi, Yuanbin Wang, Biaolong Chen, Aixi Zhang, Anyi Rao</span></li>
+                        <li><span class="paper-index">11.</span><span class="paper-title">X-Aligner: Composed Visual Retrieval without the Bells and Whistles</span><span class="board-badge">Board 6 · Front</span><span class="paper-authors">Yuqian Zheng, Iuliana Georgescu</span></li>
+                        <li><span class="paper-index">12.</span><span class="paper-title">Visual Composition Generation of Multi-Source Heterogeneous Concepts — A Practical Study Based on the AIGC Short Film: The Meeting</span><span class="board-badge">Board 6 · Back</span><span class="paper-authors">Shiqin Hou, Jiayan Chen, Tianyi Zhang, Baoyang Chen, Anyi Rao</span></li>
+                        <li><span class="paper-index">13.</span><span class="paper-title">Hi-Light: A Path to High-fidelity, High-resolution Video Relighting With A Refined Evaluation Paradigm</span><span class="board-badge">Board 7 · Front</span><span class="paper-authors">Xiangrui Liu, Haoxiang Li, Yezhou Yang</span></li>
+                        <li><span class="paper-index">14.</span><span class="paper-title">From Pixels to Layers: Multimodal Generation of Editable Vector Graphics</span><span class="board-badge">Board 7 · Back</span><span class="paper-authors">Rongxiang Zhang, Xinyi Shang, Peng Sun, Tao Lin</span></li>
+                        <li><span class="paper-index">15.</span><span class="paper-title">Faces in the Wild: GAN-Driven Normalization for Robust Facial Recognition</span><span class="board-badge">Board 8 · Front</span><span class="paper-authors">Mohit, Atul Kumar, Akshay Agarwal</span></li>
+                        <li><span class="paper-index">16.</span><span class="paper-title">Mem-UniVST: Recurrent Gram Memory for Training-Free Temporally Consistent Video Stylization</span><span class="board-badge">Board 8 · Back</span><span class="paper-authors">Nimay Ballal, Shylaja S S</span></li>
+                        <li><span class="paper-index">17.</span><span class="paper-title">Pseudo-Unification: Entropy Probing Reveals Divergent Information Patterns in Unified Multimodal Models</span><span class="board-badge">Board 9 · Front</span><span class="paper-authors">Songlin Yang, Xianghao Kong, Anyi Rao</span></li>
+                        <li><span class="paper-index">18.</span><span class="paper-title">FashionDraft: Resolving Structural Ambiguity in Text-To-Image Fashion Generation</span><span class="board-badge">Board 9 · Back</span><span class="paper-authors">Santhosh V, Arushi Jain, Shubham Paliwal, Monika Sharma</span></li>
+                        <li><span class="paper-index">19.</span><span class="paper-title">DRA-MTransfer: Physically Realistic Video Motion Transfer with Dual-Grained Re-Adaptation</span><span class="board-badge">Board 10 · Front</span><span class="paper-authors">Guoli Jia, Zhiyuan Ma, Junyao Hu, Xinwei Long, Kai Tian, Kaikai Zhao, Zhaoxiang Liu, Kai Wang, Shiguo Lian, Bowen Zhou</span></li>
                     </ul>
                 </div>
 
                 <div class="papers-track">
                     <div class="papers-track-title">Extended Abstract Track</div>
                     <ul class="papers-list">
-                        <li><span class="paper-index">1.</span><span class="paper-title">Temporal Consistency-Guided Video Editing using Diffusion Models</span><span class="paper-authors">Mahule Roy, Subhas Roy</span></li>
-                        <li><span class="paper-index">2.</span><span class="paper-title">Implicit Neural Representation of Textures</span><span class="paper-authors">Albert Kwok, Zheyuan Hu, Dounia Hammou</span></li>
-                        <li><span class="paper-index">3.</span><span class="paper-title">Selective Timestep Weighting and Advantage-Based Replay for Sample-Efficient Diffusion RLHF</span><span class="paper-authors">Eric Zhu, Abhinav Shrivastava, Soumik Mukhopadhyay</span></li>
-                        <li><span class="paper-index">4.</span><span class="paper-title">Benchmarking Single-Step Inpainting Methods for Multi-Object 3D Gaussian Splatting Scenes</span><span class="paper-authors">Finn Dröge, Cecilia Curreli, Abhishek Saroha, Daniel Cremers</span></li>
-                        <li><span class="paper-index">5.</span><span class="paper-title">MiMix: Character Mixing for Video Generation</span><span class="paper-authors">Tingting Liao, Chongjian Ge, Guangyi Liu, Hao Li, Yi Zhou</span></li>
-                        <li><span class="paper-index">6.</span><span class="paper-title">DiverseVAR: Balancing Diversity and Quality of Next-Scale Visual Autoregressive Models</span><span class="paper-authors">Mingue Park, Prin Phunyaphibarn, Phillip Y. Lee, Minhyuk Sung</span></li>
-                        <li><span class="paper-index">7.</span><span class="paper-title">Coarse-to-Real: Generative Rendering for Populated Dynamic Scenes</span><span class="paper-authors">Gonzalo Gomez-Nogales, Yicong Hong, Chongjian Ge, Marc Comino-Trinidad, Dan Casas, Peiye Zhuang, Yi Zhou</span></li>
-                        <li><span class="paper-index">8.</span><span class="paper-title">Text-Guided Object Extraction in SVG via Raster Grounding and Filtering Primitives</span><span class="paper-authors">Ivan Jarsky, Boris Timofeenko, Boris Malashenko, Valeria Efimova</span></li>
+                        <li><span class="paper-index">1.</span><span class="paper-title">Temporal Consistency-Guided Video Editing using Diffusion Models</span><span class="board-badge">Board 10 · Back</span><span class="paper-authors">Mahule Roy, Subhas Roy</span></li>
+                        <li><span class="paper-index">2.</span><span class="paper-title">Implicit Neural Representation of Textures</span><span class="board-badge">Board 11 · Front</span><span class="paper-authors">Albert Kwok, Zheyuan Hu, Dounia Hammou</span></li>
+                        <li><span class="paper-index">3.</span><span class="paper-title">Selective Timestep Weighting and Advantage-Based Replay for Sample-Efficient Diffusion RLHF</span><span class="board-badge">Board 11 · Back</span><span class="paper-authors">Eric Zhu, Abhinav Shrivastava, Soumik Mukhopadhyay</span></li>
+                        <li><span class="paper-index">4.</span><span class="paper-title">Benchmarking Single-Step Inpainting Methods for Multi-Object 3D Gaussian Splatting Scenes</span><span class="board-badge">Board 12 · Front</span><span class="paper-authors">Finn Dröge, Cecilia Curreli, Abhishek Saroha, Daniel Cremers</span></li>
+                        <li><span class="paper-index">5.</span><span class="paper-title">MiMix: Character Mixing for Video Generation</span><span class="board-badge">Board 12 · Back</span><span class="paper-authors">Tingting Liao, Chongjian Ge, Guangyi Liu, Hao Li, Yi Zhou</span></li>
+                        <li><span class="paper-index">6.</span><span class="paper-title">DiverseVAR: Balancing Diversity and Quality of Next-Scale Visual Autoregressive Models</span><span class="board-badge">Board 13 · Front</span><span class="paper-authors">Mingue Park, Prin Phunyaphibarn, Phillip Y. Lee, Minhyuk Sung</span></li>
+                        <li><span class="paper-index">7.</span><span class="paper-title">Coarse-to-Real: Generative Rendering for Populated Dynamic Scenes</span><span class="board-badge">Board 13 · Back</span><span class="paper-authors">Gonzalo Gomez-Nogales, Yicong Hong, Chongjian Ge, Marc Comino-Trinidad, Dan Casas, Peiye Zhuang, Yi Zhou</span></li>
+                        <li><span class="paper-index">8.</span><span class="paper-title">Text-Guided Object Extraction in SVG via Raster Grounding and Filtering Primitives</span><span class="board-badge">Board 14 · Front</span><span class="paper-authors">Ivan Jarsky, Boris Timofeenko, Boris Malashenko, Valeria Efimova</span></li>
                     </ul>
                 </div>
 
                 <div class="papers-track">
                     <div class="papers-track-title">Invited Poster Presentation Track</div>
                     <ul class="papers-list">
-                        <li><span class="paper-index">1.</span><span class="paper-title">Charts Are Not Images: On the Challenges of Scientific Chart Editing</span><span class="paper-venue">(ICLR 2026)</span><span class="paper-authors">Shawn Li, Ryan Rossi, Sungchul Kim, Sunav Choudhary, Franck Dernoncourt, Puneet Mathur, Zhengzhong Tu, Yue Zhao</span></li>
-                        <li><span class="paper-index">2.</span><span class="paper-title">MatLat: Material Latent Space for PBR Texture Generation</span><span class="paper-venue">(CVPR 2026)</span><span class="paper-authors">Kyeongmin Yeo, Yunhong Min, Jaihoon Kim, Minhyuk Sung</span></li>
-                        <li><span class="paper-index">3.</span><span class="paper-title">InstructMix2Mix: Consistent Sparse-View Editing Through Multi-View Model Personalization</span><span class="paper-venue">(CVPR 2026)</span><span class="paper-authors">Daniel Gilo, Or Litany</span></li>
-                        <li><span class="paper-index">4.</span><span class="paper-title">FuLLaMa: Training-free Diffusion-based Object Removal with Context Preservation</span><span class="paper-venue">(WACV 2026)</span><span class="paper-authors">Ilke Demir, Umur Aybars Ciftci</span></li>
-                        <li><span class="paper-index">5.</span><span class="paper-title">Leveraging Semantic Attribute Binding for Free-Lunch Color Control in Diffusion Models</span><span class="paper-venue">(WACV 2026)</span><span class="paper-authors">Héctor Laria, Alexandra Gomez-Villa, Jiang Qin, Muhammad Atif Butt, Bogdan Raducanu, Javier Vazquez-Corral, Joost van de Weijer, Kai Wang</span></li>
-                        <li><span class="paper-index">6.</span><span class="paper-title">Making Video Models Adhere to User Intent with Minor Adjustments</span><span class="paper-venue">(TMLR 2026)</span><span class="paper-authors">Daniel Ajisafe, Eric Hedlin, Helge Rhodin, Kwang Moo Yi</span></li>
-                        <li><span class="paper-index">7.</span><span class="paper-title">First Frame Is the Place to Go for Video Content Customization</span><span class="paper-venue">(CVPR 2026)</span><span class="paper-authors">Jingxi Chen, Zongxia Li, Zhichao Liu, Guangyao Shi, Xiyang Wu, Fuxiao Liu, Cornelia Fermuller, Brandon Y. Feng, Yiannis Aloimonos</span></li>
-                        <li><span class="paper-index">8.</span><span class="paper-title">Through the PRISM: Principle-Aware, Interpretable, and Multi-Scale Evaluation of Visual Designs</span><span class="paper-venue">(CVPR 2026 Findings)</span><span class="paper-authors">Mona Gandhi, K J Joseph, Srinivasan Parthasarathy, Sayan Nag</span></li>
-                        <li><span class="paper-index">9.</span><span class="paper-title">A Training-Free Style-Personalization via SVD-Based Feature Decomposition</span><span class="paper-venue">(CVPR 2026)</span><span class="paper-authors">Kyoungmin Lee, Jihun Park, Jongmin Gim, Wonhyeok Choi, Kyumin Hwang, Jaeyeul Kim, Sunghoon Im</span></li>
-                        <li><span class="paper-index">10.</span><span class="paper-title">SIGMA-GEN: Structure and Identity Guided Multi-subject Assembly for Image Generation</span><span class="paper-venue">(ICLR 2026)</span><span class="paper-authors">Oindrila Saha, Vojtech Krs, Radomir Mech, Subhransu Maji, Kevin Blackburn-Matzen, Matheus Gadelha</span></li>
+                        <li><span class="paper-index">1.</span><span class="paper-title">Charts Are Not Images: On the Challenges of Scientific Chart Editing</span><span class="paper-venue">(ICLR 2026)</span><span class="board-badge">Board 14 · Back</span><span class="paper-authors">Shawn Li, Ryan Rossi, Sungchul Kim, Sunav Choudhary, Franck Dernoncourt, Puneet Mathur, Zhengzhong Tu, Yue Zhao</span></li>
+                        <li><span class="paper-index">2.</span><span class="paper-title">MatLat: Material Latent Space for PBR Texture Generation</span><span class="paper-venue">(CVPR 2026)</span><span class="board-badge">Board 15 · Front</span><span class="paper-authors">Kyeongmin Yeo, Yunhong Min, Jaihoon Kim, Minhyuk Sung</span></li>
+                        <li><span class="paper-index">3.</span><span class="paper-title">InstructMix2Mix: Consistent Sparse-View Editing Through Multi-View Model Personalization</span><span class="paper-venue">(CVPR 2026)</span><span class="board-badge">Board 15 · Back</span><span class="paper-authors">Daniel Gilo, Or Litany</span></li>
+                        <li><span class="paper-index">4.</span><span class="paper-title">FuLLaMa: Training-free Diffusion-based Object Removal with Context Preservation</span><span class="paper-venue">(WACV 2026)</span><span class="board-badge">Board 16 · Front</span><span class="paper-authors">Ilke Demir, Umur Aybars Ciftci</span></li>
+                        <li><span class="paper-index">5.</span><span class="paper-title">Leveraging Semantic Attribute Binding for Free-Lunch Color Control in Diffusion Models</span><span class="paper-venue">(WACV 2026)</span><span class="board-badge">Board 16 · Back</span><span class="paper-authors">Héctor Laria, Alexandra Gomez-Villa, Jiang Qin, Muhammad Atif Butt, Bogdan Raducanu, Javier Vazquez-Corral, Joost van de Weijer, Kai Wang</span></li>
+                        <li><span class="paper-index">6.</span><span class="paper-title">Making Video Models Adhere to User Intent with Minor Adjustments</span><span class="paper-venue">(TMLR 2026)</span><span class="board-badge">Board 17 · Front</span><span class="paper-authors">Daniel Ajisafe, Eric Hedlin, Helge Rhodin, Kwang Moo Yi</span></li>
+                        <li><span class="paper-index">7.</span><span class="paper-title">First Frame Is the Place to Go for Video Content Customization</span><span class="paper-venue">(CVPR 2026)</span><span class="board-badge">Board 17 · Back</span><span class="paper-authors">Jingxi Chen, Zongxia Li, Zhichao Liu, Guangyao Shi, Xiyang Wu, Fuxiao Liu, Cornelia Fermuller, Brandon Y. Feng, Yiannis Aloimonos</span></li>
+                        <li><span class="paper-index">8.</span><span class="paper-title">Through the PRISM: Principle-Aware, Interpretable, and Multi-Scale Evaluation of Visual Designs</span><span class="paper-venue">(CVPR 2026 Findings)</span><span class="board-badge">Board 18 · Front</span><span class="paper-authors">Mona Gandhi, K J Joseph, Srinivasan Parthasarathy, Sayan Nag</span></li>
+                        <li><span class="paper-index">9.</span><span class="paper-title">A Training-Free Style-Personalization via SVD-Based Feature Decomposition</span><span class="paper-venue">(CVPR 2026)</span><span class="board-badge">Board 18 · Back</span><span class="paper-authors">Kyoungmin Lee, Jihun Park, Jongmin Gim, Wonhyeok Choi, Kyumin Hwang, Jaeyeul Kim, Sunghoon Im</span></li>
+                        <li><span class="paper-index">10.</span><span class="paper-title">SIGMA-GEN: Structure and Identity Guided Multi-subject Assembly for Image Generation</span><span class="paper-venue">(ICLR 2026)</span><span class="board-badge">Board 19 · Front</span><span class="paper-authors">Oindrila Saha, Vojtech Krs, Radomir Mech, Subhransu Maji, Kevin Blackburn-Matzen, Matheus Gadelha</span></li>
                     </ul>
                 </div>
             </div>
