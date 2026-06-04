@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CVEU Workshop</title>
+    <meta nPMe="viewport" content="width=device-width">
+    <meta nPMe="description" content="CVPR 2026 Workshop on AI for Creative Visual Content Generation Editing and Understanding.">
+    <link rel="canonical" href="https://cveu.github.io/">
+
+    <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link rel="stylesheet" href="https://cveu.github.io/style.css">
+
+    <!-- <link rel="stylesheet" href="/style.css"> -->
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="https://cveu.github.io/css/font-awesome/css/all.min.css">
+
+    <!-- <link rel="stylesheet" href="/css/font-awesome/css/all.min.css"> -->
+
+    <link rel="icon" type="image/x-icon" href="img/cveu.ico">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/09c88d384d.js" crossorigin="anonymous"></script>
+    <style>
+        /* Base font size for consistent typography */
+        body {
+            font-size: 16px;
+        }
+        .content-section {
+            font-size: 16px;
+        }
+        .content-section p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .date-text {
+            font-size: 0.9em;
+        }
+        .dates-column {
+            font-size: 0.9em;
+        }
+        /* Compact table styling */
+        .table {
+            font-size: 15px;
+        }
+        .table th, .table td {
+            padding: 10px 12px;
+            vertical-align: top;
+        }
+        .table th {
+            font-weight: 600;
+        }
+        .table ul {
+            margin-bottom: 0;
+            padding-left: 20px;
+        }
+        .table li {
+            margin-bottom: 4px;
+            line-height: 1.4;
+        }
+        .table li:last-child {
+            margin-bottom: 0;
+        }
+        /* Program section styling */
+        #program .program-wrap {
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            margin-bottom: 30px;
+        }
+        #program .program-schedule-table {
+            margin-bottom: 0;
+            font-size: 16px;
+        }
+        #program .program-schedule-table thead th {
+            background: rgba(0, 120, 200, 0.35);
+            color: #fff;
+            font-weight: 600;
+            padding: 14px 16px;
+            border: none;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        #program .program-schedule-table tbody td {
+            padding: 12px 16px;
+            border-color: rgba(255, 255, 255, 0.1);
+            vertical-align: middle;
+        }
+        #program .program-schedule-table tbody tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.03);
+        }
+        #program .program-schedule-table tbody tr:hover {
+            background: rgba(255, 255, 255, 0.06);
+        }
+        #program .program-schedule-table .session-cell {
+            line-height: 1.5;
+            font-size: 16px;
+        }
+        #program .program-schedule-table .time-cell {
+            text-align: center;
+            font-weight: 600;
+            white-space: nowrap;
+            font-size: 16px;
+            letter-spacing: 0.02em;
+        }
+        /* Tentative Speakers */
+        #program .speakers-section {
+            margin-top: 35px;
+        }
+        #program .speakers-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px 24px;
+            margin-top: 20px;
+        }
+        #program .speaker-tbd {
+            text-align: center;
+            flex: 0 0 auto;
+        }
+        #program .speaker-tbd .speaker-avatar-wrap {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #program .speaker-tbd .speaker-avatar-wrap span {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.6);
+            font-weight: 600;
+        }
+        #program .speaker-tbd .speaker-avatar-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        #program .speaker-tbd .speaker-meta {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        #program .speaker-tbd .speaker-meta .speaker-name {
+            font-weight: 600;
+            color: #fff;
+        }
+        #program .speaker-tbd .speaker-meta .speaker-affiliation {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.55);
+        }
+        /* Submission Tracks table */
+        #program .submission-tracks-wrap {
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 12px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            margin-top: 8px;
+            min-width: 0;
+        }
+        #program .submission-tracks-table {
+            margin-bottom: 0;
+            font-size: 14px;
+            min-width: 620px;
+            table-layout: fixed;
+            width: 100%;
+        }
+        #program .submission-tracks-table thead th {
+            background: rgba(0, 120, 200, 0.35);
+            color: #fff;
+            font-weight: 600;
+            padding: 14px 16px;
+            border: none;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            vertical-align: middle;
+        }
+        #program .submission-tracks-table tbody th {
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            font-weight: 600;
+            padding: 12px 14px;
+            border-color: rgba(255, 255, 255, 0.1);
+            vertical-align: top;
+            width: 13%;
+        }
+        #program .submission-tracks-table tbody td {
+            padding: 12px 14px;
+            border-color: rgba(255, 255, 255, 0.1);
+            vertical-align: top;
+        }
+        #program .submission-tracks-table tbody td:first-of-type {
+            width: 47%;
+        }
+        #program .submission-tracks-table tbody td.dates-column {
+            width: 40%;
+        }
+        #program .submission-tracks-table tbody tr {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        #program .submission-tracks-table tbody tr:last-child {
+            border-bottom: none;
+        }
+        #program .submission-tracks-table tbody tr:nth-child(even) th,
+        #program .submission-tracks-table tbody tr:nth-child(even) td {
+            background: rgba(255, 255, 255, 0.02);
+        }
+        #program .submission-tracks-table tbody tr:hover th,
+        #program .submission-tracks-table tbody tr:hover td {
+            background: rgba(255, 255, 255, 0.06);
+        }
+        #program .submission-tracks-table .track-details {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+        #program .submission-tracks-table .track-details li {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 10px;
+            line-height: 1.45;
+            padding-left: 0;
+        }
+        #program .submission-tracks-table .track-details li:last-child {
+            margin-bottom: 0;
+        }
+        #program .submission-tracks-table .track-details li::before {
+            content: "";
+            flex-shrink: 0;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            margin-top: 8px;
+        }
+        #program .submission-tracks-table .detail-label {
+            flex: 0 0 90px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.95);
+            white-space: nowrap;
+        }
+        #program .submission-tracks-table .detail-value {
+            flex: 1;
+            min-width: 0;
+        }
+        #program .submission-tracks-table .dates-column .detail-label {
+            flex: 0 0 auto;
+        }
+        #program .submission-tracks-table .dates-column .detail-value {
+            white-space: normal;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        #program .submission-tracks-table .dates-column .track-details li::before {
+            background: rgba(125, 211, 252, 0.7);
+        }
+        #program .submission-tracks-table tbody td:not(.dates-column) {
+            font-size: 0.9em;
+        }
+        #program .submission-tracks-table .dates-column {
+            font-size: 0.88em;
+        }
+        #program .submission-tracks-table a {
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        /* Deadline update notice banner */
+        .deadline-update-notice {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            background: linear-gradient(135deg, rgba(234, 179, 8, 0.18) 0%, rgba(217, 119, 6, 0.15) 100%);
+            border: 1px solid rgba(234, 179, 8, 0.45);
+            border-left: 4px solid rgba(234, 179, 8, 0.9);
+            border-radius: 10px;
+            padding: 14px 18px;
+            margin-bottom: 20px;
+            margin-top: 12px;
+        }
+        .deadline-update-notice .notice-icon {
+            flex-shrink: 0;
+            font-size: 1.25em;
+            color: #fbbf24;
+            margin-top: 1px;
+        }
+        .deadline-update-notice .notice-content {
+            font-size: 0.92em;
+            color: rgba(255,255,255,0.92);
+            line-height: 1.55;
+        }
+        .deadline-update-notice .notice-title {
+            font-weight: 700;
+            color: #fde68a;
+            font-size: 1em;
+        }
+        .deadline-update-notice .notice-dates {
+            display: block;
+            margin-top: 5px;
+            color: rgba(255,255,255,0.85);
+        }
+        .deadline-update-notice .notice-dates b {
+            color: #fde68a;
+        }
+
+        /* Strikethrough old dates */
+        .old-date {
+            color: rgba(255,255,255,0.35);
+            text-decoration: line-through;
+            font-size: 0.88em;
+        }
+        /* New updated date highlight */
+        .new-date {
+            display: block;
+            color: #fde68a;
+            font-weight: 600;
+            font-size: 0.92em;
+            line-height: 1.4;
+        }
+        .new-date::before {
+            content: "↳ ";
+            color: #fbbf24;
+            font-weight: 700;
+        }
+
+        /* Improved table visuals */
+        #program .submission-tracks-table thead th:first-child {
+            border-radius: 12px 0 0 0;
+        }
+        #program .submission-tracks-table thead th:last-child {
+            border-radius: 0 12px 0 0;
+        }
+        #program .submission-tracks-table thead th {
+            background: linear-gradient(135deg, rgba(14, 90, 170, 0.7) 0%, rgba(0, 130, 200, 0.5) 100%);
+            letter-spacing: 0.04em;
+            font-size: 0.88em;
+            text-transform: uppercase;
+            padding: 13px 16px;
+        }
+        #program .submission-tracks-table tbody th {
+            background: rgba(255,255,255,0.07);
+            border-right: 1px solid rgba(255,255,255,0.08);
+            font-size: 0.92em;
+            color: #7dd3fc;
+        }
+        #program .submission-tracks-table .track-badge {
+            display: inline-block;
+            background: rgba(125, 211, 252, 0.12);
+            border: 1px solid rgba(125, 211, 252, 0.3);
+            border-radius: 20px;
+            padding: 2px 10px;
+            font-size: 0.82em;
+            color: #7dd3fc;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            margin-bottom: 2px;
+            white-space: nowrap;
+        }
+        #program .submission-tracks-table .detail-label {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(255,255,255,0.09);
+            border-radius: 4px;
+            padding: 2px 7px;
+            font-size: 0.73em;
+            font-weight: 700;
+            color: rgba(255,255,255,0.8);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            flex: 0 0 auto;
+            white-space: nowrap;
+            line-height: 1.5;
+        }
+        #program .submission-tracks-table .dates-column .detail-label {
+            background: rgba(125, 211, 252, 0.12);
+            color: rgba(125, 211, 252, 0.9);
+            border: 1px solid rgba(125, 211, 252, 0.2);
+        }
+        #program .submission-tracks-table tbody tr {
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        #program .submission-tracks-table tbody tr:nth-child(even) th,
+        #program .submission-tracks-table tbody tr:nth-child(even) td {
+            background: rgba(255,255,255,0.04);
+        }
+        #program .submission-tracks-table tbody tr:hover th,
+        #program .submission-tracks-table tbody tr:hover td {
+            background: rgba(125, 211, 252, 0.06);
+            transition: background 0.15s ease;
+        }
+    </style>
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <!-- Navigation -->
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand page-scroll" href="#page-top">
+                <i class="fa fa-play-circle"></i> <span class="light">CVEU@CVPR 2026</span>
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+            <ul class="nav navbar-nav">
+                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#about">About</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#program">Program</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#accepted-papers">Accepted Papers</a>
+                </li>
+                <!-- <li>
+                    <a class="page-scroll" href="#sponsorship">Sponsorship</a>
+                </li> -->
+                <li>
+                    <a class="page-scroll" href="#organizer">Organizers</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#contact">Contact</a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapses--> 
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Poster Board Assignment Notice -->
+<style>
+    .poster-notice-banner {
+        position: relative;
+        margin-top: 60px;
+        background: linear-gradient(135deg, rgba(234, 179, 8, 0.2) 0%, rgba(217, 119, 6, 0.18) 100%);
+        border-bottom: 2px solid rgba(234, 179, 8, 0.7);
+        border-top: 1px solid rgba(234, 179, 8, 0.4);
+        padding: 14px 20px;
+        text-align: center;
+        z-index: 100;
+    }
+    .poster-notice-banner .notice-inner {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 1100px;
+    }
+    .poster-notice-banner .notice-bang {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: #fbbf24;
+        color: #1a1a1a;
+        font-weight: 900;
+        font-size: 1.05em;
+        flex-shrink: 0;
+    }
+    .poster-notice-banner .notice-message {
+        color: #fde68a;
+        font-weight: 600;
+        font-size: 1em;
+        letter-spacing: 0.02em;
+    }
+    .poster-notice-banner .notice-message b {
+        color: #ffffff;
+    }
+    .poster-notice-banner a.notice-link {
+        color: #ffffff;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        font-weight: 700;
+    }
+    .poster-notice-banner a.notice-link:hover {
+        color: #fde68a;
+    }
+</style>
+<div class="poster-notice-banner">
+    <div class="notice-inner">
+        <span class="notice-bang">!</span>
+        <span class="notice-message"><b>Poster boards are assigned.</b> Each accepted paper now has its board number (Front / Back) listed on the <a href="#accepted-papers" class="page-scroll notice-link">Accepted Papers</a> page.</span>
+    </div>
+</div>
+
+    <!-- Intro Header -->
+<header class="intro" style="background: url(/img/bg-denver-cvpr26.jpg) no-repeat bottom center scroll; background-size: cover; -o-background-size: cover;">
+
+    <div class="intro-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    </br>
+                    </br>
+                    <h1 class="brand-heading" style="font-size: 60px;">CVPR 2026 Workshop</h1>
+                    <h2 class="intro-text">AI for Creative Visual Content Generation Editing and Understanding<br>
+                        
+                    </h2>
+                    <div class="countdown" id="countdown" data-role="countdown" data-blink="false"
+                        data-stoptimer="2026-06-03T09:00:00" style="font-size: 20px"></div>
+
+                        <p style="margin-bottom: 0; font-size: 1.4em;"><span style="color: rgb(168, 241, 255);"><b>June 3, 2026 · 8:30 AM – 12:30 PM · Room 501</b></span></p>
+
+                        <p style="margin-bottom: 0;">
+                            <span style="color: rgb(255, 248, 168);">
+                                <b>Denver, Colorado, USA</b>
+                            </span>
+                        </p>
+                            <!-- <a href="https://cveu.github.io/" target="_blank"
+                            class="hl-green">Link</a>
+                            | 
+                            <a href="https://github.com/CVEU/2025/raw/main/papers/SIGASIA25CVEU_Course.pdf" target="_blank" class="hl-green">Slides</a> -->
+                            <!-- <i>Course : 2025-12-16 2:00pm – 5:45pm (HKT)</i><br/>
+                            <i>BoF Workshop 1 : 2025-12-16 5:00pm – 6:00pm (HKT)</i><br/>
+                            <i>BoF Workshop 2 : 2025-12-18 1:00pm – 2:00pm (HKT)</i><br/> -->
+                            <!-- Generative Models for Visual Content Editing and Creation -->
+
+                        <br>
+                        
+                        <!-- <p style="margin-top: 0; margin-bottom: 0;">
+                        Workshop Recording: 
+                        <a href="https://youtu.be/KVmXVYiQM0Q?si=XHy-jRsolj_QvTJf" target="_blank"
+                            class="hl-green">xxxxxxxxxxxxxxxx</a>
+                        </p> -->
+                        <br>
+                    <a href="#about" class="btn btn-circle page-scroll">
+                        <i class="fa fa-angle-double-down animated"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+    <!-- About Section -->
+<section id="about" class="container content-section text-left">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h2 class="text-center" style="font-size: 1.8em; margin-bottom: 20px;">About</h2>
+            <p style="text-align: justify;">
+                The AI for Creative Visual Content Generation, Editing and Understanding (CVEU) workshop at CVPR 2026 continues the series of events at
+                computer vision community:
+                <a href="/event/cvpr2025.html">CVPR'25</a>,
+                <a href="/event/cvpr2024.html">CVPR'24</a>,
+                <a href="/event/iccv2023.html">ICCV'23</a>, 
+                <a href="/event/eccv2022.html">ECCV'22</a>, 
+                <a href="/event/iccv2021.html">ICCV'21</a>, 
+                and computer graphics community: 
+                <a href="/event/sig2024.html">SIGGRAPH'24</a>,
+                <a href="/event/sig2025.html">SIGGRAPH'25</a>,
+                <a href="/event/siga2025.html">SIGGRAPH Asia'25</a>,
+                and ai art community:  
+                <a href="/event/hkustfilm2025.html">HKUST AI Film Festival 2025</a>.
+                <a href="/event/hkustfilm2026.html">HKUST AI Film Festival 2026</a>.
+
+            </p>
+            <p style="text-align: justify;">
+                It brings together researchers, artists and entrepreneurs working on computer graphics, human–computer interaction,
+                computer vision, machine learning, and cognitive research to explore how AI can assist creative visual content
+                generation, editing and understanding.
+            </p>
+            
+        </div>
+    </div>
+</section>
+
+    <!-- Theme Section -->
+<section id="theme" class="container content-section text-left" style="margin-top: -100px;">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h2 class="text-center" style="font-size: 1.8em; margin-bottom: 20px;">Workshop Theme: World Modeling</h2>
+            <p style="text-align: justify;">
+                World modeling is the development of AI systems that build rich internal representations of the physical and digital world—its objects, agents, dynamics, and uncertainties—and use these models to reason, plan, and act. 
+                Instead of only mapping inputs directly to outputs, world models learn predictive, structured abstractions (e.g., 3D scenes, causal relationships, multimodal narratives) that support simulation and counterfactual reasoning.
+            </p>
+            <p style="text-align: justify;">
+                For creative visual content, world modeling enables models to maintain global coherence across space, time, and modalities: characters stay consistent across shots, lighting and physics remain plausible, and edits respect scene geometry, narrative intent, and user constraints. 
+                This workshop highlights methods that leverage such structured world understanding to advance controllable generation, robust editing, interactive storytelling, and human–AI collaboration in visual media.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="program" class="content-section text-left"> 
+    <div class="download-section"> 
+        <div class="container"> 
+            <div class="col-lg-8 col-lg-offset-2"> 
+                <h2 class="text-center" style="font-size: 1.8em; margin-bottom: 24px;">Tentative Program (CVPR 2026)</h2> 
+                <div class="program-wrap">
+                    <table class="table table-bordered program-schedule-table" style="width: 100%;">
+                        <colgroup>
+                            <col style="width: 65%;">
+                            <col style="width: 35%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">Schedule</th>
+                                <th scope="col">Mountain Time (MT)<br/><small>June 3, 2026 · Room 501 · 8:30 AM – 12:30 PM</small></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="session-cell"><b>Opening Remarks</b></td>
+                                <td class="time-cell">8:25 – 8:30 AM</td>
+                            </tr>
+                            <tr>
+                                <td class="session-cell"><b>Keynote Talk #1 — Soo Ye Kim</b> <span style="opacity:0.6; font-size:0.85em;">(25 min + 5 min Q&A)</span></td>
+                                <td class="time-cell">8:30 – 9:00 AM</td>
+                            </tr>
+                            <tr>
+                                <td class="session-cell"><b>Keynote Talk #2 — Jack Parker-Holder</b> <span style="opacity:0.6; font-size:0.85em;">(25 min + 5 min Q&A)</span></td>
+                                <td class="time-cell">9:00 – 9:30 AM</td>
+                            </tr>
+                            <tr>
+                                <td class="session-cell"><b>Keynote Talk #3 — Amir Bar</b> <span style="opacity:0.6; font-size:0.85em;">(25 min + 5 min Q&A)</span></td>
+                                <td class="time-cell">9:30 – 10:00 AM</td>
+                            </tr>
+                            <tr>
+                                <td class="session-cell"><b>Oral Presentation #1</b><br><span style="opacity: 0.9;">LumiCtrl: Learning Illuminant Prompts for Lighting Control in Personalized Text-to-Image Models</span><br><span style="opacity: 0.55; font-size: 0.78em; font-style: italic;">Muhammad Atif Butt, Kai Wang, Javier Vazquez-Corral, Joost van de Weijer</span></td>
+                                <td class="time-cell">10:00 – 10:10 AM</td>
+                            </tr>
+                            <tr>
+                                <td class="session-cell"><b>Oral Presentation #2</b><br><span style="opacity: 0.9;">LaDe: Unified Multi-Layered Graphic Media Generation and Decomposition</span><br><span style="opacity: 0.55; font-size: 0.78em; font-style: italic;">Vlad-Constantin Lungu-Stan, Ionut Mironica, Iuliana Georgescu</span></td>
+                                <td class="time-cell">10:10 – 10:20 AM</td>
+                            </tr>
+                            <tr>
+                                <td class="session-cell"><b>Oral Presentation #3</b><br><span style="opacity: 0.9;">FOCUS: Optimal Control for Multi-Entity World Modeling in Text-to-Image Generation</span><br><span style="opacity: 0.55; font-size: 0.78em; font-style: italic;">Eric Tillmann Bill, Enis Simsar, Thomas Hofmann</span></td>
+                                <td class="time-cell">10:20 – 10:30 AM</td>
+                            </tr>
+                            <tr style="background: rgba(255,255,255,0.04);">
+                                <td class="session-cell"><b>Coffee Break & Poster Session</b></td>
+                                <td class="time-cell">10:30 – 11:30 AM</td>
+                            </tr>
+                            <tr>
+                                <td class="session-cell"><b>Keynote Talk #4 — Mike Zheng Shou</b> <span style="opacity:0.6; font-size:0.85em;">(25 min + 5 min Q&A)</span></td>
+                                <td class="time-cell">11:30 AM – 12:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td class="session-cell"><b>Keynote Talk #5 — Jiajun Wu</b> <span style="opacity:0.6; font-size:0.85em;">(25 min + 5 min Q&A)</span></td>
+                                <td class="time-cell">12:00 – 12:30 PM</td>
+                            </tr>
+                            <tr>
+                                <td class="session-cell"><b>Closing Remarks</b></td>
+                                <td class="time-cell">12:30 – 12:35 PM</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="speakers-section">
+                    <h2 class="text-center" style="font-size: 1.8em; margin-bottom: 10px;">Tentative Speakers</h2>
+                    <div class="speakers-row">
+                        <div class="speaker-tbd">
+                            <div class="speaker-avatar-wrap"><img src="/speakers/amir_bar.png" alt="Amir Bar"></div>
+                            <div class="speaker-meta"><div class="speaker-name">Amir Bar</div><div class="speaker-affiliation">FAIR</div></div>
+                        </div>
+                        <div class="speaker-tbd">
+                            <div class="speaker-avatar-wrap"><img src="/speakers/jiajun_wu.jpg" alt="Jiajun Wu"></div>
+                            <div class="speaker-meta"><div class="speaker-name">Jiajun Wu</div><div class="speaker-affiliation">Stanford University</div></div>
+                        </div>
+                        <div class="speaker-tbd">
+                            <div class="speaker-avatar-wrap"><img src="https://jparkerholder.github.io/img/jack+doris.png" alt="Jack Parker-Holder"></div>
+                            <div class="speaker-meta"><div class="speaker-name">Jack Parker-Holder</div><div class="speaker-affiliation">Google DeepMind</div></div>
+                        </div>
+                        <div class="speaker-tbd">
+                            <div class="speaker-avatar-wrap"><img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=h1-3lSoAAAAJ&citpid=10" alt="Mike Zheng Shou"></div>
+                            <div class="speaker-meta"><div class="speaker-name">Mike Zheng Shou</div><div class="speaker-affiliation">National University of Singapore</div></div>
+                        </div>
+                        <div class="speaker-tbd">
+                            <div class="speaker-avatar-wrap" style="overflow: hidden;"><img src="/img/speakers/soo_ye_kim.jpg" alt="Soo Ye Kim" style="transform: scale(2); transform-origin: center 35%; border-radius: 0;"></div>
+                            <div class="speaker-meta"><div class="speaker-name">Soo Ye Kim</div><div class="speaker-affiliation">Adobe Research</div></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <br />
+
+                <style>
+                    .cfp-toggle {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 10px;
+                        cursor: pointer;
+                        user-select: none;
+                        margin-top: 25px;
+                        margin-bottom: 0;
+                        padding: 12px 0;
+                        border-radius: 8px;
+                        transition: background 0.15s ease;
+                    }
+                    .cfp-toggle:hover {
+                        background: rgba(255,255,255,0.04);
+                    }
+                    .cfp-toggle h2 {
+                        margin: 0;
+                        font-size: 1.8em;
+                    }
+                    .cfp-toggle .cfp-icon {
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 28px;
+                        height: 28px;
+                        border-radius: 50%;
+                        border: 2px solid rgba(255,255,255,0.4);
+                        font-size: 18px;
+                        font-weight: 300;
+                        color: rgba(255,255,255,0.7);
+                        transition: transform 0.25s ease, border-color 0.15s ease;
+                        flex-shrink: 0;
+                    }
+                    .cfp-toggle:hover .cfp-icon {
+                        border-color: rgba(255,255,255,0.7);
+                        color: #fff;
+                    }
+                    .cfp-toggle.active .cfp-icon {
+                        transform: rotate(45deg);
+                    }
+                    .cfp-content {
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: max-height 0.35s ease;
+                    }
+                    .cfp-content.open {
+                        max-height: 600px;
+                    }
+                </style>
+                <div id="cfp" class="cfp-toggle" onclick="this.classList.toggle('active'); document.getElementById('cfp-body').classList.toggle('open');">
+                    <h2>Call for Papers</h2>
+                    <span style="font-size: 0.45em; color: rgba(255,255,255,0.45); font-weight: 400; margin-left: -4px;">(click to expand)</span>
+                    <span class="cfp-icon">+</span>
+                </div>
+                <div id="cfp-body" class="cfp-content">
+                    <p style="text-align: justify; margin-top: 10px;">
+                        The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026<br />
+                        This workshop is for the next installment of the AI for Creative Visual Content Generation Editing and Understanding (CVEU).
+                        It brings together researchers working on computer vision, machine listening, computer graphics, human-computer interaction,
+                        and cognitive research. It aims to bring awareness of recent advances in machine learning technologies to enable
+                        assisted creative-video creation and understanding. The workshop will include invited talks by experts in the area and
+                        give the community opportunities to share their work via oral and poster presentations. We encourage practitioners,
+                        designers, students, post-docs, and researchers to submit work describing new ideas, work-in-progress, and previously
+                        or concurrently published research.
+                    </p>
+
+                    <div style="display: flex; flex-wrap: wrap; gap: 1.5rem;">
+                        <ul style="flex: 1 1 300px; list-style: disc; line-height: 1.5;">
+                            <li>Video GenAI</li>
+                            <li>Video storyboarding</li>
+                            <li>GenAI for visual productions</li>
+                            <li>GenAI for audio-visual storytelling</li>
+                            <li>Watermarking</li>
+                            <li>Content attribution</li>
+                            <li>Safety in content generation</li>
+                            <li>Computational Video Editing</li>
+                            <li>Computational Videography/Virtual Cinematography</li>
+                            <li>Video Shortening and Manipulation</li>
+                        </ul>
+                        <ul style="flex: 1 1 300px; list-style: disc; line-height: 1.5;">
+                            <li>Video Description and Storyboarding</li>
+                            <li>Video Search and Retrieval</li>
+                            <li>Human-centric Video Understanding</li>
+                            <li>Event/Story Understanding</li>
+                            <li>Emotion/Sound Recognition</li>
+                            <li>Generative Adversarial Network for Video</li>
+                            <li>Diffusion Model and GAN for Video</li>
+                            <li>Neural Rendering for Video</li>
+                            <li>VR/AR/Panorama Video</li>
+                            <li>Dataset and Evaluation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <br />
+                <h2 class="text-center" style="font-size: 1.8em; margin-top: 28px; margin-bottom: 8px;">Submission Tracks</h2>
+
+                <style>
+                    .track-card {
+                        background: rgba(255,255,255,0.06);
+                        border: 1px solid rgba(255,255,255,0.12);
+                        border-radius: 10px;
+                        padding: 20px 24px;
+                        margin-bottom: 14px;
+                    }
+                    .track-card-header {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        gap: 8px;
+                        margin-bottom: 12px;
+                    }
+                    .track-card-title {
+                        font-size: 1.1em;
+                        font-weight: 700;
+                        color: #7dd3fc;
+                    }
+                    .track-card-meta {
+                        font-size: 0.82em;
+                        color: rgba(255,255,255,0.6);
+                    }
+                    .track-card-submit {
+                        margin-bottom: 14px;
+                        font-size: 0.88em;
+                    }
+                    .track-card-submit a {
+                        color: #7dd3fc;
+                        text-decoration: underline;
+                        text-underline-offset: 2px;
+                    }
+                    .track-dates {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 10px 24px;
+                        font-size: 0.95em;
+                    }
+                    .track-date-item {
+                        display: flex;
+                        align-items: baseline;
+                        gap: 7px;
+                    }
+                    .track-date-label {
+                        color: rgba(255,255,255,0.5);
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        font-size: 0.82em;
+                        letter-spacing: 0.03em;
+                    }
+                    .track-date-value {
+                        color: rgba(255,255,255,0.95);
+                        font-weight: 600;
+                    }
+                    .track-card .old-date {
+                        color: rgba(255,255,255,0.3);
+                        text-decoration: line-through;
+                        font-size: 0.9em;
+                        margin-right: 2px;
+                    }
+                    .track-card .new-date {
+                        color: #fde68a;
+                        font-weight: 600;
+                        display: inline;
+                    }
+                    .track-card .new-date::before {
+                        content: "→ ";
+                        color: #fbbf24;
+                    }
+                    .track-card-notice {
+                        background: rgba(234, 179, 8, 0.12);
+                        border: 1px solid rgba(234, 179, 8, 0.3);
+                        border-radius: 6px;
+                        padding: 8px 12px;
+                        font-size: 0.82em;
+                        color: rgba(255,255,255,0.85);
+                        margin-bottom: 12px;
+                    }
+                    .track-card-notice b {
+                        color: #fde68a;
+                    }
+                </style>
+
+                <!-- In-proceeding Track -->
+                <div class="track-card">
+                    <div class="track-card-header">
+                        <span class="track-card-title">In-proceeding Track</span>
+                        <span class="track-card-meta">8 pages (excl. references) · CVPR proceedings · CVPR template</span>
+                    </div>
+                    <div class="track-card-notice">
+                        <b>Updated</b> per CVPR workshop chairs — Abstract, Submission, and Notification dates revised below.
+                    </div>
+                    <div class="track-card-submit">
+                        Submit via <a href="https://openreview.net/group?id=thecvf.com/CVPR/2026/Workshop/CVEU" target="_blank">CVEU OpenReview Console</a>
+                    </div>
+                    <div class="track-dates">
+                        <div class="track-date-item">
+                            <span class="track-date-label">Abstract</span>
+                            <span class="track-date-value"><s class="old-date">Mar 16</s> <span class="new-date">Mar 16, 2026 · 11:59 PM UTC</span></span>
+                        </div>
+                        <div class="track-date-item">
+                            <span class="track-date-label">Submission</span>
+                            <span class="track-date-value"><s class="old-date">Mar 23</s> <span class="new-date">Mar 17, 2026 · 11:59 PM UTC</span></span>
+                        </div>
+                        <div class="track-date-item">
+                            <span class="track-date-label">Notification</span>
+                            <span class="track-date-value"><s class="old-date">Apr 6</s> <span class="new-date">Mar 24, 2026 · 23:59 UTC</span></span>
+                        </div>
+                        <div class="track-date-item">
+                            <span class="track-date-label">Camera-ready</span>
+                            <span class="track-date-value">Apr 9, 2026</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Extended Abstract Track -->
+                <div class="track-card">
+                    <div class="track-card-header">
+                        <span class="track-card-title">Extended Abstract Track</span>
+                        <span class="track-card-meta">4 pages (excl. references) · Not in proceedings · CVPR template</span>
+                    </div>
+                    <div class="track-card-submit">
+                        Submit via <a href="https://openreview.net/group?id=thecvf.com/CVPR/2026/Workshop/CVEU_Extended_Abstract_Track" target="_blank">CVEU Extended Abstract OpenReview</a>
+                    </div>
+                    <div class="track-dates">
+                        <div class="track-date-item">
+                            <span class="track-date-label">Submission</span>
+                            <span class="track-date-value">Apr 22, 2026</span>
+                        </div>
+                        <div class="track-date-item">
+                            <span class="track-date-label">Notification</span>
+                            <span class="track-date-value">May 1, 2026</span>
+                        </div>
+                        <div class="track-date-item">
+                            <span class="track-date-label">Camera-ready</span>
+                            <span class="track-date-value">May 7, 2026</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Invited Track -->
+                <div class="track-card">
+                    <div class="track-card-header">
+                        <span class="track-card-title">Invited Poster Presentation Track</span>
+                        <span class="track-card-meta">Already published papers (e.g. CVPR 2026) · Must relate to CVEU topics</span>
+                    </div>
+                    <div class="track-card-submit">
+                        Submit via <a href="https://docs.google.com/forms/d/e/1FAIpQLSd5VD0GStFrZR7COEmZtU8VtRwCGDNnySFYXVFFddKlNOtm9A/viewform" target="_blank">CVEU Invited Poster Form</a>
+                    </div>
+                    <div class="track-dates">
+                        <div class="track-date-item">
+                            <span class="track-date-label">Submission</span>
+                            <span class="track-date-value">May 7, 2026</span>
+                        </div>
+                        <div class="track-date-item">
+                            <span class="track-date-label">Notification</span>
+                            <span class="track-date-value">May 10, 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="accepted-papers" class="content-section text-left">
+    <div class="download-section">
+        <div class="container">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2 class="text-center" style="font-size: 1.8em; margin-top: 25px; margin-bottom: 20px;">Accepted Papers</h2>
+
+                <style>
+                    .papers-track {
+                        background: rgba(255,255,255,0.06);
+                        border: 1px solid rgba(255,255,255,0.12);
+                        border-radius: 10px;
+                        padding: 20px 24px;
+                        margin-bottom: 16px;
+                    }
+                    .papers-track-title {
+                        font-size: 1.15em;
+                        font-weight: 700;
+                        color: #7dd3fc;
+                        margin-bottom: 12px;
+                        padding-bottom: 8px;
+                        border-bottom: 1px solid rgba(125,211,252,0.2);
+                    }
+                    .papers-list {
+                        list-style: none;
+                        padding-left: 0;
+                        margin: 0;
+                    }
+                    .papers-list li {
+                        padding: 10px 0;
+                        border-bottom: 1px solid rgba(255,255,255,0.06);
+                        line-height: 1.55;
+                        font-size: 0.95em;
+                        color: rgba(255,255,255,0.92);
+                    }
+                    .papers-list li:last-child {
+                        border-bottom: none;
+                    }
+                    .papers-list .paper-index {
+                        color: rgba(125,211,252,0.7);
+                        font-weight: 600;
+                        margin-right: 8px;
+                    }
+                    .papers-list .paper-title {
+                        font-weight: 600;
+                    }
+                    .papers-list .paper-authors {
+                        display: block;
+                        margin-top: 4px;
+                        margin-left: 22px;
+                        font-size: 0.85em;
+                        color: rgba(255,255,255,0.6);
+                        font-style: italic;
+                    }
+                    .papers-list .paper-venue {
+                        color: rgba(125,211,252,0.6);
+                        font-size: 0.85em;
+                        margin-left: 6px;
+                        font-style: normal;
+                    }
+                    .papers-list .board-badge {
+                        display: inline-block;
+                        background: rgba(251, 191, 36, 0.15);
+                        border: 1px solid rgba(251, 191, 36, 0.45);
+                        border-radius: 4px;
+                        padding: 2px 8px;
+                        font-size: 0.78em;
+                        font-weight: 700;
+                        color: #fde68a;
+                        margin-left: 8px;
+                        white-space: nowrap;
+                        letter-spacing: 0.02em;
+                        vertical-align: middle;
+                    }
+                    .papers-empty {
+                        color: rgba(255,255,255,0.5);
+                        font-style: italic;
+                        padding: 8px 0;
+                    }
+                </style>
+
+                <div class="papers-track">
+                    <div class="papers-track-title">In-proceeding Track</div>
+                    <ul class="papers-list">
+                        <li><span class="paper-index">1.</span><span class="paper-title">Generating Fit Check Videos with a Handheld Camera</span><span class="board-badge">Board 1 · Front</span><span class="paper-authors">Bowei Chen, Brian Curless, Ira Kemelmacher-Shlizerman, Steve Seitz</span></li>
+                        <li><span class="paper-index">2.</span><span class="paper-title">Diamonds in the Sky: Pareidolic Animals in Clouds</span><span class="board-badge">Board 1 · Back</span><span class="paper-authors">Miriam Horovicz, Yacov Hel-Or, Yael Moses</span></li>
+                        <li><span class="paper-index">3.</span><span class="paper-title">LaDe: Unified Multi-Layered Graphic Media Generation and Decomposition</span><span class="board-badge">Board 2 · Front</span><span class="paper-authors">Vlad-Constantin Lungu-Stan, Ionut Mironica, Iuliana Georgescu</span></li>
+                        <li><span class="paper-index">4.</span><span class="paper-title">LumiCtrl: Learning Illuminant Prompts for Lighting Control in Personalized Text-to-Image Models</span><span class="board-badge">Board 2 · Back</span><span class="paper-authors">Muhammad Atif Butt, Kai Wang, Javier Vazquez-Corral, Joost van de Weijer</span></li>
+                        <li><span class="paper-index">5.</span><span class="paper-title">FOCUS: Optimal Control for Multi-Entity World Modeling in Text-to-Image Generation</span><span class="board-badge">Board 3 · Front</span><span class="paper-authors">Eric Bill, Enis Simsar, Thomas Hofmann</span></li>
+                        <li><span class="paper-index">6.</span><span class="paper-title">Learning Temporal Relations for Evaluating Instruction-Guided Image Editing in Vision-Language Models</span><span class="board-badge">Board 3 · Back</span><span class="paper-authors">Pia Donabauer, Alexander Tack, Udo Kruschwitz</span></li>
+                        <li><span class="paper-index">7.</span><span class="paper-title">PLATO++: Pose-Conditioned Part-Aware Object Generation via Residual Structure Learning</span><span class="board-badge">Board 4 · Front</span><span class="paper-authors">Varghese Kuruvilla, Harishwar Rao J., Ravi Kiran Sarvadevabhatla</span></li>
+                        <li><span class="paper-index">8.</span><span class="paper-title">Temporal Environment-Aware Image Generation via Latent Diffusion</span><span class="board-badge">Board 4 · Back</span><span class="paper-authors">Nasrin Kalanat, Yiqun Xie, Yanhua Li, Xiaowei Jia</span></li>
+                        <li><span class="paper-index">9.</span><span class="paper-title">Towards Design Composition</span><span class="board-badge">Board 5 · Front</span><span class="paper-authors">Abhinav Mahajan, Abhikhya Tripathy, Sudeeksha Pala, Vaibhav Methi, K Joseph, Balaji Vasan Srinivasan</span></li>
+                        <li><span class="paper-index">10.</span><span class="paper-title">ProFashion: Prototype-guided Fashion Video Generation with Multiple Reference Images</span><span class="board-badge">Board 5 · Back</span><span class="paper-authors">Xianghao Kong, Qiaosong Qi, Yuanbin Wang, Biaolong Chen, Aixi Zhang, Anyi Rao</span></li>
+                        <li><span class="paper-index">11.</span><span class="paper-title">X-Aligner: Composed Visual Retrieval without the Bells and Whistles</span><span class="board-badge">Board 6 · Front</span><span class="paper-authors">Yuqian Zheng, Iuliana Georgescu</span></li>
+                        <li><span class="paper-index">12.</span><span class="paper-title">Visual Composition Generation of Multi-Source Heterogeneous Concepts — A Practical Study Based on the AIGC Short Film: The Meeting</span><span class="board-badge">Board 6 · Back</span><span class="paper-authors">Shiqin Hou, Jiayan Chen, Tianyi Zhang, Baoyang Chen, Anyi Rao</span></li>
+                        <li><span class="paper-index">13.</span><span class="paper-title">Hi-Light: A Path to High-fidelity, High-resolution Video Relighting With A Refined Evaluation Paradigm</span><span class="board-badge">Board 7 · Front</span><span class="paper-authors">Xiangrui Liu, Haoxiang Li, Yezhou Yang</span></li>
+                        <li><span class="paper-index">14.</span><span class="paper-title">From Pixels to Layers: Multimodal Generation of Editable Vector Graphics</span><span class="board-badge">Board 7 · Back</span><span class="paper-authors">Rongxiang Zhang, Xinyi Shang, Peng Sun, Tao Lin</span></li>
+                        <li><span class="paper-index">15.</span><span class="paper-title">Faces in the Wild: GAN-Driven Normalization for Robust Facial Recognition</span><span class="board-badge">Board 8 · Front</span><span class="paper-authors">Mohit, Atul Kumar, Akshay Agarwal</span></li>
+                        <li><span class="paper-index">16.</span><span class="paper-title">Mem-UniVST: Recurrent Gram Memory for Training-Free Temporally Consistent Video Stylization</span><span class="board-badge">Board 8 · Back</span><span class="paper-authors">Nimay Ballal, Shylaja S S</span></li>
+                        <li><span class="paper-index">17.</span><span class="paper-title">Pseudo-Unification: Entropy Probing Reveals Divergent Information Patterns in Unified Multimodal Models</span><span class="board-badge">Board 9 · Front</span><span class="paper-authors">Songlin Yang, Xianghao Kong, Anyi Rao</span></li>
+                        <li><span class="paper-index">18.</span><span class="paper-title">FashionDraft: Resolving Structural Ambiguity in Text-To-Image Fashion Generation</span><span class="board-badge">Board 9 · Back</span><span class="paper-authors">Santhosh V, Arushi Jain, Shubham Paliwal, Monika Sharma</span></li>
+                        <li><span class="paper-index">19.</span><span class="paper-title">DRA-MTransfer: Physically Realistic Video Motion Transfer with Dual-Grained Re-Adaptation</span><span class="board-badge">Board 10 · Front</span><span class="paper-authors">Guoli Jia, Zhiyuan Ma, Junyao Hu, Xinwei Long, Kai Tian, Kaikai Zhao, Zhaoxiang Liu, Kai Wang, Shiguo Lian, Bowen Zhou</span></li>
+                    </ul>
+                </div>
+
+                <div class="papers-track">
+                    <div class="papers-track-title">Extended Abstract Track</div>
+                    <ul class="papers-list">
+                        <li><span class="paper-index">1.</span><span class="paper-title">Temporal Consistency-Guided Video Editing using Diffusion Models</span><span class="board-badge">Board 10 · Back</span><span class="paper-authors">Mahule Roy, Subhas Roy</span></li>
+                        <li><span class="paper-index">2.</span><span class="paper-title">Implicit Neural Representation of Textures</span><span class="board-badge">Board 11 · Front</span><span class="paper-authors">Albert Kwok, Zheyuan Hu, Dounia Hammou</span></li>
+                        <li><span class="paper-index">3.</span><span class="paper-title">Selective Timestep Weighting and Advantage-Based Replay for Sample-Efficient Diffusion RLHF</span><span class="board-badge">Board 11 · Back</span><span class="paper-authors">Eric Zhu, Abhinav Shrivastava, Soumik Mukhopadhyay</span></li>
+                        <li><span class="paper-index">4.</span><span class="paper-title">Benchmarking Single-Step Inpainting Methods for Multi-Object 3D Gaussian Splatting Scenes</span><span class="board-badge">Board 12 · Front</span><span class="paper-authors">Finn Dröge, Cecilia Curreli, Abhishek Saroha, Daniel Cremers</span></li>
+                        <li><span class="paper-index">5.</span><span class="paper-title">MiMix: Character Mixing for Video Generation</span><span class="board-badge">Board 12 · Back</span><span class="paper-authors">Tingting Liao, Chongjian Ge, Guangyi Liu, Hao Li, Yi Zhou</span></li>
+                        <li><span class="paper-index">6.</span><span class="paper-title">DiverseVAR: Balancing Diversity and Quality of Next-Scale Visual Autoregressive Models</span><span class="board-badge">Board 13 · Front</span><span class="paper-authors">Mingue Park, Prin Phunyaphibarn, Phillip Y. Lee, Minhyuk Sung</span></li>
+                        <li><span class="paper-index">7.</span><span class="paper-title">Coarse-to-Real: Generative Rendering for Populated Dynamic Scenes</span><span class="board-badge">Board 13 · Back</span><span class="paper-authors">Gonzalo Gomez-Nogales, Yicong Hong, Chongjian Ge, Marc Comino-Trinidad, Dan Casas, Peiye Zhuang, Yi Zhou</span></li>
+                        <li><span class="paper-index">8.</span><span class="paper-title">Text-Guided Object Extraction in SVG via Raster Grounding and Filtering Primitives</span><span class="board-badge">Board 14 · Front</span><span class="paper-authors">Ivan Jarsky, Boris Timofeenko, Boris Malashenko, Valeria Efimova</span></li>
+                    </ul>
+                </div>
+
+                <div class="papers-track">
+                    <div class="papers-track-title">Invited Poster Presentation Track</div>
+                    <ul class="papers-list">
+                        <li><span class="paper-index">1.</span><span class="paper-title">Charts Are Not Images: On the Challenges of Scientific Chart Editing</span><span class="paper-venue">(ICLR 2026)</span><span class="board-badge">Board 14 · Back</span><span class="paper-authors">Shawn Li, Ryan Rossi, Sungchul Kim, Sunav Choudhary, Franck Dernoncourt, Puneet Mathur, Zhengzhong Tu, Yue Zhao</span></li>
+                        <li><span class="paper-index">2.</span><span class="paper-title">MatLat: Material Latent Space for PBR Texture Generation</span><span class="paper-venue">(CVPR 2026)</span><span class="board-badge">Board 15 · Front</span><span class="paper-authors">Kyeongmin Yeo, Yunhong Min, Jaihoon Kim, Minhyuk Sung</span></li>
+                        <li><span class="paper-index">3.</span><span class="paper-title">InstructMix2Mix: Consistent Sparse-View Editing Through Multi-View Model Personalization</span><span class="paper-venue">(CVPR 2026)</span><span class="board-badge">Board 15 · Back</span><span class="paper-authors">Daniel Gilo, Or Litany</span></li>
+                        <li><span class="paper-index">4.</span><span class="paper-title">FuLLaMa: Training-free Diffusion-based Object Removal with Context Preservation</span><span class="paper-venue">(WACV 2026)</span><span class="board-badge">Board 16 · Front</span><span class="paper-authors">Ilke Demir, Umur Aybars Ciftci</span></li>
+                        <li><span class="paper-index">5.</span><span class="paper-title">Leveraging Semantic Attribute Binding for Free-Lunch Color Control in Diffusion Models</span><span class="paper-venue">(WACV 2026)</span><span class="board-badge">Board 16 · Back</span><span class="paper-authors">Héctor Laria, Alexandra Gomez-Villa, Jiang Qin, Muhammad Atif Butt, Bogdan Raducanu, Javier Vazquez-Corral, Joost van de Weijer, Kai Wang</span></li>
+                        <li><span class="paper-index">6.</span><span class="paper-title">Making Video Models Adhere to User Intent with Minor Adjustments</span><span class="paper-venue">(TMLR 2026)</span><span class="board-badge">Board 17 · Front</span><span class="paper-authors">Daniel Ajisafe, Eric Hedlin, Helge Rhodin, Kwang Moo Yi</span></li>
+                        <li><span class="paper-index">7.</span><span class="paper-title">First Frame Is the Place to Go for Video Content Customization</span><span class="paper-venue">(CVPR 2026)</span><span class="board-badge">Board 17 · Back</span><span class="paper-authors">Jingxi Chen, Zongxia Li, Zhichao Liu, Guangyao Shi, Xiyang Wu, Fuxiao Liu, Cornelia Fermuller, Brandon Y. Feng, Yiannis Aloimonos</span></li>
+                        <li><span class="paper-index">8.</span><span class="paper-title">Through the PRISM: Principle-Aware, Interpretable, and Multi-Scale Evaluation of Visual Designs</span><span class="paper-venue">(CVPR 2026 Findings)</span><span class="board-badge">Board 18 · Front</span><span class="paper-authors">Mona Gandhi, K J Joseph, Srinivasan Parthasarathy, Sayan Nag</span></li>
+                        <li><span class="paper-index">9.</span><span class="paper-title">A Training-Free Style-Personalization via SVD-Based Feature Decomposition</span><span class="paper-venue">(CVPR 2026)</span><span class="board-badge">Board 18 · Back</span><span class="paper-authors">Kyoungmin Lee, Jihun Park, Jongmin Gim, Wonhyeok Choi, Kyumin Hwang, Jaeyeul Kim, Sunghoon Im</span></li>
+                        <li><span class="paper-index">10.</span><span class="paper-title">SIGMA-GEN: Structure and Identity Guided Multi-subject Assembly for Image Generation</span><span class="paper-venue">(ICLR 2026)</span><span class="board-badge">Board 19 · Front</span><span class="paper-authors">Oindrila Saha, Vojtech Krs, Radomir Mech, Subhransu Maji, Kevin Blackburn-Matzen, Matheus Gadelha</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="organizer" class="content-section text-left">
+    <div class="download-section">
+        <div class="container">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2 class="text-center">Organizers</h2>
+                <style>
+                    .placeholder-avatar {
+                        width: 80%;
+                        padding-top: 80%;
+                        border-radius: 50%;
+                        border: 2px solid #ffffff;
+                        background-color: rgba(255, 255, 255, 0.1);
+                        display: inline-block;
+                    }
+                    #organizer .organizers-row {
+                        display: flex;
+                        flex-wrap: nowrap;
+                        justify-content: space-between;
+                        margin-left: -5px;
+                        margin-right: -5px;
+                    }
+                    #organizer .organizers-row .organizer-item {
+                        flex: 1 1 0;
+                        min-width: 0;
+                        padding: 0 5px;
+                    }
+                    @media (max-width: 991px) {
+                        #organizer .organizers-row {
+                            flex-wrap: wrap;
+                            justify-content: center;
+                        }
+                        #organizer .organizers-row .organizer-item {
+                            flex: 0 0 33.333%;
+                            max-width: 33.333%;
+                        }
+                    }
+                    @media (max-width: 767px) {
+                        #organizer .organizers-row .organizer-item {
+                            flex: 0 0 50%;
+                            max-width: 50%;
+                        }
+                    }
+                    #organizer .person-image {
+                        width: 100px;
+                        height: 100px;
+                        margin: 0 auto 5px;
+                        overflow: hidden;
+                        border-radius: 50%;
+                    }
+                    #organizer .person-image img.person-avatar {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 50%;
+                        display: block;
+                    }
+                    #organizer .person-meta {
+                        text-align: center;
+                        margin-bottom: 8px;
+                        font-size: 15px;
+                    }
+                    #organizer .person-name {
+                        font-size: 15px;
+                    }
+                    #organizer .person-affliation {
+                        font-size: 14px;
+                    }
+                    #organizer .logo-box {
+                        padding: 8px;
+                        margin: 0px 5px 8px 5px;
+                    }
+                    #organizer .advisory-row {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        margin-left: -8px;
+                        margin-right: -8px;
+                    }
+                    #organizer .advisory-row .advisory-item {
+                        flex: 0 0 auto;
+                        padding: 0 8px;
+                        margin-bottom: 10px;
+                    }
+                    #organizer .advisory-row .person-image {
+                        margin: 0 auto 5px;
+                    }
+                    #organizer .participants-row {
+                        text-align: center;
+                        margin-left: 0;
+                    }
+                    #organizer .participants-row .logo-box {
+                        display: inline-block;
+                        margin: 5px 8px;
+                    }
+                </style>
+                <div class="row organizers-row">
+                    <div class="organizer-item">
+                        <div class="person-image">
+                            <img src="/img/avatar/Ozgur_Kara.jpg" class="person-avatar">
+                        </div>  
+                        <div class="person-meta">
+                            <span class="person-name"><a href="https://karaozgur.com" target="_blank">Ozgur Kara</a></span>
+                            <br />
+                            <span class="person-affliation">UIUC</span>
+                            <br />
+                            <span class="person-role" style="color: #7dd3fc; font-size: 0.85em; font-weight: 600;">(Program Chair)</span>
+                        </div>
+                    </div>
+                    <div class="organizer-item">
+                        <div class="person-image">
+                            <img src="/img/avatar/jhkim.png" class="person-avatar">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-name"><a href="https://jhkim0911.github.io/" target="_blank">Junho Kim</a></span>
+                            <br />
+                            <span class="person-affliation">UIUC</span>
+                            <br />
+                            <span class="person-role" style="color: #7dd3fc; font-size: 0.85em; font-weight: 600;">(Program Chair)</span>
+                        </div>
+                    </div>
+                    <div class="organizer-item">
+                        <div class="person-image">
+                            <img src="/img/avatar/victor.jpeg" class="person-avatar">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-name"><a href="https://escorciav.github.io" target="_blank">Victor Escorcia</a></span>
+                            <br />
+                            <span class="person-affliation">Independent</span>
+                        </div>
+                    </div>
+                    <div class="organizer-item">
+                        <div class="person-image">
+                            <img src="/img/avatar/DongLiu.jpg" class="person-avatar">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-name"><a href="https://www.ee.columbia.edu/~dongliu/" target="_blank">Dong Liu</a></span>
+                            <br />
+                            <span class="person-affliation">Adobe</span>
+                        </div>
+                    </div>
+                    <div class="organizer-item">
+                        <div class="person-image">
+                            <img src="/img/avatar/Fabian.png" class="person-avatar">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-name"><a href="https://fabiancaba.com/" target="_blank">Fabian Caba</a></span>
+                            <br />
+                            <span class="person-affliation">Adobe</span>
+                        </div>
+                    </div>
+                    <div class="organizer-item">
+                        <div class="person-image">
+                            <img src="/img/avatar/jaymahajan.jpeg" class="person-avatar">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-name"><a href="https://jmahajan117.github.io/" target="_blank">Jay Mahajan</a></span>
+                            <br />
+                            <span class="person-affliation">UIUC</span>
+                        </div>
+                    </div>
+                    <div class="organizer-item">
+                        <div class="person-image">
+                            <img src="/img/avatar/jiajumu.png" class="person-avatar">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-name"><a href="https://majiaju.io/about.html" target="_blank">Jiaju Ma</a></span>
+                            <br />
+                            <span class="person-affliation">Stanford University</span>
+                            <br />
+                            <span class="person-role" style="color: #7dd3fc; font-size: 0.85em; font-weight: 600;">(Program Chair)</span>
+                        </div>
+                    </div>
+                    <div class="organizer-item">
+                        <div class="person-image">
+                            <img src="/img/avatar/Songlin_Yang.jpg" class="person-avatar">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-name"><a href="https://songlin1998.github.io" target="_blank">Songlin Yang</a></span>
+                            <br />
+                            <span class="person-affliation">HKUST</span>
+                        </div>
+                    </div>
+                    <div class="organizer-item">
+                        <div class="person-image">
+                            <img src="/img/avatar/rushikeshzawar.jpeg" class="person-avatar">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-name"><a href="https://scholar.google.com/citations?user=Qaol8LoAAAAJ&hl=en" target="_blank">Rushikesh Zawar</a></span>
+                            <br />
+                            <span class="person-affliation">Adobe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 id="advisory committee" class="text-center" style="font-size: 1.8em; margin-top: 30px; margin-bottom: 20px;">Advisory Committee</h2>
+                <div class="advisory-row">
+                    <div class="advisory-item">
+                        <div class="person-image">
+                            <img src="/img/avatar/maneesh_agrawala.jpg" class="person-avatar">
+                        </div>  
+                        <div class="person-meta">
+                            <span class="person-name"><a href="http://graphics.stanford.edu/~maneesh/" target="_blank">Maneesh Agrawala</a></span>
+                            <br />
+                            <span class="person-affliation">Stanford University</span>
+                        </div>
+                    </div>
+                    <div class="advisory-item">
+                        <div class="person-image">
+                            <img src="/img/speakers/anyi_rao.jpg" class="person-avatar">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-name"><a href="https://anyirao.com/" target="_blank">Anyi Rao</a></span>
+                            <br />
+                            <span class="person-affliation">HKUST</span>
+                        </div>
+                    </div>
+                    <div class="advisory-item">
+                        <div class="person-image">
+                            <img src="/img/avatar/alexschwing.jpeg" class="person-avatar">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-name"><a href="https://www.alexander-schwing.de/" target="_blank">Alexander Schwing</a></span>
+                            <br />
+                            <span class="person-affliation">UIUC</span>
+                        </div>
+                    </div>
+                    <div class="advisory-item">
+                        <div class="person-image">
+                            <img src="/img/avatar/JamesRehg.jpg" class="person-avatar">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-name"><a href="https://rehg.org/" target="_blank">James M. Rehg</a></span>
+                            <br />
+                            <span class="person-affliation">UIUC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="text-center" style="font-size: 1.8em; margin-top: 30px; margin-bottom: 15px;">Participants from</h2>
+                <div class="participants-row">
+                    <img class="logo-box" src="https://cveu.github.io/img/org/uiuc.png" width="auto" height="80px">
+                    <img class="logo-box" src="https://cveu.github.io/img/org/adobe.png" width="auto" height="80px">
+                    <img class="logo-box" src="https://cveu.github.io/img/org/hkust.png" width="auto" height="80px">
+                    <img class="logo-box" src="https://cveu.github.io/img/org/stanford.png" width="auto" height="80px">
+                </div>
+
+                </div>
+
+                </br> 
+                <!-- Sponsorship Section -->
+                <!-- <h2 id="sponsorship" class="text-center">Sponsorship</h2>
+                <div class="row">
+                    <img class="logo-box" src="https://cveu.github.io/2025/imgs/org/cybever.png" width="auto" height="100px">
+                    <img class="logo-box" src="https://cveu.github.io/2025/imgs/org/pika.png" width="auto" height="100px">
+                    <img class="logo-box" src="https://cveu.github.io/2025/imgs/org/tencent.png" width="auto" height="100px">
+                </div>
+                </br>
+                </br> -->
+
+                
+                <!-- <h2 id="organizer" class="text-center">Organizers</h2>
+                <div class="row">
+                <div class="row"> -->
+                    
+                    <!-- <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/avatar/Gaurav-Parmar.jpg" class="person-avatar">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-nPMe"><a href="https://gauravparmar.com/" target="_blank">Gaurav-Parmar</a></span>
+                            <br />
+                            <span class="person-affliation">CMU</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/avatar/Or-Patashnik.jpg" class="person-avatar">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-nPMe"><a href="https://orpatashnik.github.io/" target="_blank">Or Patashnik</a></span>
+                            <br />
+                            <span class="person-affliation">TAU</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/avatar/xianghao-kong.jpg" class="person-avatar">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-nPMe"><a href="https://scholar.google.com/citations?user=yQ0CXqUAAAAJ/" target="_blank">Xianghao Kong</a></span>
+                            <br />
+                            <span class="person-affliation">HKUST</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/avatar/houyuan-chen.jpg" class="person-avatar">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-nPMe"><a href="https://github.com/houyuanchen111/" target="_blank">Houyuan Chen</a></span>
+                            <br />
+                            <span class="person-affliation">NJU</span>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/amcfilm/jiajuma.jpg" class="person-avatar">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-nPMe"><a href="https://majiaju.io/" target="_blank">Jiaju Ma</a></span>
+                            <br />
+                            <span class="person-affliation">Stanford</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/avatar/Ozgur_Kara.jpg" class="person-avatar">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-nPMe"><a href="https://karaozgur.com" target="_blank">Özgür Kara</a></span>
+                            <br />
+                            <span class="person-affliation">UIUC</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/avatar/DongLiu.jpg" class="person-avatar">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-nPMe"><a href="https://www.ee.columbia.edu/~dongliu/" target="_blank">Dong Liu</a></span>
+                            <br />
+                            <span class="person-affliation">Netflix</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/avatar/Fabian.png" class="person-avatar">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-nPMe"><a href="https://fabiancaba.com/" target="_blank">Fabian Caba Heilbron</a></span>
+                            <br />
+                            <span class="person-affliation">Adobe Research</span>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/avatar/JamesRehg.jpg" class="person-avatar">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-nPMe"><a href="https://rehg.org/" target="_blank">James M. Rehg</a></span>
+                            <br />
+                            <span class="person-affliation">UIUC</span>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/avatar/Daniel-Cohen-Or.jpg" class="person-avatar">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-nPMe"><a href="https://danielcohenor.com/" target="_blank">Daniel Cohen-Or</a></span>
+                            <br />
+                            <span class="person-affliation">TAU</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/avatar/Jun-Yan-Zhu.jpg" class="person-avatar">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-nPMe"><a href="https://github.com/junyanz/" target="_blank">Jun-Yan Zhu</a></span>
+                            <br />
+                            <span class="person-affliation">CMU</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="person-image">
+                            <img src="/img/avatar/anyi_rao.jpg" class="person-avatar">
+                        </div>
+                        <div class="person-meta">
+                            <span class="person-nPMe"><a href="https://anyirao.com/" target="_blank">Anyi Rao</a></span>
+                            <br />
+                            <span class="person-affliation">HKUST</span>
+                        </div>
+                    </div> -->
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Podcast Section -->
+<section id="community-feature" class="container content-section text-center">
+  <div class="feature-container">
+           <h2>Podcast</h2>
+    <div class="feature-top">
+
+     <p class="feature-hosts">If you want to explore with us more about how AI is shaping the future of filmmaking, we invite you to tune in to podcast <strong>Empowering Storytellers</strong> <a href="https://www.youtube.com/@EmpoweringStorytellers"><i class="fab fa-youtube fa-fw"></i> <span class="network-nPMe"></span></a>    <a href="https://x.com/ep_storytellers" ><i class="fab fa-twitter fa-fw"></i> <span class="network-nPMe"></span></a>  <a href="https://open.spotify.com/show/5yTdlfU4ncxmIonSwR1QFV?si=9f857041fce445cf" ><i class="fab fa-spotify fa-fw"></i> <span class="network-nPMe"></span></a> <a href="https://www.linkedin.com/company/empowering-storytellers/"><i class="fab fa-linkedin fa-fw"></i> <span class="network-nPMe"></span></a>
+                </li>.</p>
+
+      
+    </div>
+
+    <h4 class="guest-section-title">OUR GUESTS INCLUDE</h4>
+    <div class="guest-grid">
+      <div class="guest-card">
+        <p class="guest-name"><a href="https://www.smpte.org/about/board-tony-ngai"><strong>Tony Ngai</strong></a> </p>
+        <p class="guest-affiliation">Governor, Asia-Pacific Region, Society of Motion Picture and Television Engineers (SMPTE)</p>
+      </div>
+      <div class="guest-card">
+        <p class="guest-name"><a href="https://nz.linkedin.com/in/chris-williamson-02b0232"><strong>Chris Williamson</strong></a> </p>
+        <p class="guest-affiliation">Senior 3D Generalist & Technical Advisor, Wētā Workshop</p>
+      </div>
+      <div class="guest-card">
+        <p class="guest-name"><a href="https://nz.linkedin.com/in/jacky-zheng-3562b9185?original_referer=https%3A%2F%2Fwww.google.com%2F"><strong>Jacky Zheng</strong></a> </p>
+        <p class="guest-affiliation">Art Director, Wētā Workshop</p>
+      </div>
+      <div class="guest-card">
+        <p class="guest-name"><a href="https://www.hkapa.edu/tch/ftv/faculty/lam-terry"><strong>Terry Lam</strong></a> </p>
+        <p class="guest-affiliation">Dean, School of Film and Television, The Hong Kong Academy for Performing Arts</p>
+      </div>
+      <div class="guest-card">
+        <p class="guest-name"><a href="https://lucasmariano.com/"><strong>Lucas Mariano</strong></a> </p>
+        <p class="guest-affiliation">2D Animator & Motion Designer</p>
+      </div>
+        <div class="guest-card placeholder-card">
+        <span>More guests to be announced...</span>
+        </div>
+    </div>
+  </div>
+</section>
+    
+    <!-- Contact Section -->
+<section id="contact" class="container content-section text-center">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h2>Contact</h2>
+            <!-- <p>🚧 This site is under-construction 🚧 </p> -->
+            <p><a href="mailto:cveu_organizers@googlegroups.com">cveu_organizers@googlegroups.com</a>
+            </p>
+            <ul class="list-inline banner-social-buttons">
+
+                <li>
+                    <a href="https://twitter.com/cveu_workshop" class="btn btn-default btn-lg"><i class="fab fa-twitter fa-fw"></i> <span class="network-nPMe">twitter</span></a>
+                </li>
+
+                <li>
+                    <a href="https://github.com/CVEU" class="btn btn-default btn-lg"><i class="fab fa-github fa-fw"></i> <span class="network-nPMe">github</span></a>
+                </li>
+
+                <li>
+                    <a href="https://discord.gg/RvH3H5gshw" class="btn btn-default btn-lg"><i class="fab fa-discord fa-fw"></i> <span class="network-nPMe">discord</span></a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</section>
+
+        <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>CVEU @ CVPR 2026</p>
+            <!-- Image credit to Getty Images -->
+        </div>
+    </footer>
+
+    <!-- jQuery Version 1.11.0 -->
+<script src="https://cveu.github.io/js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="https://cveu.github.io/js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="https://cveu.github.io/js/jquery.easing.min.js"></script>
+<script src="https://cveu.github.io/js/jquery.widget.min.js"></script>
+
+
+<!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+<script type="text/javascript"
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="https://cveu.github.io/js/grayscale.js"></script>
+<script src="https://cveu.github.io/js/metro.min.js"></script>
+<script src="https://cveu.github.io/js/metro-countdown.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.7/jstz.min.js"></script>
+<script src="https://cveu.github.io/js/moment.min.js"></script>
+<script src="https://cveu.github.io/js/moment-timezone.min.js"></script>
+<script src="https://cveu.github.io/js/main.js"></script>
+</body>
+
+</html>
