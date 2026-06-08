@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>CVEU Workshop</title>
     <meta nPMe="viewport" content="width=device-width">
-    <meta nPMe="description" content="SIGGRAPH 2026 Workshop on AI for Creative Visual Content Generation Editing and Understanding.">
+    <meta nPMe="description"
+        content="SIGGRAPH 2026 Workshop on AI for Creative Visual Content Generation Editing and Understanding.">
     <link rel="canonical" href="https://cveu.github.io/">
 
     <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
@@ -21,8 +23,27 @@
         .date-text {
             font-size: 0.85em;
         }
+
         .dates-column {
             font-size: 0.85em;
+        }
+
+        @media (min-width: 767px) {
+            .committee-row {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: center;
+            }
+
+            .committee-row::before,
+            .committee-row::after {
+                display: none;
+            }
+
+            .committee-row .committee-member {
+                float: none;
+                width: 14.28571429%;
+            }
         }
     </style>
 
@@ -30,137 +51,222 @@
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
     <!-- Navigation -->
-<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                <i class="fa fa-bars"></i>
-            </button>
-            <a class="navbar-brand page-scroll" href="#page-top">
-                <i class="fa fa-play-circle"></i> <span class="light">CVEU@SIGGRAPH 2026</span>
-            </a>
-        </div>
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa fa-play-circle"></i> <span class="light">CVEU@SIGGRAPH 2026</span>
+                </a>
+            </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-            <ul class="nav navbar-nav">
-                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                <li class="hidden">
-                    <a href="#page-top"></a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#about">About</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#program">Program</a>
-                </li>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#program">Program</a>
+                    </li>
+                    <!--
                 <li>
                     <a class="page-scroll" href="#sponsorship">Sponsorship</a>
                 </li>
-                <li>
-                    <a class="page-scroll" href="#organizer">Organizers</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#contact">Contact</a>
-                </li>
+                -->
+                    <li>
+                        <a class="page-scroll" href="#organizer">Organizers</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
 
-            </ul>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-</nav>
+        <!-- /.container -->
+    </nav>
     <!-- Intro Header -->
-<header class="intro" style="background: url(/img/bg-los-angeles.jpg) no-repeat bottom center scroll; background-size: cover; -o-background-size: cover;">
-    <div class="intro-body">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <h1 class="brand-heading">SIGGRAPH 2026 Workshop</h1>
-                    <h2 class="intro-text">AI for Creative Visual Content Generation Editing and Understanding<br>
-                        
-                    </h2>
-                    <div class="countdown" id="countdown" data-role="countdown" data-blink="false"
-                        data-stoptimer="2026-07-22T09:00:00" style="font-size: 20px"></div>
+    <header class="intro"
+        style="background: url(/img/bg-los-angeles.jpg) no-repeat bottom center scroll; background-size: cover; -o-background-size: cover;">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">SIGGRAPH 2026 Workshop</h1>
+                        <h2 class="intro-text">AI for Creative Visual Content Generation Editing and Understanding<br>
+
+                        </h2>
+                        <div class="countdown" id="countdown" data-role="countdown" data-blink="false"
+                            data-stoptimer="2026-07-22T09:00:00" style="font-size: 20px"></div>
                         <p style="margin-bottom: 0;">Sunday, July 19 - Thursday, July 23, 2026</p>
                         <p style="margin-top: 0; margin-bottom: 0;">
-                            <i>Course date/time: July 22, 2026, 9:00 AM - 12:15 PM PDT, Los Angeles, California, USA <span style="color: rgb(242, 255, 168);"><b>(Room 408 A at SIGGRAPH)</b></span></i>
+                            <i>Course date/time: July 19, 2026, 9:00 AM - 12:00 PM PDT, Los Angeles, California, USA
+                                <span style="color: rgb(242, 255, 168);"><b>(Room 408 A at SIGGRAPH)</b></span></i>
                         </p>
                         <p style="margin-top: 0; margin-bottom: 0;">
-                        SIGGRAPH 2026 Official Website:
-                        <a href="https://s2026.siggraph.org/" target="_blank"
-                            class="hl-green">https://s2026.siggraph.org/</a>
+                            <i>Workshop date/time: July 22, 2026, 9:00 AM - 12:05 PM PDT, Los Angeles, California, USA
+                                <span style="color: rgb(242, 255, 168);"><b>(Room 406 AB at SIGGRAPH)</b></span></i>
+                        </p>
+                        <p style="margin-top: 0; margin-bottom: 0;">
+                            SIGGRAPH 2026 Official Website:
+                            <a href="https://s2026.siggraph.org/" target="_blank"
+                                class="hl-green">https://s2026.siggraph.org/</a>
                         </p>
                         <br>
-                    <a href="#about" class="btn btn-circle page-scroll">
-                        <i class="fa fa-angle-double-down animated"></i>
-                    </a>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
     <!-- About Section -->
-<section id="about" class="container content-section text-left">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-            <h2 class="text-center">About</h2>
-            <p style="text-align: justify">This workshop is for the next installment of the AI for Creative Visual Content Generation Editing and Understanding (CVEU), 
-                which follows its success on the previous launch at
-                <a href="https://cveu.github.io/event/cvpr2026.html">CVPR'26</a>,
-                <a href="https://cveu.github.io/event/cvpr2025.html">CVPR'25</a>,
-                <a href="https://cveu.github.io/event/cvpr2024.html">CVPR'24</a>,
-                <a href="https://cveu.github.io/event/iccv2023.html">ICCV'23</a>, 
-                <a href="https://cveu.github.io/event/eccv2022.html">ECCV'22</a>, <a href="https://cveu.github.io/event/iccv2021.html">ICCV'21</a>, 
-                a Generative Models Course at <a href="https://cveu.github.io/event/sig2024.html">SIGGRAPH'24</a>,
-                <a href="https://cveu.github.io/event/sig2025.html">SIGGRAPH'25</a>,
-                2023 Paris ShortFest AI <a href="https://filmfreeway.com/AIShortFest">Film Festival</a>,
-                and 2025 Hong Kong HKUST AI <a href="https://cveu.github.io/event/hkustfilm2025.html">Film Festival</a>.
-            </p>
-            <p style="text-align: justify">It brings together researchers, artists and entrepreneurs working on computer
-                graphics, human computer interaction, computer vision, machine learning, and cognitive research.
-            It aims to bring awareness of recent advances in machine learning technologies to enable assisted
-                creative visual content creation and understanding. Find more at the <a href="https://s2026.siggraph.org/">SIGGRAPH'26 official link</a>.
-            
-        
-        </div>
-    </div>
-</section>
-    <!-- Program Section -->
-<section id="program" class="content-section text-left">
-    <div class="download-section">
-        <div class="container">
+    <section id="about" class="container content-section text-left">
+        <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-            <!-- <div > -->
-                <h2 class="text-center">Detailed Program</h2>
-                  
-                <div class="container" style="width:100%">
-                    <table class="table table-bordered" style="font-size: 1.25em; width: 90%;">
-                        <colgroup>
-                            <col style="width: 75%;">
-                            <col style="width: 25%;">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th scope="col" style="text-align: center; vertical-align: middle;">Schedule</th>
-                                <th scope="col" style="text-align: center; vertical-align: middle;">Los Angeles Time<br />2026-07-22</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td><b>Course</b></td>
-                            <td>9:00 AM - 12:15 PM PDT</td>
-                        </tr>
-                    </tbody>
-                    </table>
+                <h2 class="text-center">About</h2>
+                <p style="text-align: justify">This workshop is for the next installment of the AI for Creative Visual
+                    Content Generation Editing and Understanding (CVEU),
+                    which follows its success on the previous launch at
+                    <a href="https://cveu.github.io/event/cvpr2026.html">CVPR'26</a>,
+                    <a href="https://cveu.github.io/event/cvpr2025.html">CVPR'25</a>,
+                    <a href="https://cveu.github.io/event/cvpr2024.html">CVPR'24</a>,
+                    <a href="https://cveu.github.io/event/iccv2023.html">ICCV'23</a>,
+                    <a href="https://cveu.github.io/event/eccv2022.html">ECCV'22</a>, <a
+                        href="https://cveu.github.io/event/iccv2021.html">ICCV'21</a>,
+                    a Generative Models Course at <a href="https://cveu.github.io/event/sig2024.html">SIGGRAPH'24</a>,
+                    <a href="https://cveu.github.io/event/sig2025.html">SIGGRAPH'25</a>,
+                    2023 Paris ShortFest AI <a href="https://filmfreeway.com/AIShortFest">Film Festival</a>,
+                    and 2025 Hong Kong HKUST AI <a href="https://cveu.github.io/event/hkustfilm2025.html">Film
+                        Festival</a>.
+                </p>
+                <p style="text-align: justify">It brings together researchers, artists and entrepreneurs working on
+                    computer
+                    graphics, human computer interaction, computer vision, machine learning, and cognitive research.
+                    It aims to bring awareness of recent advances in machine learning technologies to enable assisted
+                    creative visual content creation and understanding. Find more at the <a
+                        href="https://s2026.siggraph.org/">SIGGRAPH'26 official link</a>.
 
-                </div>
-                
-                </br>
-                </br>
-                <!-- <span class="person-affliation">Principal Scientist<br>Adobe Research</span> -->
 
-                <!-- Speakers are hidden until invitations are finalized.
+            </div>
+        </div>
+    </section>
+    <!-- Program Section -->
+    <section id="program" class="content-section text-left">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <!-- <div > -->
+                    <h2 class="text-center">Detailed Program</h2>
+
+                    <div class="container" style="width:100%">
+                        <h3 class="text-center" style="margin-top: 0; margin-bottom: 20px;">Tentative Course Schedule
+                        </h3>
+                        <table class="table table-bordered" style="font-size: 1.25em; width: 90%;">
+                            <colgroup>
+                                <col style="width: 25%;">
+                                <col style="width: 75%;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col" style="text-align: center; vertical-align: middle;">Time<br />19
+                                        July, Room 408 A</th>
+                                    <th scope="col" style="text-align: center; vertical-align: middle;">Module</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>9:00 AM - 9:30 AM</td>
+                                    <td><b>Part 1: Landscape of Controllable AI</b></td>
+                                </tr>
+                                <tr>
+                                    <td>9:30 AM - 10:05 AM</td>
+                                    <td><b>Part 2: Core Principles of Multi-Agent Systems</b></td>
+                                </tr>
+                                <tr>
+                                    <td>10:05 AM - 10:15 AM</td>
+                                    <td><b>Break</b></td>
+                                </tr>
+                                <tr>
+                                    <td>10:15 AM - 10:40 AM</td>
+                                    <td><b>Part 3: Generative AI &amp; Graphics Constraints</b></td>
+                                </tr>
+                                <tr>
+                                    <td>10:40 AM - 11:50 AM</td>
+                                    <td><b>Part 4: Integration &amp; Case Studies</b></td>
+                                </tr>
+                                <tr>
+                                    <td>11:50 AM - 12:00 PM</td>
+                                    <td><b>Part 5: Future Roles & Closing</b></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="table table-bordered" style="font-size: 1.25em; width: 90%;">
+                            <colgroup>
+                                <col style="width: 75%;">
+                                <col style="width: 25%;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col" style="text-align: center; vertical-align: middle;">Tentative
+                                        Workshop Schedule</th>
+                                    <th scope="col" style="text-align: center; vertical-align: middle;">Time<br />22
+                                        July, Room 406 AB</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><b>Warm-up Session</b></td>
+                                    <td>9:00 AM - 9:05 AM</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Keynote I: Or Patashnik</b></td>
+                                    <td>9:05 AM - 9:40 AM</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Keynote II: Naomi Ken Korem</b></td>
+                                    <td>9:40 AM - 10:15 AM</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Coffee Break &amp; Workshop Group Photo</b></td>
+                                    <td>10:15 AM - 10:25 AM</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Keynote III: Richard Chuang</b></td>
+                                    <td>10:25 AM - 11:00 AM</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Keynote IV: Maneesh Agrawala</b></td>
+                                    <td>11:00 AM - 11:35 AM</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Panel Discussion</b></td>
+                                    <td>11:35 AM - 12:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Closing Remarks</b></td>
+                                    <td>12:00 PM - 12:05 PM</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    </br>
+                    </br>
+                    <!-- <span class="person-affliation">Principal Scientist<br>Adobe Research</span> -->
+
+                    <!-- Speakers are hidden until invitations are finalized.
                 <h2 class="text-center">Speakers</h2>
                 <div class="row">
                     <div class="col-md-3">
@@ -235,24 +341,21 @@
                 </div>
                 </br> 
                 -->
-       
-                <h2 class="text-center">Participants from</h2>
-                <div class="row">
-                    <img class="logo-box" src="/img/org/adobe.png" width="auto" height="100px">
-                    <img class="logo-box" src="/img/org/stanford.png" width="auto" height="100px">
-                    <img class="logo-box" src="/img/org/huggingface.png" width="auto" height="100px">
-                    <img class="logo-box" src="/img/org/cmu.png" width="auto" height="100px">
-                    <img class="logo-box" src="/img/org/tau.png" width="auto" height="100px">
-                    <img class="logo-box" src="/img/org/netflix.png" width="auto" height="100px">
-                    <img class="logo-box" src="/img/org/hkust.png" width="auto" height="100px">
-                    <img class="logo-box" src="/img/org/uiuc.png" width="auto" height="100px">
-                    <img class="logo-box" src="/img/org/ucl.png" width="auto" height="100px">
-                    <img class="logo-box" src="/img/org/snap.png" width="auto" height="100px">
-                </div>
-                </br>
-                </br>
 
-                <!-- Sponsorship Section -->
+                    <h2 class="text-center">Participants from</h2>
+                    <div class="row">
+                        <img class="logo-box" src="/img/org/adobe.png" width="auto" height="100px">
+                        <img class="logo-box" src="/img/org/stanford.png" width="auto" height="100px">
+                        <img class="logo-box" src="/img/org/kaist.png" width="auto" height="100px">
+                        <img class="logo-box" src="/img/org/cmu.png" width="auto" height="100px">
+                        <img class="logo-box" src="/img/org/tau.png" width="auto" height="100px">
+                        <img class="logo-box" src="/img/org/hkust.png" width="auto" height="100px">
+                        <img class="logo-box" src="/img/org/uiuc.png" width="auto" height="100px">
+                    </div>
+                    </br>
+                    </br>
+
+                    <!-- Sponsorship Section temporarily hidden
                 <h2 id="sponsorship" class="text-center">Sponsorship</h2>
                 <div class="row">
                     <img class="logo-box" src="https://cveu.github.io/2025/imgs/org/cybever.png" width="auto" height="100px">
@@ -261,215 +364,236 @@
                 </div>
                 </br>
                 </br>
+                -->
 
-                
-                <h2 id="organizer" class="text-center">Organizers</h2>
-                <h3 class="text-center" style="margin-top: 20px; margin-bottom: 30px;">Workshop Committee</h3>
-                <div class="row">
-                    <div class="col-md-2">
-                        <div class="person-image">
-                            <img src="/img/avatar/Songlin_Yang.jpg" class="person-avatar" width="80%" height="80%">
+
+                    <h2 id="organizer" class="text-center">Organizers</h2>
+                    <h3 class="text-center" style="margin-top: 20px; margin-bottom: 30px;">Workshop Committee</h3>
+                    <div class="row committee-row">
+                        <div class="col-md-2 committee-member">
+                            <div class="person-image">
+                                <img src="/img/avatar/Songlin_Yang.jpg" class="person-avatar" width="80%" height="80%">
+                            </div>
+                            <div class="person-meta">
+                                <span class="person-nPMe"><a href="https://songlin1998.github.io"
+                                        target="_blank">Songlin Yang</a></span>
+                                <br />
+                                <span class="person-affliation">HKUST</span>
+                            </div>
                         </div>
-                        <div class="person-meta">
-                            <span class="person-nPMe"><a href="https://songlin1998.github.io" target="_blank">Songlin Yang</a></span>
-                            <br />
-                            <span class="person-affliation">HKUST</span>
+
+                        <div class="col-md-2 committee-member">
+                            <div class="person-image">
+                                <img src="/img/avatar/Gaurav-Parmar.jpg" class="person-avatar" width="80%" height="80%">
+                            </div>
+                            <div class="person-meta">
+                                <span class="person-nPMe"><a href="https://gauravparmar.com/" target="_blank">Gaurav
+                                        Parmar</a></span>
+                                <br />
+                                <span class="person-affliation">CMU</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 committee-member">
+                            <div class="person-image">
+                                <img src="/img/avatar/Ozgur_Kara.jpg" class="person-avatar" width="80%" height="80%">
+                            </div>
+                            <div class="person-meta">
+                                <span class="person-nPMe"><a href="https://karaozgur.com" target="_blank">Ozgur
+                                        Kara</a></span>
+                                <br />
+                                <span class="person-affliation">UIUC</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 committee-member">
+                            <div class="person-image">
+                                <img src="/img/amcfilm/jiajuma.jpg" class="person-avatar" width="80%" height="80%">
+                            </div>
+                            <div class="person-meta">
+                                <span class="person-nPMe"><a href="https://majiaju.io/" target="_blank">Jiaju
+                                        Ma</a></span>
+                                <br />
+                                <span class="person-affliation">Stanford</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 committee-member">
+                            <div class="person-image">
+                                <img src="/img/avatar/lvmin.png" class="person-avatar" width="80%" height="80%">
+                            </div>
+                            <div class="person-meta">
+                                <span class="person-nPMe"><a href="https://github.com/lllyasviel" target="_blank">Lvmin
+                                        Zhang</a></span>
+                                <br />
+                                <span class="person-affliation">Stanford University</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 committee-member">
+                            <div class="person-image">
+                                <img src="/img/avatar/houyuan-chen.jpg" class="person-avatar" width="80%" height="80%">
+                            </div>
+                            <div class="person-meta">
+                                <span class="person-nPMe"><a href="https://github.com/houyuanchen111/"
+                                        target="_blank">Houyuan Chen</a></span>
+                                <br />
+                                <span class="person-affliation">HKUST</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row committee-row committee-row-seven">
+                        <div class="col-md-2 committee-member">
+                            <div class="person-image">
+                                <img src="/img/avatar/xuyi_yang.jpg" class="person-avatar" width="80%" height="80%">
+                            </div>
+                            <div class="person-meta">
+                                <span class="person-nPMe"><a href="https://cveu.github.io/" target="_blank">Xuyi
+                                        Yang</a></span>
+                                <br />
+                                <span class="person-affliation">HKUST</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 committee-member">
+                            <div class="person-image">
+                                <img src="/img/avatar/Or-Patashnik.jpg" class="person-avatar" width="80%" height="80%">
+                            </div>
+                            <div class="person-meta">
+                                <span class="person-nPMe"><a href="https://orpatashnik.github.io/" target="_blank">Or
+                                        Patashnik</a></span>
+                                <br />
+                                <span class="person-affliation">TAU</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 committee-member">
+                            <div class="person-image">
+                                <img src="/img/avatar/Fabian.png" class="person-avatar" width="80%" height="80%">
+                            </div>
+                            <div class="person-meta">
+                                <span class="person-nPMe"><a href="https://fabiancaba.com/" target="_blank">Fabian Caba
+                                        Heilbron</a></span>
+                                <br />
+                                <span class="person-affliation">Adobe Research</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 committee-member">
+                            <div class="person-image">
+                                <img src="/img/avatar/Jun-Yan-Zhu.jpg" class="person-avatar" width="80%" height="80%">
+                            </div>
+                            <div class="person-meta">
+                                <span class="person-nPMe"><a href="https://github.com/junyanz/" target="_blank">Jun-Yan
+                                        Zhu</a></span>
+                                <br />
+                                <span class="person-affliation">CMU</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 committee-member">
+                            <div class="person-image">
+                                <img src="/img/avatar/Daniel-Cohen-Or.jpg" class="person-avatar" width="80%"
+                                    height="80%">
+                            </div>
+                            <div class="person-meta">
+                                <span class="person-nPMe"><a href="https://danielcohenor.com/" target="_blank">Daniel
+                                        Cohen-Or</a></span>
+                                <br />
+                                <span class="person-affliation">TAU</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 committee-member">
+                            <div class="person-image">
+                                <img src="/img/avatar/maneesh_agrawala.jpg" class="person-avatar" width="80%"
+                                    height="80%">
+                            </div>
+                            <div class="person-meta">
+                                <span class="person-nPMe"><a href="http://graphics.stanford.edu/~maneesh/"
+                                        target="_blank">Maneesh Agrawala</a></span>
+                                <br />
+                                <span class="person-affliation">Stanford University</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 committee-member">
+                            <div class="person-image">
+                                <img src="/img/avatar/anyi_rao.jpg" class="person-avatar" width="80%" height="80%">
+                            </div>
+                            <div class="person-meta">
+                                <span class="person-nPMe"><a href="https://anyirao.com/" target="_blank">Anyi
+                                        Rao</a></span>
+                                <br />
+                                <span class="person-affliation">HKUST</span>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="col-md-2">
-                        <div class="person-image">
-                            <img src="/img/avatar/Gaurav-Parmar.jpg" class="person-avatar" width="80%" height="80%">
+                    <br />
+                    <h3 class="text-center" style="margin-top: 45px; margin-bottom: 30px;">Course Committee</h3>
+                    <div class="row committee-row">
+                        <div class="col-md-2 committee-member">
+                            <div class="person-image">
+                                <img src="/img/avatar/zheng_wei_course.jpg" class="person-avatar" width="80%"
+                                    height="80%">
+                            </div>
+                            <div class="person-meta">
+                                <span class="person-nPMe"><a href="https://www.zhengwei302.com/" target="_blank">Zheng
+                                        Wei</a></span>
+                                <br />
+                                <span class="person-affliation">KAIST</span>
+                            </div>
                         </div>
-                        <div class="person-meta">
-                            <span class="person-nPMe"><a href="https://gauravparmar.com/" target="_blank">Gaurav Parmar</a></span>
-                            <br />
-                            <span class="person-affliation">CMU</span>
+
+                        <div class="col-md-2 committee-member">
+                            <div class="person-image">
+                                <img src="/img/avatar/yuying_tang_course.jpg" class="person-avatar" width="80%"
+                                    height="80%">
+                            </div>
+                            <div class="person-meta">
+                                <span class="person-nPMe"><a href="https://yuyingtang1999.github.io/"
+                                        target="_blank">Yuying Tang</a></span>
+                                <br />
+                                <span class="person-affliation">HKUST</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 committee-member">
+                            <div class="person-image">
+                                <img src="/img/avatar/mia.jpg" class="person-avatar" width="80%" height="80%">
+                            </div>
+                            <div class="person-meta">
+                                <span class="person-nPMe"><a href="https://www.mia-tang.com/" target="_blank">Mia
+                                        Tang</a></span>
+                                <br />
+                                <span class="person-affliation">Stanford</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 committee-member">
+                            <div class="person-image">
+                                <img src="/img/avatar/anyi_rao.jpg" class="person-avatar" width="80%" height="80%">
+                            </div>
+                            <div class="person-meta">
+                                <span class="person-nPMe"><a href="https://anyirao.com/" target="_blank">Anyi
+                                        Rao</a></span>
+                                <br />
+                                <span class="person-affliation">HKUST</span>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="col-md-2">
-                        <div class="person-image">
-                            <img src="/img/avatar/Ozgur_Kara.jpg" class="person-avatar" width="80%" height="80%">
-                        </div>
-                        <div class="person-meta">
-                            <span class="person-nPMe"><a href="https://karaozgur.com" target="_blank">Ozgur Kara</a></span>
-                            <br />
-                            <span class="person-affliation">UIUC</span>
-                        </div>
-                    </div>
 
-                    <div class="col-md-2">
-                        <div class="person-image">
-                            <img src="/img/amcfilm/jiajuma.jpg" class="person-avatar" width="80%" height="80%">
-                        </div>
-                        <div class="person-meta">
-                            <span class="person-nPMe"><a href="https://majiaju.io/" target="_blank">Jiaju Ma</a></span>
-                            <br />
-                            <span class="person-affliation">Stanford</span>
-                        </div>
-                    </div>
-
-                    <div class="col-md-2">
-                        <div class="person-image">
-                            <img src="/img/avatar/lvmin.png" class="person-avatar" width="80%" height="80%">
-                        </div>
-                        <div class="person-meta">
-                            <span class="person-nPMe"><a href="https://github.com/lllyasviel" target="_blank">Lvmin Zhang</a></span>
-                            <br />
-                            <span class="person-affliation">Stanford University</span>
-                        </div>
-                    </div>
-
-                    <div class="col-md-2">
-                        <div class="person-image">
-                            <img src="/img/avatar/houyuan-chen.jpg" class="person-avatar" width="80%" height="80%">
-                        </div>
-                        <div class="person-meta">
-                            <span class="person-nPMe"><a href="https://github.com/houyuanchen111/" target="_blank">Houyuan Chen</a></span>
-                            <br />
-                            <span class="person-affliation">NJU</span>
-                        </div>
-                    </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-2">
-                        <div class="person-image">
-                            <img src="/img/avatar/xuyi_yang.jpg" class="person-avatar" width="80%" height="80%">
-                        </div>
-                        <div class="person-meta">
-                            <span class="person-nPMe"><a href="https://cveu.github.io/" target="_blank">Xuyi Yang</a></span>
-                            <br />
-                            <span class="person-affliation">WHU</span>
-                        </div>
-                    </div>
-
-                    <div class="col-md-2">
-                        <div class="person-image">
-                            <img src="/img/avatar/Or-Patashnik.jpg" class="person-avatar" width="80%" height="80%">
-                        </div>
-                        <div class="person-meta">
-                            <span class="person-nPMe"><a href="https://orpatashnik.github.io/" target="_blank">Or Patashnik</a></span>
-                            <br />
-                            <span class="person-affliation">TAU</span>
-                        </div>
-                    </div>
-
-                    <div class="col-md-2">
-                        <div class="person-image">
-                            <img src="/img/avatar/Fabian.png" class="person-avatar" width="80%" height="80%">
-                        </div>
-                        <div class="person-meta">
-                            <span class="person-nPMe"><a href="https://fabiancaba.com/" target="_blank">Fabian Caba Heilbron</a></span>
-                            <br />
-                            <span class="person-affliation">Adobe Research</span>
-                        </div>
-                    </div>
-
-                    <div class="col-md-2">
-                        <div class="person-image">
-                            <img src="/img/avatar/Jun-Yan-Zhu.jpg" class="person-avatar" width="80%" height="80%">
-                        </div>
-                        <div class="person-meta">
-                            <span class="person-nPMe"><a href="https://github.com/junyanz/" target="_blank">Jun-Yan Zhu</a></span>
-                            <br />
-                            <span class="person-affliation">CMU</span>
-                        </div>
-                    </div>
-
-                    <div class="col-md-2">
-                        <div class="person-image">
-                            <img src="/img/avatar/Daniel-Cohen-Or.jpg" class="person-avatar" width="80%" height="80%">
-                        </div>
-                        <div class="person-meta">
-                            <span class="person-nPMe"><a href="https://danielcohenor.com/" target="_blank">Daniel Cohen-Or</a></span>
-                            <br />
-                            <span class="person-affliation">TAU</span>
-                        </div>
-                    </div>
-
-                    <div class="col-md-2">
-                        <div class="person-image">
-                            <img src="/img/avatar/maneesh_agrawala.jpg" class="person-avatar" width="80%" height="80%">
-                        </div>
-                        <div class="person-meta">
-                            <span class="person-nPMe"><a href="http://graphics.stanford.edu/~maneesh/" target="_blank">Maneesh Agrawala</a></span>
-                            <br />
-                            <span class="person-affliation">Stanford University</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-2 col-md-offset-5">
-                        <div class="person-image">
-                            <img src="/img/avatar/anyi_rao.jpg" class="person-avatar" width="80%" height="80%">
-                        </div>
-                        <div class="person-meta">
-                            <span class="person-nPMe"><a href="https://anyirao.com/" target="_blank">Anyi Rao</a></span>
-                            <br />
-                            <span class="person-affliation">HKUST</span>
-                        </div>
-                    </div>
-                </div>
-
-                <br />
-                <h3 class="text-center" style="margin-top: 45px; margin-bottom: 30px;">Course Committee</h3>
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="person-image">
-                            <img src="/img/avatar/zheng_wei_course.jpg" alt="Zheng Wei" class="person-avatar" style="width:80%; aspect-ratio:1 / 1; object-fit:cover;">
-                        </div>
-                        <div class="person-meta">
-                            <span class="person-nPMe"><a href="https://www.zhengwei302.com/" target="_blank">Zheng Wei</a></span>
-                            <br />
-                            <span class="person-affliation">Korea Advanced Institute of<br>Science and Technology</span>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="person-image">
-                            <img src="/img/avatar/yuying_tang_course.jpg" alt="Yuying Tang" class="person-avatar" style="width:80%; aspect-ratio:1 / 1; object-fit:cover;">
-                        </div>
-                        <div class="person-meta">
-                            <span class="person-nPMe"><a href="https://yuyingtang1999.github.io/" target="_blank">Yuying Tang</a></span>
-                            <br />
-                            <span class="person-affliation">The Hong Kong University of<br>Science and Technology</span>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="person-image">
-                            <img src="/img/avatar/mia.jpg" alt="Mia Tang" class="person-avatar" style="width:80%; aspect-ratio:1 / 1; object-fit:cover;">
-                        </div>
-                        <div class="person-meta">
-                            <span class="person-nPMe"><a href="https://www.mia-tang.com/" target="_blank">Mia Tang</a></span>
-                            <br />
-                            <span class="person-affliation">Stanford University</span>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="person-image">
-                            <img src="/img/avatar/anyi_rao.jpg" alt="Anyi Rao" class="person-avatar" style="width:80%; aspect-ratio:1 / 1; object-fit:cover;">
-                        </div>
-                        <div class="person-meta">
-                            <span class="person-nPMe"><a href="https://anyirao.com/" target="_blank">Anyi Rao</a></span>
-                            <br />
-                            <span class="person-affliation">The Hong Kong University of<br>Science and Technology</span>
-                        </div>
-                    </div>
-                </div>
-
-
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
 
 
-    <!-- Podcast Section -->
+    <!-- Podcast Section temporarily hidden
 <section id="community-feature" class="container content-section text-center">
   <div class="feature-container">
            <h2>Podcast</h2>
@@ -509,35 +633,39 @@
     </div>
   </div>
 </section>
-    
+    -->
+
     <!-- Contact Section -->
-<section id="contact" class="container content-section text-center">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-            <h2>Contact</h2>
-            <!-- <p>🚧 This site is under-construction 🚧 </p> -->
-            <p><a href="mailto:cveu_avatar@googlegroups.com">cveu_avatar@googlegroups.com</a>
-            </p>
-            <ul class="list-inline banner-social-buttons">
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Contact</h2>
+                <!-- <p>🚧 This site is under-construction 🚧 </p> -->
+                <p><a href="mailto:cveu_avatar@googlegroups.com">cveu_avatar@googlegroups.com</a>
+                </p>
+                <ul class="list-inline banner-social-buttons">
 
-                <li>
-                    <a href="https://twitter.com/cveu_workshop" class="btn btn-default btn-lg"><i class="fab fa-twitter fa-fw"></i> <span class="network-nPMe">twitter</span></a>
-                </li>
+                    <li>
+                        <a href="https://twitter.com/cveu_workshop" class="btn btn-default btn-lg"><i
+                                class="fab fa-twitter fa-fw"></i> <span class="network-nPMe">twitter</span></a>
+                    </li>
 
-                <li>
-                    <a href="https://github.com/CVEU" class="btn btn-default btn-lg"><i class="fab fa-github fa-fw"></i> <span class="network-nPMe">github</span></a>
-                </li>
+                    <li>
+                        <a href="https://github.com/CVEU" class="btn btn-default btn-lg"><i
+                                class="fab fa-github fa-fw"></i> <span class="network-nPMe">github</span></a>
+                    </li>
 
-                <li>
-                    <a href="https://discord.gg/RvH3H5gshw" class="btn btn-default btn-lg"><i class="fab fa-discord fa-fw"></i> <span class="network-nPMe">discord</span></a>
-                </li>
+                    <li>
+                        <a href="https://discord.gg/RvH3H5gshw" class="btn btn-default btn-lg"><i
+                                class="fab fa-discord fa-fw"></i> <span class="network-nPMe">discord</span></a>
+                    </li>
 
-            </ul>
+                </ul>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-        <!-- Footer -->
+    <!-- Footer -->
     <footer>
         <div class="container text-center">
             <p>Copyright &copy; AI for Creative Video Generation Editing and Understanding 2026</p>
@@ -546,29 +674,30 @@
     </footer>
 
     <!-- jQuery Version 1.11.0 -->
-<script src="/js/jquery.js"></script>
+    <script src="/js/jquery.js"></script>
 
-<!-- Bootstrap Core JavaScript -->
-<script src="/js/bootstrap.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
 
-<!-- Plugin JavaScript -->
-<script src="/js/jquery.easing.min.js"></script>
-<script src="/js/jquery.widget.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="/js/jquery.easing.min.js"></script>
+    <script src="/js/jquery.widget.min.js"></script>
 
 
-<!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-<script type="text/javascript"
-   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
 
-<!-- Custom Theme JavaScript -->
-<script src="/js/grayscale.js"></script>
-<script src="/js/metro.min.js"></script>
-<script src="/js/metro-countdown.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="/js/grayscale.js"></script>
+    <script src="/js/metro.min.js"></script>
+    <script src="/js/metro-countdown.js"></script>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.7/jstz.min.js"></script>
-<script src="/js/moment.min.js"></script>
-<script src="/js/moment-timezone.min.js"></script>
-<script src="/js/main.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.7/jstz.min.js"></script>
+    <script src="/js/moment.min.js"></script>
+    <script src="/js/moment-timezone.min.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 
 </html>
