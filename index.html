@@ -28,6 +28,18 @@
             font-size: 0.85em;
         }
 
+        .committee-row .person-image {
+            width: 80%;
+            aspect-ratio: 1 / 1;
+            margin: 0 auto 5px;
+        }
+
+        .committee-row .person-avatar {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         @media (min-width: 767px) {
             .committee-row {
                 display: flex;
@@ -43,6 +55,10 @@
             .committee-row .committee-member {
                 float: none;
                 width: 14.28571429%;
+            }
+
+            .committee-row-8 .committee-member {
+                width: 12.5%;
             }
         }
     </style>
@@ -360,7 +376,7 @@
 
                     <h2 id="organizer" class="text-center">Organizers</h2>
                     <h3 class="text-center" style="margin-top: 20px; margin-bottom: 30px;">Workshop Committee</h3>
-                    <div class="row committee-row">
+                    <div class="row committee-row committee-row-8">
                         <div class="col-md-2 committee-member">
                             <div class="person-image">
                                 <img src="/img/avatar/Songlin_Yang.jpg" class="person-avatar" width="80%" height="80%">
@@ -445,7 +461,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row committee-row">
+                    <div class="row committee-row committee-row-8">
+                        <div class="col-md-2 committee-member">
+                            <div class="person-image">
+                                <img src="/img/avatar/Tony_zhang.jpg" class="person-avatar" width="80%" height="80%">
+                            </div>
+                            <div class="person-meta">
+                                <span class="person-nPMe"><a href="https://www.zhangtianyi.page/" target="_blank">Tony
+                                        Zhang</a></span>
+                                <br />
+                                <span class="person-affliation">HKUST</span>
+                            </div>
+                        </div>
+
                         <div class="col-md-2 committee-member">
                             <div class="person-image">
                                 <img src="/img/avatar/tina_wang.jpg" class="person-avatar" width="80%" height="80%">
