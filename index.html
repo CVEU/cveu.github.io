@@ -41,6 +41,34 @@
         }
 
         @media (min-width: 767px) {
+            .speaker-row {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: center;
+            }
+
+            .speaker-row::before,
+            .speaker-row::after {
+                display: none;
+            }
+
+            .speaker-row>.col-md-2 {
+                float: none;
+                width: 14.28571429%;
+            }
+
+            .speaker-row .person-image {
+                width: 80%;
+                aspect-ratio: 1 / 1;
+                margin: 0 auto 5px;
+            }
+
+            .speaker-row .person-avatar {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
             .committee-row {
                 display: flex;
                 flex-wrap: nowrap;
@@ -57,9 +85,6 @@
                 width: 14.28571429%;
             }
 
-            .committee-row-8 .committee-member {
-                width: 12.5%;
-            }
         }
     </style>
 
@@ -114,7 +139,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">SIGGRAPH 2026 Workshop</h1>
+                        <h1 class="brand-heading">CVEU @ SIGGRAPH 2026</h1>
                         <h2 class="intro-text">AI for Creative Visual Content Generation Editing and Understanding<br>
 
                         </h2>
@@ -122,11 +147,11 @@
                             data-stoptimer="2026-07-22T09:00:00" style="font-size: 20px"></div>
                         <p style="margin-bottom: 0;">Sunday, July 19 - Thursday, July 23, 2026</p>
                         <p style="margin-top: 0; margin-bottom: 0;">
-                            <i>Course date/time: July 19, 2026, 9:00 AM - 12:00 PM PDT, Los Angeles, California, USA
+                            <i>Course date/time: Sunday, July 19, 2026, 9:00 AM - 12:00 PM PDT, Los Angeles, California, USA
                                 <span style="color: rgb(242, 255, 168);"><b>(Room 408 A at SIGGRAPH)</b></span></i>
                         </p>
                         <p style="margin-top: 0; margin-bottom: 0;">
-                            <i>Workshop date/time: July 22, 2026, 9:00 AM - 12:05 PM PDT, Los Angeles, California, USA
+                            <i>Workshop date/time: Wednesday, July 22, 2026, 9:00 AM - 12:00 PM PDT, Los Angeles, California, USA
                                 <span style="color: rgb(242, 255, 168);"><b>(Room 406 AB at SIGGRAPH)</b></span></i>
                         </p>
                         <p style="margin-top: 0; margin-bottom: 0;">
@@ -191,43 +216,43 @@
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th scope="col" style="text-align: center; vertical-align: middle;">AIGC Course
+                                    <th scope="col" style="text-align: center; vertical-align: middle;">Course
                                         Schedule</th>
-                                    <th scope="col" style="text-align: center; vertical-align: middle;">Time<br />19
-                                        July, Room 408 A</th>
+                                    <th scope="col" style="text-align: center; vertical-align: middle;">Time<br />July
+                                        19, 2026, Room 408 A</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><b>Opening</b> - Anyi</td>
+                                    <td><b>Opening:</b> Anyi Rao</td>
                                     <td>9:00 AM - 9:20 AM</td>
                                 </tr>
                                 <tr>
-                                    <td><b>Part 1: Photorealistic Rendering</b> - Video (Songlin)</td>
+                                    <td><b>Photorealistic Rendering - Video:</b> Songlin Yang</td>
                                     <td>9:20 AM - 9:40 AM</td>
                                 </tr>
                                 <tr>
-                                    <td><b>Part 1: Photorealistic Rendering</b> - 3D (Chong)</td>
+                                    <td><b>Photorealistic Rendering - 3D:</b> Chong Zeng</td>
                                     <td>9:40 AM - 10:00 AM</td>
                                 </tr>
                                 <tr>
-                                    <td><b>Part 2: Non-Photorealistic Rendering</b> - Sketch (Mia)</td>
+                                    <td><b>Non-Photorealistic Rendering - Sketch:</b> Mia Tang</td>
                                     <td>10:00 AM - 10:20 AM</td>
                                 </tr>
                                 <tr>
-                                    <td><b>Part 2: Non-Photorealistic Rendering</b> - Motion Graphics (Jiaju)</td>
+                                    <td><b>Non-Photorealistic Rendering - Motion Graphics:</b> Jiaju Ma</td>
                                     <td>10:20 AM - 10:40 AM</td>
                                 </tr>
                                 <tr>
-                                    <td><b>Part 3: Human-AI Co-Creation</b> - Control (Lvmin)</td>
+                                    <td><b>Human-AI Co-Creation - Control:</b> Lvmin Zhang</td>
                                     <td>10:40 AM - 11:00 AM</td>
                                 </tr>
                                 <tr>
-                                    <td><b>Part 3: Human-AI Co-Creation</b> - HCI (Yuying)</td>
+                                    <td><b>Human-AI Co-Creation - HCI:</b> Yuying Tang</td>
                                     <td>11:00 AM - 11:20 AM</td>
                                 </tr>
                                 <tr>
-                                    <td><b>Discussion / Q&amp;A</b> - All speakers</td>
+                                    <td><b>Discussion / Q&amp;A:</b> All speakers</td>
                                     <td>11:20 AM - 12:00 PM</td>
                                 </tr>
                             </tbody>
@@ -240,10 +265,10 @@
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th scope="col" style="text-align: center; vertical-align: middle;">Tentative
-                                        Workshop Schedule</th>
-                                    <th scope="col" style="text-align: center; vertical-align: middle;">Time<br />22
-                                        July, Room 406 AB</th>
+                                    <th scope="col" style="text-align: center; vertical-align: middle;">Workshop
+                                        Schedule</th>
+                                    <th scope="col" style="text-align: center; vertical-align: middle;">Time<br />July
+                                        22, 2026, Room 406 AB</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -253,31 +278,39 @@
                                 </tr>
                                 <tr>
                                     <td><b>Keynote I: Or Patashnik</b></td>
-                                    <td>9:05 AM - 9:40 AM</td>
+                                    <td>9:05 AM - 9:25 AM</td>
                                 </tr>
                                 <tr>
                                     <td><b>Keynote II: Naomi Ken Korem</b></td>
-                                    <td>9:40 AM - 10:15 AM</td>
+                                    <td>9:25 AM - 9:45 AM</td>
                                 </tr>
                                 <tr>
                                     <td><b>Keynote III: Bryan Russell</b></td>
-                                    <td>10:15 AM - 10:40 AM</td>
+                                    <td>9:45 AM - 10:05 AM</td>
                                 </tr>
                                 <tr>
-                                    <td><b>Coffee Break &amp; Workshop Group Photo</b></td>
-                                    <td>10:40 AM - 10:50 AM</td>
+                                    <td><b>Coffee Break / Workshop Group Photo</b></td>
+                                    <td>10:05 AM - 10:25 AM</td>
                                 </tr>
                                 <tr>
-                                    <td><b>Keynote IV: Richard Chuang</b></td>
-                                    <td>10:50 AM - 11:25 AM</td>
+                                    <td><b>Keynote IV: Leanna Ren</b></td>
+                                    <td>10:25 AM - 10:45 AM</td>
                                 </tr>
                                 <tr>
-                                    <td><b>Keynote V: Maneesh Agrawala</b></td>
-                                    <td>11:25 AM - 12:00 PM</td>
+                                    <td><b>Keynote V: Tina Wang</b></td>
+                                    <td>10:45 AM - 11:05 AM</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Keynote VI: Richard Chuang</b></td>
+                                    <td>11:05 AM - 11:25 AM</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Keynote VII: Maneesh Agrawala</b></td>
+                                    <td>11:25 AM - 11:45 AM</td>
                                 </tr>
                                 <tr>
                                     <td><b>Closing Remarks</b></td>
-                                    <td>12:00 PM - 12:05 PM</td>
+                                    <td>11:45 AM - 12:00 PM</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -286,8 +319,8 @@
 
                     </br>
                     </br>
-                    <h2 class="text-center">Speakers</h2>
-                    <div class="row">
+                    <h2 class="text-center">Keynote Speakers</h2>
+                    <div class="row speaker-row">
                         <div class="col-md-2">
                             <div class="person-image">
                                 <img src="/img/avatar/Or-Patashnik.jpg" class="person-avatar" width="80%" height="80%">
@@ -326,6 +359,30 @@
 
                         <div class="col-md-2">
                             <div class="person-image">
+                                <img src="/img/speakers/leanna_ren.jpg" class="person-avatar" width="80%" height="80%">
+                            </div>
+                            <div class="person-meta">
+                                <span class="person-nPMe"><a href="https://www.linkedin.com/in/siyuan-leanna-ren-9459717b/"
+                                        target="_blank">Leanna Ren</a></span>
+                                <br />
+                                <span class="person-affliation">MiniMax</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="person-image">
+                                <img src="/img/avatar/tina_wang.jpg" class="person-avatar" width="80%" height="80%">
+                            </div>
+                            <div class="person-meta">
+                                <span class="person-nPMe"><a href="https://cveu.github.io/" target="_blank">Tina
+                                        Wang</a></span>
+                                <br />
+                                <span class="person-affliation">Eonix AI</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="person-image">
                                 <img src="/img/amcfilm/RichardChuang.jpg" class="person-avatar" width="80%"
                                     height="80%">
                             </div>
@@ -348,18 +405,6 @@
                                         target="_blank">Maneesh Agrawala</a></span>
                                 <br />
                                 <span class="person-affliation">Stanford</span>
-                            </div>
-                        </div>
-
-                        <div class="col-md-2">
-                            <div class="person-image">
-                                <img src="/img/speakers/leanna_ren.jpg" class="person-avatar" width="80%" height="80%">
-                            </div>
-                            <div class="person-meta">
-                                <span class="person-nPMe"><a href="https://www.linkedin.com/in/siyuan-leanna-ren-9459717b/"
-                                        target="_blank">Leanna Ren</a></span>
-                                <br />
-                                <span class="person-affliation">MiniMax</span>
                             </div>
                         </div>
                     </div>
@@ -391,7 +436,7 @@
 
                     <h2 id="organizer" class="text-center">Organizers</h2>
                     <h3 class="text-center" style="margin-top: 20px; margin-bottom: 30px;">Workshop Committee</h3>
-                    <div class="row committee-row committee-row-8">
+                    <div class="row committee-row">
                         <div class="col-md-2 committee-member">
                             <div class="person-image">
                                 <img src="/img/avatar/Songlin_Yang.jpg" class="person-avatar" width="80%" height="80%">
@@ -476,7 +521,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row committee-row committee-row-8">
+                    <div class="row committee-row">
                         <div class="col-md-2 committee-member">
                             <div class="person-image">
                                 <img src="/img/avatar/Tony_zhang.jpg" class="person-avatar" width="80%" height="80%">
@@ -486,18 +531,6 @@
                                         Zhang</a></span>
                                 <br />
                                 <span class="person-affliation">HKUST</span>
-                            </div>
-                        </div>
-
-                        <div class="col-md-2 committee-member">
-                            <div class="person-image">
-                                <img src="/img/avatar/tina_wang.jpg" class="person-avatar" width="80%" height="80%">
-                            </div>
-                            <div class="person-meta">
-                                <span class="person-nPMe"><a href="https://cveu.github.io/" target="_blank">Tina
-                                        Wang</a></span>
-                                <br />
-                                <span class="person-affliation">Eonix AI</span>
                             </div>
                         </div>
 
@@ -521,7 +554,7 @@
                                 <span class="person-nPMe"><a href="https://fabiancaba.com/" target="_blank">Fabian Caba
                                         Heilbron</a></span>
                                 <br />
-                                <span class="person-affliation">Adobe Research</span>
+                                <span class="person-affliation">Adobe</span>
                             </div>
                         </div>
 
