@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="AI Film Frontiers at SIGGRAPH Asia 2026 explores AI-native filmmaking workflows and hosts an international AI Film Challenge.">
+    <title>AI Film Frontiers | SIGGRAPH Asia 2026</title>
+    <link rel="canonical" href="https://cveu.github.io/event/siga2026.html">
+    <link rel="icon" type="image/x-icon" href="/img/cveu.ico">
+
+    <link rel="stylesheet" href="https://cveu.github.io/style.css">
+    <link rel="stylesheet" href="https://cveu.github.io/css/font-awesome/css/all.min.css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <style>
+        :root {
+            --aiff-accent: #a8f1ff;
+            --aiff-highlight: #f6ffa8;
+            --aiff-panel: rgba(255, 255, 255, 0.075);
+            --aiff-border: rgba(168, 241, 255, 0.34);
+        }
+
+        body {
+            background: #050505;
+        }
+
+        .intro.aiff-hero {
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.78)), url('/img/bg-kuala-lumpur.jpg') no-repeat center center scroll;
+            background-size: cover;
+        }
+
+        .aiff-hero .intro-body {
+            position: relative;
+            z-index: 1;
+        }
+
+        .aiff-kicker {
+            margin-bottom: 18px;
+            color: var(--aiff-accent);
+            font-family: Montserrat, sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .aiff-hero .brand-heading {
+            margin-bottom: 16px;
+            font-size: clamp(46px, 8vw, 88px);
+            line-height: 0.96;
+        }
+
+        .aiff-hero .intro-text {
+            margin: 0 auto 20px;
+            max-width: 780px;
+        }
+
+        .aiff-status {
+            display: inline-block;
+            margin: 8px 0 26px;
+            padding: 9px 16px;
+            border: 1px solid var(--aiff-border);
+            border-radius: 999px;
+            background: rgba(0, 0, 0, 0.42);
+            color: var(--aiff-highlight);
+            font-family: Montserrat, sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+        }
+
+        .content-section {
+            padding-top: 100px;
+        }
+
+        .section-lead {
+            margin-bottom: 28px;
+            font-size: 19px;
+            line-height: 1.75;
+            text-align: justify;
+        }
+
+        .aiff-card {
+            height: 100%;
+            margin-bottom: 24px;
+            padding: 26px;
+            border: 1px solid var(--aiff-border);
+            border-radius: 8px;
+            background: var(--aiff-panel);
+        }
+
+        .aiff-card h3,
+        .aiff-card h4 {
+            margin-top: 0;
+            color: var(--aiff-accent);
+        }
+
+        .aiff-card p:last-child,
+        .aiff-card ul:last-child {
+            margin-bottom: 0;
+        }
+
+        .submission-grid,
+        .review-grid {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .submission-grid > div,
+        .review-grid > div {
+            display: flex;
+        }
+
+        .requirements-list {
+            padding-left: 22px;
+        }
+
+        .requirements-list li {
+            margin-bottom: 12px;
+        }
+
+        .submission-links .btn {
+            width: 100%;
+            margin: 0 0 12px;
+            white-space: normal;
+        }
+
+        .submission-links .btn-disabled {
+            cursor: default;
+            opacity: 0.72;
+        }
+
+        .review-step {
+            position: relative;
+            padding-left: 50px;
+        }
+
+        .review-number {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 34px;
+            height: 34px;
+            border: 1px solid var(--aiff-accent);
+            border-radius: 50%;
+            color: var(--aiff-accent);
+            font-family: Montserrat, sans-serif;
+            font-weight: 700;
+            line-height: 32px;
+            text-align: center;
+        }
+
+        .timeline-list {
+            position: relative;
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 0;
+            list-style: none;
+        }
+
+        .timeline-list:before {
+            position: absolute;
+            top: 12px;
+            bottom: 12px;
+            left: 9px;
+            width: 2px;
+            background: var(--aiff-border);
+            content: '';
+        }
+
+        .timeline-list li {
+            position: relative;
+            margin-bottom: 22px;
+            padding-left: 42px;
+        }
+
+        .timeline-list li:before {
+            position: absolute;
+            top: 8px;
+            left: 3px;
+            width: 14px;
+            height: 14px;
+            border: 2px solid var(--aiff-accent);
+            border-radius: 50%;
+            background: #050505;
+            content: '';
+        }
+
+        .timeline-date {
+            display: block;
+            color: var(--aiff-highlight);
+            font-family: Montserrat, sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .organizer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .organizer-card {
+            margin-bottom: 34px;
+            text-align: center;
+        }
+
+        .organizer-card img {
+            width: 124px;
+            height: 124px;
+            border: 2px solid rgba(255, 255, 255, 0.28);
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .organizer-card .person-name {
+            display: block;
+            margin-top: 12px;
+            font-family: Montserrat, sans-serif;
+            font-weight: 700;
+        }
+
+        .organizer-card .person-affiliation {
+            color: #c9c9c9;
+            font-size: 14px;
+        }
+
+        .note {
+            color: #c9c9c9;
+            font-size: 14px;
+        }
+
+        footer {
+            padding-top: 70px;
+        }
+
+        @media (max-width: 767px) {
+            .navbar-brand {
+                font-size: 14px;
+            }
+
+            .aiff-hero .brand-heading {
+                font-size: 48px;
+            }
+
+            .content-section {
+                padding-top: 72px;
+            }
+
+            .section-lead {
+                font-size: 17px;
+                text-align: left;
+            }
+
+            .organizer-card img {
+                width: 108px;
+                height: 108px;
+            }
+        }
+    </style>
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse" aria-label="Toggle navigation">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa fa-play-circle" aria-hidden="true"></i>
+                    <span class="light">AIFF @ SIGGRAPH Asia 2026</span>
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="hidden"><a href="#page-top"></a></li>
+                    <li><a class="page-scroll" href="#about">About</a></li>
+                    <li><a class="page-scroll" href="#submission">Submission</a></li>
+                    <li><a class="page-scroll" href="#review">Review</a></li>
+                    <li><a class="page-scroll" href="#timeline">Timeline</a></li>
+                    <li><a class="page-scroll" href="#organizers">Organizers</a></li>
+                    <li><a class="page-scroll" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="intro aiff-hero">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <p class="aiff-kicker">SIGGRAPH Asia 2026 Workshop &amp; International AI Film Challenge</p>
+                        <h1 class="brand-heading">AI Film Frontiers</h1>
+                        <p class="intro-text">Advancing AI-native filmmaking through artistic expression, technical innovation, and meaningful human–AI collaboration.</p>
+                        <p class="aiff-status">Workshop date and venue to be announced</p>
+                        <br>
+                        <a href="#about" class="btn btn-circle page-scroll" aria-label="Read about AI Film Frontiers">
+                            <i class="fa fa-angle-double-down animated" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="container content-section text-left">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2 class="text-center">About AI Film Frontiers</h2>
+                    <p class="section-lead">AI Film Frontiers (AIFF) explores how generative AI is transforming the filmmaking pipeline—expanding artistic expression while redefining how creators collaborate with AI throughout the creative process. The workshop highlights AI-native filmmaking workflows and investigates key technical challenges, including character consistency, multi-shot narrative coherence, audio-visual generation, controllability, and effective human–AI collaboration.</p>
+                    <p class="section-lead">AIFF features an international AI Film Challenge. Creators submit an AI-generated film together with a Technical Report that documents the ideas, tools, human interventions, technical challenges, and workflow innovations behind the production. Award-winning films and their reports will be presented at SIGGRAPH Asia 2026: films will be screened during the workshop, and accepted Technical Reports will be published in the SIGGRAPH Asia 2026 Proceedings.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="submission" class="content-section text-left">
+            <div class="download-section">
+                <div class="container">
+                    <div class="col-lg-10 col-lg-offset-1">
+                        <h2 class="text-center">Submission</h2>
+                        <p class="text-center section-lead">A complete entry consists of two coordinated submissions: the film and its accompanying Technical Report.</p>
+
+                        <div class="row submission-grid">
+                            <div class="col-md-6">
+                                <article class="aiff-card">
+                                    <h3>1. AI-Generated Film</h3>
+                                    <p>Submit the finished film through FilmFreeway. The dedicated AIFF FilmFreeway page and detailed film requirements will be announced here.</p>
+                                    <p><strong>Submission channel:</strong> FilmFreeway</p>
+                                </article>
+                            </div>
+                            <div class="col-md-6">
+                                <article class="aiff-card">
+                                    <h3>2. Technical Report</h3>
+                                    <p>Submit the report through the SIGGRAPH Submission System. Reports must use the SIGGRAPH Proceedings template with the <code>sigconf</code> style.</p>
+                                    <p><strong>Submission channel:</strong> SIGGRAPH Asia Linklings</p>
+                                </article>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-7">
+                                <article class="aiff-card">
+                                    <h3>Technical Report Requirements</h3>
+                                    <ul class="requirements-list">
+                                        <li><strong>Project Overview:</strong> Introduce the project, its motivation, and its creative objectives.</li>
+                                        <li><strong>Creative Workflow:</strong> Describe the complete production pipeline, including AI models, software, tools, and human intervention.</li>
+                                        <li><strong>Technical Problems and Solutions:</strong> Explain the major challenges—such as character consistency, multi-shot storytelling, audio-visual synchronization, and controllability—and the solutions or workflow innovations used to address them.</li>
+                                        <li><strong>Copyright Declaration:</strong> State the ownership and licensing status of all assets used in the project, following the declaration template in the submission instructions.</li>
+                                    </ul>
+                                </article>
+                            </div>
+                            <div class="col-md-5 submission-links">
+                                <article class="aiff-card">
+                                    <h3>Submission Links &amp; Guidance</h3>
+                                    <span class="btn btn-default btn-lg btn-disabled" aria-disabled="true">
+                                        <i class="fa fa-film fa-fw" aria-hidden="true"></i> FilmFreeway Portal — Coming Soon
+                                    </span>
+                                    <a class="btn btn-default btn-lg" href="https://ssl.linklings.net/conferences/siggraphasia/" target="_blank" rel="noopener noreferrer">
+                                        <i class="fa fa-upload fa-fw" aria-hidden="true"></i> Submit Technical Report
+                                    </a>
+                                    <a class="btn btn-default btn-lg" href="https://www.siggraph.org/preparing-your-content/author-instructions/" target="_blank" rel="noopener noreferrer">
+                                        <i class="fa fa-file-text fa-fw" aria-hidden="true"></i> Template &amp; Author Instructions
+                                    </a>
+                                    <p class="note">Download an Overleaf, LaTeX, or Microsoft Word template and select the <code>sigconf</code> style. Replace the sample title, author, affiliation, and publication information before submission.</p>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="review" class="container content-section text-left">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h2 class="text-center">Review Process</h2>
+                    <p class="text-center section-lead">Final winners will be selected through a combined artistic and technical review.</p>
+
+                    <div class="row review-grid">
+                        <div class="col-md-4">
+                            <article class="aiff-card review-step">
+                                <span class="review-number">1</span>
+                                <h3>Eligibility Check</h3>
+                                <p>Organizers verify that both the film and Technical Report have been submitted and that the entry satisfies the announced requirements.</p>
+                            </article>
+                        </div>
+                        <div class="col-md-4">
+                            <article class="aiff-card review-step">
+                                <span class="review-number">2</span>
+                                <h3>Artistic Review</h3>
+                                <p>Reviewers evaluate cinematic quality, storytelling, originality, creativity, and the strength of the film's artistic expression.</p>
+                            </article>
+                        </div>
+                        <div class="col-md-4">
+                            <article class="aiff-card review-step">
+                                <span class="review-number">3</span>
+                                <h3>Technical Review</h3>
+                                <p>Reviewers assess workflow design, the clarity of the report, the significance of the technical challenges, and the novelty and effectiveness of the proposed solutions.</p>
+                            </article>
+                        </div>
+                    </div>
+
+                    <p class="text-center">Award decisions will consider both review tracks. Selected films and their corresponding reports will be presented together at SIGGRAPH Asia 2026.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="timeline" class="content-section text-left">
+            <div class="download-section">
+                <div class="container">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <h2 class="text-center">Timeline</h2>
+                        <p class="text-center section-lead">Exact dates and deadlines will be announced when the submission portals open.</p>
+                        <ol class="timeline-list">
+                            <li><span class="timeline-date">To be announced</span><strong>Film and Technical Report submissions open</strong></li>
+                            <li><span class="timeline-date">To be announced</span><strong>Film submission deadline</strong></li>
+                            <li><span class="timeline-date">To be announced</span><strong>Technical Report submission deadline</strong></li>
+                            <li><span class="timeline-date">To be announced</span><strong>Artistic and technical review period</strong></li>
+                            <li><span class="timeline-date">To be announced</span><strong>Winner and acceptance notification</strong></li>
+                            <li><span class="timeline-date">SIGGRAPH Asia 2026</span><strong>Workshop presentations, film screenings, and publication of accepted Technical Reports</strong></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="organizers" class="container content-section text-left">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h2 class="text-center">Organizers</h2>
+                    <div class="row organizer-grid">
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/speakers/Zheng_wei.jpg" alt="Zheng Wei">
+                            <span class="person-name"><a href="https://www.zhengwei302.com/" target="_blank" rel="noopener noreferrer">Zheng Wei</a></span>
+                            <span class="person-affiliation">HKUST</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/speakers/yuqing_liu.jpg" alt="Yuqing Liu">
+                            <span class="person-name"><a href="https://liuyuqing19990831.github.io/" target="_blank" rel="noopener noreferrer">Yuqing Liu</a></span>
+                            <span class="person-affiliation">HKU</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/speakers/Grace_Han.jpg" alt="Grace Han">
+                            <span class="person-name"><a href="https://art.stanford.edu/people/grace-han" target="_blank" rel="noopener noreferrer">Grace Han</a></span>
+                            <span class="person-affiliation">Stanford University</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/avatar/Tony_zhang.jpg" alt="Tony Zhang">
+                            <span class="person-name"><a href="https://www.zhangtianyi.page/" target="_blank" rel="noopener noreferrer">Tony Zhang</a></span>
+                            <span class="person-affiliation">HKUST</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/avatar/shiqin-hou.jpg" alt="Shiqin Hou">
+                            <span class="person-name">Shiqin Hou</span>
+                            <span class="person-affiliation">HKUST</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/avatar/Zhuli_Pan.jpg" alt="Zhuli Pan">
+                            <span class="person-name">Zhuli Pan</span>
+                            <span class="person-affiliation">HKUST</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/avatar/houyuan-chen.jpg" alt="Houyuan Chen">
+                            <span class="person-name"><a href="https://github.com/houyuanchen111/" target="_blank" rel="noopener noreferrer">Houyuan Chen</a></span>
+                            <span class="person-affiliation">NJU</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/avatar/xuyi_yang.jpg" alt="Xuyi Yang">
+                            <span class="person-name">Xuyi Yang</span>
+                            <span class="person-affiliation">WHU</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/avatar/baoyang-chen.jpg" alt="Baoyang Chen">
+                            <span class="person-name"><a href="https://baoyangchen.com/" target="_blank" rel="noopener noreferrer">Baoyang Chen</a></span>
+                            <span class="person-affiliation">HKUST</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/avatar/Harry_Yang.jpg" alt="Harry Yang">
+                            <span class="person-name"><a href="https://hyang.org/" target="_blank" rel="noopener noreferrer">Harry Yang</a></span>
+                            <span class="person-affiliation">HKUST</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/speakers/xian_xu.jpg" alt="Xian Xu">
+                            <span class="person-name"><a href="https://xxuxian.github.io/" target="_blank" rel="noopener noreferrer">Xian Xu</a></span>
+                            <span class="person-affiliation">Lingnan University</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/speakers/anyi_rao.jpg" alt="Anyi Rao">
+                            <span class="person-name"><a href="https://anyirao.com/" target="_blank" rel="noopener noreferrer">Anyi Rao</a></span>
+                            <span class="person-affiliation">HKUST</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="container content-section text-center">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Contact</h2>
+                    <p>Questions about the workshop or challenge can be sent to <a href="mailto:cveu_avatar@googlegroups.com">cveu_avatar@googlegroups.com</a>.</p>
+                    <ul class="list-inline banner-social-buttons">
+                        <li><a href="https://twitter.com/cveu_workshop" class="btn btn-default btn-lg" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i> <span class="network-name">Twitter</span></a></li>
+                        <li><a href="https://github.com/CVEU" class="btn btn-default btn-lg" target="_blank" rel="noopener noreferrer"><i class="fab fa-github fa-fw" aria-hidden="true"></i> <span class="network-name">GitHub</span></a></li>
+                        <li><a href="https://discord.gg/RvH3H5gshw" class="btn btn-default btn-lg" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord fa-fw" aria-hidden="true"></i> <span class="network-name">Discord</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; AI Film Frontiers 2026</p>
+        </div>
+    </footer>
+
+    <script src="https://cveu.github.io/js/jquery.js"></script>
+    <script src="https://cveu.github.io/js/bootstrap.min.js"></script>
+    <script src="https://cveu.github.io/js/jquery.easing.min.js"></script>
+    <script src="https://cveu.github.io/js/grayscale.js"></script>
+</body>
+</html>
