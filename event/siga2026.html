@@ -41,7 +41,7 @@
             margin-bottom: 18px;
             color: var(--aiff-accent);
             font-family: Montserrat, sans-serif;
-            font-size: 15px;
+            font-size: 20px;
             font-weight: 700;
             letter-spacing: 0.16em;
             text-transform: uppercase;
@@ -49,25 +49,27 @@
 
         .aiff-hero .brand-heading {
             margin-bottom: 16px;
-            font-size: clamp(46px, 8vw, 88px);
-            line-height: 0.96;
+            font-size: clamp(42px, 6vw, 64px);
+            line-height: 1.0;
         }
 
         .aiff-hero .intro-text {
             margin: 0 auto 20px;
             max-width: 780px;
+            font-size: 24px;
+            line-height: 1.6;
         }
 
         .aiff-status {
             display: inline-block;
             margin: 8px 0 26px;
             padding: 9px 16px;
-            border: 1px solid var(--aiff-border);
+            border: 1px solid #f6ffa8;
             border-radius: 999px;
             background: rgba(0, 0, 0, 0.42);
             color: var(--aiff-highlight);
             font-family: Montserrat, sans-serif;
-            font-size: 13px;
+            font-size: 20px;
             font-weight: 700;
             letter-spacing: 0.04em;
         }
@@ -223,6 +225,7 @@
             margin-top: 12px;
             font-family: Montserrat, sans-serif;
             font-weight: 700;
+            color: var(--aiff-accent);
         }
 
         .organizer-card .person-affiliation {
@@ -335,30 +338,31 @@
                                     <h3>1. AI-Generated Film</h3>
                                     <p>Submit the finished film through FilmFreeway. The dedicated AIFF FilmFreeway page and detailed film requirements will be announced here.</p>
                                     <p><strong>Submission channel:</strong> FilmFreeway</p>
+                                    <ul class="requirements-list">
+                                        <li><strong>Film entry:</strong> one finished AI-generated film, submitted as required by FilmFreeway.</li>
+                                        <li><strong>Screening materials:</strong> provide the final video file or streaming link and any supporting metadata requested.</li>
+                                        <li><strong>Enhanced Access registration:</strong> at least one representative must register for Enhanced Access to accept awards and participate at SIGGRAPH Asia 2026. This may be the author or a friend who attends.</li>
+                                    </ul>
                                 </article>
                             </div>
                             <div class="col-md-6">
                                 <article class="aiff-card">
                                     <h3>2. Technical Report</h3>
-                                    <p>Submit the report through the SIGGRAPH Submission System. Reports must use the SIGGRAPH Proceedings template with the <code>sigconf</code> style.</p>
+                                    <p>Submit the report through the SIGGRAPH Submission System. Reports must use the ACM Tech Communications template with the <code>sigconf</code> style and are limited to 4 pages.</p>
+                                    <p><strong>Review:</strong> single-blind review. After acceptance, author names and affiliations must remain unchanged.</p>
                                     <p><strong>Submission channel:</strong> SIGGRAPH Asia Linklings</p>
+                                    <ul class="requirements-list">
+                                        <li><strong>Project Overview:</strong> describe the project, motivation, and creative goals.</li>
+                                        <li><strong>Creative Workflow:</strong> explain the production pipeline, including AI models, tools, software, and human intervention.</li>
+                                        <li><strong>Technical Challenges:</strong> discuss consistency, narrative coherence, audio-visual alignment, controllability, and your workflow solutions.</li>
+                                        <li><strong>Copyright Declaration:</strong> state ownership and licensing of all assets using the required declaration template.</li>
+                                    </ul>
                                 </article>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-md-7">
-                                <article class="aiff-card">
-                                    <h3>Technical Report Requirements</h3>
-                                    <ul class="requirements-list">
-                                        <li><strong>Project Overview:</strong> Introduce the project, its motivation, and its creative objectives.</li>
-                                        <li><strong>Creative Workflow:</strong> Describe the complete production pipeline, including AI models, software, tools, and human intervention.</li>
-                                        <li><strong>Technical Problems and Solutions:</strong> Explain the major challenges—such as character consistency, multi-shot storytelling, audio-visual synchronization, and controllability—and the solutions or workflow innovations used to address them.</li>
-                                        <li><strong>Copyright Declaration:</strong> State the ownership and licensing status of all assets used in the project, following the declaration template in the submission instructions.</li>
-                                    </ul>
-                                </article>
-                            </div>
-                            <div class="col-md-5 submission-links">
+                            <div class="col-md-12 submission-links">
                                 <article class="aiff-card">
                                     <h3>Submission Links &amp; Guidance</h3>
                                     <span class="btn btn-default btn-lg btn-disabled" aria-disabled="true">
@@ -370,7 +374,7 @@
                                     <a class="btn btn-default btn-lg" href="https://www.siggraph.org/preparing-your-content/author-instructions/" target="_blank" rel="noopener noreferrer">
                                         <i class="fa fa-file-text fa-fw" aria-hidden="true"></i> Template &amp; Author Instructions
                                     </a>
-                                    <p class="note">Download an Overleaf, LaTeX, or Microsoft Word template and select the <code>sigconf</code> style. Replace the sample title, author, affiliation, and publication information before submission.</p>
+                                    <p class="note">Use the ACM Tech Communications template with the <code>sigconf</code> style. The report is limited to 4 pages. Do not change authors or affiliations after acceptance.</p>
                                 </article>
                             </div>
                         </div>
@@ -383,7 +387,7 @@
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1">
                     <h2 class="text-center">Review Process</h2>
-                    <p class="text-center section-lead">Final winners will be selected through a combined artistic and technical review.</p>
+                    <p class="text-center section-lead">AI Film Frontiers is evaluated across multiple dimensions, including artistic quality and technical contribution.</p>
 
                     <div class="row review-grid">
                         <div class="col-md-4">
@@ -396,20 +400,20 @@
                         <div class="col-md-4">
                             <article class="aiff-card review-step">
                                 <span class="review-number">2</span>
-                                <h3>Artistic Review</h3>
+                                <h3>Artistic Dimension</h3>
                                 <p>Reviewers evaluate cinematic quality, storytelling, originality, creativity, and the strength of the film's artistic expression.</p>
                             </article>
                         </div>
                         <div class="col-md-4">
                             <article class="aiff-card review-step">
                                 <span class="review-number">3</span>
-                                <h3>Technical Review</h3>
+                                <h3>Technical Dimension</h3>
                                 <p>Reviewers assess workflow design, the clarity of the report, the significance of the technical challenges, and the novelty and effectiveness of the proposed solutions.</p>
                             </article>
                         </div>
                     </div>
 
-                    <p class="text-center">Award decisions will consider both review tracks. Selected films and their corresponding reports will be presented together at SIGGRAPH Asia 2026.</p>
+                    <p class="text-center">Award decisions are based on the combined artistic and technical dimensions. Selected films and their corresponding reports will be presented together at SIGGRAPH Asia 2026.</p>
                 </div>
             </div>
         </section>
@@ -439,19 +443,9 @@
                     <h2 class="text-center">Organizers</h2>
                     <div class="row organizer-grid">
                         <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
-                            <img src="/img/speakers/Zheng_wei.jpg" alt="Zheng Wei">
-                            <span class="person-name"><a href="https://www.zhengwei302.com/" target="_blank" rel="noopener noreferrer">Zheng Wei</a></span>
+                            <img src="/img/avatar/Songlin_Yang.jpg" alt="Songlin Yang">
+                            <span class="person-name"><a href="https://cveu.github.io" target="_blank" rel="noopener noreferrer">Songlin Yang</a></span>
                             <span class="person-affiliation">HKUST</span>
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
-                            <img src="/img/speakers/yuqing_liu.jpg" alt="Yuqing Liu">
-                            <span class="person-name"><a href="https://liuyuqing19990831.github.io/" target="_blank" rel="noopener noreferrer">Yuqing Liu</a></span>
-                            <span class="person-affiliation">HKU</span>
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
-                            <img src="/img/speakers/Grace_Han.jpg" alt="Grace Han">
-                            <span class="person-name"><a href="https://art.stanford.edu/people/grace-han" target="_blank" rel="noopener noreferrer">Grace Han</a></span>
-                            <span class="person-affiliation">Stanford University</span>
                         </div>
                         <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
                             <img src="/img/avatar/Tony_zhang.jpg" alt="Tony Zhang">
@@ -459,39 +453,47 @@
                             <span class="person-affiliation">HKUST</span>
                         </div>
                         <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
-                            <img src="/img/avatar/shiqin-hou.jpg" alt="Shiqin Hou">
-                            <span class="person-name">Shiqin Hou</span>
-                            <span class="person-affiliation">HKUST</span>
+                            <img src="/img/avatar/DongLiu.jpg" alt="Dong Liu">
+                            <span class="person-name"><a href="https://cveu.github.io" target="_blank" rel="noopener noreferrer">Dong Liu</a></span>
+                            <span class="person-affiliation">Adobe</span>
                         </div>
                         <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
-                            <img src="/img/avatar/Zhuli_Pan.jpg" alt="Zhuli Pan">
-                            <span class="person-name">Zhuli Pan</span>
-                            <span class="person-affiliation">HKUST</span>
+                            <img src="/img/avatar/ruihan_zhang.jpg" alt="Ruihan Zhang">
+                            <span class="person-name"><a href="https://cveu.github.io" target="_blank" rel="noopener noreferrer">Ruihan Zhang</a></span>
+                            <span class="person-affiliation">Google</span>
                         </div>
                         <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
                             <img src="/img/avatar/houyuan-chen.jpg" alt="Houyuan Chen">
                             <span class="person-name"><a href="https://github.com/houyuanchen111/" target="_blank" rel="noopener noreferrer">Houyuan Chen</a></span>
-                            <span class="person-affiliation">NJU</span>
+                            <span class="person-affiliation">HKUST</span>
                         </div>
                         <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
                             <img src="/img/avatar/xuyi_yang.jpg" alt="Xuyi Yang">
-                            <span class="person-name">Xuyi Yang</span>
-                            <span class="person-affiliation">WHU</span>
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
-                            <img src="/img/avatar/baoyang-chen.jpg" alt="Baoyang Chen">
-                            <span class="person-name"><a href="https://baoyangchen.com/" target="_blank" rel="noopener noreferrer">Baoyang Chen</a></span>
+                            <span class="person-name"><a href="https://cveu.github.io" target="_blank" rel="noopener noreferrer">Xuyi Yang</a></span>
                             <span class="person-affiliation">HKUST</span>
                         </div>
                         <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
-                            <img src="/img/avatar/Harry_Yang.jpg" alt="Harry Yang">
-                            <span class="person-name"><a href="https://hyang.org/" target="_blank" rel="noopener noreferrer">Harry Yang</a></span>
+                            <span class="person-name"><a href="https://cveu.github.io" target="_blank" rel="noopener noreferrer">Siyu Huang</a></span>
                             <span class="person-affiliation">HKUST</span>
                         </div>
                         <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
-                            <img src="/img/speakers/xian_xu.jpg" alt="Xian Xu">
-                            <span class="person-name"><a href="https://xxuxian.github.io/" target="_blank" rel="noopener noreferrer">Xian Xu</a></span>
-                            <span class="person-affiliation">Lingnan University</span>
+                            <span class="person-name"><a href="https://cveu.github.io" target="_blank" rel="noopener noreferrer">Yudi Xie</a></span>
+                            <span class="person-affiliation">HKUST</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/speakers/Frank_Guan.jpg" alt="Frank Guan">
+                            <span class="person-name"><a href="https://cveu.github.io" target="_blank" rel="noopener noreferrer">Frank Guan</a></span>
+                            <span class="person-affiliation">SIT</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/speakers/Pol_Jeremias-Vila.jpg" alt="Pol Jeremias-Vila">
+                            <span class="person-name"><a href="https://cveu.github.io" target="_blank" rel="noopener noreferrer">Pol Jeremias-Vila</a></span>
+                            <span class="person-affiliation">Netflix</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/amcfilm/hongbofu.jpg" alt="Hongbo Fu">
+                            <span class="person-name"><a href="https://cveu.github.io" target="_blank" rel="noopener noreferrer">Hongbo Fu</a></span>
+                            <span class="person-affiliation">HKUST</span>
                         </div>
                         <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
                             <img src="/img/speakers/anyi_rao.jpg" alt="Anyi Rao">
