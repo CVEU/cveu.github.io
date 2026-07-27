@@ -1,781 +1,559 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>CVEU Workshop</title>
-    <meta nPMe="viewport" content="width=device-width">
-    <meta nPMe="description"
-        content="SIGGRAPH 2026 Workshop on AI for Creative Visual Content Generation Editing and Understanding.">
-    <link rel="canonical" href="https://cveu.github.io/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="AI Film Frontiers at SIGGRAPH Asia 2026 explores AI-native filmmaking workflows and hosts an international AI Film Challenge.">
+    <title>AI Film Frontiers | SIGGRAPH Asia 2026</title>
+    <link rel="canonical" href="https://cveu.github.io/event/siga2026.html">
+    <link rel="icon" type="image/x-icon" href="/img/cveu.ico">
 
-    <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-    <link rel="stylesheet" href="/style.css">
-
-    <!-- Custom Fonts -->
-    <link rel="stylesheet" href="/css/font-awesome/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="img/cveu.ico">
+    <link rel="stylesheet" href="https://cveu.github.io/style.css">
+    <link rel="stylesheet" href="https://cveu.github.io/css/font-awesome/css/all.min.css">
     <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <script src="https://kit.fontawesome.com/09c88d384d.js" crossorigin="anonymous"></script>
+
     <style>
-        .date-text {
-            font-size: 0.85em;
+        :root {
+            --aiff-accent: #a8f1ff;
+            --aiff-highlight: #f6ffa8;
+            --aiff-panel: rgba(255, 255, 255, 0.075);
+            --aiff-border: rgba(168, 241, 255, 0.34);
         }
 
-        .dates-column {
-            font-size: 0.85em;
+        body {
+            background: #050505;
         }
 
-        .committee-row .person-image {
-            width: 80%;
-            aspect-ratio: 1 / 1;
-            margin: 0 auto 5px;
+        .intro.aiff-hero {
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.78)), url('/img/bg-kuala-lumpur.jpg') no-repeat center center scroll;
+            background-size: cover;
         }
 
-        .committee-row .person-avatar {
-            width: 100%;
+        .aiff-hero .intro-body {
+            position: relative;
+            z-index: 1;
+        }
+
+        .aiff-kicker {
+            margin-bottom: 18px;
+            color: var(--aiff-accent);
+            font-family: Montserrat, sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .aiff-hero .brand-heading {
+            margin-bottom: 16px;
+            font-size: clamp(42px, 6vw, 64px);
+            line-height: 1.0;
+        }
+
+        .aiff-hero .intro-text {
+            margin: 0 auto 20px;
+            max-width: 780px;
+            font-size: 24px;
+            line-height: 1.6;
+        }
+
+        .aiff-status {
+            display: inline-block;
+            margin: 8px 0 26px;
+            padding: 9px 16px;
+            border: 1px solid #f6ffa8;
+            border-radius: 999px;
+            background: rgba(0, 0, 0, 0.42);
+            color: var(--aiff-highlight);
+            font-family: Montserrat, sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+        }
+
+        .content-section {
+            padding-top: 100px;
+        }
+
+        .section-lead {
+            margin-bottom: 28px;
+            font-size: 19px;
+            line-height: 1.75;
+            text-align: justify;
+        }
+
+        .aiff-card {
             height: 100%;
+            margin-bottom: 24px;
+            padding: 26px;
+            border: 1px solid var(--aiff-border);
+            border-radius: 8px;
+            background: var(--aiff-panel);
+        }
+
+        .aiff-card h3,
+        .aiff-card h4 {
+            margin-top: 0;
+            color: var(--aiff-accent);
+        }
+
+        .aiff-card p:last-child,
+        .aiff-card ul:last-child {
+            margin-bottom: 0;
+        }
+
+        .submission-grid,
+        .review-grid {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .submission-grid > div,
+        .review-grid > div {
+            display: flex;
+        }
+
+        .requirements-list {
+            padding-left: 22px;
+        }
+
+        .requirements-list li {
+            margin-bottom: 12px;
+        }
+
+        .submission-links .btn {
+            width: 100%;
+            margin: 0 0 12px;
+            white-space: normal;
+        }
+
+        .submission-links .btn-disabled {
+            cursor: default;
+            opacity: 0.72;
+        }
+
+        .review-step {
+            position: relative;
+            padding-left: 50px;
+        }
+
+        .review-number {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 34px;
+            height: 34px;
+            border: 1px solid var(--aiff-accent);
+            border-radius: 50%;
+            color: var(--aiff-accent);
+            font-family: Montserrat, sans-serif;
+            font-weight: 700;
+            line-height: 32px;
+            text-align: center;
+        }
+
+        .timeline-list {
+            position: relative;
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 0;
+            list-style: none;
+        }
+
+        .timeline-list:before {
+            position: absolute;
+            top: 12px;
+            bottom: 12px;
+            left: 9px;
+            width: 2px;
+            background: var(--aiff-border);
+            content: '';
+        }
+
+        .timeline-list li {
+            position: relative;
+            margin-bottom: 22px;
+            padding-left: 42px;
+        }
+
+        .timeline-list li:before {
+            position: absolute;
+            top: 8px;
+            left: 3px;
+            width: 14px;
+            height: 14px;
+            border: 2px solid var(--aiff-accent);
+            border-radius: 50%;
+            background: #050505;
+            content: '';
+        }
+
+        .timeline-date {
+            display: block;
+            color: var(--aiff-highlight);
+            font-family: Montserrat, sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .organizer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .organizer-card {
+            margin-bottom: 34px;
+            text-align: center;
+        }
+
+        .organizer-card img {
+            width: 100px;
+            height: 100px;
+            border: 2px solid rgba(255, 255, 255, 0.28);
+            border-radius: 50%;
             object-fit: cover;
         }
 
-        @media (min-width: 767px) {
-            .speaker-row {
-                display: flex;
-                flex-wrap: nowrap;
-                justify-content: center;
+        .organizer-card .person-name {
+            display: block;
+            margin-top: 12px;
+            font-family: Montserrat, sans-serif;
+            font-weight: 700;
+            color: var(--aiff-accent);
+        }
+
+        .organizer-card .person-affiliation {
+            color: #c9c9c9;
+            font-size: 14px;
+        }
+
+        @media (min-width: 992px) {
+            .organizer-grid > .organizer-card {
+                width: 12.5%;
+            }
+        }
+
+        .note {
+            color: #c9c9c9;
+            font-size: 14px;
+        }
+
+        footer {
+            padding-top: 70px;
+        }
+
+        @media (max-width: 767px) {
+            .navbar-brand {
+                font-size: 14px;
             }
 
-            .speaker-row::before,
-            .speaker-row::after {
-                display: none;
+            .aiff-hero .brand-heading {
+                font-size: 48px;
             }
 
-            .speaker-row>.col-md-2 {
-                float: none;
-                width: 14.28571429%;
+            .content-section {
+                padding-top: 72px;
             }
 
-            .speaker-row .person-image {
-                width: 80%;
-                aspect-ratio: 1 / 1;
-                margin: 0 auto 5px;
+            .section-lead {
+                font-size: 17px;
+                text-align: left;
             }
 
-            .speaker-row .person-avatar {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
+            .organizer-card img {
+                width: 90px;
+                height: 90px;
             }
-
-            .committee-row {
-                display: flex;
-                flex-wrap: nowrap;
-                justify-content: center;
-            }
-
-            .committee-row::before,
-            .committee-row::after {
-                display: none;
-            }
-
-            .committee-row .committee-member {
-                float: none;
-                width: 14.28571429%;
-            }
-
         }
     </style>
-
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-    <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse" aria-label="Toggle navigation">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="fa fa-play-circle"></i> <span class="light">CVEU@SIGGRAPH 2026</span>
+                    <i class="fa fa-play-circle" aria-hidden="true"></i>
+                    <span class="light">AIFF @ SIGGRAPH Asia 2026</span>
                 </a>
             </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#program">Program</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#sponsorship">Sponsorship</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#organizer">Organizers</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-
+                    <li class="hidden"><a href="#page-top"></a></li>
+                    <li><a class="page-scroll" href="#about">About</a></li>
+                    <li><a class="page-scroll" href="#submission">Submission</a></li>
+                    <li><a class="page-scroll" href="#review">Review</a></li>
+                    <li><a class="page-scroll" href="#timeline">Timeline</a></li>
+                    <li><a class="page-scroll" href="#organizers">Organizers</a></li>
+                    <li><a class="page-scroll" href="#contact">Contact</a></li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
     </nav>
-    <!-- Intro Header -->
-    <header class="intro"
-        style="background: url(/img/bg-los-angeles.jpg) no-repeat bottom center scroll; background-size: cover; -o-background-size: cover;">
+
+    <header class="intro aiff-hero">
         <div class="intro-body">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">CVEU @ SIGGRAPH 2026</h1>
-                        <h2 class="intro-text">AI for Creative Visual Content Generation Editing and Understanding<br>
-
-                        </h2>
-                        <div class="countdown" id="countdown" data-role="countdown" data-blink="false"
-                            data-stoptimer="2026-07-22T09:00:00" style="font-size: 20px"></div>
-                        <p style="margin-bottom: 0;">Sunday, July 19 - Thursday, July 23, 2026</p>
-                        <p style="margin-top: 0; margin-bottom: 0;">
-                            <i>Course date/time: Sunday, July 19, 2026, 9:00 AM - 12:00 PM PDT, Los Angeles, California, USA
-                                <span style="color: rgb(242, 255, 168);"><b>(Room 408 A at SIGGRAPH)</b></span></i>
-                        </p>
-                        <p style="margin-top: 0; margin-bottom: 0;">
-                            <i>Workshop date/time: Wednesday, July 22, 2026, 9:00 AM - 12:00 PM PDT, Los Angeles, California, USA
-                                <span style="color: rgb(242, 255, 168);"><b>(Room 406 AB at SIGGRAPH)</b></span></i>
-                        </p>
-                        <p style="margin-top: 0; margin-bottom: 0;">
-                            SIGGRAPH 2026 Official Website:
-                            <a href="https://s2026.siggraph.org/" target="_blank"
-                                class="hl-green">https://s2026.siggraph.org/</a>
-                        </p>
+                    <div class="col-md-10 col-md-offset-1">
+                        <p class="aiff-kicker">SIGGRAPH Asia 2026 Workshop &amp; International AI Film Challenge</p>
+                        <h1 class="brand-heading">AI Film Frontiers</h1>
+                        <p class="intro-text">Advancing AI-native filmmaking through artistic expression, technical innovation, and meaningful human–AI collaboration.</p>
+                        <p class="aiff-status">Workshop date and venue to be announced</p>
                         <br>
-                        <a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
+                        <a href="#about" class="btn btn-circle page-scroll" aria-label="Read about AI Film Frontiers">
+                            <i class="fa fa-angle-double-down animated" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    <!-- About Section -->
-    <section id="about" class="container content-section text-left">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2 class="text-center">About</h2>
-                <p style="text-align: justify">This workshop is for the next installment of the AI for Creative Visual
-                    Content Generation Editing and Understanding (CVEU),
-                    which follows its success on the previous launch at
-                    <a href="https://cveu.github.io/event/cvpr2026.html">CVPR'26</a>,
-                    <a href="https://cveu.github.io/event/cvpr2025.html">CVPR'25</a>,
-                    <a href="https://cveu.github.io/event/cvpr2024.html">CVPR'24</a>,
-                    <a href="https://cveu.github.io/event/iccv2023.html">ICCV'23</a>,
-                    <a href="https://cveu.github.io/event/eccv2022.html">ECCV'22</a>, <a
-                        href="https://cveu.github.io/event/iccv2021.html">ICCV'21</a>,
-                    a Generative Models Course at <a href="https://cveu.github.io/event/sig2024.html">SIGGRAPH'24</a>,
-                    <a href="https://cveu.github.io/event/sig2025.html">SIGGRAPH'25</a>,
-                    2023 Paris ShortFest AI <a href="https://filmfreeway.com/AIShortFest">Film Festival</a>,
-                    2025 Hong Kong HKUST AI <a href="https://cveu.github.io/event/hkustfilm2025.html">Film
-                        Festival</a>,
-                    and 2026 Hong Kong HKUST AI <a href="/event/hkustfilm2026.html">Film Festival</a>.
-                </p>
-                <p style="text-align: justify">It brings together researchers, artists and entrepreneurs working on
-                    computer
-                    graphics, human computer interaction, computer vision, machine learning, and cognitive research.
-                    It aims to bring awareness of recent advances in machine learning technologies to enable assisted
-                    creative visual content creation and understanding. Find more at the <a
-                        href="https://s2026.siggraph.org/">SIGGRAPH'26 official link</a>.
 
-
-            </div>
-        </div>
-    </section>
-    <!-- Program Section -->
-    <section id="program" class="content-section text-left">
-        <div class="download-section">
-            <div class="container">
+    <main>
+        <section id="about" class="container content-section text-left">
+            <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <!-- <div > -->
-                    <h2 class="text-center">Detailed Program</h2>
-
-                    <div class="container" style="width:100%">
-                        <table class="table table-bordered" style="font-size: 1.25em; width: 90%;">
-                            <colgroup>
-                                <col style="width: 75%;">
-                                <col style="width: 25%;">
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th scope="col" style="text-align: center; vertical-align: middle;">Course
-                                        Schedule</th>
-                                    <th scope="col" style="text-align: center; vertical-align: middle;">Time<br />July
-                                        19, 2026, Room 408 A</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><b>Opening:</b> Anyi Rao</td>
-                                    <td>9:00 AM - 9:20 AM</td>
-                                </tr>
-                                <tr>
-                                    <td><b>Photorealistic Rendering - Video:</b> Songlin Yang</td>
-                                    <td>9:20 AM - 9:40 AM</td>
-                                </tr>
-                                <tr>
-                                    <td><b>Photorealistic Rendering - 3D:</b> Chong Zeng</td>
-                                    <td>9:40 AM - 10:00 AM</td>
-                                </tr>
-                                <tr>
-                                    <td><b>Break</b></td>
-                                    <td>10:00 AM - 10:20 AM</td>
-                                </tr>
-                                <tr>
-                                    <td><b>Non-Photorealistic Rendering - Sketch:</b> Mia Tang</td>
-                                    <td>10:20 AM - 10:40 AM</td>
-                                </tr>
-                                <tr>
-                                    <td><b>Non-Photorealistic Rendering - Motion Graphics:</b> Jiaju Ma</td>
-                                    <td>10:40 AM - 11:00 AM</td>
-                                </tr>
-                                <tr>
-                                    <td><b>Break</b></td>
-                                    <td>11:00 AM - 11:20 AM</td>
-                                </tr>
-                                <tr>
-                                    <td><b>Human-AI Co-Creation &ndash; HCI:</b> Yuying Tang</td>
-                                    <td>11:20 AM - 11:40 AM</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <table class="table table-bordered" style="font-size: 1.25em; width: 90%;">
-                            <colgroup>
-                                <col style="width: 75%;">
-                                <col style="width: 25%;">
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th scope="col" style="text-align: center; vertical-align: middle;">Workshop
-                                        Schedule</th>
-                                    <th scope="col" style="text-align: center; vertical-align: middle;">Time<br />July
-                                        22, 2026, Room 406 AB</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><b>Warm-up Session</b></td>
-                                    <td>9:00 AM - 9:05 AM</td>
-                                </tr>
-                                <tr>
-                                    <td><b>Or Patashnik</b></td>
-                                    <td>9:05 AM - 9:25 AM</td>
-                                </tr>
-                                <tr>
-                                    <td><b>Naomi Ken Korem:</b> Multimodal Control for Generative Audio-Video Models</td>
-                                    <td>9:25 AM - 9:45 AM</td>
-                                </tr>
-                                <tr>
-                                    <td><b>Lvming Zhang</b></td>
-                                    <td>9:45 AM - 10:05 AM</td>
-                                </tr>
-                                <tr>
-                                    <td><b>Coffee Break / Workshop Group Photo</b></td>
-                                    <td>10:05 AM - 10:25 AM</td>
-                                </tr>
-                                <tr>
-                                    <td><b>Bryan Russell</b></td>
-                                    <td>10:25 AM - 10:45 AM</td>
-                                </tr>
-                                <tr>
-                                    <td><b>Tina Wang</b></td>
-                                    <td>10:45 AM - 11:05 AM</td>
-                                </tr>
-                                <tr>
-                                    <td><b>Richard Chuang:</b> Innovating Creative Workflow in the Time of Change</td>
-                                    <td>11:05 AM - 11:25 AM</td>
-                                </tr>
-                                <tr>
-                                    <td><b>Maneesh Agrawala</b></td>
-                                    <td>11:25 AM - 11:45 AM</td>
-                                </tr>
-                                <tr>
-                                    <td><b>Closing Remarks</b></td>
-                                    <td>11:45 AM - 12:00 PM</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                    </div>
-
-                    </br>
-                    </br>
-                    <h2 class="text-center">Keynote Speakers</h2>
-                    <div class="row speaker-row">
-                        <div class="col-md-2">
-                            <div class="person-image">
-                                <img src="/img/avatar/Or-Patashnik.jpg" class="person-avatar" width="80%" height="80%">
-                            </div>
-                            <div class="person-meta">
-                                <span class="person-nPMe"><a href="https://orpatashnik.github.io/" target="_blank">Or
-                                        Patashnik</a></span>
-                                <br />
-                                <span class="person-affliation">TAU</span>
-                            </div>
-                        </div>
-
-                        <div class="col-md-2">
-                            <div class="person-image">
-                                <img src="/img/avatar/naomi.png" class="person-avatar" width="80%" height="80%">
-                            </div>
-                            <div class="person-meta">
-                                <span class="person-nPMe"><a href="https://il.linkedin.com/in/naomi-ken-korem"
-                                        target="_blank">Naomi Ken Korem</a></span>
-                                <br />
-                                <span class="person-affliation">LTX</span>
-                            </div>
-                        </div>
-
-                        <div class="col-md-2">
-                            <div class="person-image">
-                                <img src="/img/avatar/lvmin.png" class="person-avatar" width="80%" height="80%">
-                            </div>
-                            <div class="person-meta">
-                                <span class="person-nPMe"><a href="https://github.com/lllyasviel" target="_blank">Lvmin
-                                        Zhang</a></span>
-                                <br />
-                                <span class="person-affliation">Stanford</span>
-                            </div>
-                        </div>
-
-                        <div class="col-md-2">
-                            <div class="person-image">
-                                <img src="/img/avatar/brayn_russell.png" class="person-avatar" width="80%" height="80%">
-                            </div>
-                            <div class="person-meta">
-                                <span class="person-nPMe"><a href="https://research.adobe.com/person/bryan-russell/"
-                                        target="_blank">Bryan Russell</a></span>
-                                <br />
-                                <span class="person-affliation">Adobe</span>
-                            </div>
-                        </div>
-
-                        <div class="col-md-2">
-                            <div class="person-image">
-                                <img src="/img/avatar/tina_wang.jpg" class="person-avatar" width="80%" height="80%">
-                            </div>
-                            <div class="person-meta">
-                                <span class="person-nPMe"><a href="https://cveu.github.io/" target="_blank">Tina
-                                        Wang</a></span>
-                                <br />
-                                <span class="person-affliation">Eonix AI</span>
-                            </div>
-                        </div>
-
-                        <div class="col-md-2">
-                            <div class="person-image">
-                                <img src="/img/amcfilm/RichardChuang.jpg" class="person-avatar" width="80%"
-                                    height="80%">
-                            </div>
-                            <div class="person-meta">
-                                <span class="person-nPMe"><a
-                                        href="https://asia.siggraph.org/2025/program/award-winners/richard-chuang/"
-                                        target="_blank">Richard Chuang</a></span>
-                                <br />
-                                <span class="person-affliation">d1n0 / PDI</span>
-                            </div>
-                        </div>
-
-                        <div class="col-md-2">
-                            <div class="person-image">
-                                <img src="/img/avatar/maneesh_agrawala.jpg" class="person-avatar" width="80%"
-                                    height="80%">
-                            </div>
-                            <div class="person-meta">
-                                <span class="person-nPMe"><a href="http://graphics.stanford.edu/~maneesh/"
-                                        target="_blank">Maneesh Agrawala</a></span>
-                                <br />
-                                <span class="person-affliation">Stanford</span>
-                            </div>
-                        </div>
-                    </div>
-                    </br>
-
-                    <h2 class="text-center">Participants from</h2>
-                    <div class="row">
-                        <img class="logo-box" src="/img/org/adobe.png" width="auto" height="100px">
-                        <img class="logo-box" src="/img/org/stanford.png" width="auto" height="100px">
-                        <img class="logo-box" src="/img/org/kaist.png" width="auto" height="100px">
-                        <img class="logo-box" src="/img/org/cmu.png" width="auto" height="100px">
-                        <img class="logo-box" src="/img/org/tau.png" width="auto" height="100px">
-                        <img class="logo-box" src="/img/org/hkust.png" width="auto" height="100px">
-                        <img class="logo-box" src="/img/org/hkust_ai_film.png" alt="HKUST AI Film Festival"
-                            width="auto" height="100px">
-                        <img class="logo-box" src="/img/org/uiuc.png" width="auto" height="100px">
-                    </div>
-                    </br>
-                    </br>
-
-                    <h2 id="sponsorship" class="text-center">Sponsorship</h2>
-                    <div class="row">
-                        <img class="logo-box" src="/img/org/tencent.png" alt="Tencent" width="auto" height="100px">
-                    </div>
-                    </br>
-                    </br>
-
-
-                    <h2 id="organizer" class="text-center">Organizers</h2>
-                    <h3 class="text-center" style="margin-top: 20px; margin-bottom: 30px;">Workshop Committee</h3>
-                    <div class="row committee-row">
-                        <div class="col-md-2 committee-member">
-                            <div class="person-image">
-                                <img src="/img/avatar/Songlin_Yang.jpg" class="person-avatar" width="80%" height="80%">
-                            </div>
-                            <div class="person-meta">
-                                <span class="person-nPMe"><a href="https://songlin1998.github.io"
-                                        target="_blank">Songlin Yang</a></span>
-                                <br />
-                                <span class="person-affliation">HKUST</span>
-                            </div>
-                        </div>
-
-                        <div class="col-md-2 committee-member">
-                            <div class="person-image">
-                                <img src="/img/avatar/Gaurav-Parmar.jpg" class="person-avatar" width="80%" height="80%">
-                            </div>
-                            <div class="person-meta">
-                                <span class="person-nPMe"><a href="https://gauravparmar.com/" target="_blank">Gaurav
-                                        Parmar</a></span>
-                                <br />
-                                <span class="person-affliation">CMU</span>
-                            </div>
-                        </div>
-
-                        <div class="col-md-2 committee-member">
-                            <div class="person-image">
-                                <img src="/img/avatar/Ozgur_Kara.jpg" class="person-avatar" width="80%" height="80%">
-                            </div>
-                            <div class="person-meta">
-                                <span class="person-nPMe"><a href="https://karaozgur.com" target="_blank">Ozgur
-                                        Kara</a></span>
-                                <br />
-                                <span class="person-affliation">UIUC</span>
-                            </div>
-                        </div>
-
-                        <div class="col-md-2 committee-member">
-                            <div class="person-image">
-                                <img src="/img/amcfilm/jiajuma.jpg" class="person-avatar" width="80%" height="80%">
-                            </div>
-                            <div class="person-meta">
-                                <span class="person-nPMe"><a href="https://majiaju.io/" target="_blank">Jiaju
-                                        Ma</a></span>
-                                <br />
-                                <span class="person-affliation">Stanford</span>
-                            </div>
-                        </div>
-
-                        <div class="col-md-2 committee-member">
-                            <div class="person-image">
-                                <img src="/img/avatar/lvmin.png" class="person-avatar" width="80%" height="80%">
-                            </div>
-                            <div class="person-meta">
-                                <span class="person-nPMe"><a href="https://github.com/lllyasviel" target="_blank">Lvmin
-                                        Zhang</a></span>
-                                <br />
-                                <span class="person-affliation">Stanford</span>
-                            </div>
-                        </div>
-
-                        <div class="col-md-2 committee-member">
-                            <div class="person-image">
-                                <img src="/img/avatar/houyuan-chen.jpg" class="person-avatar" width="80%" height="80%">
-                            </div>
-                            <div class="person-meta">
-                                <span class="person-nPMe"><a href="https://github.com/houyuanchen111/"
-                                        target="_blank">Houyuan Chen</a></span>
-                                <br />
-                                <span class="person-affliation">HKUST</span>
-                            </div>
-                        </div>
-
-                        <div class="col-md-2 committee-member">
-                            <div class="person-image">
-                                <img src="/img/avatar/xuyi_yang.jpg" class="person-avatar" width="80%" height="80%">
-                            </div>
-                            <div class="person-meta">
-                                <span class="person-nPMe"><a href="https://cveu.github.io/" target="_blank">Xuyi
-                                        Yang</a></span>
-                                <br />
-                                <span class="person-affliation">HKUST</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row committee-row">
-                        <div class="col-md-2 committee-member">
-                            <div class="person-image">
-                                <img src="/img/avatar/Tony_zhang.jpg" class="person-avatar" width="80%" height="80%">
-                            </div>
-                            <div class="person-meta">
-                                <span class="person-nPMe"><a href="https://www.zhangtianyi.page/" target="_blank">Tony
-                                        Zhang</a></span>
-                                <br />
-                                <span class="person-affliation">HKUST</span>
-                            </div>
-                        </div>
-
-                        <div class="col-md-2 committee-member">
-                            <div class="person-image">
-                                <img src="/img/avatar/Or-Patashnik.jpg" class="person-avatar" width="80%" height="80%">
-                            </div>
-                            <div class="person-meta">
-                                <span class="person-nPMe"><a href="https://orpatashnik.github.io/" target="_blank">Or
-                                        Patashnik</a></span>
-                                <br />
-                                <span class="person-affliation">TAU</span>
-                            </div>
-                        </div>
-
-                        <div class="col-md-2 committee-member">
-                            <div class="person-image">
-                                <img src="/img/avatar/Fabian.png" class="person-avatar" width="80%" height="80%">
-                            </div>
-                            <div class="person-meta">
-                                <span class="person-nPMe"><a href="https://fabiancaba.com/" target="_blank">Fabian Caba
-                                        Heilbron</a></span>
-                                <br />
-                                <span class="person-affliation">Adobe</span>
-                            </div>
-                        </div>
-
-                        <div class="col-md-2 committee-member">
-                            <div class="person-image">
-                                <img src="/img/avatar/Jun-Yan-Zhu.jpg" class="person-avatar" width="80%" height="80%">
-                            </div>
-                            <div class="person-meta">
-                                <span class="person-nPMe"><a href="https://github.com/junyanz/" target="_blank">Jun-Yan
-                                        Zhu</a></span>
-                                <br />
-                                <span class="person-affliation">CMU</span>
-                            </div>
-                        </div>
-
-                        <div class="col-md-2 committee-member">
-                            <div class="person-image">
-                                <img src="/img/avatar/Daniel-Cohen-Or.jpg" class="person-avatar" width="80%"
-                                    height="80%">
-                            </div>
-                            <div class="person-meta">
-                                <span class="person-nPMe"><a href="https://danielcohenor.com/" target="_blank">Daniel
-                                        Cohen-Or</a></span>
-                                <br />
-                                <span class="person-affliation">TAU</span>
-                            </div>
-                        </div>
-
-                        <div class="col-md-2 committee-member">
-                            <div class="person-image">
-                                <img src="/img/avatar/maneesh_agrawala.jpg" class="person-avatar" width="80%"
-                                    height="80%">
-                            </div>
-                            <div class="person-meta">
-                                <span class="person-nPMe"><a href="http://graphics.stanford.edu/~maneesh/"
-                                        target="_blank">Maneesh Agrawala</a></span>
-                                <br />
-                                <span class="person-affliation">Stanford</span>
-                            </div>
-                        </div>
-
-                        <div class="col-md-2 committee-member">
-                            <div class="person-image">
-                                <img src="/img/avatar/anyi_rao.jpg" class="person-avatar" width="80%" height="80%">
-                            </div>
-                            <div class="person-meta">
-                                <span class="person-nPMe"><a href="https://anyirao.com/" target="_blank">Anyi
-                                        Rao</a></span>
-                                <br />
-                                <span class="person-affliation">HKUST</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <br />
-                    <h3 class="text-center" style="margin-top: 45px; margin-bottom: 30px;">Course Committee</h3>
-                    <div class="row committee-row">
-                        <div class="col-md-2 committee-member">
-                            <div class="person-image">
-                                <img src="/img/avatar/zheng_wei_course.jpg" class="person-avatar" width="80%"
-                                    height="80%">
-                            </div>
-                            <div class="person-meta">
-                                <span class="person-nPMe"><a href="https://www.zhengwei302.com/" target="_blank">Zheng
-                                        Wei</a></span>
-                                <br />
-                                <span class="person-affliation">KAIST</span>
-                            </div>
-                        </div>
-
-                        <div class="col-md-2 committee-member">
-                            <div class="person-image">
-                                <img src="/img/avatar/yuying_tang_course.jpg" class="person-avatar" width="80%"
-                                    height="80%">
-                            </div>
-                            <div class="person-meta">
-                                <span class="person-nPMe"><a href="https://yuyingtang1999.github.io/"
-                                        target="_blank">Yuying Tang</a></span>
-                                <br />
-                                <span class="person-affliation">HKUST</span>
-                            </div>
-                        </div>
-
-                        <div class="col-md-2 committee-member">
-                            <div class="person-image">
-                                <img src="/img/avatar/mia.jpg" class="person-avatar" width="80%" height="80%">
-                            </div>
-                            <div class="person-meta">
-                                <span class="person-nPMe"><a href="https://www.mia-tang.com/" target="_blank">Mia
-                                        Tang</a></span>
-                                <br />
-                                <span class="person-affliation">Stanford</span>
-                            </div>
-                        </div>
-
-                        <div class="col-md-2 committee-member">
-                            <div class="person-image">
-                                <img src="/img/avatar/anyi_rao.jpg" class="person-avatar" width="80%" height="80%">
-                            </div>
-                            <div class="person-meta">
-                                <span class="person-nPMe"><a href="https://anyirao.com/" target="_blank">Anyi
-                                        Rao</a></span>
-                                <br />
-                                <span class="person-affliation">HKUST</span>
-                            </div>
-                        </div>
-                    </div>
-
-
+                    <h2 class="text-center">About AI Film Frontiers</h2>
+                    <p class="section-lead">AI Film Frontiers (AIFF) at SIGGRAPH Asia 2026 invites creators, researchers, and filmmakers worldwide to explore the future of AI-native filmmaking, showcasing how generative AI is transforming cinematic storytelling, creative workflows, and human–AI collaboration.</p>
+                    <p class="section-lead">As generative AI continues to reshape the landscape of visual storytelling, AIFF aims to bridge the gap between cutting-edge AI technologies and cinematic creativity. The workshop and film challenge welcome innovative AI-generated films and technical reports that demonstrate new possibilities in storytelling, character consistency, multi-shot generation, audio-visual creation, and AI-assisted filmmaking pipelines.</p>
+                    <p class="section-lead" style="text-align: justify">AIFF is for the next installment of the AI for Creative Visual Content Generation Editing and Understanding (CVEU), which follows its success on the previous launch at <a href="https://cveu.github.io/event/cvpr2026.html">CVPR'26</a>, <a href="https://cveu.github.io/event/cvpr2025.html">CVPR'25</a>, <a href="https://cveu.github.io/event/cvpr2024.html">CVPR'24</a>, <a href="https://cveu.github.io/event/iccv2023.html">ICCV'23</a>, <a href="https://cveu.github.io/event/eccv2022.html">ECCV'22</a>, <a href="https://cveu.github.io/event/iccv2021.html">ICCV'21</a>, a Generative Models Course at <a href="https://cveu.github.io/event/sig2024.html">SIGGRAPH'24</a>, <a href="https://cveu.github.io/event/sig2025.html">SIGGRAPH'25</a>, <a href="https://cveu.github.io/event/sig2026.html">SIGGRAPH'26</a>, the 2023 Paris ShortFest AI <a href="https://filmfreeway.com/AIShortFest">Film Festival</a>, the 2025 Hong Kong HKUST AI <a href="https://cveu.github.io/event/hkustfilm2025.html">Film Festival</a>, and the 2026 Hong Kong HKUST AI <a href="https://cveu.github.io/event/hkustfilm2026.html">Film Festival</a>.</p>
+                    <p class="section-lead">Award-winning films, together with their corresponding technical reports, will be presented at SIGGRAPH Asia 2026. The films will be screened during the workshop, while the accompanying technical reports will be formally published in the SIGGRAPH Asia 2026 Proceedings.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
+        <section id="submission" class="content-section text-left">
+            <div class="download-section">
+                <div class="container">
+                    <div class="col-lg-10 col-lg-offset-1">
+                        <h2 class="text-center">Submission</h2>
+                        <p class="text-center section-lead">A complete entry consists of two coordinated submissions: the film and its accompanying Technical Report.</p>
 
+                        <div class="row submission-grid">
+                            <div class="col-md-6">
+                                <article class="aiff-card">
+                                    <h3>1. AI-Generated Film</h3>
+                                    <p>Submit the finished film through FilmFreeway. The dedicated AIFF FilmFreeway page and detailed film requirements will be announced here.</p>
+                                    <p><strong>Submission channel:</strong> <a href="https://filmfreeway.com/HKUST-AI-Film" target="_blank" rel="noopener noreferrer">FilmFreeway</a></p>
+                                    <ul class="requirements-list">
+                                        <li><strong>Film entry:</strong> one finished AI-generated film, submitted as required by FilmFreeway.</li>
+                                        <li><strong>Screening materials:</strong> provide the final video file or streaming link and any supporting metadata requested.</li>
+                                        <li><strong>Enhanced Access registration:</strong> at least one representative must register for Enhanced Access to accept awards and participate at SIGGRAPH Asia 2026. This may be the author or a friend who attends.</li>
+                                    </ul>
+                                </article>
+                            </div>
+                            <div class="col-md-6">
+                                <article class="aiff-card">
+                                    <h3>2. Technical Report</h3>
+                                    <p>Submit the report through the SIGGRAPH Submission System. Reports must use the ACM Tech Communications template with the <code>sigconf</code> style and are limited to 4 pages.</p>
+                                    <p><strong>Review:</strong> single-blind review. After acceptance, author names and affiliations must remain unchanged.</p>
+                                    <p><strong>Submission channel:</strong> <a href="https://ssl.linklings.net/conferences/siggraphasia/" target="_blank" rel="noopener noreferrer">SIGGRAPH Asia Linklings</a></p>
+                                    <ul class="requirements-list">
+                                        <li><strong>Project Overview:</strong> describe the project, motivation, and creative goals.</li>
+                                        <li><strong>Creative Workflow:</strong> explain the production pipeline, including AI models, tools, software, and human intervention.</li>
+                                        <li><strong>Technical Challenges:</strong> discuss consistency, narrative coherence, audio-visual alignment, controllability, and your workflow solutions.</li>
+                                        <li><strong>Copyright Declaration:</strong> state ownership and licensing of all assets using the required declaration template.</li>
+                                    </ul>
+                                </article>
+                            </div>
+                        </div>
 
-
-    <!-- Podcast Section temporarily hidden
-<section id="community-feature" class="container content-section text-center">
-  <div class="feature-container">
-           <h2>Podcast</h2>
-    <div class="feature-top">
-
-     <p class="feature-hosts">If you want to explore with us more about how AI is shaping the future of filmmaking, we invite you to tune in to podcast <strong>Empowering Storytellers</strong> <a href="https://www.youtube.com/@EmpoweringStorytellers"><i class="fab fa-youtube fa-fw"></i> <span class="network-nPMe"></span></a>    <a href="https://x.com/ep_storytellers" ><i class="fab fa-twitter fa-fw"></i> <span class="network-nPMe"></span></a>  <a href="https://open.spotify.com/show/5yTdlfU4ncxmIonSwR1QFV?si=9f857041fce445cf" ><i class="fab fa-spotify fa-fw"></i> <span class="network-nPMe"></span></a> <a href="https://www.linkedin.com/company/empowering-storytellers/"><i class="fab fa-linkedin fa-fw"></i> <span class="network-nPMe"></span></a>
-                </li>.</p>
-
-      
-    </div>
-
-    <h4 class="guest-section-title">OUR GUESTS INCLUDE</h4>
-    <div class="guest-grid">
-      <div class="guest-card">
-        <p class="guest-name"><a href="https://www.smpte.org/about/board-tony-ngai"><strong>Tony Ngai</strong></a> </p>
-        <p class="guest-affiliation">Governor, Asia-Pacific Region, Society of Motion Picture and Television Engineers (SMPTE)</p>
-      </div>
-      <div class="guest-card">
-        <p class="guest-name"><a href="https://nz.linkedin.com/in/chris-williamson-02b0232"><strong>Chris Williamson</strong></a> </p>
-        <p class="guest-affiliation">Senior 3D Generalist & Technical Advisor, Wētā Workshop</p>
-      </div>
-      <div class="guest-card">
-        <p class="guest-name"><a href="https://nz.linkedin.com/in/jacky-zheng-3562b9185?original_referer=https%3A%2F%2Fwww.google.com%2F"><strong>Jacky Zheng</strong></a> </p>
-        <p class="guest-affiliation">Art Director, Wētā Workshop</p>
-      </div>
-      <div class="guest-card">
-        <p class="guest-name"><a href="https://www.hkapa.edu/tch/ftv/faculty/lam-terry"><strong>Terry Lam</strong></a> </p>
-        <p class="guest-affiliation">Dean, School of Film and Television, The Hong Kong Academy for Performing Arts</p>
-      </div>
-      <div class="guest-card">
-        <p class="guest-name"><a href="https://lucasmariano.com/"><strong>Lucas Mariano</strong></a> </p>
-        <p class="guest-affiliation">2D Animator & Motion Designer</p>
-      </div>
-        <div class="guest-card placeholder-card">
-        <span>More guests to be announced...</span>
-        </div>
-    </div>
-  </div>
-</section>
-    -->
-
-    <!-- Contact Section -->
-    <section id="contact" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact</h2>
-                <!-- <p>🚧 This site is under-construction 🚧 </p> -->
-                <p><a href="mailto:cveu_organizers@googlegroups.com">cveu_organizers@googlegroups.com</a>
-                </p>
-                <ul class="list-inline banner-social-buttons">
-
-                    <li>
-                        <a href="https://twitter.com/cveu_workshop" class="btn btn-default btn-lg"><i
-                                class="fab fa-twitter fa-fw"></i> <span class="network-nPMe">twitter</span></a>
-                    </li>
-
-                    <li>
-                        <a href="https://github.com/CVEU" class="btn btn-default btn-lg"><i
-                                class="fab fa-github fa-fw"></i> <span class="network-nPMe">github</span></a>
-                    </li>
-
-                    <li>
-                        <a href="https://discord.gg/RvH3H5gshw" class="btn btn-default btn-lg"><i
-                                class="fab fa-discord fa-fw"></i> <span class="network-nPMe">discord</span></a>
-                    </li>
-
-                </ul>
+                        <div class="row">
+                            <div class="col-md-12 submission-links">
+                                <article class="aiff-card">
+                                    <h3>Submission Links &amp; Guidance</h3>
+                                    <a class="btn btn-default btn-lg" href="https://filmfreeway.com/HKUST-AI-Film" target="_blank" rel="noopener noreferrer">
+                                        <i class="fa fa-film fa-fw" aria-hidden="true"></i> Submit Film on FilmFreeway
+                                    </a>
+                                    <a class="btn btn-default btn-lg" href="https://ssl.linklings.net/conferences/siggraphasia/" target="_blank" rel="noopener noreferrer">
+                                        <i class="fa fa-upload fa-fw" aria-hidden="true"></i> Submit Technical Report
+                                    </a>
+                                    <a class="btn btn-default btn-lg" href="https://www.siggraph.org/preparing-your-content/author-instructions/" target="_blank" rel="noopener noreferrer">
+                                        <i class="fa fa-file-text fa-fw" aria-hidden="true"></i> Template &amp; Author Instructions
+                                    </a>
+                                    <p class="note">Use the ACM Tech Communications template with the <code>sigconf</code> style. The report is limited to 4 pages. Do not change authors or affiliations after acceptance.</p>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
+        <section id="review" class="container content-section text-left">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h2 class="text-center">Review Process</h2>
+                    <p class="text-center section-lead">AI Film Frontiers is evaluated across multiple dimensions, including artistic quality and technical contribution.</p>
+
+                    <div class="row review-grid">
+                        <div class="col-md-4">
+                            <article class="aiff-card review-step">
+                                <span class="review-number">1</span>
+                                <h3>Eligibility Check</h3>
+                                <p>Organizers verify that both the film and Technical Report have been submitted and that the entry satisfies the announced requirements.</p>
+                            </article>
+                        </div>
+                        <div class="col-md-4">
+                            <article class="aiff-card review-step">
+                                <span class="review-number">2</span>
+                                <h3>Artistic Dimension</h3>
+                                <p>Reviewers evaluate cinematic quality, storytelling, originality, creativity, and the strength of the film's artistic expression.</p>
+                            </article>
+                        </div>
+                        <div class="col-md-4">
+                            <article class="aiff-card review-step">
+                                <span class="review-number">3</span>
+                                <h3>Technical Dimension</h3>
+                                <p>Reviewers assess workflow design, the clarity of the report, the significance of the technical challenges, and the novelty and effectiveness of the proposed solutions.</p>
+                            </article>
+                        </div>
+                    </div>
+
+                    <p class="text-center">Award decisions are based on the combined artistic and technical dimensions. Selected films and their corresponding reports will be presented together at SIGGRAPH Asia 2026.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="timeline" class="content-section text-left">
+            <div class="download-section">
+                <div class="container">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <h2 class="text-center">Timeline</h2>
+                        <p class="text-center section-lead">Exact dates and deadlines will be announced when the submission portals open.</p>
+                        <ol class="timeline-list">
+                            <li><span class="timeline-date">July 23, 2026</span><strong>Film and Technical Report submissions open</strong></li>
+                            <li><span class="timeline-date">August 23, 2026</span><strong>Film submission deadline</strong></li>
+                            <li><span class="timeline-date">August 23, 2026</span><strong>Technical Report submission deadline</strong></li>
+                            <li><span class="timeline-date">September 13, 2026</span><strong>Winner and acceptance notification</strong></li>
+                            <li><span class="timeline-date">September 23, 2026</span><strong>Final camera-ready submission deadline</strong></li>
+                            <li><span class="timeline-date">December 2–4, 2026</span><strong>SIGGRAPH Asia 2026 @ Malaysia KLCC<br>Workshop presentations, film screenings, and publication of accepted Technical Reports</strong></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="organizers" class="container content-section text-left">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h2 class="text-center">Organizers</h2>
+                    <div class="row organizer-grid">
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/avatar/Songlin_Yang.jpg" alt="Songlin Yang">
+                            <span class="person-name"><a href="https://cveu.github.io" target="_blank" rel="noopener noreferrer">Songlin Yang</a></span>
+                            <span class="person-affiliation">HKUST</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/avatar/Tony_zhang.jpg" alt="Tony Zhang">
+                            <span class="person-name"><a href="https://www.zhangtianyi.page/" target="_blank" rel="noopener noreferrer">Tony Zhang</a></span>
+                            <span class="person-affiliation">HKUST</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/avatar/DongLiu.jpg" alt="Dong Liu">
+                            <span class="person-name"><a href="https://cveu.github.io" target="_blank" rel="noopener noreferrer">Dong Liu</a></span>
+                            <span class="person-affiliation">Adobe</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/avatar/ruihan_zhang.jpg" alt="Ruihan Zhang">
+                            <span class="person-name"><a href="https://cveu.github.io" target="_blank" rel="noopener noreferrer">Ruihan Zhang</a></span>
+                            <span class="person-affiliation">Google</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/avatar/shiqin-hou.jpg" alt="Shiqin Hou">
+                            <span class="person-name"><a href="https://hhhsq888-alt.github.io/Houshiqin.github.io/" target="_blank" rel="noopener noreferrer">Shiqin Hou</a></span>
+                            <span class="person-affiliation">HKUST</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/amcfilm/zeyuzhang.jpg" alt="Zeyu Zhang">
+                            <span class="person-name"><a href="https://johnnyzhang728.github.io/" target="_blank" rel="noopener noreferrer">Zeyu Zhang</a></span>
+                            <span class="person-affiliation">HKUST</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/avatar/houyuan-chen.jpg" alt="Houyuan Chen">
+                            <span class="person-name"><a href="https://github.com/houyuanchen111/" target="_blank" rel="noopener noreferrer">Houyuan Chen</a></span>
+                            <span class="person-affiliation">HKUST</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/avatar/xuyi_yang.jpg" alt="Xuyi Yang">
+                            <span class="person-name"><a href="https://cveu.github.io" target="_blank" rel="noopener noreferrer">Xuyi Yang</a></span>
+                            <span class="person-affiliation">HKUST</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/avatar/siyu_huang.jpg" alt="Siyu Huang">
+                            <span class="person-name"><a href="https://cveu.github.io" target="_blank" rel="noopener noreferrer">Siyu Huang</a></span>
+                            <span class="person-affiliation">HKUST</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/avatar/yudi_xie.jpg" alt="Yudi Xie">
+                            <span class="person-name"><a href="https://cveu.github.io" target="_blank" rel="noopener noreferrer">Yudi Xie</a></span>
+                            <span class="person-affiliation">HKUST</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/avatar/hao_zhao.jpg" alt="Hao Zhao">
+                            <span class="person-name"><a href="https://sites.google.com/view/fromandto" target="_blank" rel="noopener noreferrer">Hao Zhao</a></span>
+                            <span class="person-affiliation">Tsinghua University</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/speakers/Frank_Guan.jpg" alt="Frank Guan">
+                            <span class="person-name"><a href="https://cveu.github.io" target="_blank" rel="noopener noreferrer">Frank Guan</a></span>
+                            <span class="person-affiliation">SIT</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/speakers/Pol_Jeremias-Vila.jpg" alt="Pol Jeremias-Vila">
+                            <span class="person-name"><a href="https://cveu.github.io" target="_blank" rel="noopener noreferrer">Pol Jeremias-Vila</a></span>
+                            <span class="person-affiliation">Netflix</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/amcfilm/hongbofu.jpg" alt="Hongbo Fu">
+                            <span class="person-name"><a href="https://cveu.github.io" target="_blank" rel="noopener noreferrer">Hongbo Fu</a></span>
+                            <span class="person-affiliation">HKUST</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/speakers/anyi_rao.jpg" alt="Anyi Rao">
+                            <span class="person-name"><a href="https://anyirao.com/" target="_blank" rel="noopener noreferrer">Anyi Rao</a></span>
+                            <span class="person-affiliation">HKUST</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="container content-section text-center">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Contact</h2>
+                    <p>Questions about the workshop or challenge can be sent to <a href="mailto:cveu_avatar@googlegroups.com">cveu_avatar@googlegroups.com</a>.</p>
+                    <ul class="list-inline banner-social-buttons">
+                        <li><a href="https://twitter.com/cveu_workshop" class="btn btn-default btn-lg" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i> <span class="network-name">Twitter</span></a></li>
+                        <li><a href="https://github.com/CVEU" class="btn btn-default btn-lg" target="_blank" rel="noopener noreferrer"><i class="fab fa-github fa-fw" aria-hidden="true"></i> <span class="network-name">GitHub</span></a></li>
+                        <li><a href="https://discord.gg/RvH3H5gshw" class="btn btn-default btn-lg" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord fa-fw" aria-hidden="true"></i> <span class="network-name">Discord</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer>
         <div class="container text-center">
-            <p>Copyright &copy; AI for Creative Video Generation Editing and Understanding 2026</p>
-            <!-- Image credit to Getty Images -->
+            <p>Copyright &copy; AI Film Frontiers 2026</p>
         </div>
     </footer>
 
-    <!-- jQuery Version 1.11.0 -->
-    <script src="/js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="/js/jquery.easing.min.js"></script>
-    <script src="/js/jquery.widget.min.js"></script>
-
-
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script type="text/javascript"
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="/js/grayscale.js"></script>
-    <script src="/js/metro.min.js"></script>
-    <script src="/js/metro-countdown.js"></script>
-
-    <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.7/jstz.min.js"></script>
-    <script src="/js/moment.min.js"></script>
-    <script src="/js/moment-timezone.min.js"></script>
-    <script src="/js/main.js"></script>
+    <script src="https://cveu.github.io/js/jquery.js"></script>
+    <script src="https://cveu.github.io/js/bootstrap.min.js"></script>
+    <script src="https://cveu.github.io/js/jquery.easing.min.js"></script>
+    <script src="https://cveu.github.io/js/grayscale.js"></script>
 </body>
-
 </html>
