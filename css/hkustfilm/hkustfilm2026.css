@@ -451,6 +451,31 @@
 
 }
 
+/* Sponsor enquiry */
+.sponsor-enquiry.content-section {
+    padding-top: 110px;
+    padding-bottom: 70px;
+}
+
+.sponsor-enquiry__copy {
+    max-width: 760px;
+    margin-right: auto;
+    margin-bottom: 12px;
+    margin-left: auto;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.sponsor-enquiry__contact {
+    margin: 0;
+}
+
+@media (max-width: 767px) {
+    .sponsor-enquiry.content-section {
+        padding-top: 75px;
+        padding-bottom: 40px;
+    }
+}
+
 .submission-wrapper {
     background-color: rgba(0, 0, 0, 0.25);
     border: 1px solid rgba(255, 255, 255, 0.08);
