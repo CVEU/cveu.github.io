@@ -254,6 +254,11 @@
                 flex: 0 0 12.5%;
                 width: 12.5%;
             }
+
+            .organizing-grid > .organizer-card {
+                flex-basis: calc(100% / var(--committee-columns, 8));
+                width: calc(100% / var(--committee-columns, 8));
+            }
         }
 
         .note {
@@ -468,16 +473,16 @@
         <section id="organizers" class="container content-section text-left">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1">
-                    <h2 class="text-center">Organizers</h2>
-                    <div class="row organizer-grid">
+                    <h2 class="text-center">Organizing Committee</h2>
+                    <div class="row organizer-grid organizing-grid">
                         <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
                             <img src="/img/avatar/Songlin_Yang.jpg" alt="Songlin Yang">
                             <span class="person-name"><a href="https://cveu.github.io" target="_blank" rel="noopener noreferrer">Songlin Yang</a></span>
                             <span class="person-affiliation">HKUST</span>
                         </div>
                         <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
-                            <img src="/img/avatar/Tony_zhang.jpg" alt="Tony Zhang">
-                            <span class="person-name"><a href="https://www.zhangtianyi.page/" target="_blank" rel="noopener noreferrer">Tony Zhang</a></span>
+                            <img src="/img/avatar/Tony_zhang.jpg" alt="Tianyi Zhang">
+                            <span class="person-name"><a href="https://www.zhangtianyi.page/" target="_blank" rel="noopener noreferrer">Tianyi Zhang</a></span>
                             <span class="person-affiliation">HKUST</span>
                         </div>
                         <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
@@ -490,6 +495,54 @@
                             <span class="person-name"><a href="https://cveu.github.io" target="_blank" rel="noopener noreferrer">Ruihan Zhang</a></span>
                             <span class="person-affiliation">Google</span>
                         </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/avatar/Benjamin_Seide.jpg" alt="Benjamin Seide">
+                            <span class="person-name"><a href="https://dr.ntu.edu.sg/entities/person/Benjamin-Seide" target="_blank" rel="noopener noreferrer">Benjamin Seide</a></span>
+                            <span class="person-affiliation">NTU</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/avatar/hao_zhao.jpg" alt="Hao Zhao">
+                            <span class="person-name"><a href="https://sites.google.com/view/fromandto" target="_blank" rel="noopener noreferrer">Hao Zhao</a></span>
+                            <span class="person-affiliation">Tsinghua University</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/avatar/Prakash_Ramajillu.jpg" alt="Prakash Ramajillu">
+                            <span class="person-name"><a href="https://www.linkedin.com/in/prakashramajillu/" target="_blank" rel="noopener noreferrer">Prakash Ramajillu</a></span>
+                            <span class="person-affiliation">Koelnmesse</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/avatar/Takahito_TEJIMA.jpg" alt="Takahito Tejima">
+                            <span class="person-name"><a href="https://scholar.google.com/citations?user=cxTHAikAAAAJ&amp;hl=ja" target="_blank" rel="noopener noreferrer">Takahito Tejima</a></span>
+                            <span class="person-affiliation">Polyphony Digital</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/avatar/Tomasz_Bednarz.webp" alt="Tomasz Bednarz">
+                            <span class="person-name"><a href="https://tomaszbednarz.com/" target="_blank" rel="noopener noreferrer">Tomasz Bednarz</a></span>
+                            <span class="person-affiliation">NVIDIA</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/speakers/Frank_Guan.jpg" alt="Frank Guan">
+                            <span class="person-name"><a href="https://cveu.github.io" target="_blank" rel="noopener noreferrer">Frank Guan</a></span>
+                            <span class="person-affiliation">SIT</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/speakers/Pol_Jeremias-Vila.jpg" alt="Pol Jeremias-Vila">
+                            <span class="person-name"><a href="https://cveu.github.io" target="_blank" rel="noopener noreferrer">Pol Jeremias-Vila</a></span>
+                            <span class="person-affiliation">Netflix</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/amcfilm/hongbofu.jpg" alt="Hongbo Fu">
+                            <span class="person-name"><a href="https://cveu.github.io" target="_blank" rel="noopener noreferrer">Hongbo Fu</a></span>
+                            <span class="person-affiliation">HKUST</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/speakers/anyi_rao.jpg" alt="Anyi Rao">
+                            <span class="person-name"><a href="https://anyirao.com/" target="_blank" rel="noopener noreferrer">Anyi Rao</a></span>
+                            <span class="person-affiliation">HKUST</span>
+                        </div>
+                    </div>
+                    <h2 class="text-center">Student Committee</h2>
+                    <div class="row organizer-grid">
                         <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
                             <img src="/img/amcfilm/zeyuzhang.jpg" alt="Zeyu Zhang">
                             <span class="person-name"><a href="https://johnnyzhang728.github.io/" target="_blank" rel="noopener noreferrer">Zeyu Zhang</a></span>
@@ -513,36 +566,6 @@
                         <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
                             <img src="/img/avatar/yudi_xie.jpg" alt="Yudi Xie">
                             <span class="person-name"><a href="https://cveu.github.io" target="_blank" rel="noopener noreferrer">Yudi Xie</a></span>
-                            <span class="person-affiliation">HKUST</span>
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
-                            <img src="/img/avatar/Benjamin_Seide.jpg" alt="Benjamin Seide">
-                            <span class="person-name"><a href="https://dr.ntu.edu.sg/entities/person/Benjamin-Seide" target="_blank" rel="noopener noreferrer">Benjamin Seide</a></span>
-                            <span class="person-affiliation">NTU</span>
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
-                            <img src="/img/avatar/hao_zhao.jpg" alt="Hao Zhao">
-                            <span class="person-name"><a href="https://sites.google.com/view/fromandto" target="_blank" rel="noopener noreferrer">Hao Zhao</a></span>
-                            <span class="person-affiliation">Tsinghua University</span>
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
-                            <img src="/img/speakers/Frank_Guan.jpg" alt="Frank Guan">
-                            <span class="person-name"><a href="https://cveu.github.io" target="_blank" rel="noopener noreferrer">Frank Guan</a></span>
-                            <span class="person-affiliation">SIT</span>
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
-                            <img src="/img/speakers/Pol_Jeremias-Vila.jpg" alt="Pol Jeremias-Vila">
-                            <span class="person-name"><a href="https://cveu.github.io" target="_blank" rel="noopener noreferrer">Pol Jeremias-Vila</a></span>
-                            <span class="person-affiliation">Netflix</span>
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
-                            <img src="/img/amcfilm/hongbofu.jpg" alt="Hongbo Fu">
-                            <span class="person-name"><a href="https://cveu.github.io" target="_blank" rel="noopener noreferrer">Hongbo Fu</a></span>
-                            <span class="person-affiliation">HKUST</span>
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
-                            <img src="/img/speakers/anyi_rao.jpg" alt="Anyi Rao">
-                            <span class="person-name"><a href="https://anyirao.com/" target="_blank" rel="noopener noreferrer">Anyi Rao</a></span>
                             <span class="person-affiliation">HKUST</span>
                         </div>
                     </div>
@@ -575,5 +598,11 @@
     <script src="https://cveu.github.io/js/bootstrap.min.js"></script>
     <script src="https://cveu.github.io/js/jquery.easing.min.js"></script>
     <script src="https://cveu.github.io/js/grayscale.js"></script>
+    <script>
+        document.querySelectorAll('.organizing-grid').forEach(function (grid) {
+            var memberCount = grid.querySelectorAll('.organizer-card').length;
+            grid.style.setProperty('--committee-columns', Math.ceil(memberCount / 2));
+        });
+    </script>
 </body>
 </html>
