@@ -26,6 +26,19 @@
             background: #050505;
         }
 
+        main {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #about { order: 1; }
+        #submission { order: 2; }
+        #review { order: 3; }
+        #timeline { order: 4; }
+        #organizers { order: 5; }
+        #course { order: 6; }
+        #contact { order: 7; }
+
         .intro.aiff-hero {
             position: relative;
             background: linear-gradient(rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.78)), url('/img/bg-kuala-lumpur.jpg') no-repeat center center scroll;
@@ -122,12 +135,14 @@
         }
 
         .submission-grid,
+        .course-grid,
         .review-grid {
             display: flex;
             flex-wrap: wrap;
         }
 
         .submission-grid > div,
+        .course-grid > div,
         .review-grid > div {
             display: flex;
         }
@@ -249,6 +264,52 @@
             font-size: 14px;
         }
 
+        .course-committee-grid {
+            align-items: flex-start;
+            max-width: 960px;
+            margin: 36px auto 64px;
+        }
+
+        #course .course-committee-grid > .organizer-card {
+            float: none;
+            flex: 0 0 14.285714%;
+            width: 14.285714%;
+            max-width: 14.285714%;
+            margin-bottom: 38px;
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+
+        .course-committee-grid .organizer-card img {
+            width: 116px;
+            height: 116px;
+        }
+
+        .course-committee-grid .person-name {
+            margin-top: 13px;
+            font-size: 14px;
+            line-height: 1.4;
+            text-transform: uppercase;
+        }
+
+        .course-committee-grid .person-affiliation {
+            display: block;
+            margin-top: 6px;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        #course .course-grid {
+            margin-top: 36px;
+            margin-bottom: 58px;
+        }
+
+        #course #course-organizers,
+        #course #course-advisory-committee {
+            margin-top: 28px;
+            margin-bottom: 0;
+        }
+
         @media (min-width: 992px) {
             .organizer-grid > .organizer-card {
                 flex: 0 0 12.5%;
@@ -258,6 +319,20 @@
             .organizing-grid > .organizer-card {
                 flex-basis: calc(100% / var(--committee-columns, 8));
                 width: calc(100% / var(--committee-columns, 8));
+            }
+
+            #course .course-committee-grid > .organizer-card {
+                flex: 0 0 14.285714%;
+                width: 14.285714%;
+                max-width: 14.285714%;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 991px) {
+            #course .course-committee-grid > .organizer-card {
+                flex: 0 0 25%;
+                width: 25%;
+                max-width: 25%;
             }
         }
 
@@ -292,6 +367,28 @@
                 width: 90px;
                 height: 90px;
             }
+
+            .course-committee-grid {
+                margin-bottom: 44px;
+            }
+
+            #course .course-committee-grid > .organizer-card {
+                flex: 0 0 50%;
+                width: 50%;
+                max-width: 50%;
+                padding-right: 6px;
+                padding-left: 6px;
+            }
+
+            .course-committee-grid .organizer-card img {
+                width: 72px;
+                height: 72px;
+            }
+
+            .course-committee-grid .person-name,
+            .course-committee-grid .person-affiliation {
+                font-size: 11px;
+            }
         }
     </style>
 </head>
@@ -313,6 +410,7 @@
                 <ul class="nav navbar-nav">
                     <li class="hidden"><a href="#page-top"></a></li>
                     <li><a class="page-scroll" href="#about">About</a></li>
+                    <li><a class="page-scroll" href="#course">Course</a></li>
                     <li><a class="page-scroll" href="#submission">Submission</a></li>
                     <li><a class="page-scroll" href="#review">Review</a></li>
                     <li><a class="page-scroll" href="#timeline">Timeline</a></li>
@@ -352,6 +450,119 @@
                     <p class="section-lead">As generative AI continues to reshape the landscape of visual storytelling, AIFF aims to bridge the gap between cutting-edge AI technologies and cinematic creativity. The workshop and film challenge welcome innovative AI-generated films and technical reports that demonstrate new possibilities in storytelling, character consistency, multi-shot generation, audio-visual creation, and AI-assisted filmmaking pipelines.</p>
                     <p class="section-lead" style="text-align: justify">AIFF is for the next installment of the AI for Creative Visual Content Generation Editing and Understanding (CVEU), which follows its success on the previous launch at <a href="https://cveu.github.io/event/cvpr2026.html">CVPR'26</a>, <a href="https://cveu.github.io/event/cvpr2025.html">CVPR'25</a>, <a href="https://cveu.github.io/event/cvpr2024.html">CVPR'24</a>, <a href="https://cveu.github.io/event/iccv2023.html">ICCV'23</a>, <a href="https://cveu.github.io/event/eccv2022.html">ECCV'22</a>, <a href="https://cveu.github.io/event/iccv2021.html">ICCV'21</a>, a Generative Models Course at <a href="https://cveu.github.io/event/sig2024.html">SIGGRAPH'24</a>, <a href="https://cveu.github.io/event/sig2025.html">SIGGRAPH'25</a>, <a href="https://cveu.github.io/event/sig2026.html">SIGGRAPH'26</a>, the 2023 Paris ShortFest AI <a href="https://filmfreeway.com/AIShortFest">Film Festival</a>, the 2025 Hong Kong HKUST AI <a href="https://cveu.github.io/event/hkustfilm2025.html">Film Festival</a>, and the 2026 Hong Kong HKUST AI <a href="https://cveu.github.io/event/hkustfilm2026.html">Film Festival</a>.</p>
                     <p class="section-lead">Award-winning films, together with their corresponding technical reports, will be presented at SIGGRAPH Asia 2026. The films will be screened during the workshop, while the accompanying technical reports will be formally published in the SIGGRAPH Asia 2026 Proceedings.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="course" class="content-section text-left">
+            <div class="download-section">
+                <div class="container">
+                    <div class="col-lg-10 col-lg-offset-1">
+                        <h2 class="text-center">Course</h2>
+                        <p class="text-center section-lead"><strong>Generative Models for Visual Content Editing and Creation</strong></p>
+                        <p class="text-center"><span class="aiff-status">Date and venue to be announced</span></p>
+                        <h2 class="text-center">About the Course</h2>
+                        <p class="section-lead">The AI for Creative Visual Content Generation, Editing and Understanding (CVEU) returns for its 11th edition with two sessions: a course and a AI Film Frontier Workshop that together explore the evolving dialogue between machine intelligence and human creativity. Evolving from its successful editions at SIGGRAPH' 26, SIGGRAPH'25, SIGGRAPH Asia 25, CVPR'25, CVPR'24, ICCV'23, ECCV'22, ICCV'21, a Generative Models Course at SIGGRAPH'24, 2023 Paris ShortFest AI Film Festival, and 2025 Hong Kong HKUST AI Film Festival. CVEU has become a platform where art, research, and technology meet.</p>
+                        <p class="section-lead">With over 3,000 participants worldwide, CVEU continues to foster a vibrant global community of artists, researchers, curators, and technologists. The Course "Generative Models for Visual Content Editing and Creation" uses an "Explain, Show and Do" approach to help creators and developers master AI tools for storyboarding and pre-visualization while maintaining creative control.</p>
+                        <div class="row course-grid">
+                            <div class="col-md-4">
+                                <article class="aiff-card">
+                                    <h3>Explain</h3>
+                                    <p>Build an accessible foundation in generative models, multimodal systems, and the principles behind controllable visual content generation and editing.</p>
+                                </article>
+                            </div>
+                            <div class="col-md-4">
+                                <article class="aiff-card">
+                                    <h3>Show</h3>
+                                    <p>See practical creative workflows and demonstrations for storyboarding, pre-visualization, visual development, and AI-assisted production.</p>
+                                </article>
+                            </div>
+                            <div class="col-md-4">
+                                <article class="aiff-card">
+                                    <h3>Do</h3>
+                                    <p>Apply the techniques in guided exercises designed to help creators and developers use AI tools while maintaining meaningful creative control.</p>
+                                </article>
+                            </div>
+                        </div>
+
+                        <h2 id="course-organizers" class="text-center">Course Organizers</h2>
+                        <div class="row organizer-grid course-committee-grid">
+                            <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                                <img src="/img/avatar/Tony_zhang.jpg" alt="Tony Zhang">
+                                <span class="person-name"><a href="https://www.zhangtianyi.page/" target="_blank" rel="noopener noreferrer">Tony Zhang</a></span>
+                                <span class="person-affiliation">HKUST</span>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                                <img src="/img/speakers/Zheng_wei.jpg" alt="Zheng Wei">
+                                <span class="person-name"><a href="https://www.zhengwei302.com/" target="_blank" rel="noopener noreferrer">Zheng Wei</a></span>
+                                <span class="person-affiliation">HKUST</span>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                                <img src="/img/speakers/yuqing_liu.jpg" alt="Yuqing Liu">
+                                <span class="person-name"><a href="https://liuyuqing19990831.github.io/" target="_blank" rel="noopener noreferrer">Yuqing Liu</a></span>
+                                <span class="person-affiliation">HKU</span>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                                <img src="/img/speakers/xian_xu.jpg" alt="Xian Xu">
+                                <span class="person-name"><a href="https://xxuxian.github.io/" target="_blank" rel="noopener noreferrer">Xian Xu</a></span>
+                                <span class="person-affiliation">Lingnan University</span>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                                <img src="/img/avatar/ina-conradi.jpg" alt="Ina Conradi">
+                                <span class="person-name"><a href="https://inaconradi.com/" target="_blank" rel="noopener noreferrer">Ina Conradi</a></span>
+                                <span class="person-affiliation">NTU</span>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                                <img src="/img/avatar/houyuan-chen.jpg" alt="Houyuan Chen">
+                                <span class="person-name"><a href="https://github.com/houyuanchen111/" target="_blank" rel="noopener noreferrer">Houyuan Chen</a></span>
+                                <span class="person-affiliation">NJU</span>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                                <img src="/img/speakers/anyi_rao.jpg" alt="Anyi Rao">
+                                <span class="person-name"><a href="https://anyirao.com/" target="_blank" rel="noopener noreferrer">Anyi Rao</a></span>
+                                <span class="person-affiliation">HKUST</span>
+                            </div>
+                        </div>
+
+                        <h2 id="course-advisory-committee" class="text-center">Course Advisory Committee</h2>
+                        <div class="row organizer-grid course-committee-grid">
+                            <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                                <img src="/img/avatar/maneesh_agrawala.jpg" alt="Maneesh Agrawala">
+                                <span class="person-name"><a href="http://graphics.stanford.edu/~maneesh/" target="_blank" rel="noopener noreferrer">Maneesh Agrawala</a></span>
+                                <span class="person-affiliation">Stanford University</span>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                                <img src="/img/speakers/huamin_qu.jpg" alt="Huamin Qu">
+                                <span class="person-name"><a href="http://huamin.org/" target="_blank" rel="noopener noreferrer">Huamin Qu</a></span>
+                                <span class="person-affiliation">HKUST</span>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                                <img src="/img/avatar/James Evans.jpg" alt="James Evans">
+                                <span class="person-name"><a href="https://sociology.uchicago.edu/directory/James-A-Evans" target="_blank" rel="noopener noreferrer">James Evans</a></span>
+                                <span class="person-affiliation">University of Chicago</span>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                                <img src="/img/avatar/shanedenson.jpg" alt="Shane Denson">
+                                <span class="person-name"><a href="https://shanedenson.com/bio.html#about" target="_blank" rel="noopener noreferrer">Shane Denson</a></span>
+                                <span class="person-affiliation">Stanford University</span>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                                <img src="/img/avatar/Tim Gruenewald.jpg" alt="Tim Gruenewald">
+                                <span class="person-name"><a href="https://amstudy.hku.hk/staff/TGruenewald.html" target="_blank" rel="noopener noreferrer">Tim Gruenewald</a></span>
+                                <span class="person-affiliation">HKU</span>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                                <img src="/img/speakers/xian_xu.jpg" alt="Xian Xu">
+                                <span class="person-name"><a href="https://xxuxian.github.io/" target="_blank" rel="noopener noreferrer">Xian Xu</a></span>
+                                <span class="person-affiliation">Lingnan University</span>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                                <img src="/img/speakers/anyi_rao.jpg" alt="Anyi Rao">
+                                <span class="person-name"><a href="https://anyirao.com/" target="_blank" rel="noopener noreferrer">Anyi Rao</a></span>
+                                <span class="person-affiliation">HKUST</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
