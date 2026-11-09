@@ -426,7 +426,7 @@
                     <li><a class="page-scroll" href="#about">About</a></li>
                     <li><a class="page-scroll" href="#program">Program</a></li>
                     <li><a class="page-scroll" href="#course">Course</a></li>
-                    <li class="hidden" hidden><a class="page-scroll" href="#submission">Submission</a></li>
+                    <li><a class="page-scroll" href="#submission">Submission</a></li>
                     <li><a class="page-scroll" href="#review">Review</a></li>
                     <li><a class="page-scroll" href="#timeline">Timeline</a></li>
                     <li><a class="page-scroll" href="#organizers">Organizers</a></li>
@@ -565,61 +565,64 @@
             </div>
         </section>
 
-        <section id="submission" class="content-section text-left hidden" hidden>
+        <section id="submission" class="content-section text-left">
             <div class="download-section">
                 <div class="container">
                     <div class="col-lg-10 col-lg-offset-1">
                         <h2 class="text-center">Submission</h2>
-                        <p class="text-center section-lead">A complete entry consists of two coordinated submissions: the film and its accompanying Technical Report.</p>
+                        <div class="collapse" id="submission-details">
+                            <p class="text-center section-lead">A complete entry consists of two coordinated submissions: the film and its accompanying Technical Report.</p>
 
-                        <div class="row submission-grid">
-                            <div class="col-md-6">
-                                <article class="aiff-card">
-                                    <h3>1. AI-Generated Film</h3>
-                                    <p>Submit the finished film through FilmFreeway. The dedicated AIFF FilmFreeway page and detailed film requirements will be announced here.</p>
-                                    <p><strong>Submission channel:</strong> <a href="https://filmfreeway.com/SIGGRAPHAsiaAIFF" target="_blank" rel="noopener noreferrer">FilmFreeway</a></p>
-                                    <p><strong>Submission instructions link:</strong> <a href="https://docs.google.com/document/d/1ilLTwPRKRVD-JibK_AecC2qmJNqVhg-ejUeT7K4UMmo/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Film Submission Instructions</a></p>
-                                    <ul class="requirements-list">
-                                        <li><strong>Film entry:</strong> one finished AI-generated film, submitted as required by FilmFreeway.</li>
-                                        <li><strong>Screening materials:</strong> provide the final video file or streaming link and any supporting metadata requested.</li>
-                                        <li><strong>Enhanced Access registration:</strong> at least one representative must register for Enhanced Access to accept awards and participate at SIGGRAPH Asia 2026. This may be the author or a friend who attends.</li>
-                                    </ul>
-                                </article>
+                            <div class="row submission-grid">
+                                <div class="col-md-6">
+                                    <article class="aiff-card">
+                                        <h3>1. AI-Generated Film</h3>
+                                        <p>Submit the finished film through FilmFreeway. The dedicated AIFF FilmFreeway page and detailed film requirements will be announced here.</p>
+                                        <p><strong>Submission channel:</strong> <a href="https://filmfreeway.com/SIGGRAPHAsiaAIFF" target="_blank" rel="noopener noreferrer">FilmFreeway</a></p>
+                                        <p><strong>Submission instructions link:</strong> <a href="https://docs.google.com/document/d/1ilLTwPRKRVD-JibK_AecC2qmJNqVhg-ejUeT7K4UMmo/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Film Submission Instructions</a></p>
+                                        <ul class="requirements-list">
+                                            <li><strong>Film entry:</strong> one finished AI-generated film, submitted as required by FilmFreeway.</li>
+                                            <li><strong>Screening materials:</strong> provide the final video file or streaming link and any supporting metadata requested.</li>
+                                            <li><strong>Enhanced Access registration:</strong> at least one representative must register for Enhanced Access to accept awards and participate at SIGGRAPH Asia 2026. This may be the author or a friend who attends.</li>
+                                        </ul>
+                                    </article>
+                                </div>
+                                <div class="col-md-6">
+                                    <article class="aiff-card">
+                                        <h3>2. Technical Report</h3>
+                                        <p>Submit the report through the SIGGRAPH Submission System. Reports must use the ACM Tech Communications template with the <code>sigconf</code> style and are limited to 3 pages.</p>
+                                        <p><strong>Review:</strong> single-blind review. After acceptance, author names and affiliations must remain unchanged.</p>
+                                        <p><strong>Submission channel:</strong> <a href="https://ssl.linklings.net/conferences/siggraphasia/" target="_blank" rel="noopener noreferrer">SIGGRAPH Asia Linklings</a></p>
+                                        <p><strong>Submission instructions link:</strong> <a href="https://docs.google.com/document/d/12u0SLmiFGG6h9mwqAtxVWCODCeBFsnWr7ugW5LBjJHU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Technical Report Submission Instructions</a></p>
+                                        <ul class="requirements-list">
+                                            <li><strong>Project Overview:</strong> describe the project, motivation, and creative goals.</li>
+                                            <li><strong>Creative Workflow:</strong> explain the production pipeline, including AI models, tools, software, and human intervention.</li>
+                                            <li><strong>Technical Challenges:</strong> discuss consistency, narrative coherence, audio-visual alignment, controllability, and your workflow solutions.</li>
+                                            <li><strong>Copyright Declaration:</strong> state ownership and licensing of all assets using the required declaration template.</li>
+                                        </ul>
+                                    </article>
+                                </div>
                             </div>
-                            <div class="col-md-6">
-                                <article class="aiff-card">
-                                    <h3>2. Technical Report</h3>
-                                    <p>Submit the report through the SIGGRAPH Submission System. Reports must use the ACM Tech Communications template with the <code>sigconf</code> style and are limited to 3 pages.</p>
-                                    <p><strong>Review:</strong> single-blind review. After acceptance, author names and affiliations must remain unchanged.</p>
-                                    <p><strong>Submission channel:</strong> <a href="https://ssl.linklings.net/conferences/siggraphasia/" target="_blank" rel="noopener noreferrer">SIGGRAPH Asia Linklings</a></p>
-                                    <p><strong>Submission instructions link:</strong> <a href="https://docs.google.com/document/d/12u0SLmiFGG6h9mwqAtxVWCODCeBFsnWr7ugW5LBjJHU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Technical Report Submission Instructions</a></p>
-                                    <ul class="requirements-list">
-                                        <li><strong>Project Overview:</strong> describe the project, motivation, and creative goals.</li>
-                                        <li><strong>Creative Workflow:</strong> explain the production pipeline, including AI models, tools, software, and human intervention.</li>
-                                        <li><strong>Technical Challenges:</strong> discuss consistency, narrative coherence, audio-visual alignment, controllability, and your workflow solutions.</li>
-                                        <li><strong>Copyright Declaration:</strong> state ownership and licensing of all assets using the required declaration template.</li>
-                                    </ul>
-                                </article>
+
+                            <div class="row">
+                                <div class="col-md-12 submission-links">
+                                    <article class="aiff-card">
+                                        <h3>Submission Links &amp; Guidance</h3>
+                                        <a class="btn btn-default btn-lg" href="https://filmfreeway.com/SIGGRAPHAsiaAIFF" target="_blank" rel="noopener noreferrer">
+                                            <i class="fa fa-film fa-fw" aria-hidden="true"></i> Submit Film on FilmFreeway
+                                        </a>
+                                        <a class="btn btn-default btn-lg" href="https://ssl.linklings.net/conferences/siggraphasia/" target="_blank" rel="noopener noreferrer">
+                                            <i class="fa fa-upload fa-fw" aria-hidden="true"></i> Submit Technical Report
+                                        </a>
+                                        <a class="btn btn-default btn-lg" href="https://www.siggraph.org/preparing-your-content/author-instructions/" target="_blank" rel="noopener noreferrer">
+                                            <i class="fa fa-file-text fa-fw" aria-hidden="true"></i> Template &amp; Author Instructions
+                                        </a>
+                                        <p class="note">Use the ACM Tech Communications template with the <code>sigconf</code> style. The report is limited to 3 pages. Do not change authors or affiliations after acceptance.</p>
+                                    </article>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="row">
-                            <div class="col-md-12 submission-links">
-                                <article class="aiff-card">
-                                    <h3>Submission Links &amp; Guidance</h3>
-                                    <a class="btn btn-default btn-lg" href="https://filmfreeway.com/SIGGRAPHAsiaAIFF" target="_blank" rel="noopener noreferrer">
-                                        <i class="fa fa-film fa-fw" aria-hidden="true"></i> Submit Film on FilmFreeway
-                                    </a>
-                                    <a class="btn btn-default btn-lg" href="https://ssl.linklings.net/conferences/siggraphasia/" target="_blank" rel="noopener noreferrer">
-                                        <i class="fa fa-upload fa-fw" aria-hidden="true"></i> Submit Technical Report
-                                    </a>
-                                    <a class="btn btn-default btn-lg" href="https://www.siggraph.org/preparing-your-content/author-instructions/" target="_blank" rel="noopener noreferrer">
-                                        <i class="fa fa-file-text fa-fw" aria-hidden="true"></i> Template &amp; Author Instructions
-                                    </a>
-                                    <p class="note">Use the ACM Tech Communications template with the <code>sigconf</code> style. The report is limited to 3 pages. Do not change authors or affiliations after acceptance.</p>
-                                </article>
-                            </div>
-                        </div>
+                        <p><a id="more-btn" role="button" class="collapsed" data-toggle="collapse" href="#submission-details" aria-expanded="false" aria-controls="submission-details" aria-label="Toggle submission details"></a></p>
                     </div>
                 </div>
             </div>
