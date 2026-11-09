@@ -107,6 +107,20 @@
             padding-top: 100px;
         }
 
+        #program { order: 2; }
+
+        .timeline-list.program-list li {
+            margin-bottom: 28px;
+            color: #fff;
+            font-size: clamp(20px, 2.5vw, 24px);
+            font-weight: 700;
+            line-height: 1.5;
+        }
+
+        .timeline-list.program-list li:last-child {
+            margin-bottom: 0;
+        }
+
         .section-lead {
             margin-bottom: 28px;
             font-size: 19px;
@@ -410,8 +424,9 @@
                 <ul class="nav navbar-nav">
                     <li class="hidden"><a href="#page-top"></a></li>
                     <li><a class="page-scroll" href="#about">About</a></li>
+                    <li><a class="page-scroll" href="#program">Program</a></li>
                     <li><a class="page-scroll" href="#course">Course</a></li>
-                    <li><a class="page-scroll" href="#submission">Submission</a></li>
+                    <li class="hidden" hidden><a class="page-scroll" href="#submission">Submission</a></li>
                     <li><a class="page-scroll" href="#review">Review</a></li>
                     <li><a class="page-scroll" href="#timeline">Timeline</a></li>
                     <li><a class="page-scroll" href="#organizers">Organizers</a></li>
@@ -450,6 +465,26 @@
                     <p class="section-lead">As generative AI continues to reshape the landscape of visual storytelling, AIFF aims to bridge the gap between cutting-edge AI technologies and cinematic creativity. The workshop and film challenge welcome innovative AI-generated films and technical reports that demonstrate new possibilities in storytelling, character consistency, multi-shot generation, audio-visual creation, and AI-assisted filmmaking pipelines.</p>
                     <p class="section-lead" style="text-align: justify">AIFF is for the next installment of the AI for Creative Visual Content Generation Editing and Understanding (CVEU), which follows its success on the previous launch at <a href="https://cveu.github.io/event/cvpr2026.html">CVPR'26</a>, <a href="https://cveu.github.io/event/cvpr2025.html">CVPR'25</a>, <a href="https://cveu.github.io/event/cvpr2024.html">CVPR'24</a>, <a href="https://cveu.github.io/event/iccv2023.html">ICCV'23</a>, <a href="https://cveu.github.io/event/eccv2022.html">ECCV'22</a>, <a href="https://cveu.github.io/event/iccv2021.html">ICCV'21</a>, a Generative Models Course at <a href="https://cveu.github.io/event/sig2024.html">SIGGRAPH'24</a>, <a href="https://cveu.github.io/event/sig2025.html">SIGGRAPH'25</a>, <a href="https://cveu.github.io/event/sig2026.html">SIGGRAPH'26</a>, the 2023 Paris ShortFest AI <a href="https://filmfreeway.com/AIShortFest">Film Festival</a>, the 2025 Hong Kong HKUST AI <a href="https://cveu.github.io/event/hkustfilm2025.html">Film Festival</a>, and the 2026 Hong Kong HKUST AI <a href="https://cveu.github.io/event/hkustfilm2026.html">Film Festival</a>.</p>
                     <p class="section-lead">Award-winning films, together with their corresponding technical reports, will be presented at SIGGRAPH Asia 2026. The films will be screened during the workshop, while the accompanying technical reports will be formally published in the SIGGRAPH Asia 2026 Proceedings.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="program" class="content-section text-left">
+            <div class="download-section">
+                <div class="container">
+                    <div class="col-lg-10 col-lg-offset-1">
+                        <h2 class="text-center">Program</h2>
+                        <ul class="timeline-list program-list">
+                            <li>Opening Speech</li>
+                            <li>Keynote</li>
+                            <li>Awards Ceremony</li>
+                            <li>Best Film Screening</li>
+                            <li>Panel: Beyond Art and Technology</li>
+                            <li>Break</li>
+                            <li>Award Film Screening</li>
+                            <li>Artist Sharing</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -530,7 +565,7 @@
             </div>
         </section>
 
-        <section id="submission" class="content-section text-left">
+        <section id="submission" class="content-section text-left hidden" hidden>
             <div class="download-section">
                 <div class="container">
                     <div class="col-lg-10 col-lg-offset-1">
@@ -768,6 +803,11 @@
                         <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
                             <img src="/img/avatar/yudi_xie.jpg" alt="Yudi Xie">
                             <span class="person-name"><a href="https://cveu.github.io" target="_blank" rel="noopener noreferrer">Yudi Xie</a></span>
+                            <span class="person-affiliation">HKUST</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                            <img src="/img/avatar/longji_huang.jpg" alt="Longji Huang">
+                            <span class="person-name"><a href="mailto:lhuang090@connect.hkust-gz.edu.cn">Longji Huang</a></span>
                             <span class="person-affiliation">HKUST</span>
                         </div>
                     </div>
