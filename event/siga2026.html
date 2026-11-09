@@ -108,6 +108,11 @@
             margin-bottom: 0;
         }
 
+        .section-toggle.collapsed .show-less,
+        .section-toggle:not(.collapsed) .show-more {
+            display: none;
+        }
+
         .section-lead {
             margin-bottom: 28px;
             font-size: 19px;
@@ -458,33 +463,36 @@
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1">
                     <h2 class="text-center">Review Process</h2>
-                    <p class="text-center section-lead">AI Film Frontiers is evaluated across multiple dimensions, including artistic quality and technical contribution.</p>
+                    <div class="collapse" id="review-details">
+                        <p class="text-center section-lead">AI Film Frontiers is evaluated across multiple dimensions, including artistic quality and technical contribution.</p>
 
-                    <div class="row review-grid">
-                        <div class="col-md-4">
-                            <article class="aiff-card review-step">
-                                <span class="review-number">1</span>
-                                <h3>Eligibility Check</h3>
-                                <p>Organizers verify that both the film and Technical Report have been submitted and that the entry satisfies the announced requirements.</p>
-                            </article>
+                        <div class="row review-grid">
+                            <div class="col-md-4">
+                                <article class="aiff-card review-step">
+                                    <span class="review-number">1</span>
+                                    <h3>Eligibility Check</h3>
+                                    <p>Organizers verify that both the film and Technical Report have been submitted and that the entry satisfies the announced requirements.</p>
+                                </article>
+                            </div>
+                            <div class="col-md-4">
+                                <article class="aiff-card review-step">
+                                    <span class="review-number">2</span>
+                                    <h3>Artistic Dimension</h3>
+                                    <p>Reviewers evaluate cinematic quality, storytelling, originality, creativity, and the strength of the film's artistic expression.</p>
+                                </article>
+                            </div>
+                            <div class="col-md-4">
+                                <article class="aiff-card review-step">
+                                    <span class="review-number">3</span>
+                                    <h3>Technical Dimension</h3>
+                                    <p>Reviewers assess workflow design, the clarity of the report, the significance of the technical challenges, and the novelty and effectiveness of the proposed solutions.</p>
+                                </article>
+                            </div>
                         </div>
-                        <div class="col-md-4">
-                            <article class="aiff-card review-step">
-                                <span class="review-number">2</span>
-                                <h3>Artistic Dimension</h3>
-                                <p>Reviewers evaluate cinematic quality, storytelling, originality, creativity, and the strength of the film's artistic expression.</p>
-                            </article>
-                        </div>
-                        <div class="col-md-4">
-                            <article class="aiff-card review-step">
-                                <span class="review-number">3</span>
-                                <h3>Technical Dimension</h3>
-                                <p>Reviewers assess workflow design, the clarity of the report, the significance of the technical challenges, and the novelty and effectiveness of the proposed solutions.</p>
-                            </article>
-                        </div>
+
+                        <p class="text-center">Award decisions are based on the combined artistic and technical dimensions. Selected films and their corresponding reports will be presented together at SIGGRAPH Asia 2026.</p>
                     </div>
-
-                    <p class="text-center">Award decisions are based on the combined artistic and technical dimensions. Selected films and their corresponding reports will be presented together at SIGGRAPH Asia 2026.</p>
+                    <p><a role="button" class="section-toggle collapsed" data-toggle="collapse" href="#review-details" aria-expanded="false" aria-controls="review-details"><span class="show-more">+ Show More</span><span class="show-less">− Show Less</span></a></p>
                 </div>
             </div>
         </section>
@@ -494,15 +502,18 @@
                 <div class="container">
                     <div class="col-lg-8 col-lg-offset-2">
                         <h2 class="text-center">Timeline</h2>
-                        <p class="text-center section-lead">Exact dates and deadlines will be announced when the submission portals open.</p>
-                        <ol class="timeline-list">
-                            <li><span class="timeline-date">July 23, 2026</span><strong>Film and Technical Report submissions open</strong></li>
-                            <li><span class="timeline-date">August 23, 2026</span><strong>Film submission deadline</strong></li>
-                            <li><span class="timeline-date">August 23, 2026</span><strong>Technical Report submission deadline</strong></li>
-                            <li><span class="timeline-date">September 13, 2026</span><strong>Winner and acceptance notification</strong></li>
-                            <li><span class="timeline-date">September 23, 2026</span><strong>Final camera-ready submission deadline</strong></li>
-                            <li><span class="timeline-date">December 2–4, 2026</span><strong>SIGGRAPH Asia 2026 @ Malaysia KLCC<br>Workshop presentations, film screenings, and publication of accepted Technical Reports</strong></li>
-                        </ol>
+                        <div class="collapse" id="timeline-details">
+                            <p class="text-center section-lead">Exact dates and deadlines will be announced when the submission portals open.</p>
+                            <ol class="timeline-list">
+                                <li><span class="timeline-date">July 23, 2026</span><strong>Film and Technical Report submissions open</strong></li>
+                                <li><span class="timeline-date">August 23, 2026</span><strong>Film submission deadline</strong></li>
+                                <li><span class="timeline-date">August 23, 2026</span><strong>Technical Report submission deadline</strong></li>
+                                <li><span class="timeline-date">September 13, 2026</span><strong>Winner and acceptance notification</strong></li>
+                                <li><span class="timeline-date">September 23, 2026</span><strong>Final camera-ready submission deadline</strong></li>
+                                <li><span class="timeline-date">December 2–4, 2026</span><strong>SIGGRAPH Asia 2026 @ Malaysia KLCC<br>Workshop presentations, film screenings, and publication of accepted Technical Reports</strong></li>
+                            </ol>
+                        </div>
+                        <p><a role="button" class="section-toggle collapsed" data-toggle="collapse" href="#timeline-details" aria-expanded="false" aria-controls="timeline-details"><span class="show-more">+ Show More</span><span class="show-less">− Show Less</span></a></p>
                     </div>
                 </div>
             </div>
