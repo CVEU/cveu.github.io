@@ -96,21 +96,56 @@
 
         #program { order: 2; }
 
-        .timeline-list.program-list li {
+        .program-date {
             margin-bottom: 28px;
-            color: #fff;
-            font-size: clamp(20px, 2.5vw, 24px);
-            font-weight: 700;
-            line-height: 1.5;
+            color: var(--aiff-highlight);
+            font-size: 20px;
         }
 
-        .timeline-list.program-list li:last-child {
+        #program .table-responsive {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .program-table {
             margin-bottom: 0;
+            background: rgba(0, 0, 0, 0.45);
+            font-size: 20px;
         }
 
-        .section-toggle.collapsed .show-less,
-        .section-toggle:not(.collapsed) .show-more {
-            display: none;
+        .program-table > thead > tr > th {
+            padding: 12px 16px;
+            text-align: center;
+            vertical-align: middle;
+            color: var(--aiff-accent);
+            border-color: var(--aiff-border);
+        }
+
+        .program-table > tbody > tr > th,
+        .program-table > tbody > tr > td {
+            padding: 12px 16px;
+            vertical-align: middle;
+            border-color: var(--aiff-border);
+        }
+
+        .program-table > tbody > tr > th {
+            width: 60%;
+        }
+
+        .program-table > tbody > tr > td {
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        #submission #review {
+            padding: 48px 0;
+            background: #050505;
+            box-shadow: 0 0 0 100vmax #050505;
+            clip-path: inset(0 -100vmax);
+        }
+
+        .submission-subsection {
+            margin-top: 48px;
         }
 
         .section-lead {
@@ -334,8 +369,6 @@
                     <li><a class="page-scroll" href="#about">About</a></li>
                     <li><a class="page-scroll" href="#program">Program</a></li>
                     <li><a class="page-scroll" href="#submission">Submission</a></li>
-                    <li><a class="page-scroll" href="#review">Review</a></li>
-                    <li><a class="page-scroll" href="#timeline">Timeline</a></li>
                     <li><a class="page-scroll" href="#organizers">Organizers</a></li>
                     <li><a class="page-scroll" href="#contact">Contact</a></li>
                 </ul>
@@ -381,16 +414,27 @@
                 <div class="container">
                     <div class="col-lg-10 col-lg-offset-1">
                         <h2 class="text-center">Program</h2>
-                        <ul class="timeline-list program-list">
-                            <li>Opening Speech</li>
-                            <li>Keynote</li>
-                            <li>Awards Ceremony</li>
-                            <li>Best Film Screening</li>
-                            <li>Panel: Beyond Art and Technology</li>
-                            <li>Break</li>
-                            <li>Award Film Screening</li>
-                            <li>Artist Sharing</li>
-                        </ul>
+                        <p class="text-center program-date">December 3, 2026 &middot; 15:00–19:00 (GMT+8)</p>
+                        <div class="table-responsive">
+                            <table class="table table-bordered program-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Schedule</th>
+                                        <th scope="col">Malaysia Time (GMT+8)<br>December 3, 2026</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">Opening Speech</th><td>15:00–15:15</td></tr>
+                                    <tr><th scope="row">Keynote</th><td>15:15–15:30</td></tr>
+                                    <tr><th scope="row">Awards Ceremony</th><td>15:30–15:50</td></tr>
+                                    <tr><th scope="row">Best Film Screening</th><td>15:50–16:10</td></tr>
+                                    <tr><th scope="row">Panel: Beyond Art and Technology</th><td>16:10–16:40</td></tr>
+                                    <tr><th scope="row">Break</th><td>16:40–17:00</td></tr>
+                                    <tr><th scope="row">Award Film Screening</th><td>17:00–17:30</td></tr>
+                                    <tr><th scope="row">Artist Sharing</th><td>17:30–18:00</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -452,68 +496,51 @@
                                     </article>
                                 </div>
                             </div>
+
+                            <div id="review" class="submission-subsection">
+                                <h3 class="text-center">Review Process</h3>
+                                <p class="text-center section-lead">AI Film Frontiers is evaluated across multiple dimensions, including artistic quality and technical contribution.</p>
+
+                                <div class="row review-grid">
+                                    <div class="col-md-4">
+                                        <article class="aiff-card review-step">
+                                            <span class="review-number">1</span>
+                                            <h3>Eligibility Check</h3>
+                                            <p>Organizers verify that both the film and Technical Report have been submitted and that the entry satisfies the announced requirements.</p>
+                                        </article>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <article class="aiff-card review-step">
+                                            <span class="review-number">2</span>
+                                            <h3>Artistic Dimension</h3>
+                                            <p>Reviewers evaluate cinematic quality, storytelling, originality, creativity, and the strength of the film's artistic expression.</p>
+                                        </article>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <article class="aiff-card review-step">
+                                            <span class="review-number">3</span>
+                                            <h3>Technical Dimension</h3>
+                                            <p>Reviewers assess workflow design, the clarity of the report, the significance of the technical challenges, and the novelty and effectiveness of the proposed solutions.</p>
+                                        </article>
+                                    </div>
+                                </div>
+
+                                <p class="text-center">Award decisions are based on the combined artistic and technical dimensions. Selected films and their corresponding reports will be presented together at SIGGRAPH Asia 2026.</p>
+                            </div>
+                            <div id="timeline" class="submission-subsection">
+                                <h3 class="text-center">Timeline</h3>
+                                <p class="text-center section-lead">Exact dates and deadlines will be announced when the submission portals open.</p>
+                                <ol class="timeline-list">
+                                    <li><span class="timeline-date">July 23, 2026</span><strong>Film and Technical Report submissions open</strong></li>
+                                    <li><span class="timeline-date">August 23, 2026</span><strong>Film submission deadline</strong></li>
+                                    <li><span class="timeline-date">August 23, 2026</span><strong>Technical Report submission deadline</strong></li>
+                                    <li><span class="timeline-date">September 13, 2026</span><strong>Winner and acceptance notification</strong></li>
+                                    <li><span class="timeline-date">September 23, 2026</span><strong>Final camera-ready submission deadline</strong></li>
+                                    <li><span class="timeline-date">December 2–4, 2026</span><strong>SIGGRAPH Asia 2026 @ Malaysia KLCC<br>Workshop presentations, film screenings, and publication of accepted Technical Reports</strong></li>
+                                </ol>
+                            </div>
                         </div>
                         <p><a id="more-btn" role="button" class="collapsed" data-toggle="collapse" href="#submission-details" aria-expanded="false" aria-controls="submission-details" aria-label="Toggle submission details"></a></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="review" class="container content-section text-left">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <h2 class="text-center">Review Process</h2>
-                    <div class="collapse" id="review-details">
-                        <p class="text-center section-lead">AI Film Frontiers is evaluated across multiple dimensions, including artistic quality and technical contribution.</p>
-
-                        <div class="row review-grid">
-                            <div class="col-md-4">
-                                <article class="aiff-card review-step">
-                                    <span class="review-number">1</span>
-                                    <h3>Eligibility Check</h3>
-                                    <p>Organizers verify that both the film and Technical Report have been submitted and that the entry satisfies the announced requirements.</p>
-                                </article>
-                            </div>
-                            <div class="col-md-4">
-                                <article class="aiff-card review-step">
-                                    <span class="review-number">2</span>
-                                    <h3>Artistic Dimension</h3>
-                                    <p>Reviewers evaluate cinematic quality, storytelling, originality, creativity, and the strength of the film's artistic expression.</p>
-                                </article>
-                            </div>
-                            <div class="col-md-4">
-                                <article class="aiff-card review-step">
-                                    <span class="review-number">3</span>
-                                    <h3>Technical Dimension</h3>
-                                    <p>Reviewers assess workflow design, the clarity of the report, the significance of the technical challenges, and the novelty and effectiveness of the proposed solutions.</p>
-                                </article>
-                            </div>
-                        </div>
-
-                        <p class="text-center">Award decisions are based on the combined artistic and technical dimensions. Selected films and their corresponding reports will be presented together at SIGGRAPH Asia 2026.</p>
-                    </div>
-                    <p><a role="button" class="section-toggle collapsed" data-toggle="collapse" href="#review-details" aria-expanded="false" aria-controls="review-details"><span class="show-more">+ Show More</span><span class="show-less">− Show Less</span></a></p>
-                </div>
-            </div>
-        </section>
-
-        <section id="timeline" class="content-section text-left">
-            <div class="download-section">
-                <div class="container">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <h2 class="text-center">Timeline</h2>
-                        <div class="collapse" id="timeline-details">
-                            <p class="text-center section-lead">Exact dates and deadlines will be announced when the submission portals open.</p>
-                            <ol class="timeline-list">
-                                <li><span class="timeline-date">July 23, 2026</span><strong>Film and Technical Report submissions open</strong></li>
-                                <li><span class="timeline-date">August 23, 2026</span><strong>Film submission deadline</strong></li>
-                                <li><span class="timeline-date">August 23, 2026</span><strong>Technical Report submission deadline</strong></li>
-                                <li><span class="timeline-date">September 13, 2026</span><strong>Winner and acceptance notification</strong></li>
-                                <li><span class="timeline-date">September 23, 2026</span><strong>Final camera-ready submission deadline</strong></li>
-                                <li><span class="timeline-date">December 2–4, 2026</span><strong>SIGGRAPH Asia 2026 @ Malaysia KLCC<br>Workshop presentations, film screenings, and publication of accepted Technical Reports</strong></li>
-                            </ol>
-                        </div>
-                        <p><a role="button" class="section-toggle collapsed" data-toggle="collapse" href="#timeline-details" aria-expanded="false" aria-controls="timeline-details"><span class="show-more">+ Show More</span><span class="show-less">− Show Less</span></a></p>
                     </div>
                 </div>
             </div>
