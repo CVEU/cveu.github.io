@@ -105,7 +105,21 @@
             padding-top: 100px;
         }
 
-        #program { order: 2; }
+        .program-background {
+            order: 2;
+            background: #232323 url('/img/bg-polygon.jpg') center / 100% 100% no-repeat;
+        }
+        .program-background > section { padding: clamp(40px, 6vw, 80px) 0; }
+        .program-background .logo-box {
+            display: inline-block;
+            height: 100px;
+            max-width: calc(100% - 10px);
+            object-fit: contain;
+            vertical-align: middle;
+        }
+        #about { padding-bottom: clamp(32px, 4vw, 60px); }
+        #participants .ntu-mark { padding: 4px; }
+
 
         .program-date {
             margin-bottom: 28px;
@@ -114,38 +128,28 @@
         }
 
         #program .table-responsive {
-            max-width: 720px;
+            width: 90%;
             margin: 0 auto;
         }
 
         .program-table {
             margin-bottom: 0;
-            background: rgba(0, 0, 0, 0.45);
-            font-size: 20px;
+            font-size: 1.25em;
         }
 
         .program-table > thead > tr > th {
-            padding: 12px 16px;
             text-align: center;
             vertical-align: middle;
-            color: var(--aiff-accent);
-            border-color: var(--aiff-border);
-        }
-
-        .program-table > tbody > tr > th,
-        .program-table > tbody > tr > td {
-            padding: 12px 16px;
-            vertical-align: middle;
-            border-color: var(--aiff-border);
         }
 
         .program-table > tbody > tr > th {
-            width: 60%;
+            width: 75%;
+            font-weight: normal;
+            white-space: normal;
         }
 
-        .program-table > tbody > tr > td {
-            text-align: center;
-            white-space: nowrap;
+        @media (max-width: 767px) {
+            #program .table-responsive { width: 100%; }
         }
 
         #submission,
@@ -159,6 +163,15 @@
 
         .submission-subsection {
             margin-top: 48px;
+        }
+
+        .guest-initials {
+            display: inline-grid;
+            place-items: center;
+            vertical-align: middle;
+            background: #19343a;
+            color: var(--aiff-accent);
+            font: 24px Montserrat, sans-serif;
         }
 
         .section-lead {
@@ -297,7 +310,8 @@
             text-align: center;
         }
 
-        .organizer-card img {
+        .organizer-card img,
+        .organizer-card .guest-initials {
             width: 100px;
             height: 100px;
             border: 2px solid rgba(255, 255, 255, 0.28);
@@ -417,7 +431,8 @@
                 text-align: left;
             }
 
-            .organizer-card img {
+            .organizer-card img,
+            .organizer-card .guest-initials {
                 width: 90px;
                 height: 90px;
             }
@@ -466,7 +481,6 @@
                     <li><a class="page-scroll" href="#about">About</a></li>
                     <li><a class="page-scroll" href="#program">Program</a></li>
                     <li><a class="page-scroll" href="#course">Course</a></li>
-                    <li><a class="page-scroll" href="#submission">Submission</a></li>
                     <li><a class="page-scroll" href="#organizers">Organizers</a></li>
                     <li><a class="page-scroll" href="#contact">Contact</a></li>
                 </ul>
@@ -482,8 +496,9 @@
                         <p class="aiff-kicker">SIGGRAPH Asia 2026 Workshop &amp; International AI Film Challenge</p>
                         <h1 class="brand-heading">AI Film Frontiers</h1>
                         <p class="intro-text">Advancing AI-native filmmaking through artistic expression, technical innovation, and meaningful human–AI collaboration</p>
+                        <div class="countdown" id="countdown" role="timer" aria-label="Time until the workshop in days, hours, minutes and seconds" data-stoptimer="2026-12-03T15:00:00+08:00" style="font-size: clamp(14px, 4vw, 20px)"></div>
                         <p class="aiff-location"><svg class="aiff-location-pin" viewBox="0 0 16 20" aria-hidden="true"><path fill-rule="evenodd" d="M8 0a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 3.5A3.5 3.5 0 1 1 8 10.5 3.5 3.5 0 0 1 8 3.5Z"/></svg>Kuala Lumpur Convention Centre (KLCC), Kuala Lumpur, Malaysia</p>
-                        <p class="aiff-status">Workshop date and venue to be announced</p>
+                        <p class="aiff-status">December 3, 2026 &middot; 15:00–19:00 (GMT+8) <strong>(Plenary Theatre Auditorium, Level 3)</strong></p>
                         <br>
                         <a href="#about" class="btn btn-circle page-scroll" aria-label="Read about AI Film Frontiers">
                             <i class="fa fa-angle-double-down animated" aria-hidden="true"></i>
@@ -507,36 +522,155 @@
             </div>
         </section>
 
-        <section id="program" class="content-section text-left">
-            <div class="download-section">
+        <div class="program-background">
+            <section id="program" class="text-left">
+                    <div class="container">
+                        <div class="col-lg-10 col-lg-offset-1">
+                            <h2 class="text-center">Program</h2>
+                            <p class="text-center program-date">December 3, 2026 &middot; 15:00–19:00 (GMT+8) &middot; Plenary Theatre Auditorium, Level 3</p>
+                            <div class="table-responsive">
+                                <table class="table table-bordered program-table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Workshop Schedule</th>
+                                            <th scope="col">Malaysia Time (GMT+8)<br>December 3, 2026</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><th scope="row"><strong>Opening Speech:</strong> Anyi Rao, Songlin Yang, Tony Zhang</th><td>15:00&ndash;15:15</td></tr>
+                                        <tr><th scope="row"><strong>Keynote:</strong> Nathan Chen</th><td>15:15&ndash;15:30</td></tr>
+                                        <tr><th scope="row"><strong>Keynote:</strong> Jimei Yang</th><td>15:30&ndash;15:45</td></tr>
+                                        <tr><th scope="row"><strong>Awards Ceremony</strong></th><td>15:45&ndash;16:15</td></tr>
+                                        <tr><th scope="row"><strong>Best Film Screening</strong></th><td>16:15&ndash;16:45</td></tr>
+                                        <tr><th scope="row"><strong>Panel:</strong> Beyond Art and Technology<br>Chair: Anyi Rao<br>Panelists: Baoquan Chen, Nathan Chen, Richard Chuang, Ina Conradi, Tina Wang, Jimei Yang, Jake Zhang</th><td>16:45&ndash;17:15</td></tr>
+                                        <tr><th scope="row"><strong>Break</strong></th><td>17:15&ndash;17:20</td></tr>
+                                        <tr><th scope="row"><strong>Award Film Screening</strong></th><td>17:20&ndash;17:50</td></tr>
+                                        <tr><th scope="row"><strong>Artist Sharing</strong><br>Eddy Chen, Jiajian Min, Anna Yu, Shiqin Hou, Shinho Lee</th><td>17:50&ndash;18:20</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+            <section id="guests" class="text-center">
                 <div class="container">
                     <div class="col-lg-10 col-lg-offset-1">
-                        <h2 class="text-center">Program</h2>
-                        <p class="text-center program-date">December 3, 2026 &middot; 15:00–19:00 (GMT+8)</p>
-                        <div class="table-responsive">
-                            <table class="table table-bordered program-table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Schedule</th>
-                                        <th scope="col">Malaysia Time (GMT+8)<br>December 3, 2026</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr><th scope="row">Opening Speech</th><td>15:00–15:15</td></tr>
-                                    <tr><th scope="row">Keynote</th><td>15:15–15:30</td></tr>
-                                    <tr><th scope="row">Awards Ceremony</th><td>15:30–15:50</td></tr>
-                                    <tr><th scope="row">Best Film Screening</th><td>15:50–16:10</td></tr>
-                                    <tr><th scope="row">Panel: Beyond Art and Technology</th><td>16:10–16:40</td></tr>
-                                    <tr><th scope="row">Break</th><td>16:40–17:00</td></tr>
-                                    <tr><th scope="row">Award Film Screening</th><td>17:00–17:30</td></tr>
-                                    <tr><th scope="row">Artist Sharing</th><td>17:30–18:00</td></tr>
-                                </tbody>
-                            </table>
+                        <h2>Speakers &amp; Guests</h2>
+                        <h3>Keynote Speakers</h3>
+                        <div class="row organizer-grid">
+                            <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                                <img src="/img/avatar/nathan_chen_new.jpg" alt="" loading="lazy">
+                                <span class="person-name">Nathan Chen</span>
+                                <span class="person-affiliation">Tencent Games</span>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                                <img src="/img/avatar/jimei_yang.jpg" alt="" loading="lazy">
+                                <span class="person-name">Jimei Yang</span>
+                                <span class="person-affiliation">Runway</span>
+                            </div>
+                        </div>
+                        <h3>Panel Discussion</h3>
+                        <div class="row organizer-grid">
+                            <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                                <img src="/img/avatar/baoquan_chen.jpg" style="object-position: center top" alt="" loading="lazy">
+                                <span class="person-name">Baoquan Chen</span>
+                                <span class="person-affiliation">PKU</span>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                                <img src="/img/amcfilm/RichardChuang.jpg" alt="" loading="lazy">
+                                <span class="person-name">Richard Chuang</span>
+                                <span class="person-affiliation">d1n0</span>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                                <img src="/img/avatar/nathan_chen_new.jpg" alt="" loading="lazy">
+                                <span class="person-name">Nathan Chen</span>
+                                <span class="person-affiliation">Tencent Games</span>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                                <img src="/img/avatar/jimei_yang.jpg" alt="" loading="lazy">
+                                <span class="person-name">Jimei Yang</span>
+                                <span class="person-affiliation">Runway</span>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                                <img src="/img/avatar/ina_conradi_new.jpg" alt="" loading="lazy">
+                                <span class="person-name">Ina Conradi</span>
+                                <span class="person-affiliation">NTU</span>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                                <img src="/img/avatar/tina_wang_new.jpg" alt="" loading="lazy">
+                                <span class="person-name">Tina Wang</span>
+                                <span class="person-affiliation">Zoooo</span>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                                <img src="/img/avatar/jake_zhang_new.jpg" alt="" loading="lazy">
+                                <span class="person-name">Jake Zhang</span>
+                                <span class="person-affiliation">HKUST(GZ)</span>
+                            </div>
+                        </div>
+                        <h3>Artist Sharing</h3>
+                        <div class="row organizer-grid">
+                            <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                                <img src="/img/amcfilm/Eddy_CHEN.png" alt="" loading="lazy">
+                                <span class="person-name">Eddy Chen</span>
+                                <span class="person-affiliation">AI Artist, Producer of Zoooo</span>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                                <img src="/img/amcfilm/JiajianMin.jpeg" alt="" loading="lazy">
+                                <span class="person-name">Jiajian Min</span>
+                                <span class="person-affiliation">MYStudio</span>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                                <img src="/img/amcfilm/annayu.jpg" alt="" loading="lazy">
+                                <span class="person-name">Anna Yu</span>
+                                <span class="person-affiliation">MYStudio</span>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                                <img src="/img/avatar/shiqin_hou_new.jpg" alt="" loading="lazy">
+                                <span class="person-name">Shiqin Hou</span>
+                                <span class="person-affiliation">HKUST</span>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
+                                <img src="/img/avatar/shinho_lee_new.jpg" alt="" loading="lazy">
+                                <span class="person-name">Shinho Lee</span>
+                                <span class="person-affiliation">308 ART CREW</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+
+            <section id="participants" class="text-center">
+                <div class="container">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <h2>Participants from</h2>
+                        <div class="row">
+                            <img class="logo-box" src="/img/org/nvidia.svg" alt="NVIDIA" loading="lazy">
+                            <img class="logo-box" src="/img/org/tencent.png" alt="Tencent" loading="lazy">
+                            <img class="logo-box" src="/img/org/google.png" alt="Google" loading="lazy">
+                            <img class="logo-box" src="/img/org/netflix.png" alt="Netflix" loading="lazy">
+                            <img class="logo-box" src="/img/org/adobe.png" alt="Adobe" loading="lazy">
+                            <img class="logo-box" src="/img/org/hkust.png" alt="HKUST" loading="lazy">
+                            <img class="logo-box" src="/img/org/tsinghua.svg" alt="Tsinghua University" loading="lazy">
+                            <img class="logo-box ntu-mark" src="/img/org/ntu-official.png" alt="Nanyang Technological University" loading="lazy">
+                            <img class="logo-box" src="/img/org/sit.png" alt="Singapore Institute of Technology" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sponsorship" class="text-center">
+                <div class="container">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <h2>Sponsorship</h2>
+                        <div class="row">
+                            <a href="https://www.tencent.com/" target="_blank" rel="noopener noreferrer"><img class="logo-box" src="/img/org/tencent.png" alt="Tencent" loading="lazy"></a>
+                            <a href="https://updream.bilibili.com/" target="_blank" rel="noopener noreferrer"><img class="logo-box" src="/img/org/updream.png" alt="updream (bilibili)" loading="lazy"></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
 
         <section id="course" class="content-section text-left">
             <div class="download-section">
@@ -614,7 +748,7 @@
             </div>
         </section>
 
-        <section id="submission" class="content-section text-left">
+        <section id="submission" class="content-section text-left" hidden>
             <div class="download-section">
                 <div class="container">
                     <div class="col-lg-10 col-lg-offset-1">
@@ -877,7 +1011,10 @@
         </div>
     </footer>
 
-    <script src="https://cveu.github.io/js/jquery.js"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/jquery.widget.min.js"></script>
+    <script src="/js/metro-countdown.js"></script>
+    <script>jQuery("#countdown").countdown({ blink: false });</script>
     <script src="https://cveu.github.io/js/bootstrap.min.js"></script>
     <script src="https://cveu.github.io/js/jquery.easing.min.js"></script>
     <script src="https://cveu.github.io/js/grayscale.js"></script>
