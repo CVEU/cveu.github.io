@@ -87,19 +87,13 @@
             fill: currentColor;
         }
 
-        .aiff-status {
-            display: inline-block;
-            margin: 8px 0 26px;
-            padding: 9px 16px;
-            border: 1px solid #f6ffa8;
-            border-radius: 999px;
-            background: rgba(0, 0, 0, 0.42);
-            color: var(--aiff-highlight);
-            font-family: Montserrat, sans-serif;
-            font-size: 20px;
-            font-weight: 700;
-            letter-spacing: 0.04em;
+        .aiff-session {
+            margin: 6px 0;
+            font-size: clamp(16px, 2vw, 20px);
+            line-height: 1.5;
         }
+
+        .aiff-session strong { color: var(--aiff-highlight); }
 
         .content-section {
             padding-top: 100px;
@@ -127,10 +121,12 @@
             font-size: 20px;
         }
 
-        #program .table-responsive {
+        #program .table-responsive, #course .table-responsive {
             width: 90%;
             margin: 0 auto;
         }
+
+        #course .table-responsive { margin-bottom: 36px; }
 
         .program-table {
             margin-bottom: 0;
@@ -149,7 +145,7 @@
         }
 
         @media (max-width: 767px) {
-            #program .table-responsive { width: 100%; }
+            #program .table-responsive, #course .table-responsive { width: 100%; }
         }
 
         #submission,
@@ -479,7 +475,7 @@
                 <ul class="nav navbar-nav">
                     <li class="hidden"><a href="#page-top"></a></li>
                     <li><a class="page-scroll" href="#about">About</a></li>
-                    <li><a class="page-scroll" href="#program">Program</a></li>
+                    <li><a class="page-scroll" href="#program">Workshop</a></li>
                     <li><a class="page-scroll" href="#course">Course</a></li>
                     <li><a class="page-scroll" href="#organizers">Organizers</a></li>
                     <li><a class="page-scroll" href="#contact">Contact</a></li>
@@ -497,8 +493,9 @@
                         <h1 class="brand-heading">AI Film Frontiers</h1>
                         <p class="intro-text">Advancing AI-native filmmaking through artistic expression, technical innovation, and meaningful human–AI collaboration</p>
                         <div class="countdown" id="countdown" role="timer" aria-label="Time until the workshop in days, hours, minutes and seconds" data-stoptimer="2026-12-03T15:00:00+08:00" style="font-size: clamp(14px, 4vw, 20px)"></div>
-                        <p class="aiff-location"><svg class="aiff-location-pin" viewBox="0 0 16 20" aria-hidden="true"><path fill-rule="evenodd" d="M8 0a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 3.5A3.5 3.5 0 1 1 8 10.5 3.5 3.5 0 0 1 8 3.5Z"/></svg><strong>Plenary Theatre Auditorium, Level 3</strong><br>Kuala Lumpur Convention Centre (KLCC), Kuala Lumpur, Malaysia</p>
-                        <p class="aiff-status">December 3, 2026 &middot; 15:00–19:00 (GMT+8)</p>
+                        <p class="aiff-location"><svg class="aiff-location-pin" viewBox="0 0 16 20" aria-hidden="true"><path fill-rule="evenodd" d="M8 0a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 3.5A3.5 3.5 0 1 1 8 10.5 3.5 3.5 0 0 1 8 3.5Z"/></svg>Kuala Lumpur Convention Centre (KLCC), Kuala Lumpur, Malaysia</p>
+                        <p class="aiff-session"><strong>Workshop</strong> &middot; December 3, 2026 &middot; 15:00&ndash;19:00 (GMT+8) &middot; Plenary Theatre Auditorium, Level 3</p>
+                        <p class="aiff-session"><strong>Course</strong> &middot; December 4, 2026 &middot; 13:00&ndash;16:45 (GMT+8) &middot; Meeting Room 408 / 409, Level 4</p>
                         <br>
                         <a href="#about" class="btn btn-circle page-scroll" aria-label="Read about AI Film Frontiers">
                             <i class="fa fa-angle-double-down animated" aria-hidden="true"></i>
@@ -526,7 +523,7 @@
             <section id="program" class="text-left">
                     <div class="container">
                         <div class="col-lg-10 col-lg-offset-1">
-                            <h2 class="text-center">Program</h2>
+                            <h2 class="text-center">Workshop Program</h2>
                             <p class="text-center program-date">December 3, 2026 &middot; 15:00–19:00 (GMT+8) &middot; Plenary Theatre Auditorium, Level 3 (KLCC)</p>
                             <div class="table-responsive">
                                 <table class="table table-bordered program-table">
@@ -677,9 +674,33 @@
             <div class="download-section">
                 <div class="container">
                     <div class="col-lg-10 col-lg-offset-1">
-                        <h2 class="text-center">Course</h2>
+                        <h2 class="text-center">Course Program</h2>
                         <p class="text-center section-lead"><strong>Generative Models for Visual Content Editing and Creation</strong></p>
-                        <p class="text-center"><span class="aiff-status">Date and venue to be announced</span></p>
+                        <p class="text-center program-date">December 4, 2026 &middot; 13:00&ndash;16:45 (GMT+8) &middot; Meeting Room 408 / 409, Level 4 (KLCC)</p>
+                        <div class="table-responsive">
+                            <table class="table table-bordered program-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Course Schedule</th>
+                                        <th scope="col">Malaysia Time (GMT+8)<br>December 4, 2026</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row"><strong>Opening Speech: Welcome &amp; Roadmap:</strong> Tianyi Zhang</th><td>13:00&ndash;13:10</td></tr>
+                                    <tr><th scope="row"><strong>Foundational Models and Multi-Modal Generation:</strong> Songlin Yang</th><td>13:10&ndash;13:30</td></tr>
+                                    <tr><th scope="row"><strong>Intelligent Visual Editing:</strong> Houyuan Chen</th><td>13:30&ndash;13:50</td></tr>
+                                    <tr><th scope="row"><strong>Agentic AI Orchestration &amp; Workflows:</strong> Zheng Wei</th><td>13:50&ndash;14:15</td></tr>
+                                    <tr><th scope="row"><strong>Coffee Break</strong></th><td>14:15&ndash;14:30</td></tr>
+                                    <tr><th scope="row"><strong>Towards Social World Model:</strong> Zeyu Zhang</th><td>14:30&ndash;14:50</td></tr>
+                                    <tr><th scope="row"><strong>Connecting Classes:</strong> Ina Conradi</th><td>14:50&ndash;15:10</td></tr>
+                                    <tr><th scope="row"><strong>Art Tech Education &amp; Cinematic HAI Systems:</strong> Xian Xu</th><td>15:10&ndash;15:30</td></tr>
+                                    <tr><th scope="row"><strong>SIGGRAPH Asia AI Film Frontier Nominee:</strong> Ya’ir Gabriel</th><td>15:30&ndash;15:45</td></tr>
+                                    <tr><th scope="row"><strong>SIGGRAPH Asia AI Film Frontier Nominee:</strong> Mark Chavez</th><td>15:45&ndash;16:00</td></tr>
+                                    <tr><th scope="row"><strong>AI Film Festival:</strong> Tianyi Zhang</th><td>16:00&ndash;16:15</td></tr>
+                                    <tr><th scope="row"><strong>Networking</strong></th><td>16:15&ndash;16:30</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
                         <h2 class="text-center">About the Course</h2>
                         <p class="section-lead">The AI for Creative Visual Content Generation, Editing and Understanding (CVEU) returns for its 11th edition with two sessions: a course and a AI Film Frontier Workshop that together explore the evolving dialogue between machine intelligence and human creativity. Evolving from its successful editions at SIGGRAPH' 26, SIGGRAPH'25, SIGGRAPH Asia 25, CVPR'25, CVPR'24, ICCV'23, ECCV'22, ICCV'21, a Generative Models Course at SIGGRAPH'24, 2023 Paris ShortFest AI Film Festival, and 2025 Hong Kong HKUST AI Film Festival. CVEU has become a platform where art, research, and technology meet.</p>
                         <p class="section-lead">With over 3,000 participants worldwide, CVEU continues to foster a vibrant global community of artists, researchers, curators, and technologists. The Course "Generative Models for Visual Content Editing and Creation" uses an "Explain, Show and Do" approach to help creators and developers master AI tools for storyboarding and pre-visualization while maintaining creative control.</p>
@@ -714,7 +735,7 @@
                             <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
                                 <img src="/img/speakers/Zheng_wei.jpg" alt="Zheng Wei">
                                 <span class="person-name"><a href="https://www.zhengwei302.com/" target="_blank" rel="noopener noreferrer">Zheng Wei</a></span>
-                                <span class="person-affiliation">HKUST</span>
+                                <span class="person-affiliation">KAIST</span>
                             </div>
                             <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
                                 <img src="/img/speakers/yuqing_liu.jpg" alt="Yuqing Liu">
@@ -734,7 +755,7 @@
                             <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
                                 <img src="/img/avatar/houyuan-chen.jpg" alt="Houyuan Chen">
                                 <span class="person-name"><a href="https://github.com/houyuanchen111/" target="_blank" rel="noopener noreferrer">Houyuan Chen</a></span>
-                                <span class="person-affiliation">NJU</span>
+                                <span class="person-affiliation">HKUST</span>
                             </div>
                             <div class="col-xs-6 col-sm-4 col-md-2 organizer-card">
                                 <img src="/img/speakers/anyi_rao.jpg" alt="Anyi Rao">
