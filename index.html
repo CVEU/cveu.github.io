@@ -111,6 +111,19 @@
             object-fit: contain;
             vertical-align: middle;
         }
+        .aiff-trailer {
+            max-width: 1040px;
+            margin: clamp(52px, 7vw, 96px) auto 0;
+        }
+
+        .aiff-trailer iframe {
+            display: block;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border: 0;
+            background: #000;
+        }
+
         #about { padding-bottom: clamp(32px, 4vw, 60px); }
         #participants .ntu-mark { padding: 4px; }
 
@@ -517,6 +530,10 @@
                     <p class="section-lead">Award-winning films, together with their corresponding technical reports, will be presented at SIGGRAPH Asia 2026. The films will be screened during the workshop, while the accompanying technical reports will be formally published in the SIGGRAPH Asia 2026 Proceedings.</p>
                 </div>
             </div>
+            <figure class="aiff-trailer" id="trailer">
+                <h3 class="text-center">Trailer Video</h3>
+                <iframe src="https://drive.google.com/file/d/16TYS4gCLr33nm7QY8gAy0lVw-5MdzAsz/preview" title="AI Film Frontiers 2026 trailer" loading="lazy" allowfullscreen></iframe>
+            </figure>
         </section>
 
         <div class="program-background">
